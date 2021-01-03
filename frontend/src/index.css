@@ -1,0 +1,399 @@
+:root {
+  box-sizing: border-box;
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.grid-container {
+  position: relative;
+  width: 1440px;
+  height: 4465px;
+  background: #FFFFFF;
+}
+
+
+
+.top-menu {
+  position: absolute;
+  display: block;
+  width: 1440px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+  z-index: 99;
+}
+
+.rectangle-1 {
+  background: #E7161B;
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  width: 1440px;
+  height: 30px;
+}
+
+.currency {
+  position: absolute;
+  left: 17.5%;
+  right: 77.71%;
+  top: 20%;
+  bottom: 20%;
+}
+
+.sub-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+
+  top: 41.11%;
+  bottom: 41.44%;
+  left: 30.83%;
+  right: 37.29% ;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+  
+}
+
+.login_cart {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  
+  left: 75.62%;
+  right: 11.53%;
+  top: 28.89%;
+  bottom: 35.56%
+}
+
+.social-icons {
+  position: absolute;
+  right: 11.81%
+}
+
+.language {
+  position: absolute;
+  left: 11.81%;
+  right: 83.4%;
+  top: 20%;
+  bottom: 20%;
+}
+
+.free-shipping-from {
+  position: absolute;
+  left: 37.85%;
+  right: 37.92%;
+  top: 26.67%;
+  bottom: 26.67%;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.header-menu {
+  position: absolute;
+  width: 1440px;
+  height: 90px;
+  left: 0px;
+  top: 30px
+}
+
+.logo {
+  position: absolute;
+  left: 11.81%;
+  right: 71.94%;
+  top: 17.78%;
+  bottom: 16.67%;
+
+  background: url(img/currus_logo.png);
+}
+
+.search {
+  position: absolute;
+  left: 26.94%;
+  right: 71.39%;
+  top: 37.78%;
+  bottom: 35.56%
+}
+
+.rectangle-5 {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  background: #FFFFFF;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.12);
+}
+
+.banner {
+  position: absolute;
+  width: 1440px;
+  height: 600px;
+  left: 0px;
+
+}
+
+.rectangle-6 {
+  position: absolute;
+  width: 1440px;
+  height: 600px;
+  left: 0px;
+  top: 120px;
+  background: url(img/banner_picture.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text-banner {
+  position: absolute;
+  width: 375px;
+  height: 336px;
+  left: 170px;
+  top: 220px;
+}
+
+.rectangle-14 {
+  position: absolute;
+  width: 375px;
+  height: 336px;
+  left: 170px;
+  top: 220px;
+
+  background: rgba(0,0,0,0.7);
+  border-radius: 3px;
+}
+
+.your-vehicle {
+  position: absolute;
+  width: 325px;
+  color: #FFFFFF;
+  height: 150px;
+  left: 195px;
+  top: 243px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 50px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.introducing {
+  position: absolute;
+  width: 300px;
+  height: 38px;
+  left: 220px;
+  top: 413px;
+
+  font-family: Dancing Script;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.text-banner__button {
+  position: absolute;
+  width: 225px;
+  height: 50px;
+  left: 246px;
+  top: 476px;
+}
+
+.rectangle-15 {
+  position: absolute;
+  width: 225px;
+  height: 50px;
+  left: 246px;
+  top: 476px;
+
+  background: #E7161B;
+  border-radius: 3px;
+}
+
+.buy_now {
+  position: absolute;
+  width: 175px;
+  height: 18px;
+  left: 271px;
+  top: 492px;
+
+  color: #FFFFFF;
+}
+
+.category {
+  top: 150px;
+
+  position: absolute;
+  width: 525px;
+  height: 298px;
+  background: linear-gradient(0deg, rgba(36, 36, 36, 0.65), rgba(36, 36, 36, 0.65)), url(img/category1.jpeg);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.08);
+}
+
+.rectangle-19 {
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-sizing: border-box;
+}
+
+.category_page {
+  position: absolute;
+  width: 1100px;
+  height: 298px;
+  left: 197px;
+  top: 870px;
+}
+
+.category_title {
+  width: 375px;
+  height: 31px;
+  
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.category_description {
+  width: 377px;
+  height: 70px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+
+
+
+}
+
+.whythebest {
+  position: absolute;
+  width: 1150px;
+  height: 582px;
+  left: 170px;
+  top: 1218px;
+}
+
+.whycurrus {
+  position: absolute;
+  width: 1100px;
+  height: 26px;
+  left: 170px;
+  top: 1218px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: rgba(102, 102, 102, 0.85);
+}
+
+.rectangle-24 {
+  position: absolute;
+  width: 71px;
+  height: 2px;
+  left: 685px;
+  top: 1259px;
+  background: #E7161B;
+}
+
+.group_64 {
+  position: absolute;
+  width: 525px;
+  height: 479px;
+  left: 170px;
+  top: 1321px;
+}
+
+.rectangle-45 {
+  position: absolute;
+  width: 525px;
+  height: 83px;
+  left: 170px;
+  top: 1321px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+}
+
+.bringing {
+  position: absolute;
+  width: 425px;
+  height: 47px;
+  left: 220px;
+  top: 1339px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+}
+
+.rectangle-46 {
+  position: absolute;
+  width: 2px;
+  height: 206px;
+  left: 195px;
+  top: 1339px;
+  background: #E7161B;
+}
+
+.westarted {
+  position: absolute;
+  width: 450px;
+  height: 121px;
+  left: 220px;
+  top: 1424px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: rgba(102, 102, 102, 0.85)
+}
