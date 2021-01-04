@@ -12,11 +12,185 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+footer {
+  width: 100%;
+  height: 451px;
+  background: #393636;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: grid;
+
+  grid-template-columns: [row1-start] 11.81% [row2-start] 17.36% [row3-start] 3.47% [row4-start] 10.9% [row5-start] 4.72% [row6-start] 9.53% [row7-start] 4.41% [row8-start] 25.9% ;
+  grid-template-areas: ". contact_us . support . legal . newsletter ."
+}
+
+.contact_us {
+  grid-area: contact_us;
+
+}
+
+.CONTACT {
+  position: absolute;
+  top: 13.3%;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.ifyouhave {
+  position: absolute;
+  top: 23.73%;
+  color: #888888;
+  left: 11.81%;
+  right: 70.83%;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.support {
+  grid-area: support;
+}
+
+.support_title {
+  color: #FFFFFF;
+
+  position: absolute;
+  top: 13.3%;
+  bottom: 82.93%;
+
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+
+
+}
+
+.support ul {
+  list-style: none;
+  color: #888888;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+
+  top: 20%;
+  position: absolute; 
+
+  padding: 0;
+}
+
+.support ul li {
+  margin: 5px 0px;
+}
+
+.legal {
+  grid-area: legal;
+}
+
+.legal_title {
+  color: #FFFFFF;
+
+  position: absolute;
+  top: 13.3%;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.legal ul {
+  list-style: none;
+  color: #888888;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+
+  top: 20%;
+  position: absolute; 
+
+  padding: 0;
+}
+
+.legal ul li {
+  margin: 5px 0px;
+}
+
+.newsletter {
+  grid-area: newsletter;
+}
+
+.newsletter_title {
+  color: #FFFFFF;
+
+  position: absolute;
+  top: 13.3%;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.newsletter-description {
+  color: #888888;
+  font-family: Open Sans;
+  top: 23.73%;
+
+  position: absolute;
+  
+
+}
+
+.copyright {
+  color: #888888;
+
+  top: 81.37%;
+  position: absolute;
+  left: 11.74%;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+}
+
+.copyright .social-icons {
+
+}
+
+
 
 
 .grid-container {
   position: relative;
-  width: 1440px;
+  width: 100%;
   height: 4465px;
   background: #FFFFFF;
 }
@@ -26,7 +200,7 @@ body {
 .top-menu {
   position: absolute;
   display: block;
-  width: 1440px;
+  width: 100%;
   height: 30px;
   left: 0px;
   top: 0px;
@@ -42,7 +216,7 @@ body {
   top: 0%;
   bottom: 0%;
 
-  width: 1440px;
+  width: 100%;
   height: 30px;
 }
 
@@ -54,10 +228,12 @@ body {
   bottom: 20%;
 }
 
-.sub-menu {
+.navigation ul {
   position: absolute;
   display: flex;
   flex-direction: row;
+  list-style: none;
+
 
   top: 41.11%;
   bottom: 41.44%;
@@ -72,6 +248,10 @@ body {
   text-transform: uppercase;
   color: #000000;
   
+}
+
+.navigation ul li {
+  margin: 0px 10px;
 }
 
 .login_cart {
@@ -115,9 +295,14 @@ body {
   color: #FFFFFF;
 }
 
+.menu {
+  position: absolute;
+  width: 100%;
+}
+
 .header-menu {
   position: absolute;
-  width: 1440px;
+  width: 100%;
   height: 90px;
   left: 0px;
   top: 30px
@@ -181,7 +366,7 @@ body {
 
 .rectangle-14 {
   position: absolute;
-  width: 375px;
+  width: 100%;
   height: 336px;
   left: 170px;
   top: 220px;
@@ -396,4 +581,265 @@ body {
   line-height: 24px;
 
   color: rgba(102, 102, 102, 0.85)
+}
+
+.group_61 .rectangle-47 {
+  position: absolute;
+  width: 525px;
+  height: 60px;
+  left: 170px;
+  top: 1570px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.16)
+}
+
+.group_62 .rectangle-47 {
+  position: absolute;
+  width: 525px;
+  height: 60px;
+  left: 170px;
+  top: 1655px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.16)
+}
+
+.group_63 .rectangle-47 {
+  position: absolute;
+  width: 525px;
+  height: 60px;
+  left: 170px;
+  top: 1740px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.16)
+}
+
+.group_62 .rectangle-48 {
+  position: absolute;
+  width: 2px;
+  height: 23px;
+  left: 195px;
+  top: 1673px;
+
+  background: #E7161B;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.16)
+}
+
+
+.shoppingisconvenient {
+  position: absolute;
+  width: 425px;
+  height: 23px;
+  left: 220px;
+  top: 1673px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+}
+
+.group_61 .rectangle-48 {
+  position: absolute;
+  width: 2px;
+  height: 23px;
+  left: 195px;
+  top: 1588px;
+  background: #E7161B;
+}
+
+
+.wearealways {
+  position: absolute;
+  width: 425px;
+  height: 23px;
+  left: 220px;
+  top: 1588px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E7161B;
+}
+
+.everythingyouhate {
+  position: absolute;
+  width: 425px;
+  height: 23px;
+  left: 220px;
+  top: 1758px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: #E7161B;
+}
+
+.group_63 .rectangle-48 {
+  position: absolute;
+  width: 2px;
+  height: 23px;
+  left: 195px;
+  top: 1758px;
+
+  background: #E7161B;
+}
+
+.homepage_img {
+  position: absolute;
+  width: 600px;
+  height: 478px;
+  left:720px;
+  top: 1321px;
+}
+
+.ellipse_3 {
+  position: absolute;
+  width: 281px;
+  height: 281px;
+  left: 1039px;
+  top: 1518px;
+  background: rgba(231, 22, 27, 0.85)
+}
+
+.calltoaction {
+  position: absolute;
+  width: 1440px;
+  height: 100px;
+  left: 0px;
+  top: 1900px;
+}
+
+.calltoaction .rectangle-49 {
+  position: absolute;
+  width: 1440px;
+  height: 100px;
+  left: 0px;
+  top: 1900px;
+
+  background: #E7161B;
+}
+
+.signuptonewsletter {
+  color: #FFFFFF;
+  position: absolute;
+  width: 233px;
+  height: 24px;
+  left: 170px;
+  top: 1938px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+.getallthelatest {
+  position: absolute;
+  width: 300px;
+  height: 42px;
+  left: 470px;
+  top: 1929px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.group-66 {
+  position: absolute;
+  width: 450px;
+  height: 50px;
+  left: 820px;
+  top: 1925px;
+}
+
+.group-66 .rectangle-50 {
+  position: absolute;
+  width: 450px;
+  height: 50px;
+  left: 820px;
+  top: 1925px;
+
+  background: #FFFFFF;
+  border-radius: 3px;
+}
+
+.enteryouremail {
+  position: absolute;
+  width: 129px;
+  height: 24px;
+
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  color: rgba(102, 102, 102, 0.85)
+}
+
+.shoppage {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 301px 301px 301px;
+}
+
+.breadcrumbs {
+  position: absolute;
+  width: 1440px;
+  height: 100px;
+  left: 0px;
+  top: 120px;
+}
+
+.rectangle-75 {
+  position: absolute;
+  width: 1440px;
+  height: 100px;
+  left: 0px;
+  background: linear-gradient(0deg, rgba(231, 22, 27, 0.71), rgba(231, 22, 27, 0.71)), url(img/category2.jpeg)
+}
+
+.homeshop {
+  position: absolute;
+  width: 109px;
+  height: 24px;
+  left: 172px;
+  top: 158px;
+
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.grid_product {
+  width: 301px;
+  height: 368px;
 }

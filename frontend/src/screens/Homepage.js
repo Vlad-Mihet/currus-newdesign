@@ -36,14 +36,63 @@ function Homepage() {
                         </div>
                     </div>
                     <div className="group_61">
+                        <div className="rectangle-47">
 
+                        </div>
+                        <div className="rectangle-48">
+
+                        </div>
+                        <div className="wearealways">
+                            We are always Ready to ehelp 24X7 for Free..!!!
+                        </div>
                     </div>
                     <div className="group_62">
+                        <div className="rectangle-47">
+                            
+                        </div>
+                        <div className="shoppingisconvenient">
+                            Shopping is Convenient, Easy and Hassle-Free..!!
+                        </div>
+                        <div className="rectangle-48">
 
+                        </div>
                     </div>
                     <div className="group_63">
-                        
+                        <div className="rectangle-47">
+                            
+                        </div>
+                        <div className="everythingyouhate">
+                            Everything you hate about commuting. Solved..!
+                        </div>  
+                        <div className="rectangle-48">
+
+                        </div>                    
                     </div>
+                </div>
+                <div className="homepage_img">
+                    <div className="ellipse_3">
+
+                    </div>
+                </div>
+
+            </div>
+            <div className="calltoaction">
+                <div className="rectangle-49">
+
+                </div>
+                <div className="signuptonewsletter">
+                    Sign Up to Newsletter
+                </div>
+                <div className="getallthelatest">
+                    Get all the latest information on Discounts, Sales, and Offers
+                </div>
+                <div className="group-66">
+                    <div className="rectangle-50">
+
+                    </div>
+                    <input className="enteryouremail" placeholder="Enter your e-mail" />
+                    <button style={{width: "150px", height: "50px"}}></button>
+                 
                 </div>
 
             </div>
