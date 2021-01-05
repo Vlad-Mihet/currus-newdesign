@@ -7,6 +7,8 @@ import { faGlobe, faLaptop, faHashtag, faAd, faAngry } from '@fortawesome/free-s
 import Homepage from './screens/Homepage'
 import Test from './screens/Test'
 import Shoppage from './screens/Shoppage'
+import Productpage from './screens/Productpage'
+import Aboutuspage from './screens/Aboutuspage'
 
 function App() {
   return (
@@ -59,6 +61,8 @@ function App() {
         </header>
         <Route path="/" component={Homepage} exact></Route>
         <Route path="/shop" component={Shoppage}></Route> 
+        <Route path="/product/:id" component={Productpage} exact></Route>
+        <Route path="/aboutus" component={Aboutuspage}></Route>
         <Route path="/test" component={Test}></Route>
         <footer className="footer">
           <div className="contact_us">

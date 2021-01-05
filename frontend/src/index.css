@@ -802,7 +802,10 @@ footer {
 .shoppage {
   position: absolute;
   display: grid;
-  grid-template-columns: 301px 301px 301px;
+  grid-template-columns: repeat(3, 301px);
+  grid-gap: 49px;
+  grid-template-rows: 396px 296px;
+  grid-auto-rows: 296px;
 }
 
 .breadcrumbs {
@@ -839,7 +842,136 @@ footer {
   color: #FFFFFF;
 }
 
-.grid_product {
-  width: 301px;
-  height: 368px;
+
+
+.product_gridview {
+  position: relative;
+  top: 350px;
+  grid-row: span 1;
+  grid-column: span 1;
+
+}
+
+.product_gridview:hover {
+  
+  background: #E7161B;
+
+  
+ 
+}
+.rectangle_76 {
+  position: absolute;
+  border: 1px solid rgba(102, 102, 102, 0.2);
+  box-sizing: border-box;
+}
+
+.product_gridview .sale {
+  position: absolute;
+  left: 0%;
+  right: 83.39%;
+  top: 5.98%;
+  bottom: 88.59%;
+  
+  background: #E7161B;
+}
+
+.product_gridview .sale .sale_text {
+  position: absolute;
+  
+  top: 5.43%;
+  bottom: 88.04%;
+
+  color: #FFFFFF;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.product_detail {
+
+  position: relative;
+  top: 280px;
+
+  display: grid;
+  grid-template-columns: 100px 475px 451px;
+  grid-column-gap: 170px 25px 50px 169px;
+  grid-template-rows: 396px 296px;
+  grid-auto-rows: 296px;
+}
+
+.welcome_to_currus {
+  position: relative;
+  top: 280px;
+
+  
+}
+
+.welcome_to_currus .rectangle-249 {
+  position: absolute;
+  width: 30.66px;
+  height: 2px;
+  top: 30px;
+  
+
+  background: #E7161B;
+
+}
+
+.welcome_to_currus_text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: rgba(102, 102, 102, 0.85)
+}
+
+.welcome_currus_image_one {
+  float: right;
+  width: 425px;
+  height: 230px;
+  background: url('img/61670.jpeg');
+}
+
+.welcome_currus_text_description {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+}
+
+.welcome_currus_image_two {
+  background: url('./img/26de61983a.jpeg');
+  float: left;
+  width: 200px;
+  height: 292px;
+  top: 535px;
+}
+
+.welcome_currus_image_three {
+  background: url('./img/fa53cb9684.jpeg');
+  float: left;
+  width: 200px;
+  height: 292px;
+  top: 535px;
+}
+
+.welcome_currus_text_description_two {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #666666;
+
+  width: 650px;
+  height: 292px;
 }
