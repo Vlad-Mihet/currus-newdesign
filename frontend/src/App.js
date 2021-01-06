@@ -12,6 +12,7 @@ import Aboutuspage from './screens/Aboutuspage'
 import { Blogpage } from './screens/Blogpage'
 import Faqpage from './screens/Faqpage'
 import Dealerpage from './screens/Dealerpage'
+import Contactuspage from './screens/Contactuspage'
 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
                       <li><Link to="/blog">Blog</Link></li>
                       <li><Link to="/faq">FAQ</Link></li>
                       <li><Link to="/dealer">Dealers</Link></li>
-                      <li>Contact Us</li>
+                      <li><Link to="/contactus">Contact Us</Link></li>
                     </ul>
                   </nav>
                   <div className="login_cart">
@@ -70,6 +71,7 @@ function App() {
           <Route path="/blog" component={Blogpage} exact></Route>
           <Route path="/faq" component={Faqpage} exact></Route>
           <Route path="/dealer" component={Dealerpage} exact></Route>
+          <Route path="/contactus" component={Contactuspage} exact></Route>
           <Route path="/test" component={Test}></Route>
         </Switch>
         <footer className="footer">
