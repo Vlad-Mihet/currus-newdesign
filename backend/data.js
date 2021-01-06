@@ -47,6 +47,17 @@ const data = {
             shipping: 'To qualify',
             onSale: true
         },
+    ],
+    blogs: [
+        {
+            title: 'Fulfill Your Need for SPeed with the Currus Panther Electric Scooter',
+            content: 'If you think electric scooters are good only for local communiting and cannot offer high speed, think again.',
+            date: Date.now(),
+            author: 'Rachird Farissi',
+            tags: [
+                   'e-scooter', 'post', 'accessories'
+            ]
+        }
     ]
 }
 

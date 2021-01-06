@@ -2,6 +2,8 @@ import express from 'express'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import productRouter from './routers/productRouter.js';
+import blogRouter from './routers/blogRouter.js';
+import dealerRouter from './routers/dealerRouter.js'
 
 dotenv.config()
 
@@ -15,7 +17,9 @@ mongoose.connect(process.env.MONGODB_URL, {
     useCreateIndex: true
 })
 
-app.use('/api/products', productRouter)
+app.use('/api/products', productRouter);
+app.use('/api/blogs', blogRouter);
+app.use('/api/dealers', dealerRouter)
 
 
 app.get('/', (req, res) => {

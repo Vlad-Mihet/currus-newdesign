@@ -233,6 +233,7 @@ footer {
   display: flex;
   flex-direction: row;
   list-style: none;
+  z-index: 90;
 
 
   top: 41.11%;
@@ -974,4 +975,28 @@ footer {
 
   width: 650px;
   height: 292px;
+}
+
+.blogpage {
+  position: absolute;
+  top: 250px;
+
+}
+
+.blogpage aside {
+  position: absolute;
+  width: 277px;
+  height: 717px;
+  left: 470px;
+  top: 220x;
+}
+
+.faq {
+  position: absolute;
+  top: 298px;
+}
+
+.dealer {
+  position: absolute;
+  top: 300px;
 }

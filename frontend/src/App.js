@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { BrowserRouter, Link, Route } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faLaptop, faHashtag, faAd, faAngry } from '@fortawesome/free-solid-svg-icons'
 
@@ -9,6 +9,9 @@ import Test from './screens/Test'
 import Shoppage from './screens/Shoppage'
 import Productpage from './screens/Productpage'
 import Aboutuspage from './screens/Aboutuspage'
+import { Blogpage } from './screens/Blogpage'
+import Faqpage from './screens/Faqpage'
+import Dealerpage from './screens/Dealerpage'
 
 function App() {
   return (
@@ -44,11 +47,11 @@ function App() {
                   </div>
                   <nav className="navigation">
                     <ul>
-                      <li>Shop</li>
-                      <li>About Us</li>
-                      <li>Blog</li>
-                      <li>FAQ</li>
-                      <li>Dealers</li>
+                      <li><Link to="/shop">Shop</Link></li>
+                      <li><Link to="/aboutus">About Us</Link></li>
+                      <li><Link to="/blog">Blog</Link></li>
+                      <li><Link to="/faq">FAQ</Link></li>
+                      <li><Link to="/dealer">Dealers</Link></li>
                       <li>Contact Us</li>
                     </ul>
                   </nav>
@@ -59,11 +62,16 @@ function App() {
                 </div>
             </div>
         </header>
-        <Route path="/" component={Homepage} exact></Route>
-        <Route path="/shop" component={Shoppage}></Route> 
-        <Route path="/product/:id" component={Productpage} exact></Route>
-        <Route path="/aboutus" component={Aboutuspage}></Route>
-        <Route path="/test" component={Test}></Route>
+        <Switch>
+          <Route path="/" component={Homepage} exact></Route>
+          <Route path="/shop" component={Shoppage}></Route> 
+          <Route path="/product/:id" component={Productpage} exact></Route>
+          <Route path="/aboutus" component={Aboutuspage}></Route>
+          <Route path="/blog" component={Blogpage} exact></Route>
+          <Route path="/faq" component={Faqpage} exact></Route>
+          <Route path="/dealer" component={Dealerpage} exact></Route>
+          <Route path="/test" component={Test}></Route>
+        </Switch>
         <footer className="footer">
           <div className="contact_us">
               <div className="CONTACT">Contact Us</div>

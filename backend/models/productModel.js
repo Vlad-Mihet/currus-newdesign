@@ -8,6 +8,8 @@ const productSchema = new mongoose.Schema({
     specification: { type: String },
     shipping: { type: String },
     onSale: { type: Boolean, required: true }
+}, {
+    timestamps: true
 });
 
 const Product = mongoose.model('Product', productSchema);
