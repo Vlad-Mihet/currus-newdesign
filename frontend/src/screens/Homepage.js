@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
 import Banner from '../components/Banner'
 import Category from '../components/Category'
+import OurBlog from '../components/OurBlog'
+import RideRiskFree from '../components/RideRiskFree'
 
 function Homepage() {
 
-    const [category1, setCategory1] = useState('E-SCOOTERS')
-    const [c1d, setC1d] = useState('nulla id quam varius')
-    const [category2, setCategory2] = useState('ACCESSORIES')
-    const [c2d, setC2d] = useState('nulla id quam varius')
-
     return (
-        <div>
+        <div id="homepage">
             <Banner />
-            <Category title={category1} description={c1d}/>
+            <Category />
             <div className="whythebest">
                 <div className="whycurrus">
                     Why Currus is the best way to get around
@@ -96,6 +93,8 @@ function Homepage() {
                 </div>
 
             </div>
+            <RideRiskFree />
+            <OurBlog />
 
         </div>
     )

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe, faLaptop, faHashtag, faAd, faAngry } from '@fortawesome/free-solid-svg-icons'
+
 
 import Homepage from './screens/Homepage'
 import Test from './screens/Test'
@@ -13,68 +12,27 @@ import { Blogpage } from './screens/Blogpage'
 import Faqpage from './screens/Faqpage'
 import Dealerpage from './screens/Dealerpage'
 import Contactuspage from './screens/Contactuspage'
+import Header from './components/Header'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="grid-container">
-        <header className="menu">
-          <div className="top-menu">
-            <div className="rectangle-1">
-              <div className="language">
-                ENG FRA
-              </div>
-              <div className="currency">
-                USD EUR 
-              </div>
-              <div className="free-shipping-from">
-                Free shipping from Los Angeles across USA &amp; CANADA
-              </div>
-              <div className="social-icons">
-                <FontAwesomeIcon icon={faLaptop} />
-                <FontAwesomeIcon icon={faHashtag} />
-                <FontAwesomeIcon icon={faAd} />
-                <FontAwesomeIcon icon={faAngry} />
-              </div>
-            </div>
-          </div>
-            <div className="header-menu">
-                <div className="rectangle-5">
-                  <div className="logo">
-
-                  </div>
-                  <div className="search">
-
-                  </div>
-                  <nav className="navigation">
-                    <ul>
-                      <li><Link to="/shop">Shop</Link></li>
-                      <li><Link to="/aboutus">About Us</Link></li>
-                      <li><Link to="/blog">Blog</Link></li>
-                      <li><Link to="/faq">FAQ</Link></li>
-                      <li><Link to="/dealer">Dealers</Link></li>
-                      <li><Link to="/contactus">Contact Us</Link></li>
-                    </ul>
-                  </nav>
-                  <div className="login_cart">
-                    <div>Login</div>
-                    <div>Cart</div>
-                  </div>
-                </div>
-            </div>
-        </header>
-        <Switch>
-          <Route path="/" component={Homepage} exact></Route>
-          <Route path="/shop" component={Shoppage}></Route> 
-          <Route path="/product/:id" component={Productpage} exact></Route>
-          <Route path="/aboutus" component={Aboutuspage}></Route>
-          <Route path="/blog" component={Blogpage} exact></Route>
-          <Route path="/faq" component={Faqpage} exact></Route>
-          <Route path="/dealer" component={Dealerpage} exact></Route>
-          <Route path="/contactus" component={Contactuspage} exact></Route>
-          <Route path="/test" component={Test}></Route>
-        </Switch>
-        <footer className="footer">
+        <Header />
+        <div className="wrap">
+          <Switch>
+            <Route path="/" component={Homepage} exact></Route>
+            <Route path="/shop" component={Shoppage}></Route> 
+            <Route path="/product/:id" component={Productpage} exact></Route>
+            <Route path="/aboutus" component={Aboutuspage}></Route>
+            <Route path="/blog" component={Blogpage} exact></Route>
+            <Route path="/faq" component={Faqpage} exact></Route>
+            <Route path="/dealer" component={Dealerpage} exact></Route>
+            <Route path="/contactus" component={Contactuspage} exact></Route>
+            <Route path="/test" component={Test}></Route>
+          </Switch>
+        </div>
+        <footer>
           <div className="contact_us">
               <div className="CONTACT">Contact Us</div>
               <div className="ifyouhave">

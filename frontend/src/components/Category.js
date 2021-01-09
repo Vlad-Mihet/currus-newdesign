@@ -2,30 +2,25 @@ import React from 'react'
 
 function Category(props) {
 
-    const { title, description } = props
 
     return (
         <div className="category_page">
-            <div className="category">
-                <div className="rectangle-19">
-                    <div className="category_title">
-                        {title}
-                    </div>
-                    <div className="category_description">
-                        {description}
-                    </div>
+            <section id="category1">
+                <div className="category_title">
+                    E-SCOOTERS
                 </div>
-            </div>
-            <div className="category">
-                <div className="rectangle-19">
-                    <div className="category_title">
-                        {title}
-                    </div>
-                    <div className="category_description">
-                        {description}
-                    </div>
+                <div className="category_description">
+                    Nulla id quarm varius, faucibus
                 </div>
-            </div>
+            </section>
+            <section id="category2">
+                <div className="category_title">
+                    Accessories
+                </div>
+                <div className="category_description">
+                    Nulla id quam
+                </div>
+            </section>
         </div>       
     )
 }

@@ -58,6 +58,9 @@ const data = {
                    'e-scooter', 'post', 'accessories'
             ]
         }
+    ],
+    users: [
+        
     ]
 }
 
