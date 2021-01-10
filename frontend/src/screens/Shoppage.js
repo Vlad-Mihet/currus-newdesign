@@ -10,7 +10,8 @@ const Shoppage = () => {
 
     const [grid, setGrid] = useState(false)
     const productList = useSelector((state) => state.productList);
-    const { loading, error, products } = productList;
+    const { loading, error, products, filteredProducts } = productList;
+   
 
     const dispatch = useDispatch()
 
@@ -18,17 +19,18 @@ const Shoppage = () => {
         dispatch(listProducts())
     }, [dispatch])
 
+    const displayedProducts = filteredProducts ? filteredProducts : products
+
     return (
         <div className="shoppage">
             <Breadcrumbs />
-            <Filter grid={grid} />
+            <Filter grid={grid}/>
             {
-            products &&
-            products.map((product) => (
+            displayedProducts &&
+            displayedProducts.map((product) => (
                 <ProductGridView key={product._id} product={product}></ProductGridView>
             ))
-            }
-        
+            }      
         </div>
     )
 }

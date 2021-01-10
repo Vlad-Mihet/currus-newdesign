@@ -4,6 +4,7 @@ const ProductGridView = ({ product }) => {
     return (
         <div className="product_gridview">
             {product.name}
+            {product.price}
             <div className="rectangle_76">
 
             </div>

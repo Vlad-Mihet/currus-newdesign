@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { PRODUCT_DETAILS_FAIL, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_DETAILS_SUCCESS, PRODUCT_DETAILS_REQUEST } from '../constants/productConstants';
+import { PRODUCT_DETAILS_FAIL, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_DETAILS_SUCCESS, PRODUCT_DETAILS_REQUEST, FILTER_PRODUCTS_BY_SIZE } from '../constants/productConstants';
 
 export const listProducts = () => async (dispatch) => {
     dispatch({
@@ -26,4 +26,15 @@ export const detailsProduct = (productId) => async (dispatch) => {
     } catch (error) {
         dispatch({ type: PRODUCT_DETAILS_FAIL, payload: error.response && error.response.data.message ? error.response.data.message : error.message, })
     }
+}
+
+export const filterProducts = (products, category) => (dispatch) => {
+    dispatch({
+        type: FILTER_PRODUCTS_BY_SIZE,
+        payload: {
+            products: products,
+            filteredProducts: category === "" ? products: products.filter(product => product.category === category)
+        }
+        
+    })
 }
