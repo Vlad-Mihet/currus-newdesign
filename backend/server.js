@@ -5,6 +5,7 @@ import productRouter from './routers/productRouter.js';
 import blogRouter from './routers/blogRouter.js';
 import dealerRouter from './routers/dealerRouter.js'
 import userRouter from './routers/userRouter.js';
+import contactRouter from './routers/contactRouter.js';
 
 dotenv.config()
 
@@ -21,7 +22,8 @@ mongoose.connect(process.env.MONGODB_URL, {
 app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/blogs', blogRouter);
-app.use('/api/dealers', dealerRouter)
+app.use('/api/dealers', dealerRouter);
+app.use('/api/contacts', contactRouter)
 
 
 app.get('/', (req, res) => {

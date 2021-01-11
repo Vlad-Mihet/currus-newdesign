@@ -1,43 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import Breadcrumbs from '../components/Breadcrumbs'
+import React, { useEffect } from 'react'
+import Breadcrumbs from '../components/Breadcrumbs';
 import { useDispatch, useSelector } from 'react-redux'
-import { listBlogs } from '../redux/actions/blogActions'
-import BlogPost from '../components/BlogPost'
+import { detailsBlog } from '../redux/actions/blogActions'
+import BlogAside from '../components/BlogAside';
 
-
-
-export const Blogpage = () => {
+const Blogpage = (props) => {
 
     const dispatch = useDispatch()
+    const blogId = props.match.params.id
 
-    const blogList = useSelector(state => state.blogList);
-    const { blogs, loading, error } = blogList;
+    const blogDetails = useSelector(state => state.blogDetails)
+    const { loading, blog, error } = blogDetails
 
     useEffect(() => {
-        dispatch(listBlogs());
-    }, [dispatch])
+        dispatch(detailsBlog(blogId))
+    }, [dispatch, blogId])
 
     return (
         <>
         <Breadcrumbs />
-        <div className="blogpage">
-            
-            BlogPage
-            <aside>
-                <h3>Latest Post</h3>
+        <div className="blogpostpage">
 
-                <h3>Blog Categories</h3>
+        { blog && (
+        <div>
+            {blog.title}
+            {blog.content}
+            {blog.author}
+        </div>
+        )}
 
-                <h3>Tags</h3>
-
-                <h3>Archives</h3>
-            </aside>
-            <article>
-                { blogs && blogs.map(blog => (
-                    <BlogPost key={blog._id} blog={blog}></BlogPost>
-                ))}
-            </article>
+            <BlogAside />
         </div>
         </>
     )
 }
+
+export default Blogpage;

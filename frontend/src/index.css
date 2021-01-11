@@ -885,13 +885,19 @@ header .social-icons {
   color: rgba(102, 102, 102, 0.85)
 }
 
-.shoppage {
+.shoppage_gridview {
   position: absolute;
   display: grid;
   grid-template-columns: repeat(3, 301px);
   grid-gap: 49px;
   grid-template-rows: 396px 296px;
   grid-auto-rows: 296px;
+}
+
+.shoppage_listview {
+  position: absolute;
+  display: grid;
+  
 }
 
 .breadcrumbs {
@@ -928,6 +934,10 @@ header .social-icons {
   color: #FFFFFF;
 }
 
+.shop_section {
+  position: absolute;
+  top: 300px;
+}
 
 .filter {
   position: absolute;
@@ -935,6 +945,7 @@ header .social-icons {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  z-index: 10;
 }
 
 .product_gridview {
@@ -948,10 +959,18 @@ header .social-icons {
 .product_gridview:hover {
   
   background: #E7161B;
-
   
  
 }
+
+.product_listview {
+  box-sizing: border-box;
+  display: block;
+  width: 1050px;
+  height: 296px;
+
+}
+
 .rectangle_76 {
   position: absolute;
   border: 1px solid rgba(102, 102, 102, 0.2);
@@ -1069,6 +1088,17 @@ header .social-icons {
   height: 292px;
 }
 
+.blogpostpage {
+  position: absolute;
+  top: 250px;
+}
+
+.blog_aside {
+  float: right;
+  position: absolute;
+  top: 250px;
+}
+
 .blogpage {
   position: absolute;
   top: 250px;
@@ -1093,7 +1123,12 @@ header .social-icons {
   top: 300px;
 }
 
-.contactus {
+.dealer_form {
+  
+}
+
+.contactus, .privacy, .terms {
   position: absolute;
   top: 298px;
 }
+

@@ -1,20 +1,27 @@
+import { diskStorage } from 'multer';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
+import { createDealer } from '../redux/actions/dealerActions';
 
 const Dealerpage = () => {
 
 
-    const [first, setFirst] = useState('')
-    const [last, setLast] = useState('')
+    const dispatch = useDispatch()
+
+    const [firstname, setFirst] = useState('')
+    const [lastname, setLast] = useState('')
     const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
-    const [store, setStore] = useState('')
+    const [phonenumber, setPhone] = useState('')
+    const [storeaddress, setStore] = useState('')
     const [message, setMessage] = useState('')
+    const [submitted, setSubmitted] = useState(false)
   
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('submitted')
+        setSubmitted(!submitted)
+        dispatch(createDealer({ firstname, lastname, email, phonenumber, storeaddress, message }))
     }
 
     return (
@@ -29,17 +36,19 @@ const Dealerpage = () => {
                 Give us a call?
             </p>
             <h1>Tell us about yourself</h1>
-            <form onSubmit={handleSubmit}>
-                <input id="first" type="text" value={first} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
-                <input id="last" type="text" value={last} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
+            { !submitted ? (
+            <form className="dealer_form" onSubmit={handleSubmit}>
+                <input id="firstname" type="text" value={firstname} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
+                <input id="lastname" type="text" value={lastname} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
                 <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail"></input>
-                <input id="phone" type="text" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone Number"></input>
-                <input id="store" type="text" value={store} onChange={(e) => setStore(e.target.value)} placeholder="Store Address"></input>
+                <input id="phonenumber" type="text" value={phonenumber} onChange={(e) => setPhone(e.target.value)} placeholder="Phone Number"></input>
+                <input id="storeaddress" type="text" value={storeaddress} onChange={(e) => setStore(e.target.value)} placeholder="Store Address"></input>
                 <input id="message" type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Your Message"></input>
                 <button type="submit">
                     Buy Now
                 </button>
             </form>
+            ) : <h2>Thanks for your submission.</h2>}
             </div>
         </>
     )

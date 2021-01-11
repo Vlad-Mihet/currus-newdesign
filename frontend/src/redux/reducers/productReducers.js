@@ -1,4 +1,4 @@
-import { FILTER_PRODUCTS_BY_SIZE, PRODUCT_DETAILS_FAIL, PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS } from "../constants/productConstants";
+import { FILTER_PRODUCTS_BY_SIZE, PRODUCT_DETAILS_FAIL, PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, SORT_PRODUCTS_BY_PRICE } from "../constants/productConstants";
 
 export const productListReducer = (state = {products: [], loading: true}, action) => {
     switch (action.type) {
@@ -10,6 +10,8 @@ export const productListReducer = (state = {products: [], loading: true}, action
             return { loading: false, error: action.payload }
         case FILTER_PRODUCTS_BY_SIZE:
             return { products: action.payload.products, filteredProducts: action.payload.filteredProducts }
+        case SORT_PRODUCTS_BY_PRICE:
+            return { ...state, filteredProducts: action.payload.filteredProducts }
         default:
             return state;
     }

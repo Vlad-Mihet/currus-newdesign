@@ -17,4 +17,14 @@ blogRouter.get('/seed', expressAsyncHandler(async (req, res) => {
 
 }))
 
+blogRouter.get('/:id', expressAsyncHandler(async (req, res) => {
+    const blog = await Blog.findById(req.params.id)
+
+    if (blog) {
+        res.send(blog)
+    } else {
+        res.send(404).send({ message: 'Blog Not Found' })
+    }
+}))
+
 export default blogRouter;

@@ -8,10 +8,11 @@ import { listProducts } from '../redux/actions/productActions';
 
 const Shoppage = () => {
 
-    const [grid, setGrid] = useState(false)
+    const [grid, setGrid] = useState(true)
     const productList = useSelector((state) => state.productList);
     const { loading, error, products, filteredProducts } = productList;
    
+    const [sort, setSort] = useState("")
 
     const dispatch = useDispatch()
 
@@ -24,13 +25,15 @@ const Shoppage = () => {
     return (
         <div className="shoppage">
             <Breadcrumbs />
-            <Filter grid={grid}/>
+            <Filter grid={grid} setGrid={setGrid} sort={sort} setSort={setSort} />
+            <div className={grid ? "shoppage_gridview" : "shoppage_listview"}>
             {
             displayedProducts &&
             displayedProducts.map((product) => (
-                <ProductGridView key={product._id} product={product}></ProductGridView>
+                <ProductGridView grid={grid} key={product._id} product={product}></ProductGridView>
             ))
-            }      
+            }
+            </div>
         </div>
     )
 }

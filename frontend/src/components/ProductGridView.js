@@ -1,8 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { Link } from 'react-router-dom'
 
-const ProductGridView = ({ product }) => {
+const ProductGridView = ({ grid, product }) => {
+
+ 
+
     return (
-        <div className="product_gridview">
+        <div className={grid ? "product_gridview" : "product_listview"}>
             {product.name}
             {product.price}
             <div className="rectangle_76">
@@ -15,6 +19,11 @@ const ProductGridView = ({ product }) => {
                 </div>
             </div>
             )}
+            <Link to={`/product/${product._id}`}>
+                <button>
+                    View Details
+                </button>
+            </Link>
         </div>
     )
 }

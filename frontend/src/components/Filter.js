@@ -1,18 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { filterProducts, listProducts } from '../redux/actions/productActions';
+import { filterProducts, listProducts, sortProducts } from '../redux/actions/productActions';
 
-const Filter = ({ grid }) => {
+const Filter = ({ grid, setGrid, sort, setSort }) => {
 
     const [def, setDef] = useState("starter")
+  
+
     const productList = useSelector(state => state.productList);
     const { products, filteredProducts, loading } = productList;
 
     const dispatch = useDispatch()
 
     useEffect(() => {
+
         dispatch(filterProducts(products, def))
-    }, [dispatch, def])
+
+
+    }, [def])
+
+    useEffect(() => {
+        if(filteredProducts) {
+            dispatch(sortProducts(filteredProducts, sort))
+        } else {
+            dispatch(sortProducts(products, sort))
+        }
+    }, [sort])
+
+
 
     const displayedProducts = filteredProducts ? filteredProducts : products
 
@@ -36,14 +51,16 @@ const Filter = ({ grid }) => {
                 </select>
             </div>
             <div className="filter-sort">
-                <select>
-                    <option value="lowest">Lowest</option>
-                    <option value="highest">Highest</option>
+                <select onChange={(e) => {setSort(e.target.value)}}>
+                    <option value="">Choose Sort</option>
+                    <option value="lowest">Lowest First</option>
+                    <option value="highest">Highest First</option>
                 </select>
             </div>
             <div className="gridlist">
-                <button onClick={console.log('')}>grid</button>
-                <button onClick={console.log('')}>list</button>
+                <button onClick={()=>setGrid(true)}>grid</button>
+                <button onClick={()=>
+                    setGrid(false)}>list</button>
             </div>
         </div>
     )

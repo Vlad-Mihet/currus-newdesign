@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
+import Reviews from '../components/Reviews'
 import { detailsProduct } from '../redux/actions/productActions'
 
 const Productpage = (props) => {
@@ -27,6 +28,7 @@ const Productpage = (props) => {
         </div>
         )}
         </div>
+        <Reviews />
         </>
     )
 }
