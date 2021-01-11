@@ -60,7 +60,11 @@ const data = {
         }
     ],
     users: [
-        
+        {
+            name: 'Sample User',
+            email: 'sample@sample.com',
+            password: '1234567'
+        }
     ]
 }
 

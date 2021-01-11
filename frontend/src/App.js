@@ -15,8 +15,14 @@ import Dealerpage from './screens/Dealerpage'
 import Contactuspage from './screens/Contactuspage'
 import Privacypage from './screens/Privacypage'
 import Termsandconditions from './screens/Termsandconditions'
+import Safety from './screens/Safety'
+import Affiliate from './screens/Affiliate'
+import Shipping from './screens/Shipping'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Returnpage from './screens/Returnpage'
+import Warranty from './screens/Warranty'
+import Login from './screens/Login'
 
 function App() {
   return (
@@ -36,7 +42,14 @@ function App() {
             <Route path="/contactus" component={Contactuspage} exact></Route>
             <Route path="/privacypolicy" component={Privacypage}></Route>
             <Route path="/termsandconditions" component={Termsandconditions}></Route>
+            <Route path="/safety" component={Safety}></Route>
+            <Route path="/affiliateprogram" component={Affiliate}></Route>
+            <Route path="/shipping" component={Shipping}></Route>
+            <Route path="/return" component={Returnpage}></Route>
+            <Route path="/warranty" component={Warranty}></Route>
             <Route path="/test" component={Test}></Route>
+            <Route path="/login" component={Login}></Route>
+
           </Switch>
         </div>
         <Footer />

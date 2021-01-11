@@ -1,6 +1,7 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import bcrypt from 'bcrypt'
+import data from '../data.js'
 
 import User from '../models/userModel.js';
 
@@ -10,6 +11,38 @@ const userRouter = express.Router();
 userRouter.get('/', expressAsyncHandler(async (req, res) => {
     const users = await User.find({})
     res.send(users)
+}))
+
+userRouter.get('/seed', expressAsyncHandler(async (req, res) => {
+    await User.remove({});
+    const createdUsers = await User.insertMany(data.users)
+    res.send(createdUsers)
+}))
+
+userRouter.post('/register', expressAsyncHandler(async (req, res) => {
+    const user = new User({ name: req.body.name, email: req.body.email, password: bcrypt.hasnSync(req,body.password, 8)});
+    const createdUser = await user.save();
+
+    res.send({
+        _id: createdUser._id,
+        name: createdUser.name,
+        email: createdUser.email,
+        token: generateToken(createdUser)
+    })
+}))
+
+userRouter.post('/signin', expressAsyncHandler(async (req, res) => {
+    const user = await User.findOne({email: req.body.email});
+    if(user) {
+        if (bcrypt.compareSync(req.body.password, user.password)) {
+            res.send({
+                _id: user._id,
+                name: user.name
+            })
+            return;
+        }
+    }
+    res.status(401).send({message: 'Invalid email or password' })
 }))
 
 export default userRouter;

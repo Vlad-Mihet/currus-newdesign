@@ -6,6 +6,9 @@ import blogRouter from './routers/blogRouter.js';
 import dealerRouter from './routers/dealerRouter.js'
 import userRouter from './routers/userRouter.js';
 import contactRouter from './routers/contactRouter.js';
+import newsletterRouter from './routers/newsletterRouter.js'
+import returnRouter from './routers/returnRouter.js'
+import warrantyRouter from './routers/warrantyRouter.js'
 
 dotenv.config()
 
@@ -23,7 +26,10 @@ app.use('/api/users', userRouter);
 app.use('/api/products', productRouter);
 app.use('/api/blogs', blogRouter);
 app.use('/api/dealers', dealerRouter);
-app.use('/api/contacts', contactRouter)
+app.use('/api/contacts', contactRouter);
+app.use('/api/newsletters', newsletterRouter);
+app.use('/api/returns', returnRouter);
+app.use('/api/warranties', warrantyRouter);
 
 
 app.get('/', (req, res) => {

@@ -15,10 +15,10 @@ const Footer = () => {
               Support
             </div>
             <ul>
-              <li>Contact Us</li>
-              <li>Shipping</li>
-              <li>Return</li>
-              <li>Warranty &amp; Registration</li>
+              <li><Link to='/contactus'>Contact Us</Link></li>
+              <li><Link to='/shipping'>Shipping</Link></li>
+              <li><Link to='/return'>Return</Link></li>
+              <li><Link to='/warranty'>Warranty &amp; Registration</Link></li>
               <li>FAQ</li>
             </ul>
           </div>
@@ -27,12 +27,11 @@ const Footer = () => {
               Legal
             </div>
             <ul>
-            
               <li><Link to='/privacypolicy'>Privacy Policy</Link></li>
               <li><Link to='/termsandconditions'>Terms and Conditions</Link></li>
-              <li>Currus Safety</li>
-              <li>Affiliate Program</li>
-              <li>Become a Dealer</li>
+              <li><Link to='/safety'>Currus Safety</Link></li>
+              <li><Link to='/affiliateprogram'>Affiliate Program</Link></li>
+              <li><Link to='/dealer'>Become a Dealer</Link></li>
             </ul>
           </div>
           <div className="newsletter">

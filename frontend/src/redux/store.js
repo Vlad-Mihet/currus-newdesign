@@ -4,6 +4,7 @@ import { productDetailsReducer, productFilterReducer, productListReducer } from 
 import { blogListReducer, blogDetailsReducer } from './reducers/blogReducers'
 import { dealerCreateReducer } from './reducers/dealerReducers';
 import { contactCreateReducer } from './reducers/contactReducers'
+import { returnCreateReducer } from './reducers/returnReducers'
 
 const initialState = {};
 
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
     blogList: blogListReducer,
     blogDetails: blogDetailsReducer,
     dealerCreate: dealerCreateReducer,
-    contactCreate: contactCreateReducer
+    contactCreate: contactCreateReducer,
+    returnCreate: returnCreateReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

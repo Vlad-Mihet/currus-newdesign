@@ -7,6 +7,8 @@ const Termsandconditions = () => {
         <Breadcrumbs />
         <div className="terms">
             <h1>Terms and Conditions</h1>
+
+            <h1>By placing an order on our site</h1>
         </div>
         </>
     )

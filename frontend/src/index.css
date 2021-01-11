@@ -1127,7 +1127,7 @@ header .social-icons {
   
 }
 
-.contactus, .privacy, .terms {
+.contactus, .privacy, .terms, .affiliate, .safety, .shipping, .return, .warranty {
   position: absolute;
   top: 298px;
 }
