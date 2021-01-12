@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { createWarranty } from '../redux/actions/warrantyActions'
 
 const Warranty = () => {
 
+    const dispatch = useDispatch()
     const [submitted, setSubmitted] = useState(false)
 
     const [first, setFirst] = useState('')
@@ -23,6 +26,7 @@ const Warranty = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true)
+        dispatch(createWarranty({ first, last, order, email, phone, date, address1, address2, city, state, zip, country, model, message }))
     }
 
     return (

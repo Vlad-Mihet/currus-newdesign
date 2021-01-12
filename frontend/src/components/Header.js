@@ -45,7 +45,7 @@ const Header = () => {
                     </ul>
                   </nav>
                   <div className="login_cart">
-                    <div>Login</div>
+                    <div><Link to='/login'>Login</Link></div>
                     <div>Cart</div>
                   </div>
                 </div>

@@ -20,7 +20,7 @@ userRouter.get('/seed', expressAsyncHandler(async (req, res) => {
 }))
 
 userRouter.post('/register', expressAsyncHandler(async (req, res) => {
-    const user = new User({ name: req.body.name, email: req.body.email, password: bcrypt.hasnSync(req,body.password, 8)});
+    const user = new User({ name: req.body.name, email: req.body.email, password: bcrypt.hashSync(req,body.password, 8)});
     const createdUser = await user.save();
 
     res.send({

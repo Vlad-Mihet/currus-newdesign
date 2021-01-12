@@ -1,7 +1,7 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js';
-import Return from '../models/contactModel.js'
+import Return from '../models/returnModel.js'
 
 const returnRouter = express.Router();
 

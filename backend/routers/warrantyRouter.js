@@ -1,7 +1,7 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js';
-import Warranty from '../models/newsletterModel.js'
+import Warranty from '../models/warrantyModel.js'
 
 const warrantyRouter = express.Router();
 

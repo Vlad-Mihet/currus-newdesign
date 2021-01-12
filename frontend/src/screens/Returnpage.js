@@ -50,19 +50,19 @@ const Returnpage = () => {
                 <input id="serial" type="text" value={serial} onChange={(e) => setSerial(e.target.value)} placeholder="Item Serial#"></input>
                 <input id="quantity" type="text" value={quantity} onChange={(e) => setQuantity(e.target.value)} placeholder="Quantity"></input>
                 <input id="date" type="text" value={date} onChange={(e) => setDate(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="first" type="text" value={first} onChange={(e) => setFirst(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="last" type="text" value={last} onChange={(e) => setLast(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="phone" type="text" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="order" type="text" value={order} onChange={(e) => setOrder(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="street" type="text" value={street} onChange={(e) => setStreet(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="address" type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="city" type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="state" type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="zip" type="text" value={zip} onChange={(e) => setZip(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="country" type="text" value={country} onChange={(e) => setCountry(e.target.value)} placeholder="dd/mm/yyyy"></input>
-                <input id="message" type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="dd/mm/yyyy"></input>
+                <input id="first" type="text" value={first} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
+                <input id="last" type="text" value={last} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
+                <input id="company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Company Name"></input>
+                <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"></input>
+                <input id="phone" type="text" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone Number"></input>
+                <input id="order" type="text" value={order} onChange={(e) => setOrder(e.target.value)} placeholder="Order Number"></input>
+                <input id="street" type="text" value={street} onChange={(e) => setStreet(e.target.value)} placeholder="Street Address"></input>
+                <input id="address" type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Address"></input>
+                <input id="city" type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="City"></input>
+                <input id="state" type="text" value={state} onChange={(e) => setState(e.target.value)} placeholder="State"></input>
+                <input id="zip" type="text" value={zip} onChange={(e) => setZip(e.target.value)} placeholder="zip"></input>
+                <input id="country" type="text" value={country} onChange={(e) => setCountry(e.target.value)} placeholder="country"></input>
+                <input id="message" type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Your message"></input>
                 <button type="submit">
                     Submit
                 </button>

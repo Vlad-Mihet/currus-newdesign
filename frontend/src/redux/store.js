@@ -1,10 +1,11 @@
 import { createStore, compose, applyMiddleware, combineReducers } from 'redux'
 import thunk from 'redux-thunk';
-import { productDetailsReducer, productFilterReducer, productListReducer } from './reducers/productReducers';
+import { productDetailsReducer, productListReducer } from './reducers/productReducers';
 import { blogListReducer, blogDetailsReducer } from './reducers/blogReducers'
 import { dealerCreateReducer } from './reducers/dealerReducers';
 import { contactCreateReducer } from './reducers/contactReducers'
 import { returnCreateReducer } from './reducers/returnReducers'
+import { warrantyCreateReducer } from './reducers/warrantyReducers';
 
 const initialState = {};
 
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
     blogDetails: blogDetailsReducer,
     dealerCreate: dealerCreateReducer,
     contactCreate: contactCreateReducer,
-    returnCreate: returnCreateReducer
+    returnCreate: returnCreateReducer,
+    warrantyCreate: warrantyCreateReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

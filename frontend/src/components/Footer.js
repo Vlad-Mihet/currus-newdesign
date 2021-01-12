@@ -19,7 +19,7 @@ const Footer = () => {
               <li><Link to='/shipping'>Shipping</Link></li>
               <li><Link to='/return'>Return</Link></li>
               <li><Link to='/warranty'>Warranty &amp; Registration</Link></li>
-              <li>FAQ</li>
+              <li><Link to='/faq'>FAQ</Link></li>
             </ul>
           </div>
           <div className="legal">
