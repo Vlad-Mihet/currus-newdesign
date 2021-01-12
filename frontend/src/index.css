@@ -321,21 +321,6 @@ header .social-icons {
 
 }
 
-.language {
-  position: absolute;
-  left: 11.81%;
-  right: 83.4%;
-  top: 20%;
-  bottom: 20%;
-
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 600;
-  color: #FFFFFF;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-}
 
 .free-shipping-from {
   position: absolute;
@@ -1127,7 +1112,7 @@ header .social-icons {
   
 }
 
-.contactus, .privacy, .terms, .affiliate, .safety, .shipping, .return, .login, .warranty {
+.contactus, .privacy, .terms, .affiliate, .safety, .shipping, .return, .login, .warranty, .register, .logout, .cart {
   position: absolute;
   top: 298px;
 }

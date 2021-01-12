@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { subscribe } from '../redux/actions/subscribeActions'
 
 const Footer = () => {
+
+    const [email, setEmail] = useState('')
+
+    const dispatch = useDispatch();
+
+    const subscri = useSelector(state => state.subscribe)
+
+    const { sub, loading, error } = subscri
+
+    const subscribeHandler = () => {
+      dispatch(subscribe(email))
+      setEmail('')
+    }
+
+    useEffect(() => {
+
+    }, [])
+
     return (
         <footer>
           <div className="contact_us">
@@ -41,8 +61,12 @@ const Footer = () => {
             <div className="newsletter-description">
               Subscribe to the weekly newsletter for all the latest updates
             </div>
-            <input placeholder="Enter your email"></input>
-            <button>Subscribe</button>
+            { !sub ? (
+            <div>
+            <input onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"></input>
+            <button onClick={subscribeHandler}>Subscribe</button>
+            </div> ) : <h1>Thank you for subscribing. </h1>
+            }
           </div>
           <div className="copyright">
             Copyright 2021 Currusmotors. All Rights Reservred

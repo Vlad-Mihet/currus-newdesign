@@ -1,18 +1,33 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe, faLaptop, faHashtag, faAd, faAngry } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { signout } from '../redux/actions/userActions'
+import { changeCurrency } from '../redux/actions/currencyActions'
 
 const Header = () => {
+
+    const dispatch = useDispatch()
+    const userSignin = useSelector(state => state.userSignin)
+    const { userInfo } = userSignin
+
+    const handleLogout = () => {
+      dispatch(signout())
+    }
+
+    const handleCurrency = (currency) => {
+      dispatch(changeCurrency(currency))
+    }
+
+
     return (
         <header className="menu">
           <div className="top-menu">
             <div className="rectangle-1">
-              <div className="language">
-                ENG FRA
-              </div>
               <div className="currency">
-                USD EUR 
+                <button onClick={() => handleCurrency('USD')}>USD</button>
+                <button onClick={() => handleCurrency('CAD')}>CAD</button>
               </div>
               <div className="free-shipping-from">
                 Free shipping from Los Angeles across USA &amp; CANADA
@@ -44,10 +59,16 @@ const Header = () => {
                       <li><Link to="/contactus">Contact Us</Link></li>
                     </ul>
                   </nav>
+                  
                   <div className="login_cart">
-                    <div><Link to='/login'>Login</Link></div>
-                    <div>Cart</div>
+                    { !userInfo ? (
+                    <div><Link to='/login'>Login</Link></div> ) :
+                    (
+                    <div><Link to='/logout' onClick={handleLogout}>Logout</Link></div>
+                    ) }
+                    <div><Link to='/cart'>Cart</Link></div>
                   </div>
+
                 </div>
             </div>
         </header>

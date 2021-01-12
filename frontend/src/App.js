@@ -23,6 +23,9 @@ import Footer from './components/Footer'
 import Returnpage from './screens/Returnpage'
 import Warranty from './screens/Warranty'
 import Login from './screens/Login'
+import Register from './screens/Register'
+import Logout from './screens/Logout'
+import Cartpage from './screens/Cartpage'
 
 function App() {
   return (
@@ -48,7 +51,10 @@ function App() {
             <Route path="/return" component={Returnpage}></Route>
             <Route path="/warranty" component={Warranty}></Route>
             <Route path="/test" component={Test}></Route>
+            <Route path="/cart/:id?" component={Cartpage}></Route>
+            <Route path="/register" component={Register}></Route>
             <Route path="/login" component={Login}></Route>
+            <Route path="/logout" component={Logout}></Route>
 
           </Switch>
         </div>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { signin } from '../redux/actions/userActions'
 
 const Login = () => {
 
@@ -11,7 +13,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-    
+        dispatch(signin(email, password))
     }
 
     return (
@@ -30,7 +32,10 @@ const Login = () => {
                 </div>
                 <div>
                     <label />
-                    <button className="primary" type="submit">Sign In</button>
+                    <button className="primary" type="submit">LOGIN</button>
+                </div>
+                <div>
+                    Don't have an account? <Link to='/register'>Create your account</Link>
                 </div>
             </form>
         </div>
