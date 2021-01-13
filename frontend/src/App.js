@@ -28,6 +28,7 @@ import Logout from './screens/Logout'
 import Cartpage from './screens/Cartpage'
 import Orderpage from './screens/Orderpage'
 import Checkoutpage from './screens/Checkoutpage'
+import Thankyou from './screens/Thankyou'
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
             <Route path="/order" component={Orderpage}></Route>
             <Route path="/checkout" component={Checkoutpage}></Route>
             <Route path="/register" component={Register}></Route>
+            <Route path="/thankyou" component={Thankyou}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/logout" component={Logout}></Route>
 

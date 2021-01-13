@@ -9,6 +9,7 @@ import contactRouter from './routers/contactRouter.js';
 import newsletterRouter from './routers/newsletterRouter.js'
 import returnRouter from './routers/returnRouter.js'
 import warrantyRouter from './routers/warrantyRouter.js'
+import orderRouter from './routers/orderRouter.js'
 
 dotenv.config()
 
@@ -30,6 +31,11 @@ app.use('/api/contacts', contactRouter);
 app.use('/api/newsletters', newsletterRouter);
 app.use('/api/returns', returnRouter);
 app.use('/api/warranties', warrantyRouter);
+app.use('/api/orders', orderRouter)
+
+app.get('/api/config/paypal', (req, res) => {
+    res.send(process.env.PAYPAL_CLIENT_ID)
+})
 
 
 app.get('/', (req, res) => {

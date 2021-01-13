@@ -4,7 +4,8 @@ const orderSchema = new mongoose.Schema({
     orderItems: [{
         name: { type: String, required: true },
         qty: { type: Number, required: true },
-        price: { type: Number, required: true },
+        priceUSD: { type: Number, required: true },
+        priceCAD: { type: Number, required: true },
         product: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Product',

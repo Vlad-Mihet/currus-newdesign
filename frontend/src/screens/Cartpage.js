@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { addToCart, applyCoupon, saveShipping, saveTotal, saveCoupon } from '../redux/actions/cartActions'
+import { addToCart, applyCoupon, saveShipping, saveTotal, saveCoupon, saveSubtotal } from '../redux/actions/cartActions'
 
 const Cartpage = (props) => {
 
@@ -39,6 +39,7 @@ const Cartpage = (props) => {
     const handleCheckout = () => {
         dispatch(saveShipping(shippingPrice))
         dispatch(saveCoupon(afterCouponPrice))
+        dispatch(saveSubtotal(itemsPrice))
         dispatch(saveTotal(totalPrice))
         props.history.push('/checkout')
     }

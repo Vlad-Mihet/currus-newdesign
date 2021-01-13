@@ -10,9 +10,24 @@ orderRouter.get('/', expressAsyncHandler(async (req, res) => {
     res.send(orders)
 }))
 
+orderRouter.get('/:id', expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id)
+
+    if (order) {
+        res.send(order)
+    } else {
+        res.send(404).send({ message: 'Order Not Found' })
+    }
+}))
+
 orderRouter.post('/', expressAsyncHandler(async (req, res) => {
     const order = new Order({
-    
+        orderItems: req.body.orderItems,
+        shippingAddress: req.body.shippingAddress,
+        itemsPrice: req.body.itemsPrice,
+        shippingPrice: req.body.shippingPrice,
+        totalPrice: req.body.totalPrice,
+        buyer: req.body.buyer
     });
 
     const createdOrder = await order.save();

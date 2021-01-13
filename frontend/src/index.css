@@ -1112,7 +1112,7 @@ header .social-icons {
   
 }
 
-.contactus, .privacy, .terms, .affiliate, .safety, .shipping, .return, .login, .warranty, .register, .logout, .cart, .order, .checkout {
+.contactus, .privacy, .terms, .affiliate, .safety, .shipping, .return, .login, .warranty, .register, .logout, .cart, .order, .checkout, .thankyou {
   position: absolute;
   top: 298px;
 }
