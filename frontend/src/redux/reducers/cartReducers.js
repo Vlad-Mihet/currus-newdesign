@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM } from '../constants/cartConstants'
+import { CART_ADD_ITEM, SAVE_SHIPPING, SAVE_TOTAL, SAVE_COUPON } from '../constants/cartConstants'
 
 export const cartReducer = (state = { cartItems: []}, action) => {
     switch (action.type) {
@@ -14,6 +14,12 @@ export const cartReducer = (state = { cartItems: []}, action) => {
                 }
             }
             return { ...state, cartItems: [...state.cartItems, item] };
+        case SAVE_SHIPPING:
+            return { ...state, shippingPrice: action.payload }
+        case SAVE_TOTAL:
+            return { ...state, totalPrice: action.payload }
+        case SAVE_COUPON:
+            return { ...state, afterCouponPrice: action.payload }
         default:
             return state;
     }

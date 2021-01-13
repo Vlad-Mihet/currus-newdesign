@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { checkout } from '../redux/actions/cartActions'
 
-const Checkoutpage = () => {
+const Checkoutpage = (props) => {
+
+    const dispatch = useDispatch()
 
     const [first, setFirst] = useState('')
     const [last, setLast] = useState('')
@@ -15,12 +18,32 @@ const Checkoutpage = () => {
     const [phonenumber, setPhoneNumber] = useState('')
 
     const cart = useSelector(state => state.cart)
-    const { cartItems } = cart
+    const { cartItems, totalPrice, shippingPrice, afterCouponPrice } = cart
+
+    const itemsPrice = cartItems.reduce((a, c) => a + c.priceUSD * c.qty, 0)
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        const order = {
+            orderItems: cartItems,
+            shippingAddress: {
+                address: address,
+                town: town,
+                state: state,
+                postcode: postcode
+            },
+            itemsPrice: itemsPrice,
+           
+        }
+        dispatch(checkout(order))
+        props.history.push('/thankyou')
+    }
 
     return (
         <div className="checkout">
             <h2>Billing Details</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input id="first" type="text" value={first} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
                 <input id="last" type="text" value={last} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
                 <input id="company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Comapny Name"></input>
@@ -41,6 +64,18 @@ const Checkoutpage = () => {
                         </li>
                     ))}
                     </ul>
+                <h1>Subtotal</h1>
+                <h4>
+                ${afterCouponPrice}
+                </h4>
+                <h1>Shipping</h1>
+                <h4>
+                ${shippingPrice}
+                </h4>
+                <h1>Cart Totals</h1>
+                <h4>
+                ${totalPrice}
+                </h4>
                     <button type="submit">Place Order</button>
                 </aside>
             </form>
