@@ -1,10 +1,23 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Banner from '../components/Banner'
 import Category from '../components/Category'
 import OurBlog from '../components/OurBlog'
 import RideRiskFree from '../components/RideRiskFree'
+import { subscribe } from '../redux/actions/subscribeActions'
 
 function Homepage() {
+
+    const [email, setEmail] = useState('')
+    const dispatch = useDispatch();
+
+    const subscri = useSelector(state => state.subscribe)
+    const { sub, loading, error } = subscri
+
+    const subscribeHandler = () => {
+      dispatch(subscribe(email))
+      setEmail('')
+    }
 
     return (
         <div id="homepage">
@@ -87,8 +100,12 @@ function Homepage() {
                     <div className="rectangle-50">
 
                     </div>
-                    <input className="enteryouremail" placeholder="Enter your e-mail" />
-                    <button style={{width: "150px", height: "50px"}}></button>
+            { !sub ? (
+            <div>
+            <input onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"></input>
+            <button onClick={subscribeHandler}>Subscribe</button>
+            </div> ) : <h1>Thank you for subscribing. </h1>
+            }
                  
                 </div>
 

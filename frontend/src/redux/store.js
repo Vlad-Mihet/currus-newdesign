@@ -9,6 +9,7 @@ import { warrantyCreateReducer } from './reducers/warrantyReducers';
 import { userSigninReducer, userRegisterReducer } from './reducers/userReducers';
 import { subscribeReducer } from './reducers/subscribeReducers'
 import { currencyReducer } from './reducers/currencyReducers'
+import { cartReducer } from './reducers/cartReducers'
 
 const initialState = {};
 
@@ -24,7 +25,8 @@ const rootReducer = combineReducers({
     userSignin: userSigninReducer,
     userRegister: userRegisterReducer,
     subscribe: subscribeReducer,
-    currency: currencyReducer
+    currency: currencyReducer,
+    cart: cartReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

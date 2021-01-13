@@ -26,6 +26,8 @@ import Login from './screens/Login'
 import Register from './screens/Register'
 import Logout from './screens/Logout'
 import Cartpage from './screens/Cartpage'
+import Orderpage from './screens/Orderpage'
+import Checkoutpage from './screens/Checkoutpage'
 
 function App() {
   return (
@@ -52,6 +54,8 @@ function App() {
             <Route path="/warranty" component={Warranty}></Route>
             <Route path="/test" component={Test}></Route>
             <Route path="/cart/:id?" component={Cartpage}></Route>
+            <Route path="/order" component={Orderpage}></Route>
+            <Route path="/checkout" component={Checkoutpage}></Route>
             <Route path="/register" component={Register}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/logout" component={Logout}></Route>

@@ -1112,8 +1112,13 @@ header .social-icons {
   
 }
 
-.contactus, .privacy, .terms, .affiliate, .safety, .shipping, .return, .login, .warranty, .register, .logout, .cart {
+.contactus, .privacy, .terms, .affiliate, .safety, .shipping, .return, .login, .warranty, .register, .logout, .cart, .order, .checkout {
   position: absolute;
   top: 298px;
+}
+
+.order_form {
+  position: absolute;
+  top: 300px;
 }
 
