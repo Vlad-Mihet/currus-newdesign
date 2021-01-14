@@ -65,10 +65,10 @@ const Checkoutpage = (props) => {
             itemsPrice: afterCouponPrice,
             shippingPrice: shippingPrice,
             totalPrice: totalPrice,
-            buyer: userInfo ? userInfo._id : '000000000000000000000000'
+            buyer: userInfo ? userInfo._id : '000000000000000000000000',
+            isDelivered: false
            
         }
-        console.log(order)
         dispatch(checkout(order))
         props.history.push('/thankyou')
     }

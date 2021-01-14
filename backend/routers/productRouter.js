@@ -28,5 +28,40 @@ productRouter.get('/:id', expressAsyncHandler(async (req, res) => {
     }
 }))
 
+productRouter.get('/:id/reviews', expressAsyncHandler(async (req, res) => {
+    const product = await Product.findById(req.params.id)
+    const reviews = product.reviews
+    if(reviews) {
+        res.send(reviews)
+    }
+    else {
+        res.status(404).send({message: 'Reviews Not Found'})
+    }
+}))
+
+productRouter.post('/:id/reviews', expressAsyncHandler(async (req, res) => {
+    const productId = req.params.id;
+    const product = await Product.findById(productId)
+    
+    if (product) {
+        const review = {
+            author: req.body.author,
+            stars: Number(req.body.stars),
+            pros: req.body.pros,
+            cons: req.body.cons,
+            detail: req.body.detail
+        }
+        product.reviews.push(review)
+        product.numReviews = product.reviews.length;
+        product.rating = product.reviews.reduce((a, c) => c.rating + a, 0) / product.reviews.length
+        const updatedProduct = await product.save()
+        res.status(201).send({ message: 'Review created', reviews: updatedProduct.reviews });
+
+    } else {
+        res.status(404).send({ message: 'Product Not Found' });
+    }
+
+}))
+
 
 export default productRouter;

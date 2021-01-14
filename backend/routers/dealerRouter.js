@@ -22,7 +22,7 @@ dealerRouter.post('/', expressAsyncHandler(async (req, res) => {
 
     const createdDealer = await dealer.save();
     
-    res.send({message: 'Dealer Created', dealer: createdDealer })
+    res.status(201).send({message: 'Dealer Created', dealer: createdDealer })
 }))
 
 export default dealerRouter

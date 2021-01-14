@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
+import { trackOrder } from '../redux/actions/orderActions'
 
 const Orderpage = () => {
 
+    const dispatch = useDispatch()
+
+    const [id, setId] = useState('')
+    const [email, setEmail] = useState('')
+
+    const orderDetails = useSelector(state => state.orderDetails)
+    const { order } = orderDetails;
+
     const handleSubmit = (e) => {
         e.preventDefault()
+        dispatch(trackOrder(id))
     }
     
     return (
@@ -12,14 +23,17 @@ const Orderpage = () => {
             <Breadcrumbs />
             <div className="order">
                 <h1>Order Tracking</h1>
-
-                <form className="order_form" onSubmit={handleSubmit}> 
-                    <input placeholder="Order Id"></input>
-                    <input placeholder="Billing"></input>
+                {!order ? (<form className="order_form" onSubmit={handleSubmit}> 
+                    <input placeholder="Order Id" onChange={e => setId(e.target.value)}></input>
+                    <input placeholder="Billing Email" onChange={e => setEmail(e.target.value)} ></input>
                     <button type="submit">
                         Track
                     </button>
-                </form>
+                </form>) : (
+                    <h1>
+                        {order.itemsPrice} here is the items price
+                    </h1>
+                )}
             </div>
         </>
     )

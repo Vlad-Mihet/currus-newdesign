@@ -9,7 +9,15 @@ const productSchema = new mongoose.Schema({
     quantity: { type: Number, required: true },
     specification: { type: String },
     shipping: { type: String },
-    onSale: { type: Boolean, required: true }
+    onSale: { type: Boolean, required: true },
+    reviews: [{ 
+        author: { type: String, required: true },
+        stars: { type: Number, required: true },
+        pros: { type: String },
+        cons: { type: String },
+        detail: { type: String, required: true }
+    }],
+    numReviews: { type: Number }
 }, {
     timestamps: true
 });

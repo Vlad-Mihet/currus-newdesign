@@ -49,7 +49,7 @@ const Productpage = (props) => {
         </div>
         )}
         </div>
-        <Reviews />
+        <Reviews productId={productId} product={product}/>
         </>
     )
 }

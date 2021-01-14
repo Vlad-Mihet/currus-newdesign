@@ -1,5 +1,5 @@
 import Axios from 'axios';
-import { PRODUCT_DETAILS_FAIL, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_DETAILS_SUCCESS, PRODUCT_DETAILS_REQUEST, FILTER_PRODUCTS_BY_SIZE, SORT_PRODUCTS_BY_PRICE } from '../constants/productConstants';
+import { PRODUCT_DETAILS_FAIL, PRODUCT_LIST_FAIL, PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_DETAILS_SUCCESS, PRODUCT_DETAILS_REQUEST, FILTER_PRODUCTS_BY_SIZE, SORT_PRODUCTS_BY_PRICE, REVIEW_CREATE_FAIL, REVIEW_CREATE_REQUEST, REVIEW_CREATE_SUCCESS, REVIEW_LIST_REQUEST, REVIEW_LIST_SUCCESS, REVIEW_LIST_FAIL } from '../constants/productConstants';
 
 export const listProducts = () => async (dispatch) => {
     dispatch({
@@ -10,7 +10,6 @@ export const listProducts = () => async (dispatch) => {
         const { data } = await Axios.get('/api/products/')
         dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data })
     } catch (error) {
-        console.log(error)
         dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message })
     }
 }
@@ -55,4 +54,34 @@ export const sortProducts = (products, sort) => (dispatch) => {
             filteredProducts: sortedProducts
         }
     })
+}
+
+export const listReviews = (id) => async (dispatch) => {
+    dispatch({
+        type: REVIEW_LIST_REQUEST
+    });
+
+    try {
+        const { data } = await Axios.get(`/api/products/${id}/reviews`)
+        dispatch({ type: REVIEW_LIST_SUCCESS, payload: data })
+    } catch (error) {
+        dispatch({ type: REVIEW_LIST_FAIL, payload: error.message })
+    }
+}
+
+export const createReview = (id, review) => async (dispatch) => {
+    dispatch({
+        type: REVIEW_CREATE_REQUEST
+    })
+
+    try {
+        const { data } = await Axios.post(`/api/products/${id}/reviews`, review)
+        dispatch({
+            type: REVIEW_CREATE_SUCCESS, payload: data
+        })
+    } catch (error) {
+        dispatch({
+            type: REVIEW_CREATE_FAIL, payload: error.response && error.response.data.message ? error.response.data.message : error.message
+        })
+    }
 }

@@ -35,7 +35,7 @@ returnRouter.post('/', expressAsyncHandler(async (req, res) => {
 
     const createdReturn = await rma.save();
     
-    res.send({message: 'Return Form Submitted', returns: createdReturn })
+    res.status(201).send({message: 'Return Form Submitted', returns: createdReturn })
 }))
 
 export default returnRouter

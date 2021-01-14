@@ -17,7 +17,7 @@ newsletterRouter.post('/', expressAsyncHandler(async (req, res) => {
 
     const createdNewsletter = await newsletter.save();
     
-    res.send({message: 'Subscribed to Newsletter', newsletter: createdNewsletter })
+    res.status(201).send({message: 'Subscribed to Newsletter', newsletter: createdNewsletter })
 }))
 
 export default newsletterRouter

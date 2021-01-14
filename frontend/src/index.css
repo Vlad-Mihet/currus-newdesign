@@ -1122,3 +1122,7 @@ header .social-icons {
   top: 300px;
 }
 
+.reviews {
+  position: absolute;
+  z-index: 99
+}
