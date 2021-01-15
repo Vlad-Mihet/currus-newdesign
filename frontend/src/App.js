@@ -30,9 +30,12 @@ import Orderpage from './screens/Orderpage'
 import Checkoutpage from './screens/Checkoutpage'
 import Thankyou from './screens/Thankyou'
 
+import MessengerCustomerChat from 'react-messenger-customer-chat'
+
 function App() {
   return (
     <BrowserRouter>
+      <MessengerCustomerChat appId="2880331345560627" pageId="103025775108325"/>
       <div className="grid-container">
         <Header />
         <div className="wrap">

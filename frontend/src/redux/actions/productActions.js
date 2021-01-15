@@ -27,12 +27,16 @@ export const detailsProduct = (productId) => async (dispatch) => {
     }
 }
 
-export const filterProducts = (products, category) => (dispatch) => {
+export const filterProducts = (products, category, low, high) => (dispatch) => {
+    if (low === null || low === undefined || low === "" ) { low = 0 }
+    if (high === null || high === undefined || high === "" ) { high = 1000000 }
+    if (category === null || category === undefined || category === '') { category = "" }
     dispatch({
         type: FILTER_PRODUCTS_BY_SIZE,
         payload: {
             products: products,
-            filteredProducts: category === "" ? products: products.filter(product => product.category === category)
+            filteredProducts: category === '' ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high)) :
+                                                products.filter(product => (product.category === category) && (product.priceUSD > low) && (product.priceUSD < high))
         }
         
     })
@@ -42,9 +46,13 @@ export const sortProducts = (products, sort) => (dispatch) => {
     const sortedProducts = products.slice();
 
     if(sort === "lowest") {
-        sortedProducts.sort((a,b) => a.price - b.price)
+        sortedProducts.sort((a,b) => a.priceUSD - b.priceUSD)
     } else if (sort === "highest") {
-        sortedProducts.sort((a,b) => b.price - a.price)
+        sortedProducts.sort((a,b) => b.priceUSD - a.priceUSD)
+    } else if (sort === "alphabet") {
+        sortedProducts.sort((a,b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()))
+    } else if (sort === "alphabetz") {
+        sortedProducts.sort((a,b) => b.name.toUpperCase().localeCompare(a.name.toUpperCase()))
     }
 
     dispatch({

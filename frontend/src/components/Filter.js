@@ -4,7 +4,10 @@ import { filterProducts, listProducts, sortProducts } from '../redux/actions/pro
 
 const Filter = ({ grid, setGrid, sort, setSort }) => {
 
-    const [def, setDef] = useState("starter")
+    const [def, setDef] = useState("")
+
+    const [low, setLow] = useState(0)
+    const [high, setHigh] = useState(100000)
   
 
     const productList = useSelector(state => state.productList);
@@ -14,10 +17,10 @@ const Filter = ({ grid, setGrid, sort, setSort }) => {
 
     useEffect(() => {
 
-        dispatch(filterProducts(products, def))
+        dispatch(filterProducts(products, def, low, high))
 
 
-    }, [def])
+    }, [def, low, high])
 
     useEffect(() => {
         if(filteredProducts) {
@@ -40,11 +43,16 @@ const Filter = ({ grid, setGrid, sort, setSort }) => {
             <div>
 
             </div>
+            <div className="filter-price">
+                <input id="low" type="number" onChange={e => {
+                    setLow(e.target.value)}}></input>
+                <input id="high" type="number" onChange={e => setHigh(e.target.value)}></input>
+            </div>
             <div className="filter-categories">
                 <select onChange={(e) => {
                     setDef(e.target.value)
                     }}>
-                    <option value="">Choose Something</option>
+                    <option value="">Select categories</option>
                     <option value="E-Scooter">E-scooter</option>
                     <option value="Kick Stand">Kick Stand</option>
                     <option value="Helmet">Helmet</option>
@@ -55,6 +63,8 @@ const Filter = ({ grid, setGrid, sort, setSort }) => {
                     <option value="">Choose Sort</option>
                     <option value="lowest">Lowest First</option>
                     <option value="highest">Highest First</option>
+                    <option value="alphabet">A-Z</option>
+                    <option value="alphabetz">Z-A</option>
                 </select>
             </div>
             <div className="gridlist">
