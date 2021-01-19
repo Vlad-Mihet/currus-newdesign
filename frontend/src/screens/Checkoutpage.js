@@ -4,10 +4,16 @@ import { checkout } from '../redux/actions/cartActions'
 import { Link } from 'react-router-dom'
 import { PayPalButton } from 'react-paypal-button-v2'
 import Axios from 'axios'
+import { loadStripe } from '@stripe/stripe-js'
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
+
+const stripePromise = loadStripe(process.env.STRIPE_KEY)
 
 const Checkoutpage = (props) => {
 
     const dispatch = useDispatch()
+    const stripe = useStripe()
+    const elements = useElements()
 
     const [first, setFirst] = useState('')
     const [last, setLast] = useState('')
@@ -73,6 +79,20 @@ const Checkoutpage = (props) => {
         props.history.push('/thankyou')
     }
 
+    const handleStripe = async (e) => {
+        const stripe = await stripePromise;
+        const response = await Axios.post('/create-checkout-session')
+        const session = await response.json()
+
+        const result = await stripe.redirectToCheckout({
+            sessionId: session.id,
+        })
+
+        if (result.error) {
+
+        }
+    }
+
     return (
         <div className="checkout">
             <h2>Billing Details</h2>
@@ -123,10 +143,12 @@ const Checkoutpage = (props) => {
                 <PayPalButton amount={totalPrice}
                     onSuccess={handleSuccessPayment}>
                 </PayPalButton>
+
                 </div>
                     <button type="submit">Place Order</button>
                 </aside>
             </form>
+            <button role="link" onClick={handleStripe}>Stripe CheckOut</button>
         </div>
     )
 }
