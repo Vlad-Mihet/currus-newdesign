@@ -1,0 +1,31 @@
+.redband {
+  
+    background: $darkRed;
+    display: flex;
+    flex-direction: row;
+  
+
+    #signuptonewsletter {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 24px;
+       
+        
+        
+        position: relative;
+        margin: 29px 4.7vw 29px 12vw;
+        
+        color: #FFFFFF;
+    }
+
+    #getallthelatest {
+        width: 300px;
+        margin: 29px 50px 29px 4.7vw;
+    }
+
+    #subscribe {
+        margin: 29px 10vw 29px 50px;
+    }
+}

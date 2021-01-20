@@ -1,0 +1,55 @@
+.rideriskfree {
+
+    position: relative;
+
+    img {
+        width: 30.90vw;
+        height: 735px;
+
+    }
+
+    #riskfree {
+        width: 535px;
+        height: 100px;
+        transform: rotate(-90deg);
+        background: $darkRed;
+
+        position: absolute;
+        margin: 0;
+        top: 300px;
+        left: 20px;
+    }
+
+    #sections {
+        position: absolute;
+        display: grid;
+        grid-template-columns: 22.57vw 22.57vw;
+        grid-template-rows: 20vh 20vh;
+        grid-template-areas: 
+        "one two"
+        "three four";
+        column-gap: 10px;
+        row-gap: 10px;
+        
+        width: 62.5%;
+        top: 100px;
+        left: 350px;
+
+        #one {
+            grid-area: one;
+        }
+
+        #two {
+            grid-area: two;
+        }
+
+        #three {
+            grid-area: three;
+        }
+
+        #four {
+            grid-area: four;
+        }
+    }
+
+}

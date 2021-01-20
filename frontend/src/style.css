@@ -12,6 +12,22 @@ body {
   padding: 0;
 }
 
+.banner {
+  position: relative;
+}
+.banner .banner_carousel {
+  position: relative;
+}
+.banner .text-banner {
+  position: absolute;
+  top: 16.66%;
+  left: 8.235%;
+  width: 26.04%;
+  height: 56%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+}
+
 header {
   position: relative;
 }
@@ -59,23 +75,8 @@ header .menu nav ul li {
 }
 header .menu .login_cart {
   position: absolute;
-  left: 75.62%;
-}
-
-.banner {
-  position: relative;
-}
-.banner .banner_carousel {
-  position: relative;
-}
-.banner .text-banner {
-  position: absolute;
-  top: 16.66%;
-  left: 8.235%;
-  width: 26.04%;
-  height: 56%;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 3px;
+  right: 10vw;
+  top: 1vh;
 }
 
 .category_page {
@@ -106,6 +107,102 @@ header .menu .login_cart {
   text-align: center;
   text-transform: uppercase;
   color: rgba(102, 102, 102, 0.85);
+  margin: 0px 0px 30px 0px;
+}
+.whythebest .title {
+  width: 37.5%;
+  margin: 0px 0px 0px 12.14%;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+}
+.whythebest p {
+  width: 37.5%;
+  margin: 0px 0px 0px 12.14%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+
+.redband {
+  background: #E7161B;
+  display: flex;
+  flex-direction: row;
+}
+.redband #signuptonewsletter {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 24px;
+  position: relative;
+  margin: 29px 4.7vw 29px 12vw;
+  color: #FFFFFF;
+}
+.redband #getallthelatest {
+  width: 300px;
+  margin: 29px 50px 29px 4.7vw;
+}
+.redband #subscribe {
+  margin: 29px 10vw 29px 50px;
+}
+
+.rideriskfree {
+  position: relative;
+}
+.rideriskfree img {
+  width: 30.9vw;
+  height: 735px;
+}
+.rideriskfree #riskfree {
+  width: 535px;
+  height: 100px;
+  transform: rotate(-90deg);
+  background: #E7161B;
+  position: absolute;
+  margin: 0;
+  top: 300px;
+  left: 20px;
+}
+.rideriskfree #sections {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 22.57vw 22.57vw;
+  grid-template-rows: 20vh 20vh;
+  grid-template-areas: "one two" "three four";
+  column-gap: 10px;
+  row-gap: 10px;
+  width: 62.5%;
+  top: 100px;
+  left: 350px;
+}
+.rideriskfree #sections #one {
+  grid-area: one;
+}
+.rideriskfree #sections #two {
+  grid-area: two;
+}
+.rideriskfree #sections #three {
+  grid-area: three;
+}
+.rideriskfree #sections #four {
+  grid-area: four;
+}
+
+.ourblog h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(102, 102, 102, 0.85);
+}
+.ourblog #second {
+  width: 1100px;
 }
 
 /*# sourceMappingURL=style.css.map */
