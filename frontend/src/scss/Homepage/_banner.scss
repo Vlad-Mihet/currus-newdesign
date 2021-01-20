@@ -1,0 +1,21 @@
+.banner {
+    position: relative;
+
+  
+
+    .banner_carousel {
+        position: relative;
+     
+    }
+
+    .text-banner {
+        position: absolute;
+        top: 16.66%;
+        left: 8.235%;
+        width: 26.04%;
+        height: 56%;
+
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 3px;
+    }
+}

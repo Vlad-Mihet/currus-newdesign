@@ -6,10 +6,14 @@ const Banner = () => {
     return (
         <div className="banner">
             <div className="banner_carousel">
-            <Carousel>
+            <Carousel showThumbs={false}>
                 <div>
-                    <img src="images/banner_picture.jpeg" />
-                    <p className="legend">Legend 1</p>
+                    <img src="images/1.jpeg" />
+                    <p className="legend">First Picture Legend</p>
+                </div>
+                <div>
+                    <img src="images/2.jpeg" />
+                    <p className="legend">Second Picture Legend</p>
                 </div>
             </Carousel>
             </div>

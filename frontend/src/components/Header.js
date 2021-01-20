@@ -22,9 +22,9 @@ const Header = () => {
 
 
     return (
-        <header className="menu">
-          <div className="top-menu">
-            <div className="rectangle-1">
+        <header>
+          <div className="bar">
+       
               <div className="currency">
                 <button onClick={() => handleCurrency('USD')}>USD</button>
                 <button onClick={() => handleCurrency('CAD')}>CAD</button>
@@ -38,18 +38,18 @@ const Header = () => {
                 <FontAwesomeIcon icon={faAd} />
                 <FontAwesomeIcon icon={faAngry} />
               </div>
-            </div>
           </div>
-            <div className="header-menu">
-                <div className="rectangle-5">
+
+            <div className="menu">
+  
                   
                     <Link to="/">
-                      <div className="logo"></div>
+                      <img src="images/currus_logo.png" ></img>
                     </Link>
                   <div className="search">
 
                   </div>
-                  <nav className="navigation">
+                  <nav>
                     <ul>
                       <li><Link to="/shop">Shop</Link></li>
                       <li><Link to="/aboutus">About Us</Link></li>
@@ -70,7 +70,6 @@ const Header = () => {
                     <div><Link to='/cart'>Cart</Link></div>
                   </div>
 
-                </div>
             </div>
         </header>
     )

@@ -5,7 +5,7 @@ function Category(props) {
 
     return (
         <div className="category_page">
-            <section id="category1">
+            <section>
                 <div className="category_title">
                     E-SCOOTERS
                 </div>
@@ -13,7 +13,7 @@ function Category(props) {
                     Nulla id quarm varius, faucibus
                 </div>
             </section>
-            <section id="category2">
+            <section>
                 <div className="category_title">
                     Accessories
                 </div>
