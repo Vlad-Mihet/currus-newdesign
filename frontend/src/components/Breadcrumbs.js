@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-const Breadcrumbs = () => {
+const Breadcrumbs = (props) => {
+
+    const [t, setT] = useState('');
+
+
+
+    useEffect(() => {
+        setT(props.title.slice(1).toUpperCase())
+    }, [props]);
+
+    if(!props) {
+        return <h1>Loading...</h1>
+    }
+
     return (
         <div className="breadcrumbs">
             <div className="homeshop">
-                Home / Shop
+                {`HOME / ${t}`}
             </div>
         </div>
     )

@@ -2,11 +2,11 @@ import React from 'react'
 import Breadcrumbs from '../components/Breadcrumbs'
 
 
-const Aboutuspage = () => {
+const Aboutuspage = (props) => {
 
     return (
         <>
-        <Breadcrumbs />
+        <Breadcrumbs title={`${props.location.pathname}`} />
         <div className="welcome_to_currus">
             <div className="rectangle-249">
 

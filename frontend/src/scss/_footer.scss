@@ -1,5 +1,5 @@
 footer {
-
+    box-sizing: border-box;
     background: #393636;
 
 
@@ -7,7 +7,8 @@ footer {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         display: grid;
         grid-template-columns: 29.167vw 14.375vw 14.17vw 57.715vw;
-        grid-template-rows: 34vh;
+        height: 34vh;
+        box-sizing: border-box;
         grid-template-areas: 
         "contact support legal newsletter";
 
@@ -34,13 +35,29 @@ footer {
     }
 
     #two {
+        display: grid;
+        box-sizing: border-box;
         grid-template-columns: 35.69vw 18.47vw 45.84vw;
-        grid-template-rows: 16vh;
+        height: 16vh;
         grid-template-areas:
         "copyright social card";
 
         #copyright {
+            grid-area: copyright;
             padding: 60px 0px;
+            align-self: center;
+        }
+
+        #social_icons {
+            grid-area: social;
+            align-self: center;
+            justify-self: end;
+        }
+
+        #card {
+            grid-area: card;
+            justify-self: end;
+            align-self: center;
         }
     }
 }

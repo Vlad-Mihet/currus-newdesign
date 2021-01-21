@@ -6,7 +6,7 @@ import ProductGridView from '../components/ProductGridView';
 import { listProducts } from '../redux/actions/productActions';
 
 
-const Shoppage = () => {
+const Shoppage = (props) => {
 
     const [grid, setGrid] = useState(true)
     const productList = useSelector((state) => state.productList);
@@ -24,8 +24,9 @@ const Shoppage = () => {
 
     return (
         <div className="shoppage">
-            <Breadcrumbs />
+            <Breadcrumbs title={props.location.pathname} />
             <Filter grid={grid} setGrid={setGrid} sort={sort} setSort={setSort} />
+            <div id="wrapper">
             <div className={grid ? "shoppage_gridview" : "shoppage_listview"}>
             {
             displayedProducts &&
@@ -33,6 +34,7 @@ const Shoppage = () => {
                 <ProductGridView grid={grid} key={product._id} product={product}></ProductGridView>
             ))
             }
+            </div>
             </div>
         </div>
     )

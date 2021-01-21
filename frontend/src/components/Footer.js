@@ -2,6 +2,17 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { subscribe } from '../redux/actions/subscribeActions'
+import { Icon, InlineIcon } from '@iconify/react';
+import scFacebook from '@iconify/icons-ei/sc-facebook';
+import scInstagram from '@iconify/icons-ei/sc-instagram';
+import scTwitter from '@iconify/icons-ei/sc-twitter';
+import scYoutube from '@iconify/icons-ei/sc-youtube';
+import visaIcon from '@iconify/icons-logos/visa';
+import mastercardIcon from '@iconify/icons-logos/mastercard';
+import amexIcon from '@iconify/icons-logos/amex';
+import paypalIcon from '@iconify/icons-logos/paypal';
+
+
 
 const Footer = () => {
 
@@ -69,10 +80,16 @@ const Footer = () => {
             Copyright 2021 Currusmotors. All Rights Reservred
             </div>
             <div id="social_icons">
-
+              <Icon icon={scFacebook} style={{color: '#ffffff', fontSize: '24px'}} />
+              <Icon icon={scTwitter} style={{color: '#ffffff', fontSize: '24px'}} />
+              <Icon icon={scInstagram} style={{color: '#ffffff', fontSize: '24px'}} />
+              <Icon icon={scYoutube} style={{color: '#ffffff', fontSize: '24px'}} />
             </div>
             <div id="card">
-
+              <Icon icon={visaIcon} />
+              <Icon icon={mastercardIcon} />
+              <Icon icon={amexIcon} />
+              <Icon icon={paypalIcon} />
            </div>
           </div>
         </footer>

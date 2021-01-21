@@ -3,7 +3,7 @@ import Breadcrumbs from '../components/Breadcrumbs'
 import { useDispatch } from 'react-redux'
 import { createContact } from '../redux/actions/contactActions';
 
-const Contactuspage = () => {
+const Contactuspage = (props) => {
 
     const dispatch = useDispatch()
 
@@ -24,7 +24,7 @@ const Contactuspage = () => {
 
     return (
         <>
-        <Breadcrumbs />
+        <Breadcrumbs title={props.location.pathname} />
         <div className="contactus">
             <h1>We're here to help you</h1>
             <h4>Contact us in any convenient way and we will answer any questions.</h4>

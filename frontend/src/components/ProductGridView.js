@@ -10,12 +10,12 @@ const ProductGridView = ({ grid, product }) => {
         <div className={grid ? "product_gridview" : "product_listview"}>
             {product.name}
             {currency === ("CAD") ? product.priceCAD : product.priceUSD }
-            <div className="rectangle_76">
+            <img src={product.image}/>
 
-            </div>
+            
             {product.onSale && (
             <div className="sale">
-                <div className="sale_text">
+                <div id="sale_text">
                     Sale
                 </div>
             </div>

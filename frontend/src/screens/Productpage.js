@@ -25,7 +25,7 @@ const Productpage = (props) => {
 
     return (
         <>
-        <Breadcrumbs />
+        <Breadcrumbs title={props.location.pathname} />
         <div className="product_detail">
         { product && (
         <div>

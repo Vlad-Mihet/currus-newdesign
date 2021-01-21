@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
 import { trackOrder } from '../redux/actions/orderActions'
 
-const Orderpage = () => {
+const Orderpage = (props) => {
 
     const dispatch = useDispatch()
 
@@ -20,7 +20,7 @@ const Orderpage = () => {
     
     return (
         <>
-            <Breadcrumbs />
+            <Breadcrumbs title={props.location.pathname} />
             <div className="order">
                 <h1>Order Tracking</h1>
                 {!order ? (<form className="order_form" onSubmit={handleSubmit}> 

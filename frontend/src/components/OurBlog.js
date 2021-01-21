@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick";
@@ -14,9 +14,44 @@ const OurBlog = () => {
         slidesToScroll: 1
     };
 
+    const [page, setPage] = useState(null)
+
+    const query = `
+    {
+        pageCollection {
+            items {
+                title
+
+            }
+        }
+    }
+    `
+
+    useEffect(() => {
+        window.fetch(`https://graphql.contentful.com/content/v1/spaces/xotd7hfzkl7y/`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: "Bearer 8KtFtte2PR8gF1OFvIKxx5D7lDSBw59spjTurlbh1k0",
+            },
+            body: JSON.stringify({ query }),
+        }).then((response) => response.json())
+          .then(({ data, errors }) => {
+              if (errors) {
+                  console.error(errors);
+              }
+              setPage(data.pageCollection.items[0]);
+          });
+    }, []);
+    
+    if (!page) {
+        return "Loading...";
+    }
+
     return (
         <div className="ourblog">
             <h1>Our Blog</h1>
+            <h4>{page.title}</h4>
             <div id="first">
                 <Slider {...settings}>
                     <div>

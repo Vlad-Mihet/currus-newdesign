@@ -1,7 +1,7 @@
 import React from 'react'
 import Breadcrumbs from '../components/Breadcrumbs';
 
-const Faqpage = () => {
+const Faqpage = (props) => {
 
     const clickHandler = () => {
         console.log('clicked')
@@ -10,7 +10,7 @@ const Faqpage = () => {
 
     return (
         <>
-        <Breadcrumbs />
+        <Breadcrumbs title={props.location.pathname} />
         <div className="faq">
             <section>
                 What is the shipping cost (In the USA, Canada and other countries)

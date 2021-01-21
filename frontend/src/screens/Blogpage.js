@@ -18,7 +18,7 @@ const Blogpage = (props) => {
 
     return (
         <>
-        <Breadcrumbs />
+        <Breadcrumbs title={props.location.pathname} />
         <div className="blogpostpage">
 
         { blog && (

@@ -79,9 +79,13 @@ header .menu nav ul {
   display: flex;
   flex-direction: row;
   list-style: none;
+  list-style-type: none;
 }
 header .menu nav ul li {
   margin: 5px;
+}
+header .menu a {
+  text-decoration: none;
 }
 header .menu .login_cart {
   position: absolute;
@@ -231,14 +235,110 @@ header .menu .login_cart {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.filter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px auto;
+}
+.filter #range {
+  width: 200px;
+}
+
+.shoppage #wrapper {
+  margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .shoppage #wrapper {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .shoppage #wrapper {
+    margin-bottom: 40px;
+  }
+}
+.shoppage img {
+  width: 100px;
+  height: 100px;
+}
+
+.shoppage_gridview {
+  display: grid;
+  grid-template-columns: 36.18vw auto 36.18vw;
+  grid-auto-rows: 25.56vh;
+  row-gap: 50px;
+}
+@media (max-width: 768px) {
+  .shoppage_gridview {
+    grid-template-columns: 224px 224px 224px;
+    column-gap: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .shoppage_gridview {
+    grid-template-columns: 1fr;
+  }
+}
+
+.shoppage_listview {
+  display: grid;
+  grid-auto-rows: 296px;
+  row-gap: 40px;
+}
+@media (max-width: 768px) {
+  .shoppage_listview {
+    row-gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .shoppage_listview {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+.product_listview {
+  margin: 0 auto;
+  position: relative;
+  width: 1050px;
+  height: 296px;
+  background: #ffffff;
+  border: 1px solid rgba(102, 102, 102, 0.2);
+  box-sizing: border-box;
+}
+
+.product_gridview {
+  position: relative;
+}
+
+.sale {
+  background: #E7161B;
+  width: 50px;
+  height: 20px;
+  top: 20px;
+  position: absolute;
+}
+.sale #sale_text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
 footer {
+  box-sizing: border-box;
   background: #393636;
 }
 footer #one {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   display: grid;
   grid-template-columns: 29.167vw 14.375vw 14.17vw 57.715vw;
-  grid-template-rows: 34vh;
+  height: 34vh;
+  box-sizing: border-box;
   grid-template-areas: "contact support legal newsletter";
 }
 footer #one h6 {
@@ -258,12 +358,26 @@ footer #one a {
   color: #888888;
 }
 footer #two {
+  display: grid;
+  box-sizing: border-box;
   grid-template-columns: 35.69vw 18.47vw 45.84vw;
-  grid-template-rows: 16vh;
+  height: 16vh;
   grid-template-areas: "copyright social card";
 }
 footer #two #copyright {
+  grid-area: copyright;
   padding: 60px 0px;
+  align-self: center;
+}
+footer #two #social_icons {
+  grid-area: social;
+  align-self: center;
+  justify-self: end;
+}
+footer #two #card {
+  grid-area: card;
+  justify-self: end;
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */

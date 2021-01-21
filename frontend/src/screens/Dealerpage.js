@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
 import { createDealer } from '../redux/actions/dealerActions';
 
-const Dealerpage = () => {
+const Dealerpage = (props) => {
 
 
     const dispatch = useDispatch()
@@ -26,7 +26,7 @@ const Dealerpage = () => {
 
     return (
         <>
-            <Breadcrumbs />
+            <Breadcrumbs title={props.location.pathname} />
             <div className="dealer">
             <h1>Currus Dealer Opportunities</h1>
             <p>

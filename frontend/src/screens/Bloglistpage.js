@@ -7,7 +7,7 @@ import BlogAside from '../components/BlogAside'
 
 
 
-const Bloglistpage = () => {
+const Bloglistpage = (props) => {
 
     const dispatch = useDispatch()
 
@@ -20,7 +20,7 @@ const Bloglistpage = () => {
 
     return (
         <>
-        <Breadcrumbs />
+        <Breadcrumbs title={props.location.pathname} />
         <div className="blogpage">
             
             BlogPage
