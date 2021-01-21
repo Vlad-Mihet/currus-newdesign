@@ -43,12 +43,12 @@ const Filter = ({ grid, setGrid, sort, setSort }) => {
             <div>
 
             </div>
-            <div className="filter-price">
+            <div id="filter-price">
                 <input id="low" type="number" onChange={e => {
                     setLow(e.target.value)}}></input>
                 <input id="high" type="number" onChange={e => setHigh(e.target.value)}></input>
             </div>
-            <div className="filter-categories">
+            <div id="filter-categories">
                 <select onChange={(e) => {
                     setDef(e.target.value)
                     }}>

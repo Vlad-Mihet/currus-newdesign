@@ -24,16 +24,15 @@ const Footer = () => {
 
     return (
         <footer>
+          <div id="one">
           <div className="contact_us">
-              <div className="CONTACT">Contact Us</div>
+              <h6>Contact Us</h6>
               <div className="ifyouhave">
                 If you have any question, please contact us at info@currusmotors.com
               </div>
           </div>
           <div className="support">
-            <div className="support_title">
-              Support
-            </div>
+            <h6>Support</h6>
             <ul>
               <li><Link to='/contactus'>Contact Us</Link></li>
               <li><Link to='/shipping'>Shipping</Link></li>
@@ -43,9 +42,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="legal">
-            <div className="legal_title">
-              Legal
-            </div>
+            <h6>Legal</h6>
             <ul>
               <li><Link to='/privacypolicy'>Privacy Policy</Link></li>
               <li><Link to='/termsandconditions'>Terms and Conditions</Link></li>
@@ -55,9 +52,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="newsletter">
-            <div className="newsletter_title">
-              Newsletter
-            </div>
+            <h6>Newsletter</h6>
             <div className="newsletter-description">
               Subscribe to the weekly newsletter for all the latest updates
             </div>
@@ -68,9 +63,17 @@ const Footer = () => {
             </div> ) : <h1>Thank you for subscribing. </h1>
             }
           </div>
-          <div className="copyright">
+          </div>
+          <div id="two">
+            <div id="copyright">
             Copyright 2021 Currusmotors. All Rights Reservred
-            <div className="social_icons"></div>
+            </div>
+            <div id="social_icons">
+
+            </div>
+            <div id="card">
+
+           </div>
           </div>
         </footer>
     )

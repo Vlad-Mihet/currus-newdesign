@@ -1,0 +1,17 @@
+.instagram {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  img {
+      width: 16.6667vw;
+      height: 26.6667vh;
+  }
+
+  #join {
+      width: 16.6667vw;
+      height: 26.6667vh;
+      background: #E7161B;
+      border: 1px solid #000000;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}

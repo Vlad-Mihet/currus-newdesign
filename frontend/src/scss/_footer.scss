@@ -1,0 +1,46 @@
+footer {
+
+    background: #393636;
+
+
+    #one {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        display: grid;
+        grid-template-columns: 29.167vw 14.375vw 14.17vw 57.715vw;
+        grid-template-rows: 34vh;
+        grid-template-areas: 
+        "contact support legal newsletter";
+
+        h6 {
+            font-family: Lato;
+            color: #FFFFFF;
+            font-style: normal;
+            font-weight: 550;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+        }
+
+        ul {
+            list-style-type: none;
+            
+          
+        }
+
+        a {
+            text-decoration: none;
+            color: #888888;
+        }
+    }
+
+    #two {
+        grid-template-columns: 35.69vw 18.47vw 45.84vw;
+        grid-template-rows: 16vh;
+        grid-template-areas:
+        "copyright social card";
+
+        #copyright {
+            padding: 60px 0px;
+        }
+    }
+}

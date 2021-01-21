@@ -12,6 +12,16 @@ body {
   padding: 0;
 }
 
+.breadcrumbs {
+  height: 100px;
+  background: linear-gradient(0deg, rgba(231, 22, 27, 0.71), rgba(231, 22, 27, 0.71)), url(img/category2.jpeg);
+}
+@media (max-width: 600px) {
+  .breadcrumbs {
+    height: 60px;
+  }
+}
+
 .banner {
   position: relative;
 }
@@ -203,6 +213,57 @@ header .menu .login_cart {
 }
 .ourblog #second {
   width: 1100px;
+}
+
+.instagram {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.instagram img {
+  width: 16.6667vw;
+  height: 26.6667vh;
+}
+.instagram #join {
+  width: 16.6667vw;
+  height: 26.6667vh;
+  background: #E7161B;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+  background: #393636;
+}
+footer #one {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  grid-template-columns: 29.167vw 14.375vw 14.17vw 57.715vw;
+  grid-template-rows: 34vh;
+  grid-template-areas: "contact support legal newsletter";
+}
+footer #one h6 {
+  font-family: Lato;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+footer #one ul {
+  list-style-type: none;
+}
+footer #one a {
+  text-decoration: none;
+  color: #888888;
+}
+footer #two {
+  grid-template-columns: 35.69vw 18.47vw 45.84vw;
+  grid-template-rows: 16vh;
+  grid-template-areas: "copyright social card";
+}
+footer #two #copyright {
+  padding: 60px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
