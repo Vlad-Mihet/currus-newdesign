@@ -9,6 +9,7 @@ const data = {
             category: 'E-Scooter',
             quantity: 5,
             description: 'Technology Meets Comfort for Mobility',
+            quick: 'blah blah blah',
             specification: '60V 35Ah H35E Li-ion batteries',
             shipping: 'To qualify for a warranty it is imperative',
             onSale: true
@@ -20,6 +21,7 @@ const data = {
             category: 'E-Scooter',
             quantity: 10,
             description: 'Accept it, riding an electric scooter is fun.',
+            quick: 'blah blah blah',
             specification: 'blah blah blah',
             shipping: 'To qualify',
             onSale: false
@@ -31,6 +33,7 @@ const data = {
             category: 'Kick Stand',
             quantity: 7,
             description: 'The spirit beast side stand that comes in three different colors.',
+            quick: 'blah blah blah',
             specification: 'blah blah blah',
             shipping: 'To qualify',
             onSale: false
@@ -42,6 +45,7 @@ const data = {
             category: 'Helmet',
             quantity: 0,
             description: 'The Smart4u Helmet is made of lightweight yet super strong PC material on the outside. The',
+            quick: 'blah blah blah',
             specification: 'blah blah blah',
             shipping: 'To qualify',
             onSale: false
@@ -53,6 +57,7 @@ const data = {
             category: 'E-Scooter',
             quantity: 1,
             description: 'The GUB Aluminum Electric Scooter Phone.',
+            quick: 'blah blah blah',
             specification: 'blah blah blah',
             shipping: 'To qualify',
             onSale: true

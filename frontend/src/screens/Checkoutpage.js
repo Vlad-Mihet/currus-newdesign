@@ -79,19 +79,7 @@ const Checkoutpage = (props) => {
         props.history.push('/thankyou')
     }
 
-    const handleStripe = async (e) => {
-        const stripe = await stripePromise;
-        const response = await Axios.post('/create-checkout-session')
-        const session = await response.json()
 
-        const result = await stripe.redirectToCheckout({
-            sessionId: session.id,
-        })
-
-        if (result.error) {
-
-        }
-    }
 
     return (
         <div className="checkout">
@@ -148,7 +136,7 @@ const Checkoutpage = (props) => {
                     <button type="submit">Place Order</button>
                 </aside>
             </form>
-            <button role="link" onClick={handleStripe}>Stripe CheckOut</button>
+
         </div>
     )
 }

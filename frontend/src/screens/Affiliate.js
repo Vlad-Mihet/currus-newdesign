@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import Breadcrumbs from '../components/Breadcrumbs'
 
-const Affiliate = () => {
+const Affiliate = (props) => {
 
     const [submitted, setSubmitted] = useState(false)
 
@@ -18,6 +19,8 @@ const Affiliate = () => {
     }
 
     return (
+        <>
+        <Breadcrumbs title={`${props.location.pathname}`} />
         <div className="affiliate">
             <h1>Currus Affiliate Program</h1>
             <p>If you are not in a position to sell our product directly as part of your business venture,</p>
@@ -37,6 +40,7 @@ const Affiliate = () => {
             </form>
             ) : <h2>Thanks for your submission.</h2>}
         </div>
+        </>
     )
 }
 

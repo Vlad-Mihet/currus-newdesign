@@ -1,0 +1,82 @@
+.dealer {
+    
+
+    box-sizing: content-box;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: uppercase;
+        color: rgba(102, 102, 102, 0.85);
+    }
+
+    p {
+        margin-top: 30px;
+        width: 500px;
+        margin: 0 auto;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: rgba(102, 102, 102, 0.85);
+    }
+
+
+
+
+    button {
+        width: 13.889%;
+        background: #E7161B;
+        border-radius: 3px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.dealer_form {
+    display: grid;
+    box-sizing: content-box;
+    
+    
+    grid-template-columns: 225px 225px;
+    column-gap: 50px;
+    grid-template-rows: 40px 40px 40px 100px;
+    row-gap: 30px;
+
+    #address {
+        grid-column: 1 / span 2; 
+    }
+
+    #message {
+        grid-column: 1 / span 2;
+    }
+
+    button {
+        grid-column: 1 / span 2;
+        display: block;
+        margin: 0 auto;
+    }
+
+    margin-bottom: 100px;
+
+
+}

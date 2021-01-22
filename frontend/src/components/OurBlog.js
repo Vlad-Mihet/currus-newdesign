@@ -40,6 +40,7 @@ const OurBlog = () => {
               if (errors) {
                   console.error(errors);
               }
+              console.log(data);
               setPage(data.pageCollection.items[0]);
           });
     }, []);

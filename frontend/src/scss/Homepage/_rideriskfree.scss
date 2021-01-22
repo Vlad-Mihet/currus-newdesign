@@ -3,7 +3,7 @@
     position: relative;
 
     img {
-        width: 30.90vw;
+        width: 30.90%;
         height: 735px;
 
     }
@@ -23,7 +23,7 @@
     #sections {
         position: absolute;
         display: grid;
-        grid-template-columns: 22.57vw 22.57vw;
+        grid-template-columns: 22.57% 22.57%;
         grid-template-rows: 20vh 20vh;
         grid-template-areas: 
         "one two"

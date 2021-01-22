@@ -89,7 +89,7 @@ header .menu a {
 }
 header .menu .login_cart {
   position: absolute;
-  right: 10vw;
+  right: 10%;
   top: 1vh;
 }
 
@@ -152,22 +152,22 @@ header .menu .login_cart {
   font-size: 1.5rem;
   line-height: 24px;
   position: relative;
-  margin: 29px 4.7vw 29px 12vw;
+  margin: 29px 4.7% 29px 12%;
   color: #FFFFFF;
 }
 .redband #getallthelatest {
   width: 300px;
-  margin: 29px 50px 29px 4.7vw;
+  margin: 29px 50px 29px 4.7%;
 }
 .redband #subscribe {
-  margin: 29px 10vw 29px 50px;
+  margin: 29px 10% 29px 50px;
 }
 
 .rideriskfree {
   position: relative;
 }
 .rideriskfree img {
-  width: 30.9vw;
+  width: 30.9%;
   height: 735px;
 }
 .rideriskfree #riskfree {
@@ -183,7 +183,7 @@ header .menu .login_cart {
 .rideriskfree #sections {
   position: absolute;
   display: grid;
-  grid-template-columns: 22.57vw 22.57vw;
+  grid-template-columns: 22.57% 22.57%;
   grid-template-rows: 20vh 20vh;
   grid-template-areas: "one two" "three four";
   column-gap: 10px;
@@ -224,11 +224,11 @@ header .menu .login_cart {
   grid-template-columns: repeat(6, 1fr);
 }
 .instagram img {
-  width: 16.6667vw;
+  width: 16.6667%;
   height: 26.6667vh;
 }
 .instagram #join {
-  width: 16.6667vw;
+  width: 16.6667%;
   height: 26.6667vh;
   background: #E7161B;
   border: 1px solid #000000;
@@ -265,7 +265,7 @@ header .menu .login_cart {
 
 .shoppage_gridview {
   display: grid;
-  grid-template-columns: 36.18vw auto 36.18vw;
+  grid-template-columns: 36.1% auto 36.18%;
   grid-auto-rows: 368px;
   row-gap: 50px;
 }
@@ -316,6 +316,10 @@ header .menu .login_cart {
   width: 301px;
   height: 368px;
 }
+.product_gridview img {
+  width: 100px;
+  height: 100px;
+}
 .product_gridview #grid_border {
   border: 1px solid rgba(102, 102, 102, 0.2);
   width: 300px;
@@ -347,6 +351,285 @@ header .menu .login_cart {
   display: none;
 }
 
+#gallery {
+  display: grid;
+  grid-template-columns: 375px 275px 375px;
+  grid-template-rows: 430px 430px;
+  column-gap: 25px;
+  row-gap: 25px;
+  margin-left: 13.54%;
+  margin-right: 13.54%;
+  margin-bottom: 100px;
+}
+#gallery :first-child {
+  width: 650px;
+  height: 430px;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+#gallery :nth-child(2) {
+  width: 375px;
+  height: 430px;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+#gallery :nth-child(3) {
+  width: 375px;
+  height: 430px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+#gallery :nth-child(4) {
+  width: 650px;
+  height: 430px;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+
+#aboutus_welcome {
+  display: grid;
+  grid-template-columns: 200px 200px 200px 425px;
+  grid-template-rows: 230px 292px;
+  grid-template-areas: "p1 p1 p1 pic1" "pic2 pic3 p2 p2";
+  column-gap: 25px;
+  row-gap: 25px;
+  box-sizing: content-box;
+  margin-top: 60px;
+  margin-left: 11.8056%;
+  margin-right: 11.8056%;
+  margin-bottom: 100px;
+}
+#aboutus_welcome #aboutus_second {
+  grid-area: pic1;
+}
+#aboutus_welcome #aboutus_second img {
+  width: 425px;
+  height: 230px;
+}
+#aboutus_welcome #aboutus_third {
+  grid-area: pic2;
+}
+#aboutus_welcome #aboutus_third img {
+  width: 200px;
+  height: 292px;
+}
+#aboutus_welcome #aboutus_fourth {
+  grid-area: pic3;
+}
+#aboutus_welcome #aboutus_fourth img {
+  width: 200px;
+  height: 292px;
+}
+#aboutus_welcome #aboutus_fifth {
+  grid-area: p2;
+}
+
+#our {
+  background: #F8F8F8;
+}
+#our #principles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "premium genuine" "customer transparency";
+}
+#our #principles div:first-of-type {
+  grid-area: premium;
+}
+#our #principles div:nth-of-type(2) {
+  grid-area: genuine;
+}
+#our #principles div:nth-of-type(3) {
+  grid-area: customer;
+}
+#our #principles div:nth-of-type(4) {
+  grid-area: transparency;
+}
+
+#aim_vision {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+#aim_vision img {
+  width: 100%;
+  height: 100%;
+}
+
+.dealer {
+  box-sizing: content-box;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dealer h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(102, 102, 102, 0.85);
+}
+.dealer p {
+  margin-top: 30px;
+  width: 500px;
+  margin: 0 auto;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(102, 102, 102, 0.85);
+}
+.dealer button {
+  width: 13.889%;
+  background: #E7161B;
+  border-radius: 3px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.dealer_form {
+  display: grid;
+  box-sizing: content-box;
+  grid-template-columns: 225px 225px;
+  column-gap: 50px;
+  grid-template-rows: 40px 40px 40px 100px;
+  row-gap: 30px;
+  margin-bottom: 100px;
+}
+.dealer_form #address {
+  grid-column: 1/span 2;
+}
+.dealer_form #message {
+  grid-column: 1/span 2;
+}
+.dealer_form button {
+  grid-column: 1/span 2;
+  display: block;
+  margin: 0 auto;
+}
+
+.contactus {
+  display: grid;
+  grid-template-columns: 450px 500px;
+  column-gap: 50px;
+  margin-left: 220px;
+  margin-right: 220px;
+}
+.contactus #img_one {
+  width: 300px;
+  height: 259px;
+  margin-top: 60px;
+}
+.contactus #img_two {
+  width: 250px;
+  height: 259px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+.contactus #group_three {
+  width: 250px;
+  height: 434px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+  position: relative;
+  top: -600px;
+  right: -200px;
+  z-index: 9;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .contactus {
+    display: flex;
+    flex-direction: column;
+    margin-left: 34px;
+  }
+  .contactus #images {
+    width: 702px;
+    height: 548px;
+    margin-left: 34px;
+  }
+  .contactus #images #img_two {
+    margin-bottom: -300px;
+    margin-left: -250px;
+  }
+  .contactus #images #group_three {
+    top: -200px;
+  }
+  .contactus #wearehere {
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+  }
+}
+
+.privacy {
+  display: flex;
+  align-content: flex-start;
+  margin-left: 220px;
+  margin-right: 220px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 700px;
+}
+.privacy > div {
+  width: 300px;
+}
+@media (max-width: 768px) {
+  .privacy {
+    margin-left: 32px;
+    margin-right: 32px;
+    height: 1500px;
+    width: 100%;
+  }
+  .privacy > div {
+    width: 165px;
+  }
+}
+@media (max-width: 320px) {
+  .privacy {
+    margin-left: 16px;
+    margin-right: 16px;
+    height: 1850px;
+    width: 100%;
+  }
+  .privacy > div {
+    width: 300px;
+  }
+}
+
+.shipping {
+  display: flex;
+  justify-content: center;
+}
+.shipping #icon img {
+  display: inline;
+  margin-top: 60px;
+  margin-left: 11.81%;
+  width: 227px;
+  height: 208px;
+}
+.shipping #text {
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
 footer {
   box-sizing: border-box;
   background: #393636;
@@ -354,7 +637,7 @@ footer {
 footer #one {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   display: grid;
-  grid-template-columns: 29.167vw 14.375vw 14.17vw 57.715vw;
+  grid-template-columns: 29.167% 14.375% 14.17% 57.715%;
   height: 34%;
   box-sizing: border-box;
   grid-template-areas: "contact support legal newsletter";
@@ -378,7 +661,7 @@ footer #one a {
 footer #two {
   display: grid;
   box-sizing: border-box;
-  grid-template-columns: 35.69vw 18.47vw 45.84vw;
+  grid-template-columns: 35.6% 18.47% 45.84%;
   height: 16%;
   grid-template-areas: "copyright social card";
 }

@@ -1,0 +1,35 @@
+.privacy {
+    display: flex;
+   
+    align-content: flex-start;
+
+    margin-left: 220px;
+    margin-right: 220px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 700px;
+
+    > div {
+        width: 300px;
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 32px;
+        margin-right: 32px;
+        height: 1500px;
+        width: 100%;
+        > div {
+        width: 165px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        margin-left: 16px;
+        margin-right: 16px;
+        height: 1850px;
+        width: 100%;
+        > div {
+            width: 300px;
+        }
+    }
+}

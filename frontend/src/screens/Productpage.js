@@ -8,6 +8,8 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import Faq from 'react-faq-component'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ProductGridView from '../components/ProductGridView';
+import { listProducts } from '../redux/actions/productActions';
 
 const Productpage = (props) => {
 
@@ -16,10 +18,14 @@ const Productpage = (props) => {
     const [qty, setQty] = useState(1)
     const productDetails = useSelector(state => state.productDetails)
     const { loading, error, product } = productDetails;
-    
+
+    const productList = useSelector((state) => state.productList);
+    const { products } = productList;
 
     const [p, setP] = useState('')
     const { currency } = useSelector(state => state.currency)
+
+   
 
     const data = {
         title: "FAQQQQQ",
@@ -44,24 +50,27 @@ const Productpage = (props) => {
         dispatch(detailsProduct(productId))
     }, [dispatch, productId])
 
-  
+    useEffect(() => {
+        dispatch(listProducts())
+    }, [dispatch])
 
 
     return (
         <>
         <Breadcrumbs title={props.location.pathname} />
+        {product ? (
+        <>
         <div>
-            { (product && product.images) ? (
+            {product && product.images ? (
             <ImageGallery items={product.images.map(url => ({
                 original: url,
                 thumbnail: url
-            }))} thumbnailPosition="left" />
-             ) : <h1>No Extra Images</h1>}
+            }))} thumbnailPosition="left" />) : <h1>Loading</h1>
+            }
+            
         </div>
 
         <div className="product_detail">
-        { product && (
-        <>
             <div>{product.name}</div>
             <div>{product.description}</div>
             <div>
@@ -78,26 +87,59 @@ const Productpage = (props) => {
                     }
                 </select>
             </div>
-            <button onClick={handleCart}>Add To Cart</button>
-        </>
-        )}
+            <button onClick={handleCart}>Add To Cart</button>     
         </div>
 
         <Tabs>
             <TabList>
                 <Tab>Description</Tab>
-                <Tab>Speficiation</Tab>
+                <Tab>Specification</Tab>
+                <Tab>Shipping &amp; Warranty</Tab>
+                <Tab>FAQ</Tab>
+                <Tab>Videos</Tab>
+                <Tab>Reviews</Tab>
             </TabList>
             <TabPanel>
-                <h2>blah blah blah</h2>
+                <h2>{product.description}</h2>
             </TabPanel>
             <TabPanel>
                 <h3>ha ha ha</h3>
             </TabPanel>
+            <TabPanel>
+                <h3>ha ha ha</h3>
+            </TabPanel>
+            <TabPanel>
+                <Faq data={data} />
+            </TabPanel>
+            <TabPanel>
+                <h1>Videos</h1>
+            </TabPanel>
+            <TabPanel>
+                <Reviews productId={productId} product={product}/>
+            </TabPanel>
         </Tabs>
 
-        <Faq data={data} />
-        <Reviews productId={productId} product={product}/>
+        <div>
+            <h4>A closer look at {product.name}</h4>
+            <div id="gallery">
+                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery1.jpeg"></img>
+                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery2.jpeg"></img>
+                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery3.jpeg"></img>
+                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery4.jpeg"></img>
+            </div>
+        </div>
+            <h1>Related Products</h1>
+            <div className="shoppage_gridview">
+            {
+            products &&
+            products.filter(product => product._id !== productId).slice(0,3).map((product) => (
+                <ProductGridView grid={true} history={props.history} key={product._id} product={product}></ProductGridView>
+            ))
+            }
+            </div>
+
+
+        </>) : <h1>Fetching</h1> }
         </>
     )
 }

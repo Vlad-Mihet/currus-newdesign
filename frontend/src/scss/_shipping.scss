@@ -1,0 +1,17 @@
+.shipping {
+    display: flex;
+    justify-content: center;
+
+    #icon img {
+        display: inline;
+        margin-top: 60px;
+        margin-left: 11.81%;
+        width: 227px;
+        height: 208px;
+    }
+
+    #text {
+        margin-top: 60px;
+        margin-left: 50px;
+    }
+}

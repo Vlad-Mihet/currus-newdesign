@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import Breadcrumbs from '../components/Breadcrumbs'
 import { createReturn } from '../redux/actions/returnActions'
 
-const Returnpage = () => {
+const Returnpage = (props) => {
 
     const dispatch = useDispatch()
 
@@ -36,6 +37,8 @@ const Returnpage = () => {
     }
 
     return (
+        <>
+        <Breadcrumbs title={`${props.location.pathname}`} />
         <div className="return">
             <h1>Return</h1>
             <p>We offer a robust and fair Return policy</p>
@@ -69,6 +72,7 @@ const Returnpage = () => {
             </form>
             ) : <h2>Thanks for your submission.</h2>}          
         </div>
+        </>
     )
 }
 

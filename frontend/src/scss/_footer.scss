@@ -6,7 +6,7 @@ footer {
     #one {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         display: grid;
-        grid-template-columns: 29.167vw 14.375vw 14.17vw 57.715vw;
+        grid-template-columns: 29.167% 14.375% 14.17% 57.715%;
         height: 34%;
         box-sizing: border-box;
         grid-template-areas: 
@@ -37,7 +37,7 @@ footer {
     #two {
         display: grid;
         box-sizing: border-box;
-        grid-template-columns: 35.69vw 18.47vw 45.84vw;
+        grid-template-columns: 35.6% 18.47% 45.84%;
         height: 16%;
         grid-template-areas:
         "copyright social card";

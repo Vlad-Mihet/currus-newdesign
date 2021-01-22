@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
+import Breadcrumbs from '../components/Breadcrumbs'
 import { createWarranty } from '../redux/actions/warrantyActions'
 
-const Warranty = () => {
+const Warranty = (props) => {
 
     const dispatch = useDispatch()
     const [submitted, setSubmitted] = useState(false)
@@ -30,6 +31,8 @@ const Warranty = () => {
     }
 
     return (
+        <>
+        <Breadcrumbs title={`${props.location.pathname}`} />
         <div className="warranty">
             <h1>Registration Form</h1>
             <p>Please take a moment to register your product with us. Send registration form by mail or electronically.</p>
@@ -56,6 +59,7 @@ const Warranty = () => {
             </form>
             ) : <h2>Thanks for your submission.</h2>}
         </div>
+        </>
     )
 }
 

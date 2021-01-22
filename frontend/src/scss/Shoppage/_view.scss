@@ -19,7 +19,7 @@
 
 .shoppage_gridview {
   display: grid;
-  grid-template-columns: 36.18vw auto 36.18vw;
+  grid-template-columns: 36.1% auto 36.18%;
   grid-auto-rows: 368px;
   row-gap: 50px;
 
@@ -66,6 +66,11 @@
   position: relative;
   width: 301px;
   height: 368px;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
   
 
   #grid_border {

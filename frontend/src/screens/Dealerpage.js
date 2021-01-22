@@ -27,6 +27,7 @@ const Dealerpage = (props) => {
     return (
         <>
             <Breadcrumbs title={props.location.pathname} />
+            <>
             <div className="dealer">
             <h1>Currus Dealer Opportunities</h1>
             <p>
@@ -42,7 +43,7 @@ const Dealerpage = (props) => {
                 <input id="lastname" type="text" value={lastname} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
                 <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail"></input>
                 <input id="phonenumber" type="text" value={phonenumber} onChange={(e) => setPhone(e.target.value)} placeholder="Phone Number"></input>
-                <input id="storeaddress" type="text" value={storeaddress} onChange={(e) => setStore(e.target.value)} placeholder="Store Address"></input>
+                <input id="address" type="text" value={storeaddress} onChange={(e) => setStore(e.target.value)} placeholder="Store Address"></input>
                 <input id="message" type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Your Message"></input>
                 <button type="submit">
                     Buy Now
@@ -50,6 +51,8 @@ const Dealerpage = (props) => {
             </form>
             ) : <h2>Thanks for your submission.</h2>}
             </div>
+            </>
+            
         </>
     )
 }
