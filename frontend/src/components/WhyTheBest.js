@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Faq from 'react-faq-component'
 
 const WhyTheBest = () => {
 
@@ -6,6 +7,20 @@ const WhyTheBest = () => {
     const [two, setTwo] = useState(false)
     const [three, setThree] = useState(false)
     const [four, setFour] = useState(false)
+
+    const data = {
+        title: "FAQQQQQ",
+        rows: [
+            {
+                title: "Bringing Green Mobility Revolution is our Passion &amp; We Love Electric Vehicles",
+                content: "We started because we believe driving EV leads to a sustainable future. We are eco-friendly enthusiasts, working agigely to increase usability, awareness among people about electric vehicles. Our e-scooters are just a reflection of our company philosophy and values. To know more, you can",
+            },
+            {
+                title: "We are always Ready to help 24X7 for Free..!!!",
+                content: "We understand choosing, getting along with an Electric Vehicle (EV) can be confusing for you. If you have any technical queries or issues with the delivered to you, talk to our expert technical team available 24x7. Customer satisfaction is all we strive for, right from when we started."
+            }
+        ]
+    }
 
     return (
             <div className="whythebest">
@@ -71,6 +86,8 @@ const WhyTheBest = () => {
                         }             
                     </div>
                 </div>
+
+                <Faq data={data} />
 
             </div>
     )

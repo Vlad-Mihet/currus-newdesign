@@ -31,7 +31,7 @@ const Shoppage = (props) => {
             {
             displayedProducts &&
             displayedProducts.map((product) => (
-                <ProductGridView grid={grid} key={product._id} product={product}></ProductGridView>
+                <ProductGridView history={props.history} grid={grid} key={product._id} product={product}></ProductGridView>
             ))
             }
             </div>

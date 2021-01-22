@@ -17,7 +17,9 @@ const productSchema = new mongoose.Schema({
         cons: { type: String },
         detail: { type: String, required: true }
     }],
-    numReviews: { type: Number }
+    numReviews: { type: Number },
+    image: { type: String },
+    images: [{ type: String }]
 }, {
     timestamps: true
 });

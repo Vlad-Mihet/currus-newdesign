@@ -20,7 +20,7 @@
 .shoppage_gridview {
   display: grid;
   grid-template-columns: 36.18vw auto 36.18vw;
-  grid-auto-rows: 25.56vh;
+  grid-auto-rows: 368px;
   row-gap: 50px;
 
   @media (max-width: 768px) {
@@ -56,10 +56,29 @@
   background: #ffffff;
   border: 1px solid rgba(102, 102, 102, 0.2);
   box-sizing: border-box;
+
+  #cartshare {
+    display: block;
+  }
 }
 
 .product_gridview {
   position: relative;
+  width: 301px;
+  height: 368px;
+  
+
+  #grid_border {
+    border: 1px solid rgba(102, 102, 102, 0.2);
+    width: 300px;
+    height: 296px;
+    box-sizing: border-box;
+
+  }
+
+  #grid_border:hover #cartshare {
+    display: block;
+  }
 }
 
 .sale {
@@ -78,4 +97,9 @@
     text-align: center;
     color: #ffffff;
   }
+}
+
+#cartshare {
+  display: none;
+
 }

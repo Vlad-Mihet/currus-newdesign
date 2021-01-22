@@ -1,7 +1,11 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobe, faLaptop, faHashtag, faAd, faAngry } from '@fortawesome/free-solid-svg-icons'
+import { Icon, InlineIcon } from '@iconify/react';
+import scFacebook from '@iconify/icons-ei/sc-facebook';
+import scInstagram from '@iconify/icons-ei/sc-instagram';
+import scTwitter from '@iconify/icons-ei/sc-twitter';
+import scYoutube from '@iconify/icons-ei/sc-youtube';
+
 import { Link } from 'react-router-dom'
 import { signout } from '../redux/actions/userActions'
 import { changeCurrency } from '../redux/actions/currencyActions'
@@ -33,10 +37,10 @@ const Header = () => {
                 Free shipping from Los Angeles across USA &amp; CANADA
               </div>
               <div className="social-icons">
-                <FontAwesomeIcon icon={faLaptop} />
-                <FontAwesomeIcon icon={faHashtag} />
-                <FontAwesomeIcon icon={faAd} />
-                <FontAwesomeIcon icon={faAngry} />
+              <Icon icon={scFacebook} style={{color: '#ffffff', fontSize: '24px'}} />
+              <Icon icon={scTwitter} style={{color: '#ffffff', fontSize: '24px'}} />
+              <Icon icon={scInstagram} style={{color: '#ffffff', fontSize: '24px'}} />
+              <Icon icon={scYoutube} style={{color: '#ffffff', fontSize: '24px'}} />
               </div>
           </div>
 
