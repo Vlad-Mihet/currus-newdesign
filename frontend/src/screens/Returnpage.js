@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
+import { Link } from 'react-router-dom'
 import { createReturn } from '../redux/actions/returnActions'
 
 const Returnpage = (props) => {
@@ -40,9 +41,30 @@ const Returnpage = (props) => {
         <>
         <Breadcrumbs title={`${props.location.pathname}`} />
         <div className="return">
-            <h1>Return</h1>
-            <p>We offer a robust and fair Return policy</p>
+            <div id="icontext">
+                <div id="icon">
+                    <img src="/images/icon1.png"></img>
+                </div>
+                <div id="text">
+                <h1>Canadian Customers: <Link>CLICK HERE for Warranty Contact Information</Link></h1>
+                <p>We offer a robust and fair Return Policy but the item must be intact, returned within 14 days of purchase and the customer is required to provide a reason and obtain authorization prior. If what you receive is the wrong item, or it has a defect, or if for any reason you are dissatisfied we will of course provide a refund. You must contact us within 30 days. (Conditions apply). The product must be unused, kept with all accessories and original packaging must be intact. If your shipment was delayed and you no longer require the item, we will refund. Several factors should be weighed before moving forward:</p>
+                <ul>
+                    <li>
+We charge a 10% restocking fee (for unused) &amp; 30% (used) for those who change their minds or refuse a shipment, and will apply that same fee if necessary should we find a returned item used
+                    </li>
+                    <li>
+          All customers must obtain a Return Merchandise Authorization (RMA) code              
+                    </li>
+                    <li>
+              A refund will typically be made within 3 days or so after we receive and inspect it.
+          
+                    </li>
+                </ul>
+                <p>Your request can take 24-72 hours to process.</p>
+                </div>
+            </div>
 
+            <div id="return_box">
             <h1>CURRUS RETURN (RMA) FORM</h1>
             <h4>Fill in all field for return and your request can take 24-72 hours to process</h4>
             { !submitted ? (
@@ -70,7 +92,8 @@ const Returnpage = (props) => {
                     Submit
                 </button>
             </form>
-            ) : <h2>Thanks for your submission.</h2>}          
+            ) : <h2>Thanks for your submission.</h2>}    
+            </div>      
         </div>
         </>
     )

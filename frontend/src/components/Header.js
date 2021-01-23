@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Icon, InlineIcon } from '@iconify/react';
 import scFacebook from '@iconify/icons-ei/sc-facebook';
@@ -10,11 +10,13 @@ import { Link } from 'react-router-dom'
 import { signout } from '../redux/actions/userActions'
 import { changeCurrency } from '../redux/actions/currencyActions'
 
-const Header = () => {
+const Header = ({ hamburger, setHamburger }) => {
 
     const dispatch = useDispatch()
     const userSignin = useSelector(state => state.userSignin)
     const { userInfo } = userSignin
+
+
 
     const handleLogout = () => {
       dispatch(signout())
@@ -26,6 +28,7 @@ const Header = () => {
 
 
     return (
+        <>
         <header>
           <div className="bar">
        
@@ -45,14 +48,14 @@ const Header = () => {
           </div>
 
             <div className="menu">
-  
+                    <div id="hamburger">
+                      <button onClick={() => setHamburger(true)}>Ham</button>
+                    </div>
                   
                     <Link to="/">
                       <img src="images/currus_logo.png" ></img>
                     </Link>
-                  <div className="search">
-
-                  </div>
+              
                   <nav>
                     <ul>
                       <li><Link to="/shop">Shop</Link></li>
@@ -76,6 +79,7 @@ const Header = () => {
 
             </div>
         </header>
+        </>
     )
 }
 

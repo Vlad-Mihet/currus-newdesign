@@ -10,8 +10,13 @@ const Shipping = (props) => {
                 <img src="/images/icon1.png"></img>
             </div>
             <div id="text">
-            <h1>Shipping</h1>
-            <h4>All Domestic United States orders include Free Standard Shipping</h4>
+            <h1>Shipping Information</h1>
+            <p>All Domestic United States orders include Free Standard Shipping, excluding Alaska and Hawaii.
+                <br />
+                <br />
+                We do not currently ship internationally. <br />
+                <br />
+                Your <span>CURRUS</span> will ship from our U.S. Warehouse within 24-48 hours* of your payment clearing. We only ship Monday through Friday. Any in-stock orders placed Friday through Sunday will ship the following Monday or Tuesday.</p>
             </div>
         </div>
         </>

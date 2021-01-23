@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
-import { Elements } from '@stripe/react-stripe-js'
-import { loadStripe } from '@stripe/stripe-js'
+
 
 import Homepage from './screens/Homepage'
 import Test from './screens/Test'
@@ -33,15 +32,21 @@ import Thankyou from './screens/Thankyou'
 
 import MessengerCustomerChat from 'react-messenger-customer-chat'
 
-const stripePromise = loadStripe(process.env.STRIPE_KEY)
 
 function App() {
+
+    const [hamburger, setHamburger] = useState(false)
+
   return (
-    <Elements stripe={stripePromise}>
+  
     <BrowserRouter>
       <MessengerCustomerChat appId="2880331345560627" pageId="103025775108325"/>
       <div className="grid-container">
-        <Header />
+        <Header hamburger={hamburger} setHamburger={setHamburger} />
+        <aside className={hamburger? 'open': '' }>
+              HAMBURGERMENU
+              <button onClick={() => setHamburger(false)}>X</button>
+        </aside>
         <div className="wrap">
           <Switch>
             <Route path="/" component={Homepage} exact></Route>
@@ -74,7 +79,6 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
-    </Elements>
   );
 }
 

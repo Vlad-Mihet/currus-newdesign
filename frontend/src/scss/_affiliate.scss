@@ -1,0 +1,104 @@
+.affiliate {
+
+    margin-top: 60px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #icontext {
+        display: flex;
+        margin-left: 11.81%;
+        margin-right: 11.81%;
+
+        #icon {
+        display: inline;
+       
+        width: 227px;
+        height: 208px;
+        }
+
+        #text {
+
+        }
+    }
+
+    #affiliate_box {
+            margin-left: 220px;
+            margin-right: 220px;
+            text-align: center;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+
+    }
+
+        h1 {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 24px;
+            color: #393636;
+        }
+
+        p {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: rgba(102, 102, 102, 0.85);
+
+            span {
+                color: red;
+                
+            }
+        }
+
+        #affiliate_form {
+            
+            display: grid;
+         
+
+            grid-template-columns: 300px 300px;
+            column-gap: 25px;
+            grid-template-rows: 40px 40px 40px 40px 100px;
+            row-gap: 25px;
+
+            #firstname {
+                grid-column: 1 / span 1;
+            }
+
+            #lastname {
+                grid-column: 2 / span 1;
+            }
+
+            #email {
+                grid-column: 1 / span 1;
+            }
+
+            #phonenumber {
+                grid-column: 2 / span 1;
+            }
+
+            #ineedhelp {
+                grid-column: 1 / span 2;
+            }
+
+            #concern {
+                grid-column: 1 / span 2;
+            }
+
+            #message {
+                grid-column: 1 / span 2;
+            }
+
+
+            button {
+                grid-column: 1 / span 2;
+                margin: 0 auto;
+            }
+
+
+        }
+}

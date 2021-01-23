@@ -45,11 +45,11 @@ header .bar {
   position: inherit;
   height: 30px;
   background-color: #E7161B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 header .bar .free-shipping-from {
-  position: absolute;
-  left: 37.85%;
-  top: 26.67%;
   font-family: "Lato";
   font-weight: 600;
   font-size: 12px;
@@ -57,19 +57,15 @@ header .bar .free-shipping-from {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-header .bar .social-icons {
-  position: absolute;
-  left: 79.86%;
-  top: 10%;
-}
 header .menu {
   height: 90px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-header .menu img {
-  position: absolute;
-  left: 11.81%;
-  top: 17.78%;
+header .menu #hamburger {
+  display: none;
 }
 header .menu nav {
   position: absolute;
@@ -88,9 +84,31 @@ header .menu a {
   text-decoration: none;
 }
 header .menu .login_cart {
-  position: absolute;
-  right: 10%;
-  top: 1vh;
+  margin: 15px;
+}
+@media (max-width: 768px) {
+  header .menu #hamburger {
+    display: inline-block;
+  }
+}
+
+aside {
+  width: 288px;
+  position: fixed;
+  height: 100%;
+  margin-top: -120px;
+  z-index: 100;
+  transform: translateX(-288px);
+  background-color: #efefef;
+}
+@media (max-width: 320px) {
+  aside {
+    width: 286px;
+  }
+}
+
+.open {
+  transform: translateX(0);
 }
 
 .category_page {
@@ -617,17 +635,362 @@ header .menu .login_cart {
 .shipping {
   display: flex;
   justify-content: center;
-}
-.shipping #icon img {
-  display: inline;
+  margin-bottom: 100px;
+  margin-left: 15.28%;
+  margin-right: 15.28%;
   margin-top: 60px;
-  margin-left: 11.81%;
+}
+.shipping #icon {
+  display: inline;
   width: 227px;
   height: 208px;
 }
 .shipping #text {
-  margin-top: 60px;
   margin-left: 50px;
+}
+.shipping #text h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #393636;
+}
+.shipping #text p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+.shipping #text p span {
+  color: red;
+}
+@media (max-width: 768px) {
+  .shipping {
+    margin-bottom: 60px;
+    margin-right: 32px;
+  }
+  .shipping #text {
+    margin-right: 32px;
+  }
+}
+@media (max-width: 320px) {
+  .shipping {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.return {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.return #icontext {
+  display: flex;
+  margin-left: 11.81%;
+  margin-right: 11.81%;
+}
+.return #icontext #icon {
+  display: inline;
+  width: 227px;
+  height: 208px;
+}
+.return h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #393636;
+}
+.return p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+.return p span {
+  color: red;
+}
+.return #return_box {
+  margin-left: 220px;
+  margin-right: 220px;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+}
+.return .return_form {
+  display: grid;
+  grid-template-columns: 218.7px 56.7px 137px 137px 56.7px 218.7px;
+  column-gap: 25px;
+  grid-template-rows: 40px 40px 40px 40px 40px 40px 100px;
+  row-gap: 25px;
+}
+.return .return_form #vendor {
+  grid-column: 1/span 2;
+}
+.return .return_form #action {
+  grid-column: 3/span 2;
+}
+.return .return_form #sku {
+  grid-column: 5/span 2;
+}
+.return .return_form #serial {
+  grid-column: 1/span 2;
+}
+.return .return_form #quantity {
+  grid-column: 3/span 2;
+}
+.return .return_form #date {
+  grid-column: 5/span 2;
+}
+.return .return_form #first {
+  grid-column: 1/span 2;
+}
+.return .return_form #last {
+  grid-column: 3/span 2;
+}
+.return .return_form #company {
+  grid-column: 5/span 2;
+}
+.return .return_form #email {
+  grid-column: 1/span 2;
+}
+.return .return_form #phone {
+  grid-column: 3/span 2;
+}
+.return .return_form #order {
+  grid-column: 5/span 2;
+}
+.return .return_form #street {
+  grid-column: 1/span 3;
+}
+.return .return_form #address {
+  grid-column: 4/span 3;
+}
+.return .return_form #city {
+  grid-column: 1/span 1;
+}
+.return .return_form #state {
+  grid-column: 2/span 2;
+}
+.return .return_form #zip {
+  grid-column: 4/span 2;
+}
+.return .return_form #country {
+  grid-column: 6/span 1;
+}
+.return .return_form #message {
+  grid-column: 1/span 6;
+}
+.return .return_form button {
+  grid-column: 1/span 6;
+  margin: 0 auto;
+}
+
+.warranty {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.warranty #icontext {
+  display: flex;
+  margin-left: 11.81%;
+  margin-right: 11.81%;
+}
+.warranty #icontext #icon {
+  display: inline;
+  width: 227px;
+  height: 208px;
+}
+.warranty #warranty_box {
+  margin-left: 220px;
+  margin-right: 220px;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+}
+.warranty h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #393636;
+}
+.warranty p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+.warranty p span {
+  color: red;
+}
+.warranty #warranty_form {
+  display: grid;
+  grid-template-columns: 218.7px 56.7px 137px 137px 56.7px 218.7px;
+  column-gap: 25px;
+  grid-template-rows: 40px 40px 40px 40px 40px 100px;
+  row-gap: 25px;
+}
+.warranty #warranty_form #first {
+  grid-column: 1/span 2;
+}
+.warranty #warranty_form #last {
+  grid-column: 3/span 2;
+}
+.warranty #warranty_form #order {
+  grid-column: 5/span 2;
+}
+.warranty #warranty_form #email {
+  grid-column: 1/span 2;
+}
+.warranty #warranty_form #phone {
+  grid-column: 3/span 2;
+}
+.warranty #warranty_form #date {
+  grid-column: 5/span 2;
+}
+.warranty #warranty_form #address1 {
+  grid-column: 1/span 3;
+}
+.warranty #warranty_form #address2 {
+  grid-column: 4/span 3;
+}
+.warranty #warranty_form #city {
+  grid-column: 1/span 1;
+}
+.warranty #warranty_form #state {
+  grid-column: 2/span 2;
+}
+.warranty #warranty_form #zip {
+  grid-column: 4/span 2;
+}
+.warranty #warranty_form #country {
+  grid-column: 6/span 1;
+}
+.warranty #warranty_form #model {
+  grid-column: 1/span 6;
+}
+.warranty #warranty_form #message {
+  grid-column: 1/span 6;
+}
+.warranty #warranty_form button {
+  grid-column: 1/span 6;
+  margin: 0 auto;
+}
+
+.affiliate {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.affiliate #icontext {
+  display: flex;
+  margin-left: 11.81%;
+  margin-right: 11.81%;
+}
+.affiliate #icontext #icon {
+  display: inline;
+  width: 227px;
+  height: 208px;
+}
+.affiliate #affiliate_box {
+  margin-left: 220px;
+  margin-right: 220px;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+}
+.affiliate h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #393636;
+}
+.affiliate p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+.affiliate p span {
+  color: red;
+}
+.affiliate #affiliate_form {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  column-gap: 25px;
+  grid-template-rows: 40px 40px 40px 40px 100px;
+  row-gap: 25px;
+}
+.affiliate #affiliate_form #firstname {
+  grid-column: 1/span 1;
+}
+.affiliate #affiliate_form #lastname {
+  grid-column: 2/span 1;
+}
+.affiliate #affiliate_form #email {
+  grid-column: 1/span 1;
+}
+.affiliate #affiliate_form #phonenumber {
+  grid-column: 2/span 1;
+}
+.affiliate #affiliate_form #ineedhelp {
+  grid-column: 1/span 2;
+}
+.affiliate #affiliate_form #concern {
+  grid-column: 1/span 2;
+}
+.affiliate #affiliate_form #message {
+  grid-column: 1/span 2;
+}
+.affiliate #affiliate_form button {
+  grid-column: 1/span 2;
+  margin: 0 auto;
+}
+
+.login {
+  margin-left: 34.375%;
+  margin-right: 34.375%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+}
+.login img {
+  width: 200px;
+  height: 50px;
+}
+.login h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(57, 54, 54, 0.85);
 }
 
 footer {

@@ -24,6 +24,23 @@ export const register = (name, email, password) => async (dispatch) => {
     }
 }
 
+export const fblogin = (name, email) => async (dispatch) => {
+    try {
+        const { data } = await Axios.post('/api/users/register', { name, email, password: '00000000'})
+        dispatch({ type: USER_REGISTER_SUCCESS, payload: data })
+    } catch (error) {
+
+        try {
+        const { data } = await Axios.post('/api/users/signin', { email, password: '00000000' });
+        dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
+        } catch (err) {
+        dispatch({ type: USER_SIGNIN_FAIL, payload: err.response })
+        }
+        dispatch({ type: USER_REGISTER_FAIL, payload: error.response })
+
+    }
+}
+
 export const signout = () => (dispatch) => {
     dispatch({ type: USER_SIGNIN_SIGNOUT })
     

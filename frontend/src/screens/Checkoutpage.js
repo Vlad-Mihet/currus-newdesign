@@ -4,16 +4,13 @@ import { checkout } from '../redux/actions/cartActions'
 import { Link } from 'react-router-dom'
 import { PayPalButton } from 'react-paypal-button-v2'
 import Axios from 'axios'
-import { loadStripe } from '@stripe/stripe-js'
-import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 
-const stripePromise = loadStripe(process.env.STRIPE_KEY)
+
 
 const Checkoutpage = (props) => {
 
     const dispatch = useDispatch()
-    const stripe = useStripe()
-    const elements = useElements()
+    
 
     const [first, setFirst] = useState('')
     const [last, setLast] = useState('')

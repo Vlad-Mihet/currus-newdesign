@@ -21,6 +21,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-facebook": "^8.1.4",
+    "react-facebook-login": "^4.1.1",
     "react-faq-component": "^1.2.2",
     "react-image-gallery": "^1.0.8",
     "react-messenger-customer-chat": "^0.8.0",
@@ -41,7 +42,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
