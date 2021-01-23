@@ -76,7 +76,7 @@ const Cartpage = (props) => {
             <div>
                 <Link to='/shop'>Continue Shopping</Link>
             </div>
-            <aside>
+            <div>
             <h1>Cart Totals</h1>
             <h4>
             ${itemsPrice}
@@ -109,7 +109,7 @@ const Cartpage = (props) => {
                         Proceed to Checkout
                     </button>
             </div>
-            </aside>
+            </div>
         </div>
     )
 }

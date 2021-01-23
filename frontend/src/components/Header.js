@@ -17,6 +17,10 @@ const Header = ({ hamburger, setHamburger }) => {
     const { userInfo } = userSignin
 
 
+    const cart = useSelector(state => state.cart)
+    const { cartItems } = cart
+
+    const itemsPrice = cartItems.reduce((a, c) => a + c.priceUSD * c.qty, 0)
 
     const handleLogout = () => {
       dispatch(signout())
@@ -74,7 +78,7 @@ const Header = ({ hamburger, setHamburger }) => {
                     (
                     <div><Link to='/logout' onClick={handleLogout}>Logout</Link></div>
                     ) }
-                    <div><Link to='/cart'>Cart</Link></div>
+                    <div><Link to='/cart'>Cart</Link> / ${itemsPrice}</div>
                   </div>
 
             </div>

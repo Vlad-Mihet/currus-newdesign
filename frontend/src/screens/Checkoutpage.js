@@ -101,7 +101,7 @@ const Checkoutpage = (props) => {
                 <input id="postcode" type="text" value={postcode} onChange={(e) => setPostcode(e.target.value)} placeholder="Postcode"></input>
                 <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"></input>
                 <input id="phonenumber" type="text" value={phonenumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Phone Number"></input>
-                <aside>
+                <div>
                     <ul>
                         {cartItems.map(item => (
                         <li key={item.id}>
@@ -131,7 +131,7 @@ const Checkoutpage = (props) => {
 
                 </div>
                     <button type="submit">Place Order</button>
-                </aside>
+                </div>
             </form>
 
         </div>

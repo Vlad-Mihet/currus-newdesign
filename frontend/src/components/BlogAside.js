@@ -15,7 +15,7 @@ const BlogAside  = () => {
     return (
         <>
         { blogs && (
-        <aside className="blog_aside">
+        <div className="blog_aside">
             <h1>Latest Post</h1>
 
             <h1>Blog Categories</h1>
@@ -23,7 +23,7 @@ const BlogAside  = () => {
             <h1>Tags</h1>
 
             <h1>Archives</h1>
-        </aside>
+        </div>
         )
         }
         </>

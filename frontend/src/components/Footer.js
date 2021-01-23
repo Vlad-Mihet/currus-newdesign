@@ -39,7 +39,8 @@ const Footer = () => {
           <div className="contact_us">
               <h6>Contact Us</h6>
               <div className="ifyouhave">
-                If you have any question, please contact us at info@currusmotors.com
+                If you have any question, please <br/>
+                contact us at info@currusmotors.com
               </div>
           </div>
           <div className="support">

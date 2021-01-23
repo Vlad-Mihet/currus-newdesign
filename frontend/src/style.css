@@ -47,7 +47,7 @@ header .bar {
   background-color: #E7161B;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 header .bar .free-shipping-from {
   font-family: "Lato";
@@ -62,14 +62,10 @@ header .menu {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 header .menu #hamburger {
   display: none;
-}
-header .menu nav {
-  position: absolute;
-  left: 30.83%;
 }
 header .menu nav ul {
   display: flex;
@@ -84,7 +80,12 @@ header .menu a {
   text-decoration: none;
 }
 header .menu .login_cart {
+  display: flex;
+  flex-direction: row;
   margin: 15px;
+}
+header .menu .login_cart div {
+  margin: 5px;
 }
 @media (max-width: 768px) {
   header .menu #hamburger {
@@ -223,6 +224,10 @@ aside {
   grid-area: four;
 }
 
+.ourblog {
+  margin-left: 162.5px;
+  margin-right: 162.5px;
+}
 .ourblog h1 {
   font-family: Lato;
   font-style: normal;
@@ -233,8 +238,18 @@ aside {
   text-transform: uppercase;
   color: rgba(102, 102, 102, 0.85);
 }
+.ourblog #first {
+  margin-bottom: 100px;
+}
 .ourblog #second {
   width: 1100px;
+  margin-bottom: 100px;
+}
+.ourblog .slick-prev {
+  background: red;
+}
+.ourblog .slick-next {
+  background: red;
 }
 
 .instagram {
@@ -242,15 +257,30 @@ aside {
   grid-template-columns: repeat(6, 1fr);
 }
 .instagram img {
-  width: 16.6667%;
+  min-width: 0;
+  min-height: 0;
   height: 26.6667vh;
 }
 .instagram #join {
-  width: 16.6667%;
   height: 26.6667vh;
   background: #E7161B;
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.instagram #join #insta {
+  margin-top: 8.33%;
+  margin-left: 8.33%;
+}
+.instagram #join #instatext {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-left: 20px;
+  margin-bottom: 25px;
 }
 
 .filter {
@@ -993,17 +1023,77 @@ aside {
   color: rgba(57, 54, 54, 0.85);
 }
 
+.terms {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  margin-left: 11.81%;
+  margin-right: 11.81%;
+}
+.terms h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #393636;
+}
+.terms p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+@media (max-width: 768px) {
+  .terms {
+    margin-left: 4.43%;
+    margin-right: 4.43%;
+  }
+}
+
+.safety {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  margin-left: 11.81%;
+  margin-right: 11.81%;
+}
+.safety #icontext {
+  display: flex;
+}
+.safety h1 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #393636;
+}
+.safety p, .safety li {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+@media (max-width: 768px) {
+  .safety {
+    margin-left: 4.43%;
+    margin-right: 4.43%;
+  }
+}
+
 footer {
   box-sizing: border-box;
   background: #393636;
 }
 footer #one {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  display: grid;
-  grid-template-columns: 29.167% 14.375% 14.17% 57.715%;
-  height: 34%;
-  box-sizing: border-box;
-  grid-template-areas: "contact support legal newsletter";
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 306px;
 }
 footer #one h6 {
   font-family: Lato;
@@ -1016,32 +1106,18 @@ footer #one h6 {
 }
 footer #one ul {
   list-style-type: none;
+  padding-left: 0;
 }
 footer #one a {
   text-decoration: none;
   color: #888888;
 }
 footer #two {
-  display: grid;
-  box-sizing: border-box;
-  grid-template-columns: 35.6% 18.47% 45.84%;
-  height: 16%;
-  grid-template-areas: "copyright social card";
-}
-footer #two #copyright {
-  grid-area: copyright;
-  padding: 60px 0px;
-  align-self: center;
-}
-footer #two #social_icons {
-  grid-area: social;
-  align-self: center;
-  justify-self: end;
-}
-footer #two #card {
-  grid-area: card;
-  justify-self: end;
-  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 144px;
 }
 
 /*# sourceMappingURL=style.css.map */

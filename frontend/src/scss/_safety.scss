@@ -1,0 +1,34 @@
+.safety {
+    margin-top: 60px;
+    margin-bottom: 100px;
+
+    margin-left: 11.81%;
+    margin-right: 11.81%;
+
+    #icontext {
+        display: flex;
+    }
+
+    h1 {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        color: #393636;
+    }
+
+    p, li {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(102, 102, 102, 0.85);
+    }
+
+    @media (max-width:768px) {
+        margin-left: 4.43%;
+        margin-right: 4.43%;
+    }
+}
