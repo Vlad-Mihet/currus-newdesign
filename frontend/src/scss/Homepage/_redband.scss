@@ -28,4 +28,8 @@
     #subscribe {
         margin: 29px 10% 29px 50px;
     }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }

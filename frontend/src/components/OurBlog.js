@@ -53,7 +53,7 @@ const OurBlog = () => {
         <div className="ourblog">
             <h1>Our Blog</h1>
             <h4>{page.title}</h4>
-            <div id="first" style={{ width: "1000px" }}>
+            <div id="first">
                 <Slider {...settings}>
                     <div>
                         <img height={200} src="images/fa53cb9684.jpeg" />
@@ -69,7 +69,7 @@ const OurBlog = () => {
                     </div>
                 </Slider>
             </div>
-            <div id="second" style={{ width: "750px" }}>
+            <div id="second">
                 <Slider arrows={true} slidesToShow={1}>
                     <div>
                         <p>Riding the Currus NF is like a dream come true</p>

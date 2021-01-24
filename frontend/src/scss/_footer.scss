@@ -9,7 +9,11 @@ footer {
         justify-content: space-around;
         align-items: center;
        
-        height: 306px;
+       #contact_us {
+            h6 {
+                margin: 0;
+            }
+       }
       
      
 
@@ -33,6 +37,10 @@ footer {
             text-decoration: none;
             color: #888888;
         }
+
+        @media (max-width: 320px) {
+            display: block;
+        }
     }
 
     #two {
@@ -40,8 +48,9 @@ footer {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-   
-        height: 144px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+      
 
   
     }

@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM, SAVE_SHIPPING, SAVE_TOTAL, SAVE_COUPON, SAVE_SUBTOTAL, CHECKOUT_REQUEST, CHECKOUT_SUCCESS, CHECKOUT_FAILURE } from '../constants/cartConstants'
+import { CART_ADD_ITEM, CART_REMOVE_ITEM, SAVE_SHIPPING, SAVE_TOTAL, SAVE_COUPON, SAVE_SUBTOTAL, CHECKOUT_REQUEST, CHECKOUT_SUCCESS, CHECKOUT_FAILURE, CART_REMOVE_ONE } from '../constants/cartConstants'
 
 export const cartReducer = (state = { cartItems: []}, action) => {
     switch (action.type) {
@@ -14,6 +14,20 @@ export const cartReducer = (state = { cartItems: []}, action) => {
                 }
             }
             return { ...state, cartItems: [...state.cartItems, item] };
+        case CART_REMOVE_ITEM:
+            const id = action.payload;
+            const foundItem = state.cartItems.find((x) => x.id === id)
+            if (foundItem) {
+                return { ...state, cartItems: [...state.cartItems.filter(x => x.id !== id)]}
+            }
+        case CART_REMOVE_ONE:
+            const productId = action.payload;
+            const i = state.cartItems.find((x) => x.id === productId)
+            if (i && i.qty > 1) {
+                return { ...state, cartItems: [...state.cartItems.map(x => (x.id === productId ? { ...x, qty: x.qty - 1 } : { ...x }))]}
+            }
+            
+
         case SAVE_SUBTOTAL:
             return { ...state, subtotal: action.payload }
         case SAVE_SHIPPING:

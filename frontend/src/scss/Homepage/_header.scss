@@ -33,18 +33,14 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
 
         #hamburger {
             display: none;
         }
 
-        img {
-           
-        }
 
         nav {
-      
-
             ul {
                 display: flex;
                 flex-direction: row;
@@ -56,6 +52,12 @@ header {
                     margin: 5px;
                 }
             }
+
+            @media (max-width: 768px) {
+                display: none;
+
+            }
+
         }
 
         a {
@@ -70,6 +72,12 @@ header {
            div {
                margin: 5px;
            }
+
+           @media (max-width: 320px) {
+               display: none;
+           }
+
+
         }
 
         @media (max-width: 768px) {

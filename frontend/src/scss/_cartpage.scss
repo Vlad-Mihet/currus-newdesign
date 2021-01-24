@@ -1,0 +1,40 @@
+.cart {
+
+    margin-left: 170px;
+    margin-right: 170px;
+    margin-bottom: 100px;
+
+    #gridbox {
+        display: grid;
+        grid-template-columns:  2.5833fr 1fr;
+        column-gap: 25px;
+
+        #box1 {
+            border: 1px solid rgba(102, 102, 102, 0.3);
+            box-sizing: border-box;
+
+            ul {
+
+                li {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+            #row {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        #box2 {
+            background: #F6F6F6;
+        }
+    }
+}

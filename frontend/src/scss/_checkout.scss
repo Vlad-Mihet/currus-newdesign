@@ -1,0 +1,17 @@
+.checkout {
+
+    #grid {
+
+        display: grid;
+        grid-template-columns:  2.5833fr 1fr;
+        column-gap: 25px;
+
+        #box1 {
+
+        }
+
+        #box2 {
+            background: #F6F6F6;
+        }
+    }   
+}

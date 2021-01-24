@@ -17,13 +17,19 @@ const Faqpage = (props) => {
             }
         ]
     }
+
+    const styles = {
+        titleTextColor: "red",
+        rowTitleColor: "red",
+        rowContentPaddingBottom: '50'
+    }
   
 
     return (
         <>
         <Breadcrumbs title={props.location.pathname} />
         <div className="faq">
-            <Faq data={data} />
+            <Faq styles={styles} data={data} />
         </div>
         </>
     )

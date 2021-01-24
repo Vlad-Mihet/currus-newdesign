@@ -27,7 +27,8 @@ orderRouter.post('/', expressAsyncHandler(async (req, res) => {
         itemsPrice: req.body.itemsPrice,
         shippingPrice: req.body.shippingPrice,
         totalPrice: req.body.totalPrice,
-        buyer: req.body.buyer
+        buyer: req.body.buyer,
+        isDelivered: false
     });
 
     const createdOrder = await order.save();

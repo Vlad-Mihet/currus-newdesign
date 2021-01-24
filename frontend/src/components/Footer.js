@@ -36,7 +36,7 @@ const Footer = () => {
     return (
         <footer>
           <div id="one">
-          <div className="contact_us">
+          <div id="contact_us">
               <h6>Contact Us</h6>
               <div className="ifyouhave">
                 If you have any question, please <br/>

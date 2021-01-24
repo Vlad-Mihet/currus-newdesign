@@ -4,7 +4,7 @@ import { checkout } from '../redux/actions/cartActions'
 import { Link } from 'react-router-dom'
 import { PayPalButton } from 'react-paypal-button-v2'
 import Axios from 'axios'
-
+import Stepper from 'react-stepper-horizontal'
 
 
 const Checkoutpage = (props) => {
@@ -52,11 +52,7 @@ const Checkoutpage = (props) => {
     })
 
     const handleSuccessPayment = () => {
-
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
+        
         const order = {
             orderItems: cartItems.map(x => ({...x, product: x.id })),
             shippingAddress: {
@@ -80,6 +76,9 @@ const Checkoutpage = (props) => {
 
     return (
         <div className="checkout">
+            <Stepper activeStep={1} steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
+            <div id="grid">
+            <div id="box1">
             <h2>Billing Details</h2>
             { !userInfo && (
             <div>
@@ -90,7 +89,7 @@ const Checkoutpage = (props) => {
                 Have A Coupon? Click here!
             </div>
             ): <div>Coupon Applied</div>}
-            <form onSubmit={handleSubmit}>
+            <form>
                 <input id="first" type="text" value={first} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
                 <input id="last" type="text" value={last} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
                 <input id="company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Company Name"></input>
@@ -101,7 +100,23 @@ const Checkoutpage = (props) => {
                 <input id="postcode" type="text" value={postcode} onChange={(e) => setPostcode(e.target.value)} placeholder="Postcode"></input>
                 <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"></input>
                 <input id="phonenumber" type="text" value={phonenumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Phone Number"></input>
-                <div>
+             </form>
+            <br />
+            { !userInfo ? (
+             <form>
+                 <label> Create An Account?
+                    <input type="checkbox"></input>
+                </label>
+                <input placeholder="Username"></input>
+                <input placeholder="Create Password"></input>
+                <input placeholder="Notes about your order" type="text"></input>
+             </form> ) : ""
+            }
+
+            </div>
+
+            <div id="box2">
+                
                     <ul>
                         {cartItems.map(item => (
                         <li key={item.id}>
@@ -130,10 +145,11 @@ const Checkoutpage = (props) => {
                 </PayPalButton>
 
                 </div>
-                    <button type="submit">Place Order</button>
+                    {/* <button type="submit">Place Order</button> */}
                 </div>
-            </form>
 
+             
+            </div>
         </div>
     )
 }

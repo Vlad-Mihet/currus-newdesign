@@ -1,5 +1,5 @@
 import Axios from 'axios'
-import { CART_ADD_ITEM, SAVE_SHIPPING, SAVE_TOTAL, SAVE_COUPON, SAVE_SUBTOTAL, CHECKOUT_REQUEST, CHECKOUT_SUCCESS, CHECKOUT_FAILURE } from '../constants/cartConstants'
+import { CART_ADD_ITEM, CART_REMOVE_ITEM, SAVE_SHIPPING, SAVE_TOTAL, SAVE_COUPON, SAVE_SUBTOTAL, CHECKOUT_REQUEST, CHECKOUT_SUCCESS, CHECKOUT_FAILURE, CART_REMOVE_ONE } from '../constants/cartConstants'
 
 export const addToCart = (productId, qty) => async (dispatch, getState) => {
     const { data } = await Axios.get(`/api/products/${productId}`);
@@ -11,9 +11,18 @@ export const addToCart = (productId, qty) => async (dispatch, getState) => {
             name: data.name,
             priceUSD: data.priceUSD,
             priceCAD: data.priceCAD,
+            image: data.image,
             qty,
         }
     })
+}
+
+export const removeFromCart = (productId) => (dispatch) => {
+    dispatch({ type: CART_REMOVE_ITEM, payload: productId })
+}
+
+export const removeOneFromCart = (productId) => (dispatch) => {
+    dispatch({ type: CART_REMOVE_ONE, payload: productId })
 }
 
 export const applyCoupon = () => (dispatch) => {
