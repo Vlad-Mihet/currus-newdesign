@@ -9,17 +9,15 @@ const Banner = () => {
             <Carousel showThumbs={false}>
                 <div>
                     <img src="images/1.jpeg" />
-                    <p className="legend">First Picture Legend</p>
+
                 </div>
                 <div>
                     <img src="images/2.jpeg" />
-                    <p className="legend">Second Picture Legend</p>
+                    {/* <p className="legend">Second Picture Legend</p> */}
                 </div>
             </Carousel>
-            </div>
                 <div className="text-banner">
-                    <div className="rectangle-14">
-                    </div>
+   
                  
                     <div className="your-vehicle">
                         Your Vehicle-Grade Scooter is Here
@@ -27,14 +25,15 @@ const Banner = () => {
                     <div className="introducing">
                         Introducing Currus NF
                     </div>
-                    <div className="text-banner__button">
-                        <div className="rectangle-15">
-                            <div className="buy_now">
-                                Buy Now
-                            </div>
+                    <div className="text-banner__button">        
+                        <div className="buy_now">
+                            Buy Now
                         </div>
                     </div>
                 </div>
+
+            </div>
+
         </div>
     )
 }

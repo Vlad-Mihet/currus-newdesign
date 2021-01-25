@@ -32,17 +32,19 @@ body {
 .banner {
   position: relative;
 }
-.banner .banner_carousel {
-  position: relative;
-}
 .banner .text-banner {
-  position: absolute;
-  top: 16.66%;
-  left: 8.235%;
   width: 26.04%;
   height: 56%;
+  position: absolute;
+  top: 16.67%;
+  left: 11.81%;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 3px;
+}
+@media (max-width: 320px) {
+  .banner .text-banner {
+    width: 80%;
+  }
 }
 
 header {
@@ -55,6 +57,7 @@ header .bar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
 }
 header .bar .free-shipping-from {
   font-family: "Lato";
@@ -63,6 +66,9 @@ header .bar .free-shipping-from {
   line-height: 14px;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+header .bar .social-icons svg {
+  margin: 1px;
 }
 header .menu {
   height: 90px;
@@ -75,6 +81,14 @@ header .menu {
 header .menu #hamburger {
   display: none;
 }
+header .menu nav {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
 header .menu nav ul {
   display: flex;
   flex-direction: row;
@@ -83,6 +97,9 @@ header .menu nav ul {
 }
 header .menu nav ul li {
   margin: 5px;
+}
+header .menu nav ul li a {
+  color: rgba(102, 102, 102, 0.85);
 }
 @media (max-width: 768px) {
   header .menu nav {
@@ -96,9 +113,18 @@ header .menu .login_cart {
   display: flex;
   flex-direction: row;
   margin: 15px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
 }
 header .menu .login_cart div {
   margin: 5px;
+}
+header .menu .login_cart div a {
+  color: rgba(102, 102, 102, 0.85);
 }
 @media (max-width: 320px) {
   header .menu .login_cart {
@@ -348,6 +374,11 @@ aside {
     position: absolute;
     top: 151px;
     margin: 10px;
+  }
+}
+@media (min-width: 321px) {
+  .rideriskfree #sections {
+    margin-right: 13.54%;
   }
 }
 
@@ -1301,7 +1332,7 @@ footer #one a {
   text-decoration: none;
   color: #888888;
 }
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   footer #one {
     display: block;
   }

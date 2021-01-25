@@ -13,7 +13,9 @@ const Cartpage = (props) => {
     const [code, setCode] = useState('')
     const [applied, setApplied] = useState(false)
     const [shippingPrice, setShippingPrice] = useState(0)
-
+    const [itemsPrice, setItemsPrice] = useState(0);
+    const [afterCouponPrice, setAfterCouponPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
     
     const productId = props.match.params.id;
     const qty = props.location.search ? Number(props.location.search.split('=')[1]) : 1;
@@ -21,12 +23,21 @@ const Cartpage = (props) => {
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
 
-    const itemsPrice = cartItems.reduce((a, c) => a + c.priceUSD * c.qty, 0)
-    const afterCouponPrice = Math.round(itemsPrice * coupon)
 
-    const totalPrice = afterCouponPrice + shippingPrice
 
-  
+    
+
+    useEffect(() => {
+        setItemsPrice(cartItems.reduce((a, c) => a + c.priceUSD * c.qty, 0))
+    }, [cartItems])
+
+    useEffect(() => {
+        setAfterCouponPrice((itemsPrice * coupon));
+    }, [itemsPrice, coupon])
+
+    useEffect(() => {
+        setTotalPrice((afterCouponPrice + shippingPrice))
+    }, [afterCouponPrice, shippingPrice]);
 
   
 

@@ -11,6 +11,8 @@ const Shoppage = (props) => {
     const [grid, setGrid] = useState(true)
     const productList = useSelector((state) => state.productList);
     const { loading, error, products, filteredProducts } = productList;
+    const [displayedProducts, setDisplayedProducts] = useState([]);
+
    
     const [sort, setSort] = useState("")
 
@@ -20,7 +22,10 @@ const Shoppage = (props) => {
         dispatch(listProducts())
     }, [dispatch])
 
-    const displayedProducts = filteredProducts ? filteredProducts : products
+    useEffect(() => {
+        setDisplayedProducts(filteredProducts ? filteredProducts : products)
+    }, [filteredProducts])
+
 
     return (
         <div className="shoppage">

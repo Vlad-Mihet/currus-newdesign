@@ -74,10 +74,10 @@ const Header = ({ hamburger, setHamburger }) => {
                   
                   <div className="login_cart">
                     { !userInfo ? (
-                    <div><Link to='/login'>Login</Link></div> ) :
+                    <div><Link to='/login'>Login&nbsp;&nbsp;&nbsp;&nbsp;|</Link></div> ) :
                     (
                     <div><Link to='/logout' onClick={handleLogout}>Logout</Link></div>
-                    ) }
+                    ) } 
                     <div><Link to='/cart'>Cart</Link> / ${itemsPrice}</div>
                   </div>
 

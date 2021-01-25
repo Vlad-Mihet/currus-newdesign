@@ -14,7 +14,7 @@ const Filter = ({ grid, setGrid, sort, setSort }) => {
     const [low, setLow] = useState(0)
     const [high, setHigh] = useState(100000)
     const [pricerange, setPricerange] = useState([0, 10000])
-  
+    const [displayedProducts, setDisplayedProducts] = useState([]);
 
     const productList = useSelector(state => state.productList);
     const { products, filteredProducts, loading } = productList;
@@ -35,10 +35,11 @@ const Filter = ({ grid, setGrid, sort, setSort }) => {
             dispatch(sortProducts(products, sort))
         }
     }, [sort])
+    
+    useEffect(() => {
+        setDisplayedProducts(filteredProducts ? filteredProducts : products)
+    }, [filteredProducts])
 
-
-
-    const displayedProducts = filteredProducts ? filteredProducts : products
 
     return (
         <div className="filter">
