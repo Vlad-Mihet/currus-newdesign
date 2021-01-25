@@ -5,20 +5,24 @@ function Category(props) {
 
     return (
         <div className="category_page">
-            <section>
-                <div className="category_title">
-                    E-SCOOTERS
-                </div>
-                <div className="category_description">
-                    Nulla id quarm varius, faucibus
+            <section id="section_one">
+                <div className="category_border">
+                    <div className="category_title">
+                        E-SCOOTERS
+                    </div>
+                    <div className="category_description">
+                        Nulla id quarm varius
+                    </div>
                 </div>
             </section>
-            <section>
-                <div className="category_title">
-                    Accessories
-                </div>
-                <div className="category_description">
-                    Nulla id quam
+            <section id="section_two">
+                <div className="category_border">
+                    <div className="category_title">
+                        Accessories
+                    </div>
+                    <div className="category_description">
+                        Nulla id quarm varius
+                    </div>
                 </div>
             </section>
         </div>       

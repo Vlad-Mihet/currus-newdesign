@@ -5,6 +5,8 @@ import scFacebook from '@iconify/icons-ei/sc-facebook';
 import scInstagram from '@iconify/icons-ei/sc-instagram';
 import scTwitter from '@iconify/icons-ei/sc-twitter';
 import scYoutube from '@iconify/icons-ei/sc-youtube';
+import bagIcon from '@iconify/icons-bytesize/bag';
+
 
 import { Link } from 'react-router-dom'
 import { signout } from '../redux/actions/userActions'
@@ -37,8 +39,10 @@ const Header = ({ hamburger, setHamburger }) => {
           <div className="bar">
        
               <div className="currency">
-                <button onClick={() => handleCurrency('USD')}>USD</button>
-                <button onClick={() => handleCurrency('CAD')}>CAD</button>
+                <select onChange={(e) => handleCurrency(e.target.value)}>
+                  <option value="USD">USD</option>
+                  <option value="CAD">CAD</option>
+                </select>
               </div>
               <div className="free-shipping-from">
                 Free shipping from Los Angeles across USA &amp; CANADA
@@ -56,11 +60,11 @@ const Header = ({ hamburger, setHamburger }) => {
                       <button onClick={() => setHamburger(true)}>Ham</button>
                     </div>
                   
-                    <Link to="/">
+                    <Link id="logo" to="/" style={{ margin: "0 auto" }}>
                       <img src="images/currus_logo.png" ></img>
                     </Link>
               
-                  <nav>
+                  <nav id="menu_nav">
                     <ul>
                       <li><Link to="/shop">Shop</Link></li>
                       <li><Link to="/aboutus">About Us</Link></li>
@@ -73,12 +77,20 @@ const Header = ({ hamburger, setHamburger }) => {
                   </nav>
                   
                   <div className="login_cart">
+                    <div id="login">
                     { !userInfo ? (
                     <div><Link to='/login'>Login&nbsp;&nbsp;&nbsp;&nbsp;|</Link></div> ) :
                     (
                     <div><Link to='/logout' onClick={handleLogout}>Logout</Link></div>
                     ) } 
-                    <div><Link to='/cart'>Cart</Link> / ${itemsPrice}</div>
+                    </div>
+                    <div id="cart" style={{color: "rgba(102, 102, 102, 0.85)"}}><Link to='/cart'>Cart</Link> / ${itemsPrice}</div>
+                    <div id="cartsizeparent">
+                    <Icon icon={bagIcon} style={{color: 'black', fontSize: '25px' }}></Icon>
+                  
+                    <div id="cartsize">{cartItems.length}</div>
+                  
+                    </div>
                   </div>
 
             </div>

@@ -19,14 +19,14 @@ const Banner = () => {
                 <div className="text-banner">
    
                  
-                    <div className="your-vehicle">
-                        Your Vehicle-Grade Scooter is Here
+                    <div id="your-vehicle">
+                        Your <br/>Vehicle-Grade Scooter is Here
                     </div>
-                    <div className="introducing">
+                    <div id="introducing">
                         Introducing Currus NF
                     </div>
-                    <div className="text-banner__button">        
-                        <div className="buy_now">
+                    <div id="text-banner__button">        
+                        <div id="buy_now">
                             Buy Now
                         </div>
                     </div>

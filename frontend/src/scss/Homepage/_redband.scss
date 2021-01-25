@@ -3,13 +3,14 @@
     background: $darkRed;
     display: flex;
     flex-direction: row;
+    align-items: center;
   
 
     #signuptonewsletter {
         font-family: Lato;
         font-style: normal;
-        font-weight: 600;
-        font-size: 1.5rem;
+        font-weight: 400;
+        font-size: 24px;
         line-height: 24px;
        
         
@@ -23,13 +24,70 @@
     #getallthelatest {
         width: 300px;
         margin: 29px 50px 29px 4.7%;
+        
+        font-family: Open Sans;
+        font-style: normal;
+    
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
     }
 
     #subscribe {
         margin: 29px 10% 29px 50px;
+        display: flex;
+
+
+        input {
+            height: 50px;
+            width: 200px;
+            padding-left: 20px;
+        }
+        button {
+            height: 50px;
+            width: 100px;
+            background: #393636;
+            border-radius: 0px 3px 3px 0px;
+
+            font-family: Lato;
+            color: #FFFFFF;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 350px) {
+            display: block;
+            input {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
+            button {
+                display: block;
+                margin: 0 auto;
+            }
+        }
     }
 
     @media (max-width: 768px) {
         flex-direction: column;
+        #signuptonewsletter {
+            margin: 30px auto;
+        }
+
+        #getallthelatest {
+            margin: 20px auto;
+        }
+
+        button {
+            border-radius: 3px 3px 3px 3px;
+        }
+
     }
 }

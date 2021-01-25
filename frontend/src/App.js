@@ -32,6 +32,9 @@ import Thankyou from './screens/Thankyou'
 
 import MessengerCustomerChat from 'react-messenger-customer-chat'
 
+import {Icon, InlineIcon } from '@iconify/react';
+import closeIcon from '@iconify/icons-carbon/close';
+
 
 function App() {
 
@@ -43,9 +46,31 @@ function App() {
       <MessengerCustomerChat appId="2880331345560627" pageId="103025775108325"/>
       <div className="grid-container">
         <Header hamburger={hamburger} setHamburger={setHamburger} />
-        <aside className={hamburger? 'open': '' }>
-              HAMBURGERMENU
-              <button onClick={() => setHamburger(false)}>X</button>
+        <aside className={hamburger? 'hamburger open': 'hamburger' }>
+          <div id="xparent">
+            <div id="x">
+                <Icon onClick={() => setHamburger(false)} icon={closeIcon} style={{color: '#393636', fontSize: '24px'}} />
+            </div>
+          </div>
+              <div id="content">
+                  <img src="images/currus_logo.png" ></img>
+                  <nav id="hamburger_nav">
+                    <ul>
+                      <li><Link to="/">Home</Link></li>
+                      <li><Link to="/shop">Shop</Link></li>
+                      <li><Link to="/aboutus">About Us</Link></li>
+                      <li><Link to="/blog">Blog</Link></li>
+                      <li><Link to="/faq">FAQ</Link></li>
+                      <li><Link to="/dealer">Dealers</Link></li>
+                      <li><Link to="/contactus">Contact Us</Link></li>
+                      <li><Link to="/order">Order Tracking</Link></li>
+                    </ul>
+                  </nav>
+                      <Link id="login" to="/login">
+                      LOGIN
+                    </Link>
+
+              </div>
         </aside>
         <div className="wrap">
           <Switch>

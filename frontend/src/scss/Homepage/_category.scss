@@ -1,24 +1,106 @@
 .category_page {
-    position: relative;
+    
   
    
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+        #section_one {
+        background: linear-gradient(0deg, rgba(36, 36, 36, 0.65), rgba(36, 36, 36, 0.65)), url(img/banner_picture.jpeg);
+        background-size: cover;
+        }
+
+        #section_two {
+        background: linear-gradient(0deg, rgba(36, 36, 36, 0.65), rgba(36, 36, 36, 0.65)), url(img/category2.jpeg);
+        background-size: cover;
+        }
 
     section {
-        background: linear-gradient(0deg, rgba(36, 36, 36, 0.65), rgba(36, 36, 36, 0.65)), url(img/banner_picture.jpeg);
-        width: 37.5%;
-        height: 50%;
-        display: flex;
-        flex-direction: column;
 
-        justify-content: center;
-        align-items: center;
 
-        align-content: space-around; 
 
-        margin: 100px 80px;
 
+        
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.08);
+        width: 36.46%;
+        height: 298px;
+
+        margin-left: 25px;
+        margin-right: 25px;
+
+        padding: 10px;
+
+        .category_border {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            box-sizing: border-box;
+
+        
+
+            .category_title {
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+               
+           
+                margin-bottom: 10px;
+            }
+
+            .category_title:after {
+                margin: 0 auto;
+                width: 40%;
+                display: block;
+                content: "";
+                padding-top: 10px;
+                border-bottom: 3px solid $darkRed;
+
+            }
+
+            .category_description {
+                font-family: Lato;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+               
+                color: #FFFFFF;
+            }
+        }
+        
+
+    }
+
+    @media (max-width: 800px) {
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        section {
+            height: 206px;
+            width: 43.75%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        section {
+            width: 80%;
+            margin: 30px auto;
+        }
     }
 }

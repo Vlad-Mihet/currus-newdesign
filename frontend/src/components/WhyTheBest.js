@@ -12,7 +12,7 @@ const WhyTheBest = () => {
     
         rows: [
             {
-                title: "Bringing Green Mobility Revolution is our Passion &amp; We Love Electric Vehicles",
+                title: "Bringing Green Mobility Revolution is our Passion & We Love Electric Vehicles",
                 content: "We started because we believe driving EV leads to a sustainable future. We are eco-friendly enthusiasts, working agigely to increase usability, awareness among people about electric vehicles. Our e-scooters are just a reflection of our company philosophy and values. To know more, you can",
             },
             {

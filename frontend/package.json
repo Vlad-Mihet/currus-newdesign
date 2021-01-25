@@ -7,6 +7,8 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "@iconify/icons-bytesize": "^1.1.0",
+    "@iconify/icons-carbon": "^1.1.1",
     "@iconify/icons-ei": "^1.1.0",
     "@iconify/icons-feather": "^1.1.0",
     "@iconify/icons-logos": "^1.1.4",

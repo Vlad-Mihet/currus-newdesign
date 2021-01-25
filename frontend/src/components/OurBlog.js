@@ -11,7 +11,17 @@ const OurBlog = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        centerMode: false,
+        responsive: [
+            {
+                breakpoint: 700,
+                settings: {
+                    centerMode: true,
+                    slidesToShow: 1
+                }
+            }
+        ]
     };
 
     const [page, setPage] = useState(null)

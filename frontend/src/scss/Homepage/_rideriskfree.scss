@@ -1,8 +1,8 @@
 .rideriskfree {
 
     display: grid;
-    grid-template-columns: 16.6% 8.3% 4.1% 1fr;
-    column-gap: 16px;
+    grid-template-columns: 27.4% 3.47% 3.47% 5.21% 1fr;
+   
     grid-template-rows: 1fr;
     
     
@@ -11,7 +11,7 @@
         
     }
 
-    @media (max-width: 320px) {
+    @media (max-width: 400px) {
         display: block;
         position: relative;
         height: 1246px;
@@ -26,14 +26,14 @@
         height: 100%;
         object-fit: cover;
 
-        @media (max-width: 320px) {
+        @media (max-width: 400px) {
             max-width: 50%;
         }
 
     }
 
     #riskfree {
-        height: 520px;
+        height: 72.79%;
         grid-column: 2 / span 2;
         grid-row: 1 / span 1;
         z-index: 5;
@@ -45,7 +45,7 @@
             height: 506px;
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 400px) {
         
             position: absolute;
             top: 0;
@@ -64,6 +64,7 @@
 
     #sections {
      
+        grid-column: 5 / span 1;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -103,7 +104,7 @@
                 height: 245px;
             }
             
-            @media (max-width: 320px) {
+            @media (max-width: 400px) {
                 width: 75%;
                 height: 245px;
                 margin: auto;
@@ -129,7 +130,7 @@
             grid-area: four;
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 400px) {
             display: block;
             position: absolute;
             top: 151px;
@@ -138,7 +139,7 @@
             
         }
 
-        @media (min-width: 321px) {
+        @media (min-width: 401px) {
             margin-right: 13.54%;
         }
     }

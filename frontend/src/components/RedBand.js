@@ -26,6 +26,7 @@ const RedBand = () => {
                 <div id="subscribe">
                 { !sub ? (
                 <>
+                
                 <input onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"></input>
                 <button onClick={subscribeHandler}>Subscribe</button>
                 </> ) : (<h1>Thank you for subscribing. </h1>)
