@@ -24,6 +24,36 @@ const OurBlog = () => {
         ]
     };
 
+    // const NextArrow = (props) => {
+    //     const { className, style, onClick } = props;
+    //     return (
+    //         <div
+    //         className={className}
+    //         style={{ ...style, display: "block", background: "green" }}
+    //         onClick={onClick} />
+    //     );
+    // }
+
+    // const PrevArrow = (props) => {
+    //     const { className, style, onClick } = props;
+    //     return (
+    //         <div
+    //         className={className}
+    //         style={{ ...style, display: "block", background: "red" }}
+    //         onClick={onClick} />
+    //     );
+    // }
+
+    const settings2 = {
+        arrows: true,
+        slidesToShow: 1,
+        // nextArrow: <NextArrow />,
+        // prevArrow: <PrevArrow />
+    }
+
+
+
+
     const [page, setPage] = useState(null)
 
     const query = `
@@ -80,9 +110,17 @@ const OurBlog = () => {
                 </Slider>
             </div>
             <div id="second">
-                <Slider arrows={true} slidesToShow={1}>
-                    <div>
-                        <p>Riding the Currus NF is like a dream come true</p>
+                <div id="redquote">“</div>
+                <Slider {...settings2}>
+                    <div className="second_quote">
+                        <p>Riding the Currus NF is like a dream come true. It's super awesome,
+                            fun to ride, looks amazing and powerful and has a top speed of of 40 MPH. I don't know
+                            what more you can expect from an e-scooter. Also, it easily folds, so I can carry it where it's not possible
+                            to ride. It's a complete power package. I am glad that my parents got me Currus NF for my birthday
+                            last month.
+                            <br/><br/>
+                            <span>L. JOSEPH (USA) </span>
+                        </p>
                     </div>
                     <div>
                         <p>Another Review</p>

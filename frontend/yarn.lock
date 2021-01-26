@@ -1463,10 +1463,20 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-ei/-/icons-ei-1.1.0.tgz#3bed3c7bae7119a17b2050328db6b386aa94a034"
   integrity sha512-DExc4AWmFgAOeugmHCVMx2QqGxXHDnHmg0a4SyJ17/JbbtC/NhALgA74UyS35BiMNJfSuyx85yeNo5zDqOhdzg==
 
+"@iconify/icons-emojione-monotone@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-emojione-monotone/-/icons-emojione-monotone-1.1.0.tgz#0feaf8568cac57c67dadefbfb08f3335a973fd67"
+  integrity sha512-fz2NZ40hq3Ud0QryD9Q0CalEsrrdbay5lBSoP1HuBdu2GMh4SBwibxFMSxy2qqbom69BeitiHl/GHAvW6ybbsg==
+
 "@iconify/icons-feather@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@iconify/icons-feather/-/icons-feather-1.1.0.tgz#83955bb10ff8fe45d5c8131db445da28b3da9d1c"
   integrity sha512-nl7NB324/5s0B8PjQAOpkVqOxdIYrC3nuyE9hcjzHZ3Pj9Pkqq58qaOaq0UVGn3mq6W+liAY1cA7QnGJBh/MOw==
+
+"@iconify/icons-ic@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.1.2.tgz#324260c7b8ca871c58115c436de39637e07f7563"
+  integrity sha512-5ePXKybIsA8lQl1u3tRhpZ1wbIINrUmoqyA2vqBW/Gv1iZ+KxBRVTK2NmKRmLGp403jTkqPHlOAHyZiqbkR4vQ==
 
 "@iconify/icons-logos@^1.1.4":
   version "1.1.4"

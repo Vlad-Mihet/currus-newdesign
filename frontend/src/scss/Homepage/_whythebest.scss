@@ -104,46 +104,91 @@
       }
   }
 
-  .faq-body {
-    margin-left: 16%;
-  }
+.sandbox {
+    
+    margin: 0;
+    margin-left: 17%;
 
-  .row-title {
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
-   
-  }
+    @media (max-width: 500px) {
+      margin-left: 0;
+      margin-right: 10%;
+    }
 
-  .faq-row {
-    border-bottom: 0px solid #ccc;
-  }
+    .wrapper {
+       margin: 0;
+       margin-left: 50px;
+        position: relative;
+        margin-bottom: 25px;
+        
 
-  .row-title-text {
-    padding: 18px 50px 18px 40px;
-    border-left: 2px solid $darkRed;
-    margin-left: 20px;
-    color: #E7161B;
+        .borderleft {
+            border-left: 2px solid $darkRed;
+            height: 85%;
+            position: absolute;
+            top: 18px;
+            left: 25px;
+            z-index: 7;
+         
 
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
-  .row-content {
-    border-left: 2px solid $darkRed;
-    font-family: Open Sans;
-    font-size: 16px;
-    line-height: 24px;
-    margin-left: 20px;
-    padding: 0px 10px 0px 40px;
-  }
-  
-  .row-content-text {
-   color: rgba(102, 102, 102, 0.85);
-   font-style: normal;
-   font-weight: normal;
-  }
+        }
+
+        .borderopen {
+
+        }
+
+        .borderclosed {
+            border-left: 2px solid $darkRed;
+            height: 40%;
+            position: absolute;
+            
+        }
+       
+
+        .title {
+            background: #FFFFFF;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+            
+            width: 100%;
+            margin: 0;
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #E7161B;
+            position: relative;
+
+            .icon {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+           
+        }
+
+        .closed {
+            display: none;
+        }
+
+        .open {
+            display: block;
+        }
+
+        .content {
+           
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            color: rgba(102, 102, 102, 0.85);
+        }
+
+    }
+}
 
 }
 

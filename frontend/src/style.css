@@ -32,6 +32,7 @@ body {
 .sandbox {
   margin-left: 100px;
   margin-bottom: 100px;
+  margin-right: 100px;
   margin-top: 60px;
 }
 .sandbox .wrapper {
@@ -40,10 +41,11 @@ body {
 }
 .sandbox .wrapper .borderleft {
   border-left: 2px solid #E7161B;
-  height: 80%;
+  height: 85%;
   position: absolute;
   top: 18px;
   left: 25px;
+  z-index: 7;
 }
 .sandbox .wrapper .borderclosed {
   border-left: 2px solid #E7161B;
@@ -51,11 +53,24 @@ body {
   position: absolute;
   top: 18px;
   left: 25px;
+  z-index: 4;
 }
 .sandbox .wrapper .title {
   background: #FFFFFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
   padding: 18px 50px 18px 50px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E7161B;
+  position: relative;
+}
+.sandbox .wrapper .title .icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 .sandbox .wrapper .closed {
   display: none;
@@ -65,6 +80,12 @@ body {
 }
 .sandbox .wrapper .content {
   padding: 20px 50px 20px 50px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(102, 102, 102, 0.85);
 }
 
 .banner {
@@ -391,6 +412,11 @@ aside {
   margin-right: 25px;
   padding: 10px;
 }
+@media (max-width: 1000px) {
+  .category_page section {
+    width: 25%;
+  }
+}
 .category_page section .category_border {
   display: flex;
   flex-direction: column;
@@ -438,7 +464,7 @@ aside {
     width: 43.75%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .category_page {
     display: block;
     margin-top: 30px;
@@ -530,38 +556,66 @@ aside {
     padding-bottom: 5px;
   }
 }
-.whythebest .faq-body {
-  margin-left: 16%;
+.whythebest .sandbox {
+  margin: 0;
+  margin-left: 17%;
 }
-.whythebest .row-title {
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+@media (max-width: 500px) {
+  .whythebest .sandbox {
+    margin-left: 0;
+    margin-right: 10%;
+  }
 }
-.whythebest .faq-row {
-  border-bottom: 0px solid #ccc;
+.whythebest .sandbox .wrapper {
+  margin: 0;
+  margin-left: 50px;
+  position: relative;
+  margin-bottom: 25px;
 }
-.whythebest .row-title-text {
-  padding: 18px 50px 18px 40px;
+.whythebest .sandbox .wrapper .borderleft {
   border-left: 2px solid #E7161B;
-  margin-left: 20px;
-  color: #E7161B;
+  height: 85%;
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  z-index: 7;
+}
+.whythebest .sandbox .wrapper .borderclosed {
+  border-left: 2px solid #E7161B;
+  height: 40%;
+  position: absolute;
+}
+.whythebest .sandbox .wrapper .title {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+  width: 100%;
+  margin: 0;
   font-family: Open Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  color: #E7161B;
+  position: relative;
 }
-.whythebest .row-content {
-  border-left: 2px solid #E7161B;
+.whythebest .sandbox .wrapper .title .icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.whythebest .sandbox .wrapper .closed {
+  display: none;
+}
+.whythebest .sandbox .wrapper .open {
+  display: block;
+}
+.whythebest .sandbox .wrapper .content {
   font-family: Open Sans;
-  font-size: 16px;
-  line-height: 24px;
-  margin-left: 20px;
-  padding: 0px 10px 0px 40px;
-}
-.whythebest .row-content-text {
-  color: rgba(102, 102, 102, 0.85);
   font-style: normal;
   font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(102, 102, 102, 0.85);
 }
 
 .redband {
@@ -569,6 +623,13 @@ aside {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+@media (max-width: 800px) {
+  .redband {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 .redband #signuptonewsletter {
   font-family: Lato;
@@ -579,6 +640,14 @@ aside {
   position: relative;
   margin: 29px 4.7% 29px 12%;
   color: #FFFFFF;
+}
+@media (max-width: 800px) {
+  .redband #signuptonewsletter {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 1px;
+  }
 }
 .redband #getallthelatest {
   width: 300px;
@@ -591,9 +660,24 @@ aside {
   text-align: center;
   color: #FFFFFF;
 }
+@media (max-width: 800px) {
+  .redband #getallthelatest {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .redband #subscribe {
   margin: 29px 10% 29px 50px;
   display: flex;
+}
+@media (max-width: 800px) {
+  .redband #subscribe {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 1px;
+  }
 }
 .redband #subscribe input {
   height: 50px;
@@ -634,9 +718,11 @@ aside {
   }
   .redband #signuptonewsletter {
     margin: 30px auto;
+    max-width: 90%;
   }
   .redband #getallthelatest {
     margin: 20px auto;
+    max-width: 90%;
   }
   .redband button {
     border-radius: 3px 3px 3px 3px;
@@ -647,6 +733,13 @@ aside {
   display: grid;
   grid-template-columns: 27.4% 3.47% 3.47% 5.21% 1fr;
   grid-template-rows: 1fr;
+  background: rgba(248, 248, 248, 0.7);
+  position: relative;
+}
+@media (max-width: 1000px) {
+  .rideriskfree {
+    grid-template-columns: 15% 5% 3.47% 4% 1fr;
+  }
 }
 @media (max-width: 400px) {
   .rideriskfree {
@@ -675,6 +768,47 @@ aside {
   margin: auto 0;
   background: #E7161B;
   text-align: center;
+  position: relative;
+}
+.rideriskfree #riskfree #rideriskfree {
+  position: absolute;
+  top: 100px;
+  left: -210px;
+  width: 200px;
+  margin: 0;
+  transform: rotate(-90deg);
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media (max-width: 1000px) {
+  .rideriskfree #riskfree #rideriskfree {
+    left: -230px;
+  }
+}
+.rideriskfree #riskfree #rideriskfree:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  border-bottom: 2px solid white;
+  padding-top: 20px;
+}
+@media (max-width: 1200px) {
+  .rideriskfree #riskfree #rideriskfree:after {
+    padding-top: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .rideriskfree #riskfree #rideriskfree {
+    transform: none;
+    top: -290px;
+    left: 80px;
+  }
 }
 @media (max-width: 768px) {
   .rideriskfree #riskfree {
@@ -699,21 +833,61 @@ aside {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "one two" "three four";
-  column-gap: 10px;
-  row-gap: 10px;
+  column-gap: 25px;
+  row-gap: 25px;
   margin-top: 13.6%;
   margin-bottom: 13.6%;
 }
-.rideriskfree #sections :first-of-type {
-  align-self: end;
-}
-.rideriskfree #sections :nth-child(4n+2) {
-  align-self: end;
-}
 .rideriskfree #sections > section {
   background: #FFFFFF;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 25px rgba(188, 78, 78, 0.16);
   height: 255px;
+  position: relative;
+}
+.rideriskfree #sections > section .red {
+  background-color: #E7161B;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 49px;
+  height: 150px;
+  position: absolute;
+  top: 69px;
+  left: 24px;
+}
+@media (max-width: 600px) {
+  .rideriskfree #sections > section .red {
+    width: 35px;
+    height: 125px;
+  }
+}
+.rideriskfree #sections > section h3 {
+  color: #E7161B;
+  font-size: 100%;
+  margin: 20px auto;
+  margin-left: 90px;
+  position: relative;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+.rideriskfree #sections > section p {
+  margin-left: 90px;
+  margin-right: 30px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #666666;
+}
+@media (max-width: 500px) {
+  .rideriskfree #sections > section p {
+    font-size: 14px;
+    line-height: 15px;
+  }
 }
 @media (max-width: 768px) {
   .rideriskfree #sections > section {
@@ -734,11 +908,33 @@ aside {
 .rideriskfree #sections #two {
   grid-area: two;
 }
+@media (min-width: 401px) and (max-width: 650px) {
+  .rideriskfree #sections #two {
+    display: none;
+  }
+}
 .rideriskfree #sections #three {
   grid-area: three;
 }
 .rideriskfree #sections #four {
   grid-area: four;
+}
+@media (min-width: 401px) and (max-width: 650px) {
+  .rideriskfree #sections #four {
+    display: none;
+  }
+}
+.rideriskfree #sections #redone {
+  background-image: url("img/premium.png");
+}
+.rideriskfree #sections #redtwo {
+  background-image: url("img/easy.png");
+}
+.rideriskfree #sections #redthree {
+  background-image: url("img/mobility.png");
+}
+.rideriskfree #sections #redfour {
+  background-image: url("img/cost.png");
 }
 @media (max-width: 400px) {
   .rideriskfree #sections {
@@ -754,6 +950,9 @@ aside {
   }
 }
 
+.ourblog {
+  max-width: 95%;
+}
 .ourblog h1 {
   font-family: Lato;
   font-style: normal;
@@ -766,10 +965,34 @@ aside {
 }
 .ourblog #first {
   width: 79.86%;
-  margin: 100px 10.07%;
+  margin: 100px 9%;
 }
 .ourblog #second {
-  margin: 90px 11.8%;
+  margin: 90px 15%;
+}
+.ourblog #second p {
+  margin: 85px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .ourblog #second p {
+    margin: 70px;
+  }
+}
+@media (max-width: 700px) {
+  .ourblog #second p {
+    margin: 65px;
+  }
+}
+@media (max-width: 500px) {
+  .ourblog #second p {
+    margin: 45px;
+  }
+}
+@media (max-width: 400px) {
+  .ourblog #second p {
+    margin: 20px;
+  }
 }
 @media (max-width: 768px) {
   .ourblog #second {
@@ -781,11 +1004,38 @@ aside {
     margin: 40px 5%;
   }
 }
-.ourblog .slick-prev {
-  background: red;
+.ourblog #second .second_quote {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #393636;
 }
-.ourblog .slick-next {
-  background: red;
+.ourblog #second .second_quote span {
+  font-weight: bold;
+}
+.ourblog #second #redquote {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  color: #E7161B;
+  font-size: 124px;
+  line-height: 10px;
+  text-align: center;
+  margin-bottom: -50px;
+}
+@media (max-width: 500px) {
+  .ourblog #second #redquote {
+    margin-bottom: -20px;
+  }
+}
+.ourblog .slick-prev:before {
+  color: rgba(102, 102, 102, 0.85);
+}
+.ourblog .slick-next:before {
+  color: rgba(102, 102, 102, 0.85);
 }
 
 .instagram {
@@ -804,6 +1054,7 @@ aside {
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
+  border-right: none;
 }
 .instagram #join #insta {
   margin-top: 8.33%;
@@ -972,7 +1223,15 @@ aside {
   grid-row: 2/3;
 }
 
-#aboutus_welcome {
+#aboutus p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666;
+}
+#aboutus #aboutus_welcome {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2.125fr;
   grid-template-rows: 230px 292px;
@@ -984,84 +1243,245 @@ aside {
   margin-left: 11.8056%;
   margin-right: 11.8056%;
   margin-bottom: 100px;
+  padding-bottom: 50px;
+}
+#aboutus #aboutus_welcome #aboutus_first h6 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: rgba(102, 102, 102, 0.85);
+  margin: 0;
+}
+#aboutus #aboutus_welcome #aboutus_first span {
+  color: #E7161B;
+}
+#aboutus #aboutus_welcome #aboutus_first h6::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid red;
+  padding-bottom: 10px;
+  width: 4%;
 }
 @media (max-width: 768px) {
-  #aboutus_welcome {
+  #aboutus #aboutus_welcome {
     grid-template-columns: 1fr 1fr 1.4167fr;
     grid-template-rows: 229px 1fr;
     grid-template-areas: "p1 p1 pic1" "pic2 pic3 p2";
   }
 }
 @media (max-width: 320px) {
-  #aboutus_welcome {
+  #aboutus #aboutus_welcome {
     display: block;
   }
 }
-#aboutus_welcome #aboutus_first {
+#aboutus #aboutus_welcome #aboutus_first {
   grid-area: p1;
 }
-#aboutus_welcome #aboutus_second {
+#aboutus #aboutus_welcome #aboutus_second {
   grid-area: pic1;
   min-width: 0;
 }
-#aboutus_welcome #aboutus_second img {
+#aboutus #aboutus_welcome #aboutus_second img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-#aboutus_welcome #aboutus_third {
+#aboutus #aboutus_welcome #aboutus_third {
   grid-area: pic2;
   min-width: 0;
 }
-#aboutus_welcome #aboutus_third img {
+#aboutus #aboutus_welcome #aboutus_third img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-#aboutus_welcome #aboutus_fourth {
+#aboutus #aboutus_welcome #aboutus_fourth {
   grid-area: pic3;
   min-width: 0;
 }
-#aboutus_welcome #aboutus_fourth img {
+#aboutus #aboutus_welcome #aboutus_fourth img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-#aboutus_welcome #aboutus_fifth {
-  grid-area: p2;
+#aboutus #aboutus_welcome #aboutus_fifth {
+  grid-column: 3/span 2;
+  grid-row: 2/span 1;
   min-width: 0;
 }
-
-#our {
+@media (max-width: 800px) {
+  #aboutus #aboutus_welcome #aboutus_fifth {
+    grid-column: 3/span 2;
+    grid-row: 2/span 2;
+  }
+}
+#aboutus #our {
   background: #F8F8F8;
 }
-#our #principles {
+#aboutus #our h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(102, 102, 102, 0.85);
+  padding: 60px;
+}
+#aboutus #our h1::after {
+  content: "";
+  display: block;
+  border-bottom: 1px red solid;
+  padding: 8px;
+  width: 5%;
+  margin: 0 auto;
+}
+#aboutus #our h3 {
+  padding: 0px;
+  margin: 0px;
+}
+#aboutus #our #principles {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "premium genuine" "customer transparency";
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 60px;
 }
-#our #principles div:first-of-type {
+@media (max-width: 600px) {
+  #aboutus #our #principles {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  #aboutus #our #principles svg {
+    position: absolute;
+    margin-top: -25px;
+  }
+}
+#aboutus #our #principles #svg1 {
+  position: absolute;
+  left: 20px;
+}
+@media (max-width: 600px) {
+  #aboutus #our #principles #svg1 {
+    left: -50px;
+  }
+}
+#aboutus #our #principles #svg2 {
+  position: absolute;
+  left: 53%;
+}
+@media (max-width: 600px) {
+  #aboutus #our #principles #svg2 {
+    left: -50px;
+  }
+}
+#aboutus #our #principles #svg3 {
+  position: absolute;
+  left: 20px;
+}
+@media (max-width: 600px) {
+  #aboutus #our #principles #svg3 {
+    left: -50px;
+  }
+}
+#aboutus #our #principles #svg4 {
+  position: absolute;
+  left: 53%;
+}
+@media (max-width: 600px) {
+  #aboutus #our #principles #svg4 {
+    left: -50px;
+  }
+}
+#aboutus #our #principles .principle {
+  padding: 0px 20px;
+  border-left: 1px solid #666666;
+  height: 80%;
+  margin-left: 100px;
+}
+@media (max-width: 600px) {
+  #aboutus #our #principles .principle {
+    padding: 0px 10px;
+    margin-left: 13px;
+  }
+}
+#aboutus #our #principles h3 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #E7161B;
+}
+#aboutus #our #principles div:first-of-type {
   grid-area: premium;
 }
-#our #principles div:nth-of-type(2) {
+#aboutus #our #principles div:nth-of-type(2) {
   grid-area: genuine;
 }
-#our #principles div:nth-of-type(3) {
+#aboutus #our #principles div:nth-of-type(3) {
   grid-area: customer;
 }
-#our #principles div:nth-of-type(4) {
+#aboutus #our #principles div:nth-of-type(4) {
   grid-area: transparency;
 }
-
-#aim_vision {
+#aboutus #aim_vision {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
-#aim_vision img {
+@media (max-width: 500px) {
+  #aboutus #aim_vision {
+    display: block;
+  }
+}
+#aboutus #aim_vision img {
   width: 100%;
   height: 100%;
+}
+#aboutus #aim_vision h3 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: rgba(102, 102, 102, 0.85);
+  margin-left: 50px;
+  margin-top: 60px;
+}
+#aboutus #aim_vision h3::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid red;
+  width: 10%;
+  padding-bottom: 20px;
+}
+#aboutus #aim_vision p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  color: #666666;
+  margin-left: 50px;
+  margin-top: 60px;
+  margin-right: 50px;
+}
+@media (max-width: 1000px) {
+  #aboutus #aim_vision p {
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 20px;
+  }
 }
 
 .dealer {
@@ -1688,14 +2108,69 @@ footer {
   box-sizing: border-box;
   background: #393636;
 }
+@media (max-width: 700px) {
+  footer {
+    position: relative;
+    height: 1000px;
+  }
+}
+@media (max-width: 450px) {
+  footer {
+    position: relative;
+    height: 1000px;
+  }
+}
 footer #one {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  height: 300px;
 }
-footer #one #contact_us h6 {
-  margin: 0;
+@media (max-width: 400px) {
+  footer #one {
+    height: 350px;
+  }
+}
+@media (max-width: 700px) {
+  footer #one {
+    flex-direction: column;
+    border-bottom: none;
+  }
+}
+footer #one #contact_us #ifyouhave {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #888888;
+  margin-bottom: 40px;
+}
+footer #one #contact_us #ifyouhave span {
+  color: #E7161B;
+}
+footer #one #contact_us #phone {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 40px;
+}
+footer #one #contact_us #phone span {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+}
+@media (max-width: 700px) {
+  footer #one #contact_us #phone {
+    margin-left: 30px;
+  }
 }
 footer #one h6 {
   font-family: Lato;
@@ -1705,27 +2180,135 @@ footer #one h6 {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
+  position: absolute;
+  top: 10px;
+}
+@media (max-width: 700px) {
+  footer #one h6 {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+}
+footer #one h6 + div {
+  position: absolute;
+  top: 80px;
+}
+@media (max-width: 700px) {
+  footer #one h6 + div {
+    position: relative;
+    top: 0px;
+    margin-left: 30px;
+  }
+}
+footer #one h6 + ul {
+  position: absolute;
+  top: 80px;
+  margin-top: 0px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #888888;
+}
+@media (max-width: 700px) {
+  footer #one h6 + ul {
+    position: relative;
+    top: 0px;
+    margin-left: 30px;
+  }
 }
 footer #one ul {
   list-style-type: none;
   padding-left: 0;
 }
+footer #one ul li {
+  margin-bottom: 11px;
+}
 footer #one a {
   text-decoration: none;
   color: #888888;
 }
-@media (max-width: 400px) {
+@media (max-width: 700px) {
   footer #one {
     display: block;
   }
 }
+@media (max-width: 800px) {
+  footer #one #newsletter {
+    display: block;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+footer #one #newsletter #newsletter-description {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #888888;
+}
+footer #one #newsletter input {
+  padding: 7px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+@media (max-width: 700px) {
+  footer #one #newsletter input {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+}
+footer #one #newsletter button {
+  padding: 7px;
+  background: #E7161B;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
 footer #two {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding-top: 56px;
   padding-bottom: 56px;
+  position: relative;
+}
+footer #two #copyright {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: #888888;
+}
+footer #two #copyright span {
+  color: #E7161B;
+}
+footer #two #card svg {
+  margin: 0 8px;
+  padding: 2px;
+  width: 20px;
+}
+@media (max-width: 700px) {
+  footer #two {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    top: 400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

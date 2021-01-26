@@ -1,6 +1,7 @@
 .ourblog {
 
-  
+    max-width: 95%;
+
 
   h1 {
     font-family: Lato;
@@ -15,12 +16,33 @@
 
   #first {
     width: 79.86%;
-    margin: 100px 10.07%;
+    margin: 100px 9%;
   }
 
   #second {
     
-    margin: 90px 11.8%;
+    margin: 90px 15%;
+
+    p {
+      margin: 85px;
+      text-align: center;
+
+      @media (max-width: 800px) {
+        margin: 70px;
+      }
+
+      @media (max-width: 700px) {
+        margin: 65px;
+      }
+
+      @media (max-width: 500px) {
+        margin: 45px;
+      }
+
+      @media (max-width: 400px) {
+        margin: 20px;
+      }
+    }
 
     @media (max-width: 768px) {
       margin: 60px 6.25%;
@@ -29,15 +51,45 @@
     @media (max-width: 400px) {
       margin: 40px 5%;
     }
+
+    .second_quote {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: center;
+      color: #393636;
+
+      span {
+        font-weight: bold; 
+
+      }
+    }
+
+    #redquote {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      color: #E7161B;
+      font-size: 124px;
+      line-height: 10px;
+      text-align: center;
+      margin-bottom: -50px;
+
+      @media (max-width: 500px) {
+        margin-bottom: -20px;
+      }
+    }
   }
 
-    .slick-prev {
-    background: red;
+    .slick-prev:before {
+    color: rgba(102, 102, 102, 0.85);
     
     }
 
-    .slick-next {
-    background: red;
+    .slick-next:before {
+    color: rgba(102, 102, 102, 0.85);
    
     }
 

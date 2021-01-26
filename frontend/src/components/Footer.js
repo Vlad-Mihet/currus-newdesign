@@ -11,6 +11,7 @@ import visaIcon from '@iconify/icons-logos/visa';
 import mastercardIcon from '@iconify/icons-logos/mastercard';
 import amexIcon from '@iconify/icons-logos/amex';
 import paypalIcon from '@iconify/icons-logos/paypal';
+import twotoneSupportAgent from '@iconify/icons-ic/twotone-support-agent';
 
 
 
@@ -38,9 +39,13 @@ const Footer = () => {
           <div id="one">
           <div id="contact_us">
               <h6>Contact Us</h6>
-              <div className="ifyouhave">
+              <div id="ifyouhave">
                 If you have any question, please <br/>
-                contact us at info@currusmotors.com
+                contact us at <span>info@currusmotors.com</span>
+              </div>
+              <div id="phone">
+                <Icon icon={twotoneSupportAgent} style={{color: '#e7161b', fontSize: '50px'}} />
+                <div>&nbsp;&nbsp;+1 80 <span>123 123 123</span></div>
               </div>
           </div>
           <div className="support">
@@ -63,9 +68,9 @@ const Footer = () => {
               <li><Link to='/dealer'>Become a Dealer</Link></li>
             </ul>
           </div>
-          <div className="newsletter">
+          <div id="newsletter">
             <h6>Newsletter</h6>
-            <div className="newsletter-description">
+            <div id="newsletter-description">
               Subscribe to the weekly newsletter for all the latest updates
             </div>
             { !sub ? (
@@ -78,7 +83,7 @@ const Footer = () => {
           </div>
           <div id="two">
             <div id="copyright">
-            Copyright 2021 Currusmotors. All Rights Reservred
+            Copyright 2021 <span>Currusmotors</span> All Rights Reservred
             </div>
             <div id="social_icons">
               <Icon icon={scFacebook} style={{color: '#ffffff', fontSize: '24px'}} />
@@ -87,10 +92,10 @@ const Footer = () => {
               <Icon icon={scYoutube} style={{color: '#ffffff', fontSize: '24px'}} />
             </div>
             <div id="card">
-              <Icon icon={visaIcon} />
-              <Icon icon={mastercardIcon} />
-              <Icon icon={amexIcon} />
-              <Icon icon={paypalIcon} />
+              <Icon icon={visaIcon} style={{ backgroundColor: '#DFE3E8', fontSize: '15px' }}/>
+              <Icon icon={mastercardIcon} style={{backgroundColor: '#DFE3E8', fontSize: '15px' }} />
+              <Icon icon={amexIcon} style={{backgroundColor: '#DFE3E8', fontSize: '15px' }}/>
+              <Icon icon={paypalIcon} style={{backgroundColor: '#DFE3E8', fontSize: '15px' }} />
            </div>
           </div>
         </footer>

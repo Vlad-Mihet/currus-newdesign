@@ -31,6 +31,7 @@ body {
 .sandbox {
     margin-left: 100px;
     margin-bottom: 100px;
+    margin-right: 100px;
     margin-top: 60px;
 
     .wrapper {
@@ -40,11 +41,17 @@ body {
 
         .borderleft {
             border-left: 2px solid $darkRed;
-            height: 80%;
+            height: 85%;
             position: absolute;
             top: 18px;
             left: 25px;
+            z-index: 7;
+         
 
+
+        }
+
+        .borderopen {
 
         }
 
@@ -54,6 +61,7 @@ body {
             position: absolute;
             top: 18px;
             left: 25px;  
+            z-index: 4;
         }
        
 
@@ -61,6 +69,19 @@ body {
             background: #FFFFFF;
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
             padding: 18px 50px 18px 50px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #E7161B;
+            position: relative;
+
+            .icon {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
            
         }
 
@@ -74,6 +95,13 @@ body {
 
         .content {
             padding: 20px 50px 20px 50px;
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 21px;
+            color: rgba(102, 102, 102, 0.85);
         }
 
     }
