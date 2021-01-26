@@ -41,9 +41,28 @@ const WhyTheBest = () => {
                 </div>
   
                 <div id="grid">
-                    <div id="homefaq">
-                        <Faq data={data} />
-                    </div>
+                    {/* <div className="sandbox">
+                        <div className="wrapper">
+                            <div className="title">
+                                What is the shipping cost (in the USA)
+                                <button onClick={() => setFirst(!first)}>+</button>
+                            </div>
+                            <div className={first? "open" : "closed"}>
+                                We only to the United States.
+                                <br/>
+                                We do not currently ship to international locations.
+                            </div>
+                        </div>
+                        <div className="wrapper">
+                            <div className="title">
+                                Is There A Warranty on Currus Vehicles?
+                                <button onClick={() => setFirst(!first)}>+</button>
+                            </div>
+                            <div className={first? "open" : "closed"}>
+                                Yes.
+                            </div>
+                        </div>                   
+                    </div> */}
                     <div id="image">
                         <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/redcircles.png" />
                     </div>

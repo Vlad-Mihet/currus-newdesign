@@ -1,35 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Breadcrumbs from '../components/Breadcrumbs';
-import Faq from 'react-faq-component'
+
 
 const Faqpage = (props) => {
+    
+    const [first, setFirst] = useState(false);
+    const [second, setSecond] = useState(false);
+    const [third, setThird] = useState(false);
 
-    const data = {
-        title: "",
-        rows: [
-            {
-                title: "What is the shipping cost",
-                content: "We started because we believe driving EV leads to a sustainable future. We are eco-friendly enthusiasts, working agigely to increase usability, awareness among people about electric vehicles. Our e-scooters are just a reflection of our company philosophy and values. To know more, you can",
-            },
-            {
-                title: "Is there a Warranty on Currus Vehicles",
-                content: "We understand choosing, getting along with an Electric Vehicle (EV) can be confusing for you. If you have any technical queries or issues with the delivered to you, talk to our expert technical team available 24x7. Customer satisfaction is all we strive for, right from when we started."
-            }
-        ]
-    }
 
-    const styles = {
-        titleTextColor: "red",
-        rowTitleColor: "red",
-        rowContentPaddingBottom: '50'
-    }
   
 
     return (
         <>
         <Breadcrumbs title={props.location.pathname} />
-        <div className="faq">
-            <Faq styles={styles} data={data} />
+ 
+
+        <div className="sandbox">
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    What is the shipping cost? (In the USA, Canada and other countries)
+                    <button onClick={() => setFirst(!first)}>+</button>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+                    We only ship to the United States. All domestic orders to all locations in Canada &amp; the U.S., exclusing Alaska and Hawaii, include FREE Standard Shipping.
+                    <br/>
+                    We do not currently ship to international locations.
+                </div>
+            </div>
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    Is There A Warranty on Currus Vehicles?
+                    <button onClick={() => setFirst(!first)}>+</button>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+                    Yes.
+                </div>
+            </div>
         </div>
         </>
     )
