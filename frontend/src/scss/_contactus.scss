@@ -1,70 +1,190 @@
 .contactus {
+
+    #wearehere_form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+   
+    background: #E5E5E5;
+    box-sizing: border-box;
+
+    #wrapper {
     display: grid;
-    grid-template-columns: 450px 500px;
+    grid-template-columns: 1fr 1fr;
+   
     column-gap: 50px;
-    margin-left: 220px;
-    margin-right: 220px;
-    
-    #img_one {
-        width: 300px;
-        height: 259px;
-        margin-top: 60px;
-        
-    }
-
-    #img_two {
-        width: 250px;
-        height: 259px;
-        margin-left: 50px;
-        margin-bottom: 100px;
-        margin-top: 30px;
-    }
-
-    #group_three {
-        width: 250px;
-        height: 434px;
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
-        position: relative;
-        top: -600px;
-        right: -200px;
-        z-index: 9;
-        background: #FFFFFF;
-
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        
-        margin-left: 34px;
-
-        #images {
-            width: 702px;
-            height: 548px;
-            margin-left: 34px;
-
-            #img_one {
-            
-            }
-
-            #img_two {
-                margin-bottom: -300px;
-                margin-left: -250px;
-            }
-
-            #group_three {
-                top: -200px;
-            }
-        }
+    margin-left: 13%;
+    margin-right: 13%;
 
         #wearehere {
             margin: auto;
             text-align: center;
-            margin-top: 100px;
+            margin-top: 50px;
+            
+
+            h1 {
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 24px;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgba(102, 102, 102, 0.85);
+
+            }
+
+            h4 {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: rgba(102, 102, 102, 0.85);
+            }
+
+            button {
+                background: #E7161B;
+                border-radius: 3px;
+                color: #FFFFFF;
+
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size:1 16px;
+                line-height: 19px;
+                text-align: center;
+                text-transform: uppercase;
+            }
             
         }
+
+    #images {
+    
+        #img_one {
+width: 43%;
+    height: 37%;
+    margin-top: 60px;
+            
+        }
+
+        #img_two {
+    width: 35%;
+    height: 36.5%;
+    position: relative;
+    top: 40%;
+    right: 28%;
+        }
+
+        #group_three {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.16);
+    width: 50%;
+    position: relative;
+    left: 35%;
+    top: -30%;
+    height: 60%;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    div.three_box {
+        border-bottom: 1px solid rgba(102, 102, 102, 0.2);
+        height: 25%;
+        width: 85%;
+        margin: 0 auto;
+        
+
+        
+
+        h4 {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            color: #393636;
+            margin-bottom: 3px;
+            margin-top: 2px;
+        
+        }
+
+            &:last-of-type {
+                border: none;
+            }
+
+        .three_box_flex {
+            display: flex;
+            flex-direction: row;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+
+            svg {
+                color: #E7161B;
+                padding: 5px;
+            }
+
+            div {
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 21px;
+                color: rgba(102, 102, 102, 0.85);
+                padding: 3px;
+                
+            }
+
+
+        }
+    }
+        }
+
+ 
+    }
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        
+        margin: 0 auto;
+        width: 80%;
+
+        #images {
+            width: 90%;
+            height: 548px;
+            margin: 0 auto;
+
+            #img_one {
+width: 43%;
+    height: 37%;
+    margin-top: 60px;
+            
+            }
+
+            #img_two {
+    width: 35%;
+    height: 36.5%;
+    position: relative;
+    top: 40%;
+    right: 28%;
+            }
+
+            
+        }
+
+        #wearehere {
+            margin: 0 auto;
+            width: 90%;
+
+            .dealer_form {
+                width: 100%;
+            }
+        }
+
+    }
     }
 }

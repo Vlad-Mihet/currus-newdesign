@@ -36,7 +36,7 @@ const Warranty = (props) => {
         <div className="warranty">
             <div id="icontext">
                 <div id="icon">
-                    <img src="/images/icon1.png"></img>
+                    <img src="/images/warranty.png"></img>
                 </div>
                 <div id="text">
                     <h1>Warranty and Registration</h1>

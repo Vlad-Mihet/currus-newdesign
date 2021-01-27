@@ -37,9 +37,9 @@ const Orderpage = (props) => {
                         Track
                     </button>
                 </form>) : (
-                    <h1>
+                    <p>
                         {order.itemsPrice} here is the items price
-                    </h1>
+                    </p>
                 )}
             </div>
         </>

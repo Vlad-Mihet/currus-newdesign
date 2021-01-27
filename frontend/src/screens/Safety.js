@@ -11,7 +11,7 @@ const Safety = (props) => {
             </p>
             <div id="icontext">
                 <div id="icon">
-                    <img src="/images/icon1.png"></img>
+                    <img src="/images/safety.png"></img>
                 </div>
                 <div id="text">
                 <h1>Charging Battery</h1>

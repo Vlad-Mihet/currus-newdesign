@@ -10,6 +10,11 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ProductGridView from '../components/ProductGridView';
 import { listProducts } from '../redux/actions/productActions';
+import { Icon, InlineIcon } from '@iconify/react';
+import shippingFast from '@iconify/icons-fa-solid/shipping-fast';
+import flagForCanada from '@iconify/icons-emojione-monotone/flag-for-canada';
+import financeIcon from '@iconify/icons-mdi/finance';
+import shieldCheckSolid from '@iconify/icons-clarity/shield-check-solid';
 
 const Productpage = (props) => {
 
@@ -59,37 +64,57 @@ const Productpage = (props) => {
         <>
         <Breadcrumbs title={props.location.pathname} />
         {product ? (
-        <>
-        <div>
-            {product && product.images ? (
-            <ImageGallery items={product.images.map(url => ({
-                original: url,
-                thumbnail: url
-            }))} thumbnailPosition="left" />) : <h1>Loading</h1>
-            }
-            
-        </div>
-
-        <div className="product_detail">
-            <div>{product.name}</div>
-            <div>{product.description}</div>
-            <div>
-            {currency === ("CAD") ? product.priceCAD : product.priceUSD}
+        <div className="single_page">
+        <div className="product_intro">
+            <div className="gal">
+                {product && product.images ? (
+                <ImageGallery items={product.images.map(url => ({
+                    original: url,
+                    thumbnail: url
+                }))} thumbnailPosition="left" />) : <h1>Loading</h1>
+                }
+                
             </div>
-            <div>{product.specification}</div>
-            <div>
-                qty
-                <select value={qty} onChange={e => setQty(e.target.value)}>
-                    {
-                        [...Array(product.quantity).keys()].map(x => (
-                            <option key={x+1} value={x+1}>{x+1}</option>
-                        ))
-                    }
-                </select>
-            </div>
-            <button onClick={handleCart}>Add To Cart</button>     
-        </div>
 
+            <div className="product_detail">
+                <div>{product.name}</div>
+                <div>{product.description}</div>
+                <div>
+                {currency === ("CAD") ? product.priceCAD : product.priceUSD}
+                </div>
+                <div>{product.specification}</div>
+                <div>
+                    qty
+                    <select value={qty} onChange={e => setQty(e.target.value)}>
+                        {
+                            [...Array(product.quantity).keys()].map(x => (
+                                <option key={x+1} value={x+1}>{x+1}</option>
+                            ))
+                        }
+                    </select>
+                </div>
+                <button onClick={handleCart}>Add To Cart</button>     
+            </div>
+
+            <div id="product_icons">
+                <div>
+                    <div><Icon icon={shippingFast} style={{color: '#393636', fontSize: '42px'}} /></div>
+                    <div>Free Shipping &amp; Returns</div>
+                </div>
+                <div>
+                    <div><Icon icon={flagForCanada} style={{color: '#393636', fontSize: '51px'}} /></div>
+                    <div>Canada Duty Free</div>
+                </div>
+                <div>
+                    <div><Icon icon={financeIcon} style={{color: '#393636', fontSize: '53px'}} /></div>
+                    <div>Financing</div>
+                </div>
+                <div>
+                    <div><Icon icon={shieldCheckSolid} style={{ color: '#393636', fontSize: '53px'}} /></div>
+                    <div>12 month warranty</div>
+                </div>
+            </div>
+        </div>
         <Tabs>
             <TabList>
                 <Tab>Description</Tab>
@@ -137,9 +162,9 @@ const Productpage = (props) => {
             ))
             }
             </div>
+        </div>
 
-
-        </>) : <h1>Fetching</h1> }
+        ) : <h1>Fetching</h1> }
         </>
     )
 }

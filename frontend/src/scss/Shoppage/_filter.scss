@@ -1,4 +1,15 @@
 .filter {
+
+    width: 95%;
+    
+    #filter-icon {
+        @media (max-width: 820px) {
+            display: inline;
+
+        }
+
+        display:none
+    }
     
     display: flex;
     justify-content: space-evenly;
@@ -7,6 +18,41 @@
 
     #range {
     width: 200px;
+    display: flex;
+    
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #393636;
    
     }
+
+    #filter-result {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666666;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    #filter-categories {
+        @media (max-width: 820px) {
+            display: none;
+        }
+    }
+
+    .filter-sort {
+        @media (max-width: 820px) {
+            display: none;
+        }
+    }
 }
+

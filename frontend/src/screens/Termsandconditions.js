@@ -16,7 +16,7 @@ If you purchase a product or place an order from our website, you will be bound 
             </p>
             <h1>By placing an order on our site you agree that:</h1>
             <p>
-All information you provide is accurate &amp; true to the best of your knowledge.
+All information you provide is accurate &amp; true to the best of your knowledge.<br/>
 You consent or agree to the collection, usage &amp; disclosure of information you provide via: terms in our Privacy Policy.
             </p>
             <h1>Product Availability</h1>

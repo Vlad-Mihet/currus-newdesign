@@ -19,9 +19,18 @@
         color: rgba(102, 102, 102, 0.85);
     }
 
+    h1::after {
+        content: '';
+        display: block;
+        border-bottom: red solid 2px;
+        padding-bottom: 15px;
+        width: 20%;
+        margin: 0 auto;
+    }
+
     p {
         margin-top: 30px;
-        width: 500px;
+        width: 52.1%;
         margin: 0 auto;
         font-family: Open Sans;
         font-style: normal;
@@ -30,13 +39,18 @@
         line-height: 24px;
         text-align: center;
         color: rgba(102, 102, 102, 0.85);
+        margin-bottom: 40px;
+
+    @media (max-width: 700px) {
+        width: 90%;
+    }
     }
 
 
 
 
     button {
-        width: 13.889%;
+        
         background: #E7161B;
         border-radius: 3px;
         font-family: Lato;
@@ -61,21 +75,51 @@
     column-gap: 50px;
     grid-template-rows: 40px 40px 40px 100px;
     row-gap: 30px;
+    
+    @media (max-width: 700px) {
+        width: 90%;
+        grid-template-columns: 1fr;
+        column-gap: 20px;
+        grid-template-rows: 40px 40px 40px 40px 40px 100px;
+    }
+
+  
+
+    
 
     #address {
         grid-column: 1 / span 2; 
+    @media (max-width: 700px) {
+        grid-column: 1 / span 1;
+    }
+        
     }
 
     #message {
         grid-column: 1 / span 2;
+    @media (max-width: 700px) {
+        grid-column: 1 / span 1;
+    }
     }
 
     button {
+        box-sizing: border-box;
+
         grid-column: 1 / span 2;
+    @media (max-width: 700px) {
+        grid-column: 1 / span 1;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 auto;
+        
+    }
         display: block;
         margin: 0 auto;
+        width: 40%;
+        padding: 16px;
     }
 
+    margin-top: 10px;
     margin-bottom: 100px;
 
 

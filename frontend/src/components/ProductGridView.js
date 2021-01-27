@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, EmailShareButton, EmailIcon } from 'react-share';
 import Modal from 'react-modal'
+import { Icon, InlineIcon } from '@iconify/react';
+import shoppingCart from '@iconify/icons-feather/shopping-cart';
+import share2 from '@iconify/icons-feather/share-2';
 
 const ProductGridView = (props) => {
 
@@ -29,22 +32,27 @@ const ProductGridView = (props) => {
             <Link to={`/product/${product._id}`}>
                 <img src={product.image}/>
             </Link>
-                
+                <>
                 {product.onSale && (
                 <div className="sale">
                     <div id="sale_text">
                         Sale
                     </div>
+                </div>)}
+                </>
+                {grid && (
+                <div className="cartshare">
+                    <div className="carticon" onClick={handleCart}>
+                        <Icon icon={shoppingCart} style={{fontSize: '12px'}} />&nbsp;&nbsp;Add To Cart
+                    </div>
+                    <div className="shareicon" onClick={openModal}>
+                        | &nbsp; <Icon icon={share2} style={{fontSize: '12px' }} />
+                    </div>
                 </div>
                 )}
-                <div id="cartshare">
-                    <button onClick={handleCart}>
-                        Add To Cart
-                    </button>
-                    <button onClick={openModal}>
-                        Share
-                    </button>
-                </div>
+                
+                
+
                 <Modal isOpen={m} onRequestClose={closeModal}>
                     <FacebookShareButton url="www.google.com">
                         <FacebookIcon size={36} />
@@ -57,13 +65,39 @@ const ProductGridView = (props) => {
                     </TwitterShareButton>
                 </Modal>
             </div>
+            <div className="name_price">
+            <div className="product_name">
             {product.name}
-            {currency === ("CAD") ? product.priceCAD : product.priceUSD }
-            {!grid && (<Link to={`/product/${product._id}`}>
-                <button>
-                    View Details
-                </button>
-            </Link>)}
+            </div>
+            <div className="product_price">
+            $ {currency === ("CAD") ? product.priceCAD : product.priceUSD }
+            </div>
+            {
+            !grid && (<>
+                <p className="product_description">
+                    {product.description}
+                </p>
+                <br /> <br /> <br /> <br /> <br /> <br />
+                <div className="button_detail">
+                <div className="cartshare">
+                    <div className="carticon" onClick={handleCart}>
+                        <Icon icon={shoppingCart} style={{fontSize: '12px'}} />&nbsp;&nbsp;Add To Cart
+                    </div>
+                    <div className="shareicon" onClick={openModal}>
+                        &nbsp;&nbsp;| &nbsp; <Icon icon={share2} style={{fontSize: '12px' }} />
+                    </div>
+                </div>
+                <div className="view_details">
+                <Link to={`/product/${product._id}`}>  
+                        View Details              
+                </Link>
+                </div>
+                </div>
+                </>
+            )
+            }
+            </div>
+
         </div>
     )
 }

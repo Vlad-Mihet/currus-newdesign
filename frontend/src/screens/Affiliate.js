@@ -24,7 +24,7 @@ const Affiliate = (props) => {
         <div className="affiliate">
             <div id="icontext">
                 <div id="icon">
-                    <img src="/images/affiliatelogo.png"></img>
+                    <img src="/images/affiliate.png"></img>
                 </div>
                 <div id="text">
                     <h1>Currus Affiliate Program</h1>

@@ -1,6 +1,7 @@
 import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -27,7 +28,7 @@ const Banner = () => {
                     </div>
                     <div id="text-banner__button">        
                         <div id="buy_now">
-                            Buy Now
+                            <Link style={{ color: 'white', textDecoration: 'none' }} to='/shop'>Buy Now</Link>
                         </div>
                     </div>
                 </div>
