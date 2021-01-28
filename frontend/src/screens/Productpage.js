@@ -30,6 +30,7 @@ import plusIcon from '@iconify/icons-feather/plus';
 
 
 
+
 const Productpage = (props) => {
 
     const dispatch = useDispatch()
@@ -172,7 +173,7 @@ const Productpage = (props) => {
             </TabPanel>
             <TabPanel>
                 <ul id="specification">
-                    {product.specification.map(d => (
+                    {product.specification && product.specification.map(d => (
                         <li>{d}</li>
                     ))}
                 </ul>
@@ -183,7 +184,6 @@ const Productpage = (props) => {
                 </p>
             </TabPanel>
             <TabPanel>
-                <Faq data={data} />
         <div className="sandbox">
             <div className="wrapper">
                 <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
