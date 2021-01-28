@@ -10,7 +10,7 @@ const data = {
             quantity: 5,
             description: 'Technology Meets Comfort for Mobility',
             quick: 'blah blah blah',
-            specification: '60V 35Ah H35E Li-ion batteries',
+            specification: ['blah blah blah'],
             shipping: 'To qualify for a warranty it is imperative',
             onSale: true
         },
@@ -22,7 +22,7 @@ const data = {
             quantity: 10,
             description: 'Accept it, riding an electric scooter is fun.',
             quick: 'blah blah blah',
-            specification: 'blah blah blah',
+            specification: ['blah blah blah'],
             shipping: 'To qualify',
             onSale: false
         },
@@ -34,7 +34,7 @@ const data = {
             quantity: 7,
             description: 'The spirit beast side stand that comes in three different colors.',
             quick: 'blah blah blah',
-            specification: 'blah blah blah',
+             specification: ['blah blah blah'],
             shipping: 'To qualify',
             onSale: false
         },
@@ -46,7 +46,7 @@ const data = {
             quantity: 0,
             description: 'The Smart4u Helmet is made of lightweight yet super strong PC material on the outside. The',
             quick: 'blah blah blah',
-            specification: 'blah blah blah',
+            specification: ['blah blah blah'],
             shipping: 'To qualify',
             onSale: false
         },
@@ -58,7 +58,7 @@ const data = {
             quantity: 1,
             description: 'The GUB Aluminum Electric Scooter Phone.',
             quick: 'blah blah blah',
-            specification: 'blah blah blah',
+            specification: ['blah blah blah'],
             shipping: 'To qualify',
             onSale: true
         },

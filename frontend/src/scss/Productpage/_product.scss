@@ -50,12 +50,127 @@
 
     .product_detail {
 
+        #card_icons {
+            img {
+                margin: 2%;
+            }
+        }
+
+        #product_name {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 24px;
+            color: #393636;
+        }
+
+        #product_price {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 24px;
+            color: #E7161B;
+        }
+
+        #product_availability, #product_category {
+            font-family: Open Sans;
+            font-style: normal;
+            
+            font-size: 14px;
+            line-height: 24px;
+            color: #393636;
+
+            span {
+            font-weight: bold;
+            }
+        }
+
+        #icon_list {
+            ul {
+                list-style: none;
+            }
+        }
+
+        #plusminus {
+            display: flex;
+     
+            margin-top: 20px;
+            margin-bottom: 20px;
+            
+            
+            #gray {
+                
+                background: #F8F8F8;
+                margin-right: 25px;
+                border: 1px solid rgba(102, 102, 102, 0.2);
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+                color: #666666;
+            
+                button {
+                    border: none;
+                    outline: none;
+                    background: none;
+                    margin: 10px;
+                              
+                }
+        
+            }
+
+            button#addtocart {
+                background: #E7161B;
+                padding: 5px;
+                width: 50%;
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: #FFFFFF;
+        
+            }
+        }
+
+    
+
+    }
+
+    #product_icons {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: rgba(102, 102, 102, 0.85);
+
+        .icon_wrapper {
+            width: auto;
+            height: auto;
+
+            .icon_caption {
+                width: 140px;
+                height: 40px;
+            }
+        }
+
+        svg {
+            width: 50px;
+            height: 50px;
+        }
     }
 
     .product_intro {
         display: grid;
         width: 100%;
-        grid-template-columns: 46% 40%;
+        grid-template-columns: 1.15fr 1fr;
         column-gap: 50px;
         grid-template-rows: 3fr 1fr;
         row-gap: 50px;
@@ -66,3 +181,68 @@
     }
 
 }
+
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 40px !important;
+}
+
+.react-tabs__tab {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #393636;
+    border: none;
+    border-top: rgba(102, 102, 102, 0.2);
+    bottom: 0px !important;
+   
+}
+
+.react-tabs__tab-list {
+  
+    border-bottom: none !important;
+    border-top: 1px solid rgba(102, 102, 102, 0.2) !important;
+}
+
+
+
+.react-tabs {
+  
+    border-top: rgba(102, 102, 102, 0.2) !important;
+
+    p {
+        font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #666666;
+    }
+
+    #specification {
+        list-style: none;
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 100%;
+        color: rgba(102, 102, 102, 0.85);
+     
+        li {
+            padding: 7px;
+        }
+        
+        li:nth-child(odd) {
+            background: #F8F8F8;
+        }
+    }
+    
+}
+div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
+    
+    border-radius: 0px 0px 0px 0px !important;
+    border-top: 2px solid red !important;
+}
+
+

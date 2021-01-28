@@ -4,10 +4,10 @@ import Breadcrumbs from '../components/Breadcrumbs'
 import Reviews from '../components/Reviews'
 import { detailsProduct } from '../redux/actions/productActions'
 import ImageGallery from 'react-image-gallery'
-import "react-image-gallery/styles/css/image-gallery.css";
+
 import Faq from 'react-faq-component'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+
 import ProductGridView from '../components/ProductGridView';
 import { listProducts } from '../redux/actions/productActions';
 import { Icon, InlineIcon } from '@iconify/react';
@@ -15,6 +15,20 @@ import shippingFast from '@iconify/icons-fa-solid/shipping-fast';
 import flagForCanada from '@iconify/icons-emojione-monotone/flag-for-canada';
 import financeIcon from '@iconify/icons-mdi/finance';
 import shieldCheckSolid from '@iconify/icons-clarity/shield-check-solid';
+
+import globeIcon from '@iconify/icons-feather/globe'
+import mapIcon from '@iconify/icons-feather/map';
+import truckIcon from '@iconify/icons-feather/truck';
+import awardIcon from '@iconify/icons-feather/award';
+import headphonesIcon from '@iconify/icons-feather/headphones';
+import shoppingCart from '@iconify/icons-feather/shopping-cart';
+
+import minusIcon from '@iconify/icons-feather/minus';
+import plusIcon from '@iconify/icons-feather/plus';
+
+
+
+
 
 const Productpage = (props) => {
 
@@ -29,6 +43,7 @@ const Productpage = (props) => {
 
     const [p, setP] = useState('')
     const { currency } = useSelector(state => state.currency)
+    const [first, setFirst] = useState(false);
 
    
 
@@ -77,41 +92,69 @@ const Productpage = (props) => {
             </div>
 
             <div className="product_detail">
-                <div>{product.name}</div>
-                <div>{product.description}</div>
-                <div>
-                {currency === ("CAD") ? product.priceCAD : product.priceUSD}
+                <div id="product_name">{product.name}</div>
+                <div id="product_price">
+                $ {currency === ("CAD") ? product.priceCAD : product.priceUSD}
                 </div>
-                <div>{product.specification}</div>
-                <div>
-                    qty
+                <div id="product_availability">
+                <span>Availability:</span> {product.quantity === 0 ? 'Out of Stock' : 'In Stock & Ready to Ship'}
+                </div>
+                <div id="product_category">
+                <span>Category:</span> {product.category}
+                </div>
+                <div id="icon_list">
+                    <ul>
+                        <li><Icon icon={globeIcon} style={{fontSize: '18px'}}/>&nbsp;&nbsp;100% Made In Korea</li>
+                        <li><Icon icon={mapIcon} style={{fontSize: '18px'}} />&nbsp;&nbsp;Free shipping to USA and Canada</li>
+                        <li><Icon icon={truckIcon} style={{fontSize: '18px'}} />&nbsp;&nbsp;Ships in 1-2 days from California</li>
+                        <li><Icon icon={awardIcon} style={{fontSize: '18px' }} />&nbsp;&nbsp;12- months complete warranty</li>
+                        <li><Icon icon={headphonesIcon} style={{fontSize: '18px'}} />&nbsp;&nbsp;Free extra 12 months technical support</li>
+                    </ul>
+                </div>
+            
+                <div id="plusminus">
+                    {/* qty
                     <select value={qty} onChange={e => setQty(e.target.value)}>
                         {
                             [...Array(product.quantity).keys()].map(x => (
                                 <option key={x+1} value={x+1}>{x+1}</option>
                             ))
                         }
-                    </select>
+                    </select> */}
+                    <div id="gray">
+                        <button disabled={qty <= 0 ? true : false} onClick={() => setQty(qty-1)}>-</button>
+                        <div style={{margin: "auto", display: "inline"}}>{qty}</div>
+                        <button disabled={qty >= product.quantity ? true : false }onClick={() => setQty(qty+1)}>+</button>
+                    </div>
+                    <button id="addtocart" onClick={handleCart}>
+                        <Icon icon={shoppingCart} style={{fontSize: '12px'}} />&nbsp;
+                        Add To Cart</button>  
                 </div>
-                <button onClick={handleCart}>Add To Cart</button>     
+
+                <div id="card_icons">      
+                    <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/visa-outline-large.png" ></img>
+                    <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/mastercard-outline-large.png"></img>
+                    <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/americanexpress-outline-large.png"></img>
+                    <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/paypal-outline-large.png"></img>
+                </div>   
             </div>
 
             <div id="product_icons">
-                <div>
+                <div className="icon_wrapper">
                     <div><Icon icon={shippingFast} style={{color: '#393636', fontSize: '42px'}} /></div>
-                    <div>Free Shipping &amp; Returns</div>
+                    <div className="icon_caption">Free Shipping &amp; Returns</div>
                 </div>
-                <div>
+                <div className="icon_wrapper">
                     <div><Icon icon={flagForCanada} style={{color: '#393636', fontSize: '51px'}} /></div>
-                    <div>Canada Duty Free</div>
+                    <div className="icon_caption">Canada&nbsp;Duty Free</div>
                 </div>
-                <div>
+                <div className="icon_wrapper">
                     <div><Icon icon={financeIcon} style={{color: '#393636', fontSize: '53px'}} /></div>
-                    <div>Financing</div>
+                    <div className="icon_caption">Financing</div>
                 </div>
-                <div>
+                <div className="icon_wrapper">
                     <div><Icon icon={shieldCheckSolid} style={{ color: '#393636', fontSize: '53px'}} /></div>
-                    <div>12 month warranty</div>
+                    <div className="icon_caption">12 month<br/>warranty</div>
                 </div>
             </div>
         </div>
@@ -125,16 +168,42 @@ const Productpage = (props) => {
                 <Tab>Reviews</Tab>
             </TabList>
             <TabPanel>
-                <h2>{product.description}</h2>
+                <p>{product.description}</p>
             </TabPanel>
             <TabPanel>
-                <h3>ha ha ha</h3>
+                <ul id="specification">
+                    {product.specification.map(d => (
+                        <li>{d}</li>
+                    ))}
+                </ul>
             </TabPanel>
             <TabPanel>
-                <h3>ha ha ha</h3>
+                <p>
+                   To qualify for a warranty it is imperative you keep your original receipts and documents. We offer a 12-month limited warranty that covers the original purchase should any defects or problems result from normal use of your scooter. These 12 months are from the date of purchase. But we also offer 12 months of free technical support. That support includes any repairs, spare parts or other service needs. We also offer a six-month warranty for used certified items. (Unfortunately we cannot offer a warranty for items modified by customers). Our warranties do not cover physical damage resulting from a road accident so travel smart and stay safe. 
+                </p>
             </TabPanel>
             <TabPanel>
                 <Faq data={data} />
+        <div className="sandbox">
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    What is the shipping cost? (In the USA, Canada and other countries)
+                    <div className="icon" onClick={() => setFirst(!first)}>
+                        {first ?
+                        <Icon icon={minusIcon} style={{fontSize: '24px' }} /> :
+                        <Icon icon={plusIcon} style={{fontSize: '24px' }} />
+                        }
+                    </div>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+                    We only ship to the United States. All domestic orders to all locations in Canada &amp; the U.S., exclusing Alaska and Hawaii, include FREE Standard Shipping.
+                    <br/>
+                    We do not currently ship to international locations.
+                </div>
+            </div>
+        </div>
             </TabPanel>
             <TabPanel>
                 <h1>Videos</h1>

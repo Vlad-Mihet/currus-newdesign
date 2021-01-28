@@ -4,6 +4,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@iconify/icons-feather": "^1.1.0",
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
