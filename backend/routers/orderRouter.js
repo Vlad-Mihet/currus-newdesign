@@ -2,6 +2,7 @@ import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
 import data from '../data.js';
 import Order from '../models/orderModel.js'
+import User from '../models/userModel.js'
 
 const orderRouter = express.Router();
 
@@ -31,7 +32,16 @@ orderRouter.post('/', expressAsyncHandler(async (req, res) => {
         isDelivered: false
     });
 
+  
+
     const createdOrder = await order.save();
+    console.log(createdOrder)
+    const user = await User.findById(req.body.buyer)
+
+    if (user) {
+        user.orders.push(createdOrder._id)
+        const updatedUser = await user.save();
+    }
     
     res.send({message: 'Order Created', order: createdOrder })
 }))

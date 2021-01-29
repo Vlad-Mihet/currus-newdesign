@@ -8,11 +8,20 @@
 	margin-top:50px;
 	box-shadow:0px 2px 7px 1px #aa9191;
 }
+
 .hedding-title h1{	
 	margin:0px;
 	padding:0px 0px 10px 0px;
-	font-size:25px;
+    
+    font-family: Open Sans;
+    color: #212121;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
 }
+
 .average-rating{
 	float:left;
 	text-align: center;
@@ -20,7 +29,14 @@
 }
 .average-rating h2{
 	margin:0px;
-	font-size:80px;
+    font-size:72px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 86px;
+    text-align: center;
+    color: #212121;
+    
 }
 .average-rating p{
 	margin:0px;
@@ -127,11 +143,16 @@
 .start-part{
 	float:right;
 	width:30%;
-	text-align: center;
+    text-align: center;
+    
 }
 .start-part span{
 	color:#000000;
-	font-size:20.7px;
+    font-size:18px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    
 }
 .reviews h1{
 	margin:10px 0px 20px 30px;
@@ -143,32 +164,39 @@
 	border-radius: 50%;
 }
 .user-img-part{
-	width:30%;
-	float:left;
+
 }
-.user-img{
-	width:48%;
-	float:left;
-	text-align: center;
-}
+
 .user-text{
-	float:left;
+    
+    
+    .stars_date {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;color: rgba(102, 102, 102, 0.6);
+        }
+    }
 }
+
 .user-text h4,.user-text p{
 	margin:0px 0px 5px 0px;
 }
-.user-text p{
-	font-size: 20px;
-	font-weight: bold;
+
+.user-text h4{
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #393636;
 }
-.user-text h4,.user-text span{
-	color:#B3B5B4;
-}
-.comment{
-	width:68%;
-	float:right;
-	
-}
+
+
+
 
 
 }

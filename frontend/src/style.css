@@ -1545,7 +1545,13 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .reviews .hedding-title h1 {
   margin: 0px;
   padding: 0px 0px 10px 0px;
-  font-size: 25px;
+  font-family: Open Sans;
+  color: #212121;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
 }
 .reviews .average-rating {
   float: left;
@@ -1554,7 +1560,13 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 }
 .reviews .average-rating h2 {
   margin: 0px;
-  font-size: 80px;
+  font-size: 72px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 86px;
+  text-align: center;
+  color: #212121;
 }
 .reviews .average-rating p {
   margin: 0px;
@@ -1640,7 +1652,10 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 }
 .reviews .start-part span {
   color: #000000;
-  font-size: 20.7px;
+  font-size: 18px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
 }
 .reviews .reviews h1 {
   margin: 10px 0px 20px 30px;
@@ -1651,31 +1666,26 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   border: 1px solid blue;
   border-radius: 50%;
 }
-.reviews .user-img-part {
-  width: 30%;
-  float: left;
+.reviews .user-text .stars_date {
+  display: flex;
+  justify-content: space-between;
 }
-.reviews .user-img {
-  width: 48%;
-  float: left;
-  text-align: center;
-}
-.reviews .user-text {
-  float: left;
+.reviews .user-text .stars_date span {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(102, 102, 102, 0.6);
 }
 .reviews .user-text h4, .reviews .user-text p {
   margin: 0px 0px 5px 0px;
 }
-.reviews .user-text p {
-  font-size: 20px;
+.reviews .user-text h4 {
+  font-family: Open Sans;
+  font-style: normal;
   font-weight: bold;
-}
-.reviews .user-text h4, .reviews .user-text span {
-  color: #B3B5B4;
-}
-.reviews .comment {
-  width: 68%;
-  float: right;
+  font-size: 16px;
+  color: #393636;
 }
 
 #aboutus p {

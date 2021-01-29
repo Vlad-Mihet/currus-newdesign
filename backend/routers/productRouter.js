@@ -45,11 +45,13 @@ productRouter.post('/:id/reviews', expressAsyncHandler(async (req, res) => {
     
     if (product) {
         const review = {
+            _id: Math.random(),
             author: req.body.author,
             stars: Number(req.body.stars),
             pros: req.body.pros,
             cons: req.body.cons,
-            detail: req.body.detail
+            detail: req.body.detail,
+            date: Date.now()
         }
         product.reviews.push(review)
         product.numReviews = product.reviews.length;

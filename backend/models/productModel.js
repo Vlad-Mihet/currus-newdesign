@@ -16,7 +16,8 @@ const productSchema = new mongoose.Schema({
         stars: { type: Number, required: true },
         pros: { type: String },
         cons: { type: String },
-        detail: { type: String, required: true }
+        detail: { type: String, required: true },
+        date: { type: Date }
     }],
     numReviews: { type: Number },
     image: { type: String },

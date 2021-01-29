@@ -78,7 +78,8 @@ const data = {
         {
             name: 'Sample User',
             email: 'sample@sample.com',
-            password: '1234567'
+            password: '1234567',
+            orders: []
         }
     ]
 }

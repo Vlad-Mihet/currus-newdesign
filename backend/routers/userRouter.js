@@ -32,12 +32,13 @@ userRouter.post('/register', expressAsyncHandler(async (req, res) => {
 }))
 
 userRouter.post('/signin', expressAsyncHandler(async (req, res) => {
-    const user = await User.findOne({email: req.body.email});
+    const user = await User.findOne({email: req.body.email}).populate('orders');
     if(user) {
         if (bcrypt.compareSync(req.body.password, user.password)) {
             res.send({
                 _id: user._id,
-                name: user.name
+                name: user.name,
+                orders: user.orders
             })
             return;
         }
