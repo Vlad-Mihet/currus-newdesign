@@ -174,7 +174,7 @@ const Productpage = (props) => {
             <TabPanel>
                 <ul id="specification">
                     {product.specification && product.specification.map(d => (
-                        <li>{d}</li>
+                        <li key={d}>{d}</li>
                     ))}
                 </ul>
             </TabPanel>
@@ -203,6 +203,113 @@ const Productpage = (props) => {
                     We do not currently ship to international locations.
                 </div>
             </div>
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    Is There A Warranty on Currus Vehicles?
+                    <div className="icon" onClick={() => setFirst(!first)}>
+                        {first ?
+                        <Icon icon={minusIcon} style={{fontSize: '24px' }} /> :
+                        <Icon icon={plusIcon} style={{fontSize: '24px' }} />
+                        }
+                    </div>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+                    Yes. We offer a 12-month limited warranty from the date of purchase. The warranty covers any defects or problems that may result from the normal use of the scooter. In addition to 12 months product warranty, we also offer 12 months of free technical support for any repairs, spare parts or any other service you may need during the period.
+
+For used certified items, we offer a six-month warranty.
+
+The warranty will not be applicable to items modified by customers. Physical damages to the vehicle resulting from an accident are also not covered under the warranty.
+                </div>
+            </div>
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    Can I Get a Test Ride Before Buying?
+                    <div className="icon" onClick={() => setFirst(!first)}>
+                        {first ?
+                        <Icon icon={minusIcon} style={{fontSize: '24px' }} /> :
+                        <Icon icon={plusIcon} style={{fontSize: '24px' }} />
+                        }
+                    </div>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+No. We do not offer test rides as of now, as we only have online stores. However, we are working to make partners with physical stores across the USA and might soon allow customers to test ride before buying from one of the Currus-authorised stores.
+                </div>
+            </div>
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    How Do I Order Wholesale?
+                    <div className="icon" onClick={() => setFirst(!first)}>
+                        {first ?
+                        <Icon icon={minusIcon} style={{fontSize: '24px' }} /> :
+                        <Icon icon={plusIcon} style={{fontSize: '24px' }} />
+                        }
+                    </div>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+If you’d like to become a dealer and resell our products through your own website or physical store, we can provide you these items at wholesale prices. If you want to order wholesale for any other reason, we might be able to help you with discounts.
+
+To know about our wholesale price or to discuss the details, give us a call or send an enquiry.
+                </div>
+            </div>
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    How often does this need servicing in a year/
+                    <div className="icon" onClick={() => setFirst(!first)}>
+                        {first ?
+                        <Icon icon={minusIcon} style={{fontSize: '24px' }} /> :
+                        <Icon icon={plusIcon} style={{fontSize: '24px' }} />
+                        }
+                    </div>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+Well, regular servicing of your Currus E-scooter is a must in order to maintain a safe and good condition. We suggest regular check-ups for tires, brakes, suspension, and battery. The more and better you maintain your vehicle, the longer it will be able to serve you. Also, take proper care of the scooter battery. Avoid overcharging or undercharging it. Keep it away from direct sunlight and rain.
+                </div>
+            </div>
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    Is there any age restriction to Order the Electric Scooter?
+                    <div className="icon" onClick={() => setFirst(!first)}>
+                        {first ?
+                        <Icon icon={minusIcon} style={{fontSize: '24px' }} /> :
+                        <Icon icon={plusIcon} style={{fontSize: '24px' }} />
+                        }
+                    </div>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+At CurrusMotors.com, we only sell high-power scooters that are meant to be used by adults, above 18 years of age. So, we accept online orders only from legal adult age users.
+                </div>
+            </div>
+            <div className="wrapper">
+                <div className={first? "borderleft borderopen": "borderleft borderclosed"}>
+                </div>
+                <div className="title">
+                    In case of damage, where do I get spare parts for the scooter?
+                    <div className="icon" onClick={() => setFirst(!first)}>
+                        {first ?
+                        <Icon icon={minusIcon} style={{fontSize: '24px' }} /> :
+                        <Icon icon={plusIcon} style={{fontSize: '24px' }} />
+                        }
+                    </div>
+                </div>
+                <div className={first? "content open" : "content closed"}>
+If your product is in the warranty period, send a query to our technical support team for any service or repair needs. As long as your damages are covered under warranty, we will take care of them, without a cost.
+
+However, if your product is not under warranty or the damages are not covered, we can only help you get spare parts and replace the damaged parts. The cost of repair and spare parts will be borne by the user/customer.
+                </div>
+            </div>
+            
+
+
         </div>
             </TabPanel>
             <TabPanel>
