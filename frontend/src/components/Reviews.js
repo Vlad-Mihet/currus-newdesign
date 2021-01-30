@@ -5,7 +5,7 @@ import { Icon, InlineIcon } from '@iconify/react';
 import starFilled from '@iconify/icons-ant-design/star-filled';
 import starHalf from '@iconify/icons-bi/star-half';
 import starIcon from '@iconify/icons-bi/star';
-
+import arrowRight from '@iconify/icons-bi/arrow-right';
 
     const StarsUI = ({ rating }) => {
         return (
@@ -111,7 +111,7 @@ const Reviews = ({ product, productId }) => {
 
 
     const [author, setAuthor] = useState('')
-    const [stars, setStars] = useState('')
+    const [stars, setStars] = useState(0)
     const [pros, setPros] = useState('')
     const [cons, setCons] = useState('')
     const [detail, setDetail] = useState('')
@@ -128,13 +128,23 @@ const Reviews = ({ product, productId }) => {
     const [one, setOne] = useState(0.01);
 
     const [view, setView] = useState(2);
+    const [openReviewForm, setOpenReviewForm] = useState(false);
+ 
 
     const { userInfo } = useSelector(state => state.userSignin)
 
+  
+
     useEffect(() => {
         dispatch(listReviews(productId))
-        console.log(userInfo)
+ 
     }, [])
+
+    useEffect(() => {
+        if (userInfo) {
+        setAuthor(userInfo.name)
+        }
+    }, [userInfo])
 
     useEffect(() => {
         setAverage(reviews ? (reviews.reduce((a, c) => a + c.stars, 0)/reviews.length).toFixed(1) : 1)
@@ -227,22 +237,41 @@ const Reviews = ({ product, productId }) => {
                 )) : <h1>Loading...</h1>}
             </div>
             <div>
-                {reviews ? (reviews.length >= view ? <button onClick={() => setView(view+2)}>Load More</button> : "") : ""}
+                {reviews ? (reviews.length > view ? <button id="loadmore" style={{ float: "right" }} onClick={() => {
+                    setView(view+2)
+                }}>
+                    <Icon icon={arrowRight} style={{color: '#e7161b', fontSize: '16px' }} />
+                    Load More</button> : "") : ""}
             </div>
-                {userInfo ? (userInfo.orders[0].orderItems.find(ele => ele.product === productId) ? (<button>Write a Review</button>) : "Can not write"): "No user info"}
+                {userInfo ? (userInfo.orders[0].orderItems.find(ele => ele.product === productId) ? 
+                (! openReviewForm ? <button id="writeareview" onClick={() => setOpenReviewForm(!openReviewForm)}>Write a Review</button> : "") : "Can not write"): "No user info"}
 		    </div>
+            {openReviewForm ? 
+            <form className="comment-part" onSubmit={submitHandler}>
+                <div className="user-image-part">
+                    <div className="user-text">
+                        {/* <input id="author" placeholder="Author" onChange={e => setAuthor(e.target.value)}></input> */}
+                        <div>
+                            <Icon onMouseOver={() => setStars(1)} icon={stars >= 1 ? starFilled : starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
+                            <Icon onMouseOver={() => setStars(2)} icon={stars >= 2 ? starFilled : starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
+                            <Icon onMouseOver={() => setStars(3)} icon={stars >= 3 ? starFilled : starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
+                            <Icon onMouseOver={() => setStars(4)} icon={stars >= 4 ? starFilled : starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
+                            <Icon onMouseOver={() => setStars(5)} icon={stars >= 5 ? starFilled : starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
+                        </div>
+                    </div>
+                </div>
+                <div className="comment">
+                    <input style={{ display: "block", width: "100%", height: "50px", marginBottom: "10px" }} id="pros" placeholder="Pros" onChange={e => setPros(e.target.value)}></input>
+                    <input style={{ display: "block", width: "100%", height: "50px", marginBottom: "10px" }} id="cons" placeholder="Cons" onChange={e => setCons(e.target.value)}></input>
+                    <input style={{ display: "block", width: "100%", height: "100px" }} id="detail" placeholder="Detail" onChange={e => setDetail(e.target.value)}></input>   
+                </div>   
+                <button type="submit">Post Your Review</button>      
+            </form> : ""
+            }
 	</div>
 
 
 
-            <form onSubmit={submitHandler}>
-                <input id="author" placeholder="Author" onChange={e => setAuthor(e.target.value)}></input>
-                <input id="stars" placeholder="Stars" onChange={e => setStars(e.target.value)}></input>
-                <input id="pros" placeholder="Pros" onChange={e => setPros(e.target.value)}></input>
-                <input id="cons" placeholder="Cons" onChange={e => setCons(e.target.value)}></input>
-                <input id="detail" placeholder="Detail" onChange={e => setDetail(e.target.value)}></input>      
-                <button type="submit">Post Your Review</button>      
-            </form>
         </section>
     )
 }

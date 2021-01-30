@@ -42,10 +42,12 @@ productRouter.get('/:id/reviews', expressAsyncHandler(async (req, res) => {
 productRouter.post('/:id/reviews', expressAsyncHandler(async (req, res) => {
     const productId = req.params.id;
     const product = await Product.findById(productId)
+
+    // add protected route for posting reviews here
     
     if (product) {
         const review = {
-            _id: Math.random(),
+     
             author: req.body.author,
             stars: Number(req.body.stars),
             pros: req.body.pros,
@@ -53,7 +55,7 @@ productRouter.post('/:id/reviews', expressAsyncHandler(async (req, res) => {
             detail: req.body.detail,
             date: Date.now()
         }
-        product.reviews.push(review)
+        product.reviews.unshift(review)
         product.numReviews = product.reviews.length;
         product.rating = product.reviews.reduce((a, c) => c.rating + a, 0) / product.reviews.length
         const updatedProduct = await product.save()
