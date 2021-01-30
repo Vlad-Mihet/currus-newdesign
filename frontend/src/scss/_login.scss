@@ -1,14 +1,18 @@
 .login {
-    margin-left: 34.375%;
-    margin-right: 34.375%;
+    margin: 0 auto;
+    width: 50%;
     margin-top: 60px;
     margin-bottom: 100px;
     background: #FFFFFF;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+    padding: 60px;
 
     img {
-        width: 200px;
+        width: 100%;
+        object-fit: contain;
         height: 50px;
+        margin: 0 auto;
+        display: block;
     }
 
     h1 {
@@ -20,6 +24,92 @@
         text-align: center;
         text-transform: uppercase;
         color: rgba(57, 54, 54, 0.85);
+        
+    }
+    h1::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #E7161B;
+        width: 15%;
+        margin: 0 auto;
+        padding-top: 10px;
+   
+    }
+
+    #login_form {
+       input {
+           width: 100%;
+           background: #FFFFFF;
+           border: 1px solid rgba(102, 102, 102, 0.3);
+           box-sizing: border-box;
+           border-radius: 3px;
+           margin-bottom: 10px;
+           padding: 10px;
+       }
+
+       button#forgot {
+            border: none;
+            background: none;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            text-align: right;
+            color: rgba(102, 102, 102, 0.85);
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+       }
+
+       button.primary {
+           background: #E7161B;
+           border-radius: 3px;
+           border: none;
+           color: #FFFFFF;
+           font-family: Lato;
+           font-style: normal;
+           font-weight: 600;
+           font-size: 16px;
+           line-height: 19px;
+           text-align: center;
+           text-transform: uppercase;
+           padding: 10px;
+           width: 100%;
+           margin-top: 10px;
+       }
+
+       #donthave {
+           font-family: Open Sans;
+           font-style: normal;
+           font-weight: normal;
+           font-size: 12px;
+           line-height: 16px;
+           text-align: center;
+           color: rgba(102, 102, 102, 0.85);
+           margin-top: 20px;
+
+           a {
+               color: #E7161B;
+               font-weight: 600;
+           }
+       }
+
+       #signupvia {
+           width: 100%;
+           border-bottom: 1px solid rgba(102, 102, 102, 0.85);
+           color: rgba(102, 102, 102, 0.85);
+           text-align: center;
+           line-height: 1px;
+           margin: 20px 0 20px;
+
+
+            span {
+                background: #fff;
+                padding: 0 10px;
+            }
+       }
+
     }
 
 }

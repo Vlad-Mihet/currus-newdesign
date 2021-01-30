@@ -79,8 +79,9 @@ const Checkoutpage = (props) => {
             <Stepper activeStep={1} steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
             <div id="grid">
             <div id="box1">
-            <h2>Billing Details</h2>
-            { !userInfo && (
+            <h2 id="billing_details">Billing Details</h2>
+
+            {/* { !userInfo && (
             <div>
                 Returning Customer?<Link to='/login'>Click Here to Login</Link>
             </div>)}
@@ -88,8 +89,9 @@ const Checkoutpage = (props) => {
             <div>
                 Have A Coupon? Click here!
             </div>
-            ): <div>Coupon Applied</div>}
-            <form>
+            ): <div>Coupon Applied</div>} */}
+
+            <form id="checkout_form">
                 <input id="first" type="text" value={first} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
                 <input id="last" type="text" value={last} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
                 <input id="company" type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="Company Name"></input>
@@ -102,16 +104,16 @@ const Checkoutpage = (props) => {
                 <input id="phonenumber" type="text" value={phonenumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="Phone Number"></input>
              </form>
             <br />
-            { !userInfo ? (
+            {/* { !userInfo ? (
              <form>
-                 <label> Create An Account?
+                 <label id="createanaccount"> Create An Account?
                     <input type="checkbox"></input>
                 </label>
                 <input placeholder="Username"></input>
                 <input placeholder="Create Password"></input>
                 <input placeholder="Notes about your order" type="text"></input>
              </form> ) : ""
-            }
+            } */}
 
             </div>
 
@@ -120,24 +122,24 @@ const Checkoutpage = (props) => {
                     <ul>
                         {cartItems.map(item => (
                         <li key={item.id}>
-                            {item.name}{' '}
-                            {item.qty}{' '}
-                            {item.priceUSD}
+                            <img src={item.image}></img>
+                            <div>{item.name}</div>
+                            <div>{item.qty}</div>
+                            <div>{item.priceUSD}</div>
                         </li>
                     ))}
                     </ul>
-                <h1>Subtotal</h1>
-                <h4>
+                <h1 className="subtotal">Subtotal
                 { afterCouponPrice === subtotal ? subtotal : afterCouponPrice }
-                </h4>
-                <h1>Shipping</h1>
-                <h4>
+                </h1>
+   
+                <h1 className="subtotal">Shipping
                 ${shippingPrice}
-                </h4>
-                <h1>Cart Totals</h1>
-                <h4>
+                </h1>
+  
+                <h1 className="subtotal">Cart Totals
                 ${totalPrice}
-                </h4>
+                </h1>
 
                 <div>
                 <PayPalButton amount={totalPrice}

@@ -321,15 +321,46 @@ However, if your product is not under warranty or the damages are not covered, w
         </Tabs>
 
         <div>
-            <h4>A closer look at {product.name}</h4>
+            <h4 id="closerlook">A closer look at {product.name}</h4>
             <div id="gallery">
-                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery1.jpeg"></img>
-                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery2.jpeg"></img>
-                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery3.jpeg"></img>
-                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery4.jpeg"></img>
+                <div id="row_1">
+                    <div id="row_1_image_1">
+                        <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery1.jpeg"></img>
+                        <div id="caption_1">
+                            <h1>Fast</h1>
+                            <p>Up to 50 Mph Speed 5400W Max Dual Hub Motor Hydraulic Disk Brake with ABS</p>
+                        </div>
+                    </div>
+                    <div id="row_1_image_2">
+                        <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery2.jpeg"></img>
+                        <div id="caption_2">
+                            <h1>Reliable</h1>
+                            <p>75+ Miles Range 5400W Max Dual Motor Extra-wide Tubeless Tires</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="row_2">
+                    <div id="row_2_image_3">
+                        <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery3.jpeg"></img>
+                        <div id="caption_3">
+                            <h1>Powerful</h1>
+                            <p>5400W Max Dual Hub Motor Hydraulic Disc Brake with ABS Multi-eye smart throttle system</p>
+                        </div>
+                    </div>
+                    <div id="row_2_image_4">
+                        <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/gallery4.jpeg"></img>
+                        <div id="caption_4">
+                            <h1>Safe</h1>
+                            <p>Dual Hydraulic Brake Extra-Wide Tubeless Tires Headlight &amp; Horn</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-            <h1>Related Products</h1>
+
+            <h1 id="related">Related Products</h1>
             <div className="shoppage_gridview">
             {
             products &&

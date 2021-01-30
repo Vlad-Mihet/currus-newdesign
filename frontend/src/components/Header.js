@@ -6,6 +6,7 @@ import scInstagram from '@iconify/icons-ei/sc-instagram';
 import scTwitter from '@iconify/icons-ei/sc-twitter';
 import scYoutube from '@iconify/icons-ei/sc-youtube';
 import bagIcon from '@iconify/icons-bytesize/bag';
+import bxMenuAltLeft from '@iconify/icons-bx/bx-menu-alt-left';
 
 
 import { Link } from 'react-router-dom'
@@ -57,11 +58,13 @@ const Header = ({ hamburger, setHamburger }) => {
 
             <div className="menu">
                     <div id="hamburger">
-                      <button onClick={() => setHamburger(true)}>Ham</button>
+                      <button onClick={() => setHamburger(true)}>
+                        <Icon icon={bxMenuAltLeft} style={{color: '#393636', fontSize: '24px'}} />
+                      </button>
                     </div>
                   
                     <Link id="logo" to="/" style={{ margin: "0 auto" }}>
-                      <img src="images/currus_logo.png" ></img>
+                      <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/currus_logo.png"></img>
                     </Link>
               
                   <nav id="menu_nav">
@@ -84,7 +87,7 @@ const Header = ({ hamburger, setHamburger }) => {
                     <div><Link to='/logout' onClick={handleLogout}>Logout</Link></div>
                     ) } 
                     </div>
-                    <div id="cart" style={{color: "rgba(102, 102, 102, 0.85)"}}><Link to='/cart'>Cart</Link> / ${itemsPrice}</div>
+                    <div id="cart" style={{color: "rgba(102, 102, 102, 0.85)"}}><Link to='/cart'>Cart</Link> / ${Math.round(100 * itemsPrice) / 100}</div>
                     <div id="cartsizeparent">
                     <Icon icon={bagIcon} style={{color: 'black', fontSize: '25px' }}></Icon>
                   

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { addToCart, removeFromCart, applyCoupon, saveShipping, saveTotal, saveCoupon, saveSubtotal, removeOneFromCart } from '../redux/actions/cartActions'
 import Stepper from 'react-stepper-horizontal'
 import Breadcrumbs from '../components/Breadcrumbs'
+import { Icon, InlineIcon } from '@iconify/react';
+import closeO from '@iconify/icons-ei/close-o';
 
 const Cartpage = (props) => {
 
@@ -32,7 +34,7 @@ const Cartpage = (props) => {
     }, [cartItems])
 
     useEffect(() => {
-        setAfterCouponPrice((itemsPrice * coupon));
+        setAfterCouponPrice(Math.round(100* itemsPrice * coupon)/100);
     }, [itemsPrice, coupon])
 
     useEffect(() => {
@@ -88,14 +90,16 @@ const Cartpage = (props) => {
                             <li key={item.id}>
                                 <img style={{ width: '75px', height: '75px' }} src={item.image}></img>
                                 <div>{item.name}{' '}</div>
-                                <div>{item.priceUSD}</div>
-                               <div>
+                                <div>${item.priceUSD}</div>
+                               <div id="gray">
                                    <button onClick={() => handleMinus(item.id)}>-</button>
                                    {item.qty}{' '}
                                    <button onClick={() => handlePlus(item.id)}>+</button>
                                </div>
-                                <div>{item.priceUSD * item.qty}</div>
-                                <button onClick={() => handleRemove(item.id)}>X</button>
+                                <div style={{ fontWeight: "bold"}}>${Math.round(100* item.priceUSD * item.qty)/100}</div>
+                                <button id="xbutton" onClick={() => handleRemove(item.id)}>
+                                    <Icon icon={closeO} style={{color: '#666666', fontSize: '20px' }} />
+                                </button>
                             </li>
                         )
                     ))}
@@ -104,9 +108,9 @@ const Cartpage = (props) => {
                     <div>
                         { !applied ? (
                         <>
-                        <input onChange={(e) => setCode(e.target.value)} placeholder="Coupon Code">     
+                        <input id="couponcode" onChange={(e) => setCode(e.target.value)} placeholder="Coupon Code">     
                         </input>
-                        <button onClick={handleCoupon}>Apply Coupon</button>
+                        <button id="applycoupon" onClick={handleCoupon}>Apply Coupon</button>
                         </>
                         ) : (<h5>Coupon Applied</h5>)}
                     </div>
@@ -117,35 +121,32 @@ const Cartpage = (props) => {
                 </div>
             </div>
             <div id="box2">
-                <h1>Cart Totals</h1>
-                <h4>
-                ${itemsPrice}
+                <h1 id="carttotals">Cart Totals</h1>
+                <h4 className="subtotal">
+                Subtotal &nbsp; ${Math.round(100 * itemsPrice)/100}
                 </h4>
-                <h1>After Coupon Applied</h1>
-                <h4>
-                ${afterCouponPrice}
-                </h4>
-                <h4>
-                    <label>
-                        Free shipping
-                        <input name="free" type="checkbox" value="free" checked={!shipping} onChange={() => {
+                <h4 className="subtotal">Coupon Applied &nbsp; ${afterCouponPrice}</h4>
+                <h4 className="subtotal">
+                    Shipping
+                    <label style={{display: "block"}}>
+                        
+                        <input name="free" type="radio" value="free" checked={!shipping} onChange={() => {
                             setShipping(!shipping)
                             setShippingPrice(0)}} />
+                            Free shipping
                     </label>
                     <label>
-                        Shipping to CA
-                        <input name="paid" type="checkbox" value="paid" checked={shipping} onChange={() => {
+                      
+                        <input name="paid" type="radio" value="paid" checked={shipping} onChange={() => {
                             setShipping(!shipping)
                             setShippingPrice(100)}} />
+                            Shipping to CA
                     </label>
                     { shipping && <h1>$100</h1>}
                 </h4>
-                <h1>Total</h1>
-                <h4>
-                ${totalPrice}
-                </h4>
+                <h4 className="subtotal">Total &nbsp; ${totalPrice}</h4>
                 <div>
-                        <button type="button" onClick={handleCheckout} disabled={cartItems.length === 0}>
+                        <button id="checkoutbutton" type="button" onClick={handleCheckout} disabled={cartItems.length === 0}>
                             Proceed to Checkout
                         </button>
                 </div>

@@ -166,6 +166,7 @@ const Reviews = ({ product, productId }) => {
             cons,
             detail
         }))
+        setStars(0);
     }
 
 

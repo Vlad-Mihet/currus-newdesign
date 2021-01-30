@@ -1,10 +1,25 @@
 .checkout {
 
+    width: 90%;
+    margin: 0 auto;
+
+    #billing_details, #createanaccount {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #393636;
+    }
+
     #grid {
 
         display: grid;
         grid-template-columns:  2.5833fr 1fr;
         column-gap: 25px;
+        margin-top: 50px;
+        margin-bottom: 50px;
 
         #box1 {
 
@@ -12,6 +27,89 @@
 
         #box2 {
             background: #F6F6F6;
+            ul {
+                list-style: none;
+                li {
+                    img {
+                        width: 75px;
+                        height: 75px;
+                        object-fit: cover;
+                    }
+                }
+            }
         }
     }   
+
+            .subtotal {
+                font-family: Open Sans;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 19px;
+                text-transform: uppercase;
+                color: #393636;
+            }
+
+        #checkout_form {
+            
+            display: grid;
+         
+
+            grid-template-columns: 2.23fr 1fr 1fr 2.23fr;
+            column-gap: 25px;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            row-gap: 25px;
+
+            input {
+                padding: 5px;
+            }
+
+            #first {
+                grid-column: 1 / span 2;
+            }
+
+            #last {
+                grid-column: 3 / span 2;
+            }
+
+            #company {
+                grid-column: 1 / span 4;
+            }
+
+            #country {
+                grid-column: 1 / span 2;
+            }
+
+            #address {
+                grid-column: 3 / span 2;
+            }
+
+            #town {
+                grid-column: 1 / span 1;
+            }
+
+            #state {
+                grid-column: 2 / span 2;
+            }
+
+            #postcode {
+                grid-column: 4 / span 1;
+            }
+
+            #email {
+                grid-column: 1 / span 2;
+            }
+            
+            #phonenumber {
+                grid-column: 3 / span 2;
+            }
+
+
+            button {
+                grid-column: 1 / span 2;
+                margin: 0 auto;
+            }
+
+
+        }
 }

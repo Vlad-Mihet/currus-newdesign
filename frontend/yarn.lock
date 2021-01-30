@@ -1458,6 +1458,11 @@
   resolved "https://registry.yarnpkg.com/@iconify/icons-bi/-/icons-bi-1.1.0.tgz#f1fa17625fe1c4800f0083adcbd295ec2c5d1294"
   integrity sha512-1YcKuayjyEanBmrpflgW+m4RMQP2PbXJQgTctcha47KLhN5i9tjejEGBpBlrIJ+137HQje8iZ5TJxVT5Nab/hw==
 
+"@iconify/icons-bx@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-bx/-/icons-bx-1.1.0.tgz#6ce5251aee266ad5a8ee3effab1d031281edb61e"
+  integrity sha512-4TyjNcB4hO5e5pTe/M0xaW1vqK92DcK3y9n0cDx/bUaBBa/xt2K3OM6uBGVbna2yIcmDvQJGPJpd5hnXtgZrBw==
+
 "@iconify/icons-bytesize@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@iconify/icons-bytesize/-/icons-bytesize-1.1.0.tgz#29267b6a3301ec02512c795b7f2a1d6f9161c922"
@@ -2129,10 +2134,23 @@
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.1.6.tgz#f4b1efa784e8db479cdb8b14403e2144b1e9ff03"
   integrity sha512-6gOkRe7OIioWAXfnO/2lFiv+SJichKVSys1mSsgyrYHSEjk8Ctv4tSR/Odvnu+HWlH2C8j53dahU03XmQdd5fA==
 
+"@types/prop-types@*":
+  version "15.7.3"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
+  integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
+
 "@types/q@^1.5.1":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
+
+"@types/react@*":
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.0.tgz#5af3eb7fad2807092f0046a1302b7823e27919b8"
+  integrity sha512-aj/L7RIMsRlWML3YB6KZiXB3fV2t41+5RBGYF8z+tAKU43Px8C3cYUZsDvf1/+Bm4FK21QWBrDutu8ZJ/70qOw==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
 
 "@types/resolve@0.0.8":
   version "0.0.8"
@@ -4266,6 +4284,11 @@ cssstyle@^2.2.0:
   integrity sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==
   dependencies:
     cssom "~0.3.6"
+
+csstype@^3.0.2:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.0.6.tgz#865d0b5833d7d8d40f4e5b8a6d76aea3de4725ef"
+  integrity sha512-+ZAmfyWMT7TiIlzdqJgjMb7S4f1beorDbWbsocyK4RaiqA5RTX3K14bnBWmmA9QEM0gRdsjyyrEmcyga8Zsxmw==
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -9776,6 +9799,14 @@ react-faq-component@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/react-faq-component/-/react-faq-component-1.2.2.tgz#92ab0c8e86cf34847eb3159433025f1b6365d22a"
   integrity sha512-To0PgQW2LUWCOvvsaa7L24KhSk3zol5xcHkv/Bm+yZieNs3j3V0z4EulKEhA11vbMVb8Tbj3h/jJg3GQ+dCbXg==
+
+react-google-login@^5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-5.2.2.tgz#a20b46440c6c1610175ef75baf427118ff0e9859"
+  integrity sha512-JUngfvaSMcOuV0lFff7+SzJ2qviuNMQdqlsDJkUM145xkGPVIfqWXq9Ui+2Dr6jdJWH5KYdynz9+4CzKjI5u6g==
+  dependencies:
+    "@types/react" "*"
+    prop-types "^15.6.0"
 
 react-image-gallery@^1.0.8:
   version "1.0.8"

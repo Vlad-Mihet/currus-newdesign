@@ -9,6 +9,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <meta name="google-signin-client_id" content="%REACT_APP_GOOGLE_CLIENT_ID%">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -35,6 +36,8 @@
     <title>React App</title>
   </head>
   <body>
+    <script src="https://apis.google.com/js/platform.js" async defer>
+    </script>
     <script>
       window.fbAsyncInit = function() {
         FB.init({
