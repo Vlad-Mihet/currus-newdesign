@@ -58,7 +58,7 @@ const Header = ({ hamburger, setHamburger }) => {
 
             <div className="menu">
                     <div id="hamburger">
-                      <button onClick={() => setHamburger(true)}>
+                      <button style={{ background: 'None', border: 'None' }} onClick={() => setHamburger(true)}>
                         <Icon icon={bxMenuAltLeft} style={{color: '#393636', fontSize: '24px'}} />
                       </button>
                     </div>
