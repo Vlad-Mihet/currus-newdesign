@@ -34,7 +34,7 @@ const data = {
             quantity: 7,
             description: 'The spirit beast side stand that comes in three different colors.',
             quick: 'blah blah blah',
-             specification: ['blah blah blah'],
+            specification: ['blah blah blah'],
             shipping: 'To qualify',
             onSale: false
         },
