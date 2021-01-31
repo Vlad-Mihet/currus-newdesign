@@ -10,6 +10,9 @@ import returnRouter from './routers/returnRouter.js'
 import warrantyRouter from './routers/warrantyRouter.js'
 import orderRouter from './routers/orderRouter.js'
 
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 const path = require('path')
 
 
