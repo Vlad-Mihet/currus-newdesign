@@ -53,7 +53,7 @@ function App() {
             </div>
           </div>
               <div id="content">
-                  <img src="images/currus_logo.png" ></img>
+                  <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/currus_logo.png" ></img>
                   <nav id="hamburger_nav">
                     <ul>
                       <li><Link to="/">Home</Link></li>
