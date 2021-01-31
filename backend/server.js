@@ -14,6 +14,10 @@ import orderRouter from './routers/orderRouter.js'
 dotenv.config()
 
 const app = express();
+
+app.use(express.static(path.join(__dirname, '/frontend/build')));
+
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
@@ -37,11 +41,11 @@ app.get('/api/config/paypal', (req, res) => {
 })
 
 
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, '/frontend/build/index.html')))
 
-
-app.get('/', (req, res) => {
-    res.send('Server is ready')
-})
+// app.get('/', (req, res) => {
+//     res.send('Server is ready')
+// })
 
 const port = 5001;
 
