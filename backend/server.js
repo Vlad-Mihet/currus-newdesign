@@ -9,12 +9,12 @@ import newsletterRouter from './routers/newsletterRouter.js'
 import returnRouter from './routers/returnRouter.js'
 import warrantyRouter from './routers/warrantyRouter.js'
 import orderRouter from './routers/orderRouter.js'
+import path from 'path';
 
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
-const path = require('path')
-
+const __dirname = path.resolve();
 
 dotenv.config()
 
