@@ -1,4 +1,4 @@
-.login {
+.register {
     margin: 0 auto;
     width: 50%;
     margin-top: 60px;
@@ -36,19 +36,7 @@
    
     }
 
-    .login_form {
-
-       .errorbox {
-          background: #E7161B;
-           color: #FFFFFF;
-           font-family: Lato;
-           font-style: normal;
-           font-weight: 600;
-           font-size: 13px;
-           line-height: 19px;
-           text-align: center;
-       }
-
+    .register_form {
        input {
            width: 100%;
            background: #FFFFFF;

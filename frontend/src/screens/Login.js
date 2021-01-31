@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { signin } from '../redux/actions/userActions'
 import Breadcrumbs from '../components/Breadcrumbs'
 import FacebookLogin from 'react-facebook-login';
-import { fblogin } from '../redux/actions/userActions'
+import { fblogin, userreset } from '../redux/actions/userActions'
 import GoogleLogin from 'react-google-login';
 
 
@@ -34,6 +34,10 @@ const Login = (props) => {
     }
 
     useEffect(() => {
+        dispatch(userreset());
+    }, [])
+
+    useEffect(() => {
         if(userInfo) {
             props.history.push('/')
         }
@@ -44,9 +48,9 @@ const Login = (props) => {
             <Breadcrumbs title={props.location.pathname} />
             <div className="login">
                 <img src="images/currus_logo.png" ></img>
-                <form id="login_form" onSubmit={handleSubmit}>
+                <form className="login_form" onSubmit={handleSubmit}>
                     <h1>Login</h1>
-                    {error && <h4>Wrong Username/Password</h4>}
+                    {error && <h4 className="errorbox">Wrong Username/Password</h4>}
                     <div>
                         <input type="email" id="email" placeholder="Username or Email" required
                         onChange={e => setEmail(e.target.value)}></input>

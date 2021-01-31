@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 
 const OurBlog = () => {
 
@@ -55,17 +56,27 @@ const OurBlog = () => {
 
 
     const [page, setPage] = useState(null)
+    const [posts, setPosts] = useState(null)
 
     const query = `
     {
         pageCollection {
             items {
+                id
                 title
+                theme
+                author
+                date
+                picture {
+                    url
+                }
 
             }
         }
     }
     `
+
+  
 
     useEffect(() => {
         window.fetch(`https://graphql.contentful.com/content/v1/spaces/xotd7hfzkl7y/`, {
@@ -80,8 +91,8 @@ const OurBlog = () => {
               if (errors) {
                   console.error(errors);
               }
-              console.log(data);
               setPage(data.pageCollection.items[0]);
+              setPosts(data.pageCollection.items);
           });
     }, []);
     
@@ -92,21 +103,25 @@ const OurBlog = () => {
     return (
         <div className="ourblog">
             <h1>Our Blog</h1>
-            <h4>{page.title}</h4>
+
             <div id="first">
                 <Slider {...settings}>
-                    <div>
-                        <img height={200} src="images/fa53cb9684.jpeg" />
+            {posts && posts.map(post => (
+            <Link to={`/blog/${post.id}`}>
+            <div className="ourblog_post">
+                <img style={{ width: "100%", height: "404px", maxWidth: "100%", objectFit: "cover" }} src={post.picture.url} />
+                <div className="ourblog_post_textbox">
+                    <div className="ourblog_post_textbox_black">
+                        {post.date.split("T")[0]} by {post.author}
                     </div>
-                    <div>
-                        <img height={200} src="images/61670.jpeg" />
+                    <div className="ourblog_post_textbox_white">
+                        <span>{post.theme} </span>{post.title}    
                     </div>
-                    <div>
-                        <img height={200} src="images/26de61983a.jpeg" />
-                    </div>
-                    <div>
-                        <img height={200} src="images/fa53cb9684.jpeg" />
-                    </div>
+                    
+                </div>
+            </div>
+            </Link>
+            ))}
                 </Slider>
             </div>
             <div id="second">

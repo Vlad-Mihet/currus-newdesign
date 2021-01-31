@@ -71,7 +71,7 @@ const Bloglistpage = (props) => {
         <div className="blogpage">
             
            <div className="blogpage_gallery">
-            {posts && posts.map(post => 
+            {posts && posts.slice(0, 3).map(post => 
             <div onClick={() => clickHandler(post.id)} className="blogpage_box" key={post.id}>
                 <img src={post.picture.url} />
                 <div className="blogpage_box_text">

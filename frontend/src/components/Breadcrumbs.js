@@ -4,10 +4,11 @@ const Breadcrumbs = (props) => {
 
     const [t, setT] = useState('');
 
-
+    const [arr, setArr] = useState([]);
 
     useEffect(() => {
         setT(props.title.slice(1).toUpperCase())
+        setArr(t.split("/"))
     }, [props]);
 
     if(!props) {
@@ -17,7 +18,7 @@ const Breadcrumbs = (props) => {
     return (
         <div className="breadcrumbs">
             <div className="homeshop">
-                {`HOME / ${t}`}
+                {`HOME / ${arr[0]}`}{arr[1] ? ` / ${arr[1]}`:''}
             </div>
         </div>
     )

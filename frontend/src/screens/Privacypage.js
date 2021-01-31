@@ -5,6 +5,7 @@ const Privacypage = (props) => {
     return (
         <>
         <Breadcrumbs title={`${props.location.pathname}`} />
+        <div className="privacy_wrap">
             <div className="privacy">
                 <div>
                     <h2>Code of Practice</h2>
@@ -45,7 +46,6 @@ The customer’s requests, various program administration, delivery of product &
                     <h2>Collection of Personally identifying infomration</h2>
                     <p>
 In certain cases, the interactions made by customers on our website require us to gather some personally-identifying information. The amount and type of personal information that we gather from customers will depend upon the nature of interaction with us through our website. For example, we might ask customers to provide additional information like personal and financial information during the product purchase to complete their transactions.
-
 However, we make sure that we do not disclose any kind of personally-identifying information of our customers by applying strict procedures to prevent unauthorized access. However, we cannot guarantee the security of the customer personal information completely as we might be legally bound to share customer personal data in certain scenarios.
                     </p>
                 </div>
@@ -55,6 +55,7 @@ However, we make sure that we do not disclose any kind of personally-identifying
 We use cookies to personalize or improve your user experience with our site, such as quick sign up and logout process, etc. We assure that none of the customer personal information delivered through cookies will be used to disclose our customer’s identity.
                     </p>
                 </div>
+            </div>
             </div>
         </>
     )

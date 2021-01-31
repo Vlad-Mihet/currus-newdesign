@@ -40,9 +40,9 @@ const Header = ({ hamburger, setHamburger }) => {
           <div className="bar">
        
               <div className="currency">
-                <select onChange={(e) => handleCurrency(e.target.value)}>
-                  <option value="USD">USD</option>
-                  <option value="CAD">CAD</option>
+                <select style={{ border: "None", background: "None", color: "white" }} onChange={(e) => handleCurrency(e.target.value)}>
+                  <option value="USD">$ USD</option>
+                  <option value="CAD">$ CAD</option>
                 </select>
               </div>
               <div className="free-shipping-from">

@@ -18,14 +18,16 @@
         height: 208px;
         }
 
-        #text {
-
+        #text h1 {
+            margin: 0 auto;
+            text-align: center;
         }
     }
 
     #affiliate_box {
             margin-left: 220px;
             margin-right: 220px;
+            padding: 30px 20px;
             text-align: center;
             background: #FFFFFF;
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
@@ -39,6 +41,16 @@
             font-size: 18px;
             line-height: 24px;
             color: #393636;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            padding-top: 15px;
+            border-bottom: 2px solid #E7161B;
+            width: 10%;
+            margin: 0 auto;
+            
         }
 
         p {
@@ -59,6 +71,10 @@
             
             display: grid;
          
+
+            input {
+                padding-left: 10px;
+            }
 
             grid-template-columns: 300px 300px;
             column-gap: 25px;
@@ -97,6 +113,18 @@
             button {
                 grid-column: 1 / span 2;
                 margin: 0 auto;
+                border: none;
+                background: #E7161B;
+                border-radius: 3px;
+                padding: 15px 35px;
+                font-family: Lato;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
             }
 
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -15,6 +16,21 @@ body {
 .breadcrumbs {
   height: 100px;
   background: linear-gradient(0deg, rgba(231, 22, 27, 0.71), rgba(231, 22, 27, 0.71)), url(img/category2.jpeg);
+  background-size: contain;
+  display: flex;
+  align-items: center;
+}
+.breadcrumbs .homeshop {
+  font-family: Lato;
+  font-style: normal;
+  font-style: 600;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 15%;
 }
 @media (max-width: 600px) {
   .breadcrumbs {
@@ -955,7 +971,7 @@ aside {
 }
 
 .ourblog {
-  max-width: 95%;
+  margin-top: 80px;
 }
 .ourblog h1 {
   font-family: Lato;
@@ -966,10 +982,70 @@ aside {
   text-align: center;
   text-transform: uppercase;
   color: rgba(102, 102, 102, 0.85);
+  margin-bottom: 40px;
+}
+.ourblog h1::after {
+  display: block;
+  content: "";
+  border-bottom: 1px solid #E7161B;
+  width: 10%;
+  padding-bottom: 10px;
+  margin: 0 auto;
 }
 .ourblog #first {
-  width: 79.86%;
-  margin: 100px 9%;
+  width: 80%;
+  margin: 10px auto;
+}
+.ourblog #first .ourblog_post {
+  position: relative;
+}
+.ourblog #first .ourblog_post:hover .ourblog_post_textbox_black {
+  background: #E7161B;
+}
+.ourblog #first .ourblog_post .ourblog_post_textbox {
+  position: absolute;
+  top: -70px;
+  background: white;
+  width: 90%;
+  left: 16px;
+}
+.ourblog #first .ourblog_post .ourblog_post_textbox_black {
+  background: #393636;
+  color: #FFFFFF;
+  margin: 40px auto;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 10px;
+}
+.ourblog #first .ourblog_post .ourblog_post_textbox_white {
+  text-align: center;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #393636;
+  padding: 20px;
+}
+.ourblog #first .ourblog_post .ourblog_post_textbox_white span {
+  display: block;
+  color: #E7161B;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  padding: 5px;
+}
+.ourblog #first .slick-slide {
+  padding: 25px;
 }
 .ourblog #second {
   margin: 90px 15%;
@@ -2201,6 +2277,9 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-top: 10px;
   margin-bottom: 100px;
 }
+.dealer_form input {
+  padding-left: 10px;
+}
 @media (max-width: 700px) {
   .dealer_form {
     width: 90%;
@@ -2248,6 +2327,9 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 }
 .contactus #wearehere_form {
   grid-template-columns: 1fr 1fr;
+}
+.contactus #wearehere_form input {
+  padding-left: 10px;
 }
 .contactus #wrapper {
   display: grid;
@@ -2387,37 +2469,66 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   }
 }
 
-.privacy {
-  display: flex;
-  align-content: flex-start;
-  margin-left: 220px;
-  margin-right: 220px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 700px;
+.privacy_wrap {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 100%;
 }
-.privacy > div {
-  width: 300px;
+.privacy_wrap .privacy {
+  columns: 3 200px;
+  column-gap: 20px;
+}
+.privacy_wrap .privacy h2 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #393636;
+}
+.privacy_wrap .privacy h2::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #E7161B;
+  width: 15%;
+  padding-top: 10px;
+}
+.privacy_wrap .privacy p {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+.privacy_wrap .privacy > div {
+  width: 100%;
+  background: rgba(231, 22, 27, 0.06);
+  margin-left: 10px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
 }
 @media (max-width: 768px) {
-  .privacy {
-    margin-left: 32px;
-    margin-right: 32px;
+  .privacy_wrap .privacy {
     height: 1500px;
     width: 100%;
   }
-  .privacy > div {
+  .privacy_wrap .privacy > div {
     width: 165px;
   }
 }
 @media (max-width: 320px) {
-  .privacy {
-    margin-left: 16px;
-    margin-right: 16px;
+  .privacy_wrap .privacy {
     height: 1850px;
     width: 100%;
   }
-  .privacy > div {
+  .privacy_wrap .privacy > div {
     width: 300px;
   }
 }
@@ -2492,6 +2603,23 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   width: 227px;
   height: 208px;
 }
+.return #icontext #text ul {
+  list-style: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(102, 102, 102, 0.85);
+}
+.return #icontext #text ul li::before {
+  content: "•";
+  color: #E7161B;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
 .return h1 {
   font-family: Open Sans;
   font-style: normal;
@@ -2512,11 +2640,31 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   color: red;
 }
 .return #return_box {
-  margin-left: 220px;
-  margin-right: 220px;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
   text-align: center;
   background: #FFFFFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+}
+.return #return_box h1::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #E7161B;
+  width: 15%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.return #return_box h4 {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: rgba(102, 102, 102, 0.85);
 }
 .return .return_form {
   display: grid;
@@ -2524,6 +2672,9 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   column-gap: 25px;
   grid-template-rows: 40px 40px 40px 40px 40px 40px 100px;
   row-gap: 25px;
+}
+.return .return_form input {
+  padding-left: 15px;
 }
 .return .return_form #vendor {
   grid-column: 1/span 2;
@@ -2585,6 +2736,18 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .return .return_form button {
   grid-column: 1/span 6;
   margin: 0 auto;
+  border: none;
+  background: #E7161B;
+  border-radius: 3px;
+  padding: 15px 35px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 .warranty {
@@ -2607,6 +2770,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .warranty #warranty_box {
   margin-left: 220px;
   margin-right: 220px;
+  padding: 25px 20px;
   text-align: center;
   background: #FFFFFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
@@ -2618,6 +2782,14 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-size: 18px;
   line-height: 24px;
   color: #393636;
+}
+.warranty h1::after {
+  content: "";
+  display: block;
+  padding-top: 15px;
+  border-bottom: 2px solid #E7161B;
+  width: 10%;
+  margin: 0 auto;
 }
 .warranty p {
   font-family: Open Sans;
@@ -2636,6 +2808,9 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   column-gap: 25px;
   grid-template-rows: 40px 40px 40px 40px 40px 100px;
   row-gap: 25px;
+}
+.warranty #warranty_form input {
+  padding-left: 15px;
 }
 .warranty #warranty_form #first {
   grid-column: 1/span 2;
@@ -2682,6 +2857,18 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .warranty #warranty_form button {
   grid-column: 1/span 6;
   margin: 0 auto;
+  border: none;
+  background: #E7161B;
+  border-radius: 3px;
+  padding: 15px 35px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 .affiliate {
@@ -2701,9 +2888,14 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   width: 227px;
   height: 208px;
 }
+.affiliate #icontext #text h1 {
+  margin: 0 auto;
+  text-align: center;
+}
 .affiliate #affiliate_box {
   margin-left: 220px;
   margin-right: 220px;
+  padding: 30px 20px;
   text-align: center;
   background: #FFFFFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
@@ -2715,6 +2907,14 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-size: 18px;
   line-height: 24px;
   color: #393636;
+}
+.affiliate h1::after {
+  content: "";
+  display: block;
+  padding-top: 15px;
+  border-bottom: 2px solid #E7161B;
+  width: 10%;
+  margin: 0 auto;
 }
 .affiliate p {
   font-family: Open Sans;
@@ -2733,6 +2933,9 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   column-gap: 25px;
   grid-template-rows: 40px 40px 40px 40px 100px;
   row-gap: 25px;
+}
+.affiliate #affiliate_form input {
+  padding-left: 10px;
 }
 .affiliate #affiliate_form #firstname {
   grid-column: 1/span 1;
@@ -2758,6 +2961,18 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .affiliate #affiliate_form button {
   grid-column: 1/span 2;
   margin: 0 auto;
+  border: none;
+  background: #E7161B;
+  border-radius: 3px;
+  padding: 15px 35px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 .login {
@@ -2794,7 +3009,17 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin: 0 auto;
   padding-top: 10px;
 }
-.login #login_form input {
+.login .login_form .errorbox {
+  background: #E7161B;
+  color: #FFFFFF;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: center;
+}
+.login .login_form input {
   width: 100%;
   background: #FFFFFF;
   border: 1px solid rgba(102, 102, 102, 0.3);
@@ -2803,7 +3028,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-bottom: 10px;
   padding: 10px;
 }
-.login #login_form button#forgot {
+.login .login_form button#forgot {
   border: none;
   background: none;
   font-family: Open Sans;
@@ -2817,7 +3042,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.login #login_form button.primary {
+.login .login_form button.primary {
   background: #E7161B;
   border-radius: 3px;
   border: none;
@@ -2833,7 +3058,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   width: 100%;
   margin-top: 10px;
 }
-.login #login_form #donthave {
+.login .login_form #donthave {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -2843,11 +3068,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   color: rgba(102, 102, 102, 0.85);
   margin-top: 20px;
 }
-.login #login_form #donthave a {
+.login .login_form #donthave a {
   color: #E7161B;
   font-weight: 600;
 }
-.login #login_form #signupvia {
+.login .login_form #signupvia {
   width: 100%;
   border-bottom: 1px solid rgba(102, 102, 102, 0.85);
   color: rgba(102, 102, 102, 0.85);
@@ -2855,7 +3080,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   line-height: 1px;
   margin: 20px 0 20px;
 }
-.login #login_form #signupvia span {
+.login .login_form #signupvia span {
   background: #fff;
   padding: 0 10px;
 }
@@ -2913,6 +3138,17 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-size: 16px;
   line-height: 24px;
   color: rgba(102, 102, 102, 0.85);
+}
+.safety ul {
+  list-style-type: none;
+}
+.safety ul li::before {
+  content: "•";
+  color: #E7161B;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 @media (max-width: 768px) {
   .safety {
@@ -3484,6 +3720,106 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   width: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+.register {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+  padding: 60px;
+}
+.register img {
+  width: 100%;
+  object-fit: contain;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+}
+.register h1 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(57, 54, 54, 0.85);
+}
+.register h1::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #E7161B;
+  width: 15%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.register .register_form input {
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid rgba(102, 102, 102, 0.3);
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.register .register_form button#forgot {
+  border: none;
+  background: none;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: rgba(102, 102, 102, 0.85);
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.register .register_form button.primary {
+  background: #E7161B;
+  border-radius: 3px;
+  border: none;
+  color: #FFFFFF;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+.register .register_form #donthave {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: rgba(102, 102, 102, 0.85);
+  margin-top: 20px;
+}
+.register .register_form #donthave a {
+  color: #E7161B;
+  font-weight: 600;
+}
+.register .register_form #signupvia {
+  width: 100%;
+  border-bottom: 1px solid rgba(102, 102, 102, 0.85);
+  color: rgba(102, 102, 102, 0.85);
+  text-align: center;
+  line-height: 1px;
+  margin: 20px 0 20px;
+}
+.register .register_form #signupvia span {
+  background: #fff;
+  padding: 0 10px;
 }
 
 footer {

@@ -28,7 +28,7 @@ const Affiliate = (props) => {
                 </div>
                 <div id="text">
                     <h1>Currus Affiliate Program</h1>
-                    <p>If you are not in a position to sell our product directly as part of your business venture,</p>
+                    <p>If you are not in a position to sell our product directly as part of your business venture, an affiliate agreement might be a better fit. Our affiliates do not sell our product directly but instead are granted a promotion code to use when placing our scooter on their site. When a sale is made, you get commission. It’s an easy way to make money and a satisfying one, if you are interested in alternative modes of transportation in an increasingly crowded world.</p>
                 </div>
             </div>
 
