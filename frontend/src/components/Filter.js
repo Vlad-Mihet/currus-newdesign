@@ -23,7 +23,9 @@ const Filter = ({ low, setLow, high, setHigh, def, setDef, grid, setGrid, sort, 
 
     useEffect(() => {
 
+        if(products) {
         dispatch(filterProducts(products, def, low, high))
+        }
 
 
     }, [def, low, high])
@@ -31,7 +33,7 @@ const Filter = ({ low, setLow, high, setHigh, def, setDef, grid, setGrid, sort, 
     useEffect(() => {
         if(filteredProducts) {
             dispatch(sortProducts(filteredProducts, sort))
-        } else {
+        } else if (products){
             dispatch(sortProducts(products, sort))
         }
     }, [sort])
@@ -49,7 +51,7 @@ const Filter = ({ low, setLow, high, setHigh, def, setDef, grid, setGrid, sort, 
             </div>
             { loading ? <h1>Loading </h1> : 
             <div id="filter-result">
-                We found <span>{displayedProducts.length} product(s)</span> available for you.
+            We found <span>{displayedProducts ? displayedProducts.length : products.length} product(s)</span> available for you.
             </div> }
   
             <div id="filter-price">

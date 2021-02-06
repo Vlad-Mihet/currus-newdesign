@@ -107,7 +107,7 @@ const OurBlog = () => {
             <div id="first">
                 <Slider {...settings}>
             {posts && posts.map(post => (
-            <Link to={`/blog/${post.id}`}>
+            <Link key={post.id} to={`/blog/${post.id}`}>
             <div className="ourblog_post">
                 <img style={{ width: "100%", height: "404px", maxWidth: "100%", objectFit: "cover" }} src={post.picture.url} />
                 <div className="ourblog_post_textbox">

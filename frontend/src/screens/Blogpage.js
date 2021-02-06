@@ -72,10 +72,10 @@ const Blogpage = (props) => {
               if (errors) {
                   console.error(errors);
               }
-              console.log(data);
+           
               setPage(data.pageCollection.items[0]);
               setPosts(data.pageCollection.items)
-              console.log(posts)
+            
           });
 
 
@@ -94,7 +94,7 @@ const Blogpage = (props) => {
               if (errors) {
                   console.error(errors);
               }
-              console.log(data);
+            
               setRecentposts(data.pageCollection.items)
           });
     }, [])

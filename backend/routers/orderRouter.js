@@ -35,7 +35,7 @@ orderRouter.post('/', expressAsyncHandler(async (req, res) => {
   
 
     const createdOrder = await order.save();
-    console.log(createdOrder)
+  
     const user = await User.findById(req.body.buyer)
 
     if (user) {

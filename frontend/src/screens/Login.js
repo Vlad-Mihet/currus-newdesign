@@ -24,12 +24,12 @@ const Login = (props) => {
     }
 
     const responseFacebook = (response) => {
-        console.log(response);
+     
         dispatch(fblogin(response.name, response.email))
     }
 
     const responseGoogle = (response) => {
-        console.log(response);
+     
         dispatch(fblogin(response.profileObj.name, response.profileObj.email))
     }
 

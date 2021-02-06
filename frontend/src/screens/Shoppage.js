@@ -29,11 +29,12 @@ const Shoppage = (props) => {
 
     useEffect(() => {
         dispatch(listProducts())
-    }, [dispatch])
+    }, [])
 
     useEffect(() => {
         setDisplayedProducts(filteredProducts ? filteredProducts : products)
-    }, [filteredProducts])
+      
+    }, [products, filteredProducts])
 
 
     return (

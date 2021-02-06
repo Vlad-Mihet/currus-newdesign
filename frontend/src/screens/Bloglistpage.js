@@ -56,10 +56,10 @@ const Bloglistpage = (props) => {
               if (errors) {
                   console.error(errors);
               }
-              console.log(data);
+         
               setPage(data.pageCollection.items[0]);
               setPosts(data.pageCollection.items)
-              console.log(posts)
+             
           });
     }, []);
     
