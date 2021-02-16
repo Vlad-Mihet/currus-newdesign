@@ -19,7 +19,7 @@
         align-items: center;
         justify-content: space-around;
 
-        background: rgba(0, 0, 0, 0.7);
+  
         border-radius: 3px;
         padding: 10px;
 
@@ -31,7 +31,7 @@
         }
 
         #your-vehicle {
-            color: #FFFFFF;
+            color: #E7161B;
             font-family: Lato;
             font-style: normal;
             font-weight: bold;
@@ -57,13 +57,13 @@
         }
 
         #introducing {
-            font-family: Dancing Script;
+            font-family: Poppins;
             font-style: normal;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 32px;
             line-height: 38px;
             text-align: center;
-            color: #FFFFFF;
+            color: #222222;
 
             @media (max-width: 1000px) {
                 font-size: 24px;
@@ -94,4 +94,13 @@
 
         }
     }
+}
+
+.carousel .control-dots {
+    bottom: 50%;
+    left: 90%;
+}
+
+.carousel .slide {
+    background: white;
 }
