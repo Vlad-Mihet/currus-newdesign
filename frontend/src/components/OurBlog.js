@@ -102,27 +102,30 @@ const OurBlog = () => {
 
     return (
         <div className="ourblog">
-            <h1>Our Blog</h1>
+            <h1>Latest News</h1>
 
             <div id="first">
-                <Slider {...settings}>
-            {posts && posts.map(post => (
-            <Link key={post.id} to={`/blog/${post.id}`}>
-            <div className="ourblog_post">
-                <img style={{ width: "100%", height: "404px", maxWidth: "100%", objectFit: "cover" }} src={post.picture.url} />
-                <div className="ourblog_post_textbox">
-                    <div className="ourblog_post_textbox_black">
-                        {post.date.split("T")[0]} by {post.author}
-                    </div>
-                    <div className="ourblog_post_textbox_white">
-                        <span>{post.theme} </span>{post.title}    
-                    </div>
-                    
+                <div className="featured">
+                    {posts && posts.slice(0,3).map(post => <div className="featured_post">
+                        <div className="featured_img">
+                            <img src={post.picture.url} />
+                        </div>
+
+
+                        <div className="featured_text">
+                            <div className="featured_text_date">{post.date.split("T")[0]}</div>
+                            <div className="featured_text_title">{post.title}</div>
+                            <div className="featured_text_body">{post.body}</div>
+                            <div className="featured_text_author">
+                                <div className="featured_text_author_posted">
+                                    Posted By
+                                </div>
+                                {post.author}
+                            </div>
+                            <div className="featured_text_likes">Likes: {post.likes}</div>
+                        </div>
+                    </div>)}
                 </div>
-            </div>
-            </Link>
-            ))}
-                </Slider>
             </div>
             <div id="second">
                 <div id="redquote">“</div>

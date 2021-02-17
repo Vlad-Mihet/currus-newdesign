@@ -8,6 +8,7 @@ import {Icon, InlineIcon } from '@iconify/react';
 import closeIcon from '@iconify/icons-carbon/close';
 import { Link } from 'react-router-dom'
 import Slider, { Range } from 'rc-slider';
+import LeftFilter from '../components/LeftFilter';
 
 const Shoppage = (props) => {
 
@@ -105,6 +106,7 @@ const Shoppage = (props) => {
             <Breadcrumbs title={props.location.pathname} />
             <Filter low={low} setLow={setLow} high={high} setHigh={setHigh} def={def} setDef={setDef} hamburger={hamburger} setHamburger={setHamburger} grid={grid} setGrid={setGrid} sort={sort} setSort={setSort} />
             <div id="wrapper">
+                <LeftFilter />
             <div className={grid ? "shoppage_gridview" : "shoppage_listview"}>
             {
             displayedProducts &&

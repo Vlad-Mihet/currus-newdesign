@@ -14,8 +14,8 @@ body {
 }
 
 .breadcrumbs {
-  height: 100px;
-  background: linear-gradient(0deg, rgba(231, 22, 27, 0.71), rgba(231, 22, 27, 0.71)), url(img/category2.jpeg);
+  height: 50px;
+  background: #222222;
   background-size: contain;
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@ body {
 .banner .text-banner #text-banner__button #shop_now_circle {
   width: 40px;
   height: 40px;
-  background: #E7161B;
+  background: #e7161b;
   border-radius: 100%;
   color: white;
   margin: 0 auto;
@@ -150,7 +150,7 @@ body {
   line-height: 15px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: #E7161B;
+  color: #e7161b;
 }
 .banner .text-banner .features .feature_box .black_text_introducing {
   font-size: 18px;
@@ -165,7 +165,7 @@ body {
   }
 }
 .banner .text-banner #your-vehicle {
-  color: #E7161B;
+  color: #e7161b;
   font-family: Hind;
   font-style: normal;
   font-weight: bold;
@@ -443,8 +443,9 @@ aside {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 200px;
 }
 .category_page #section_one {
   background: url(img/category.png);
@@ -456,7 +457,7 @@ aside {
 }
 .category_page section {
   width: 36.46%;
-  height: 298px;
+  height: 160px;
   margin-left: 25px;
   margin-right: 25px;
   padding: 10px;
@@ -509,7 +510,7 @@ aside {
     margin-bottom: 60px;
   }
   .category_page section {
-    height: 206px;
+    height: 100px;
     width: 43.75%;
   }
 }
@@ -671,7 +672,7 @@ aside {
   background: url(img/subscribe.png);
   background-size: cover;
   width: 100%;
-  height: 400px;
+  height: 100px;
 }
 .redband_wrapper .redband {
   background: #222222;
@@ -903,6 +904,66 @@ aside {
   }
 }
 
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 25px;
+}
+.featured .featured_post {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 10px;
+}
+.featured .featured_post img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.featured .featured_post .featured_text {
+  width: 100%;
+  height: 100%;
+}
+.featured .featured_post .featured_text_date {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(57, 54, 54, 0.8);
+  opacity: 0.7;
+}
+.featured .featured_post .featured_text_title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #393636;
+}
+.featured .featured_post .featured_text_body {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 187.6%;
+  color: rgba(57, 54, 54, 0.8);
+}
+.featured .featured_post .featured_text_author {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #393636;
+}
+.featured .featured_post .featured_text_author_posted {
+  color: #E7161B;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.09em;
+  line-height: 187.6%;
+}
 .ourblog {
   margin-top: 80px;
 }
@@ -1137,6 +1198,8 @@ aside {
   margin-left: 15.28%;
   margin-right: 15.28%;
   margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 @media (max-width: 768px) {
   .shoppage #wrapper {
@@ -1218,6 +1281,7 @@ aside {
   background: #ffffff;
   border: 1px solid rgba(102, 102, 102, 0.2);
   box-sizing: border-box;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
 }
@@ -1293,12 +1357,14 @@ aside {
 .product_gridview {
   position: relative;
   height: 368px;
+  overflow: hidden;
 }
 .product_gridview img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   max-height: 100%;
+  display: block;
 }
 .product_gridview #grid_border {
   border: 1px solid rgba(102, 102, 102, 0.2);
@@ -3756,6 +3822,68 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .register .register_form #signupvia span {
   background: #fff;
   padding: 0 10px;
+}
+
+.faqpage {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
+}
+.faqpage .sandbox {
+  margin: 0;
+  margin-left: 17%;
+}
+.faqpage .sandbox .wrapper {
+  margin: 0;
+  position: relative;
+  margin-bottom: 25px;
+}
+.faqpage .sandbox .wrapper .borderleft {
+  border-left: 2px solid #E7161B;
+  height: 85%;
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  z-index: 7;
+}
+.faqpage .sandbox .wrapper .borderclosed {
+  border-left: 2px solid #E7161B;
+  height: 40%;
+  position: absolute;
+}
+.faqpage .sandbox .wrapper .title {
+  background: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+  width: 100%;
+  margin: 0;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E7161B;
+  position: relative;
+}
+.faqpage .sandbox .wrapper .title .icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.faqpage .sandbox .wrapper .closed {
+  display: none;
+}
+.faqpage .sandbox .wrapper .open {
+  display: block;
+}
+.faqpage .sandbox .wrapper .content {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(102, 102, 102, 0.85);
 }
 
 footer {

@@ -1,60 +1,29 @@
-html {
-    font-size: 100%;
-    box-sizing: border-box;
-}
+.faqpage {
 
-*, *::before, *::after {
-    box-sizing: inherit;
-}
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
 
-body {
+
+    &_image {
+
+    }
+
+    .sandbox {
+    
     margin: 0;
-    padding: 0;
-}
-
-.breadcrumbs {
-    height: 50px;
-    background: #222222;
-    background-size: contain;
-    display: flex;
-    align-items: center;
+    margin-left: 17%;
 
 
-    .homeshop {
-        font-family: Lato;
-        font-style: normal;
-        font-style: 600;
-        color: #FFFFFF;
-        font-size: 16px;
-        line-height: 24px;
-        text-transform: uppercase;
-        vertical-align: middle;
-        display: inline-block;
-        margin-left: 15%;
-    }
-
-    @media (max-width: 600px) {
-        height: 60px;
-    }
-}
-
-.faq {
-    margin-left: 13.89%;
-    margin-right: 13.89%;
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-.sandbox {
-    margin-left: 100px;
-    margin-bottom: 100px;
-    margin-right: 100px;
-    margin-top: 60px;
 
     .wrapper {
+       margin: 0;
        
         position: relative;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
+        
 
         .borderleft {
             border-left: 2px solid $darkRed;
@@ -74,18 +43,19 @@ body {
 
         .borderclosed {
             border-left: 2px solid $darkRed;
-            height: 50%;
+            height: 40%;
             position: absolute;
-            top: 18px;
-            left: 25px;  
-            z-index: 4;
+            
         }
        
 
         .title {
             background: #FFFFFF;
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
-            padding: 18px 50px 18px 50px;
+            
+            width: 100%;
+            margin: 0;
+
             font-family: Open Sans;
             font-style: normal;
             font-weight: 600;
@@ -111,7 +81,7 @@ body {
         }
 
         .content {
-            padding: 20px 50px 20px 50px;
+           
 
             font-family: Open Sans;
             font-style: normal;
@@ -122,4 +92,5 @@ body {
         }
 
     }
+}
 }

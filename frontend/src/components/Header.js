@@ -75,7 +75,6 @@ const Header = ({ hamburger, setHamburger }) => {
                       <li><Link to="/faq">FAQ</Link></li>
                       <li><Link to="/dealer">Dealers</Link></li>
                       <li><Link to="/contactus">Contact Us</Link></li>
-                      <li><Link to="/order">Order Tracking</Link></li>
                     </ul>
                   </nav>
                   

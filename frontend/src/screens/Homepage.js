@@ -5,6 +5,7 @@ import Category from '../components/Category'
 import Instagram from '../components/Instagram'
 import OurBlog from '../components/OurBlog'
 import RedBand from '../components/RedBand'
+import Featured from '../components/Featured'
 import RideRiskFree from '../components/RideRiskFree'
 import WhyTheBest from '../components/WhyTheBest'
 
@@ -23,6 +24,7 @@ function Homepage() {
         <div id="homepage">
             <Banner />
             <Category />
+            <Featured />
             <WhyTheBest />
             <RedBand />
             <RideRiskFree />
