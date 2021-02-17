@@ -16,6 +16,7 @@ const RedBand = () => {
     }
 
     return (
+        <div className="redband_wrapper">
             <div className="redband">
                 <div id="signuptonewsletter">
                     Sign Up to Newsletter
@@ -33,6 +34,7 @@ const RedBand = () => {
                 }
                 </div>
             </div>
+        </div>
     )
 }
 

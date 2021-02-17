@@ -11,7 +11,7 @@ const Banner = () => {
         height: 18,
         display: 'block', 
         top: '50px',
-        bottom: '50%',
+      
         left: '90%',
         
         margin: '10px 8px'
@@ -64,11 +64,11 @@ const Banner = () => {
                 )
             }}>
                 <div>
-                    <img src="images/bbbc5fe88a5ca682c51189dc99db6385.png" />
+                    <img style={{ width: '400px',height: '400px' }} src="images/bbbc5fe88a5ca682c51189dc99db6385.png" />
 
                 </div>
                 <div>
-                    <img src="images/2.jpeg" />
+                    <img />
                     {/* <p className="legend">Second Picture Legend</p> */}
                 </div>
             </Carousel>
@@ -81,9 +81,34 @@ const Banner = () => {
                     <div id="introducing">
                         Introducing Currus NF
                     </div>
-                    <div id="text-banner__button">        
+                    <div className="features">
+                        <div className="feature_box">
+                            <i style={{width: '10px', height: '10px' }} className="fas fa-tachometer-alt"></i>
+                            <div>
+                                <div className="red_text_introducing">TOP SPEED</div>
+                                <div className="black_text_introducing">25mph</div>
+                            </div>
+                        </div>
+                        <div className="feature_box">
+                            <i style={{width: '10px', height: '10px' }} className="fas fa-bolt"></i>
+                            <div>
+                                <div className="red_text_introducing">BATTERY RANGE</div>
+                                <div className="black_text_introducing">55-60 miles</div>
+                            </div>
+                        </div>
+                        <div className="feature_box">
+                            <i style={{width: '10px', height: '10px' }} className="fas fa-shield-alt"></i>
+                            <div>
+                                <div className="red_text_introducing">ANTI-THEFT</div>
+                                <div className="black_text_introducing">Smart Lock</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="text-banner__button">   
+                        <div id="shop_now_circle">→</div>
+
                         <div id="buy_now">
-                            <Link style={{ color: 'white', textDecoration: 'none' }} to='/shop'>Buy Now</Link>
+                            <Link style={{ color: 'black', textDecoration: 'none' }} to='/shop'>Shop Now</Link>
                         </div>
                     </div>
                 </div>

@@ -107,6 +107,10 @@ body {
 .banner {
   position: relative;
 }
+.banner .banner_carousel {
+  background: url(img/hero.png);
+  background-size: cover;
+}
 .banner .text-banner {
   width: 26.04%;
   height: 56%;
@@ -120,6 +124,39 @@ body {
   border-radius: 3px;
   padding: 10px;
 }
+.banner .text-banner #text-banner__button {
+  display: inline;
+}
+.banner .text-banner #text-banner__button #shop_now_circle {
+  width: 40px;
+  height: 40px;
+  background: #E7161B;
+  border-radius: 100%;
+  color: white;
+  margin: 0 auto;
+  display: block;
+}
+.banner .text-banner .features {
+  display: flex;
+}
+.banner .text-banner .features .feature_box {
+  display: flex;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+}
+.banner .text-banner .features .feature_box .red_text_introducing {
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #E7161B;
+}
+.banner .text-banner .features .feature_box .black_text_introducing {
+  font-size: 18px;
+  line-height: 20px;
+  color: #393636;
+}
 @media (max-width: 500px) {
   .banner .text-banner {
     width: 80%;
@@ -129,12 +166,12 @@ body {
 }
 .banner .text-banner #your-vehicle {
   color: #E7161B;
-  font-family: Lato;
+  font-family: Hind;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 50px;
-  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 @media (max-width: 1000px) {
@@ -160,7 +197,6 @@ body {
   font-weight: 600;
   font-size: 32px;
   line-height: 38px;
-  text-align: center;
   color: #222222;
 }
 @media (max-width: 1000px) {
@@ -178,28 +214,14 @@ body {
     font-size: 16px;
   }
 }
-.banner .text-banner #text-banner__button {
-  background: #E7161B;
-  border-radius: 3px;
-  padding: 5px;
-  color: #FFFFFF;
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 5% 18%;
-}
 
 .carousel .control-dots {
-  bottom: 50%;
+  bottom: 40%;
   left: 90%;
 }
 
 .carousel .slide {
-  background: white;
+  background: none;
 }
 
 header {
@@ -207,7 +229,7 @@ header {
 }
 header .bar {
   position: inherit;
-  height: 30px;
+  height: 20px;
   background-color: #393636;
   display: flex;
   flex-direction: row;
@@ -233,7 +255,7 @@ header .bar .social-icons svg {
 header .menu {
   background: #FFFFFF;
   position: relative;
-  height: 90px;
+  height: 60px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   display: flex;
   flex-direction: row;
@@ -425,15 +447,14 @@ aside {
   margin-bottom: 100px;
 }
 .category_page #section_one {
-  background: linear-gradient(0deg, rgba(36, 36, 36, 0.65), rgba(36, 36, 36, 0.65)), url(img/banner_picture.jpeg);
+  background: url(img/category.png);
   background-size: cover;
 }
 .category_page #section_two {
-  background: linear-gradient(0deg, rgba(36, 36, 36, 0.65), rgba(36, 36, 36, 0.65)), url(img/category2.jpeg);
+  background: url(img/category.png);
   background-size: cover;
 }
 .category_page section {
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.08);
   width: 36.46%;
   height: 298px;
   margin-left: 25px;
@@ -646,115 +667,19 @@ aside {
   color: rgba(102, 102, 102, 0.85);
 }
 
-.redband {
-  background: #E7161B;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.redband_wrapper {
+  background: url(img/subscribe.png);
+  background-size: cover;
+  width: 100%;
+  height: 400px;
 }
-@media (max-width: 800px) {
-  .redband {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-}
-.redband #signuptonewsletter {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 24px;
+.redband_wrapper .redband {
+  background: #222222;
   position: relative;
-  margin: 29px 4.7% 29px 12%;
-  color: #FFFFFF;
-}
-@media (max-width: 800px) {
-  .redband #signuptonewsletter {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 1px;
-  }
-}
-.redband #getallthelatest {
-  width: 300px;
-  margin: 29px 50px 29px 4.7%;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: #FFFFFF;
-}
-@media (max-width: 800px) {
-  .redband #getallthelatest {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-.redband #subscribe {
-  margin: 29px 10% 29px 50px;
-  display: flex;
-}
-@media (max-width: 800px) {
-  .redband #subscribe {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px 1px;
-  }
-}
-.redband #subscribe input {
-  height: 50px;
-  width: 200px;
-  padding-left: 20px;
-}
-.redband #subscribe button {
-  height: 50px;
-  width: 100px;
-  background: #393636;
-  border-radius: 0px 3px 3px 0px;
-  font-family: Lato;
-  color: #FFFFFF;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  text-transform: uppercase;
-}
-@media (max-width: 350px) {
-  .redband #subscribe {
-    display: block;
-  }
-  .redband #subscribe input {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  }
-  .redband #subscribe button {
-    display: block;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 768px) {
-  .redband {
-    flex-direction: column;
-  }
-  .redband #signuptonewsletter {
-    margin: 30px auto;
-    max-width: 90%;
-  }
-  .redband #getallthelatest {
-    margin: 20px auto;
-    max-width: 90%;
-  }
-  .redband button {
-    border-radius: 3px 3px 3px 3px;
-  }
+  top: 30%;
+  left: 10%;
+  right: 30px;
+  width: 80%;
 }
 
 .rideriskfree {

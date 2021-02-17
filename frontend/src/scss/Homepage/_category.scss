@@ -9,12 +9,12 @@
     margin-bottom: 100px;
 
         #section_one {
-        background: linear-gradient(0deg, rgba(36, 36, 36, 0.65), rgba(36, 36, 36, 0.65)), url(img/banner_picture.jpeg);
+        background: url(img/category.png);
         background-size: cover;
         }
 
         #section_two {
-        background: linear-gradient(0deg, rgba(36, 36, 36, 0.65), rgba(36, 36, 36, 0.65)), url(img/category2.jpeg);
+        background: url(img/category.png);
         background-size: cover;
         }
 
@@ -25,8 +25,7 @@
 
 
 
-        
-        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.08);
+     
         width: 36.46%;
         height: 298px;
 
@@ -43,6 +42,7 @@
             height: 100%;
             border: 1px solid rgba(255, 255, 255, 0.85);
             box-sizing: border-box;
+
 
         
 

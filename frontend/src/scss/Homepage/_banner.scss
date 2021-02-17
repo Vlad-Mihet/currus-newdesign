@@ -1,106 +1,124 @@
 .banner {
-   
-    position: relative;
-  
+  position: relative;
 
-    .banner_carousel {
-   
-     
+  .banner_carousel {
+    background: url(img/hero.png);
+    background-size: cover;
+  }
+
+  .text-banner {
+    width: 26.04%;
+    height: 56%;
+    position: absolute;
+    top: 16.67%;
+    left: 11.81%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    #text-banner__button {
+      display: inline;
+
+      #shop_now_circle {
+        width: 40px;
+        height: 40px;
+        background: #e7161b;
+        border-radius: 100%;
+        color: white;
+        margin: 0 auto;
+        display: block;
+      }
     }
 
-    .text-banner {
-        width: 26.04%;
-        height: 56%;
-        position: absolute;
-        top: 16.67%;
-        left: 11.81%;
+    .features {
+      display: flex;
+
+      .feature_box {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
 
-  
-        border-radius: 3px;
-        padding: 10px;
-
-        @media (max-width: 500px) {
-            width: 80%;
-            height: 80%;
-            top: 10%;
-            
+        .red_text_introducing {
+          font-size: 10px;
+          line-height: 15px;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          color: #e7161b;
         }
 
-        #your-vehicle {
-            color: #E7161B;
-            font-family: Lato;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 36px;
-            line-height: 50px;
-            text-align: center;
-            text-transform: uppercase;
-
-            @media (max-width: 1000px) {
-                font-size: 24px;
-                line-height: 30px;
-            }  
-
-            @media (max-width: 700px) {
-                font-size: 18px;
-            }
-
-            @media (max-width: 600px) {
-                font-size: 16px;
-                line-height: 18px;
-            }
-
+        .black_text_introducing {
+          font-size: 18px;
+          line-height: 20px;
+          color: #393636;
         }
-
-        #introducing {
-            font-family: Poppins;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 32px;
-            line-height: 38px;
-            text-align: center;
-            color: #222222;
-
-            @media (max-width: 1000px) {
-                font-size: 24px;
-            }  
-
-            @media (max-width: 700px) {
-                font-size: 18px;
-            }
-
-            @media (max-width: 400px) {
-                font-size: 16px;
-            }
-        }
-
-        #text-banner__button {
-            background: #E7161B;
-            border-radius: 3px;
-            padding: 5px;
-            color: #FFFFFF;
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 19px;
-            text-align: center;
-            text-transform: uppercase;
-            padding: 5% 18%;
-
-        }
+      }
     }
+
+    border-radius: 3px;
+    padding: 10px;
+
+    @media (max-width: 500px) {
+      width: 80%;
+      height: 80%;
+      top: 10%;
+    }
+
+    #your-vehicle {
+      color: #e7161b;
+      font-family: Hind;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 25px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+
+      @media (max-width: 1000px) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      @media (max-width: 700px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+    #introducing {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 38px;
+
+      color: #222222;
+
+      @media (max-width: 1000px) {
+        font-size: 24px;
+      }
+
+      @media (max-width: 700px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 .carousel .control-dots {
-    bottom: 50%;
-    left: 90%;
+  bottom: 40%;
+  left: 90%;
 }
 
 .carousel .slide {
-    background: white;
+  background: none;
 }
