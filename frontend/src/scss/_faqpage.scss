@@ -1,96 +1,79 @@
 .faqpage {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 50px;
 
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 50px;
+  &_image {
+  }
 
-
-    &_image {
-
-    }
-
-    .sandbox {
-    
+  .sandbox {
     margin: 0;
     margin-left: 17%;
 
-
-
     .wrapper {
-       margin: 0;
-       
+      margin: 0;
+
+      position: relative;
+      margin-bottom: 25px;
+
+      .borderleft {
+        border-left: 2px solid $darkRed;
+        height: 85%;
+        position: absolute;
+        top: 18px;
+        left: 25px;
+        z-index: 7;
+      }
+
+      .borderopen {
+      }
+
+      .borderclosed {
+        border-left: 2px solid $darkRed;
+        height: 40%;
+        position: absolute;
+      }
+
+      .title {
+        background: #ffffff;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+
+        width: 100%;
+        margin: 0;
+
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #e7161b;
         position: relative;
-        margin-bottom: 25px;
-        
 
-        .borderleft {
-            border-left: 2px solid $darkRed;
-            height: 85%;
-            position: absolute;
-            top: 18px;
-            left: 25px;
-            z-index: 7;
-         
-
-
+        .icon {
+          position: absolute;
+          top: 20px;
+          right: 20px;
         }
+      }
 
-        .borderopen {
+      .closed {
+        display: none;
+      }
 
-        }
+      .open {
+        display: block;
+      }
 
-        .borderclosed {
-            border-left: 2px solid $darkRed;
-            height: 40%;
-            position: absolute;
-            
-        }
-       
-
-        .title {
-            background: #FFFFFF;
-            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
-            
-            width: 100%;
-            margin: 0;
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 24px;
-            color: #E7161B;
-            position: relative;
-
-            .icon {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-           
-        }
-
-        .closed {
-            display: none;
-        }
-
-        .open {
-            display: block;
-        }
-
-        .content {
-           
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 21px;
-            color: rgba(102, 102, 102, 0.85);
-        }
-
+      .content {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(102, 102, 102, 0.85);
+      }
     }
-}
+  }
 }

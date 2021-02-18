@@ -49,10 +49,10 @@ const Header = ({ hamburger, setHamburger }) => {
                 Free shipping from Los Angeles across USA &amp; CANADA
               </div>
               <div className="social-icons">
-              <Icon icon={scFacebook} style={{color: '#ffffff', fontSize: '24px'}} />
-              <Icon icon={scTwitter} style={{color: '#ffffff', fontSize: '24px'}} />
-              <Icon icon={scInstagram} style={{color: '#ffffff', fontSize: '24px'}} />
-              <Icon icon={scYoutube} style={{color: '#ffffff', fontSize: '24px'}} />
+              <a href="https://facebook.com/currusmotors" target="_blank" ><Icon icon={scFacebook} style={{color: '#ffffff', fontSize: '24px'}} /></a>
+              <a href="https://twitter.com/currusmotors" target="_blank" ><Icon icon={scTwitter} style={{color: '#ffffff', fontSize: '24px'}} /></a>
+              <a href="https://instagram.com/currusmotors" target="_blank" ><Icon icon={scInstagram} style={{color: '#ffffff', fontSize: '24px'}} /></a>
+              <a href="https://youtube.com/channel/UC4ko00dckfzvi8hrECa-cwQ" target="_blank" ><Icon icon={scYoutube} style={{color: '#ffffff', fontSize: '24px'}} /></a>
               </div>
           </div>
 
@@ -72,7 +72,6 @@ const Header = ({ hamburger, setHamburger }) => {
                       <li><Link to="/shop">Shop</Link></li>
                       <li><Link to="/aboutus">About Us</Link></li>
                       <li><Link to="/blog">Blog</Link></li>
-                      <li><Link to="/faq">FAQ</Link></li>
                       <li><Link to="/dealer">Dealers</Link></li>
                       <li><Link to="/contactus">Contact Us</Link></li>
                     </ul>

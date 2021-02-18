@@ -38,7 +38,7 @@ const Footer = () => {
         <footer>
           <div id="one">
           <div id="contact_us">
-              <h6>Contact Us</h6>
+              <img src="images/curruslogowhite.png"></img>
               <div id="ifyouhave">
                 If you have any question, please <br/>
                 contact us at <span>info@currusmotors.com</span>

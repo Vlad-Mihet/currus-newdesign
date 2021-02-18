@@ -8,7 +8,7 @@ const OurBlog = () => {
 
     const settings = {
         arrows: true,
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -25,31 +25,32 @@ const OurBlog = () => {
         ]
     };
 
-    // const NextArrow = (props) => {
-    //     const { className, style, onClick } = props;
-    //     return (
-    //         <div
-    //         className={className}
-    //         style={{ ...style, display: "block", background: "green" }}
-    //         onClick={onClick} />
-    //     );
-    // }
+    const NextArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+            <div
+            className={className}
+            style={{ ...style, display: "block", background: "#393636", fontFamily: "none" }}
+            onClick={onClick} />
+        );
+    }
 
-    // const PrevArrow = (props) => {
-    //     const { className, style, onClick } = props;
-    //     return (
-    //         <div
-    //         className={className}
-    //         style={{ ...style, display: "block", background: "red" }}
-    //         onClick={onClick} />
-    //     );
-    // }
+    const PrevArrow = (props) => {
+        const { className, style, onClick } = props;
+        return (
+            <div
+            className={className}
+            style={{ ...style, display: "block", background: "#393636" }}
+            onClick={onClick} />
+        );
+    }
 
     const settings2 = {
         arrows: true,
         slidesToShow: 1,
-        // nextArrow: <NextArrow />,
-        // prevArrow: <PrevArrow />
+        dots: true,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
     }
 
 
@@ -102,7 +103,13 @@ const OurBlog = () => {
 
     return (
         <div className="ourblog">
-            <h1>Latest News</h1>
+            <div className="ourblog_titlerow">
+                <h1>Latest News</h1>
+                <Link to='/blog'>
+                    SEE ALL
+                </Link>
+            </div>
+
 
             <div id="first">
                 <div className="featured">
@@ -128,25 +135,29 @@ const OurBlog = () => {
                 </div>
             </div>
             <div id="second">
-                <div id="redquote">“</div>
-                <Slider {...settings2}>
-                    <div className="second_quote">
-                        <p>Riding the Currus NF is like a dream come true. It's super awesome,
-                            fun to ride, looks amazing and powerful and has a top speed of of 40 MPH. I don't know
-                            what more you can expect from an e-scooter. Also, it easily folds, so I can carry it where it's not possible
-                            to ride. It's a complete power package. I am glad that my parents got me Currus NF for my birthday
-                            last month.
-                            <br/><br/>
-                            <span>L. JOSEPH (USA) </span>
-                        </p>
-                    </div>
-                    <div>
-                        <p>Another Review</p>
-                    </div>
-                    <div>
-                        <p>Third Review</p>
-                    </div>
-                </Slider>
+                <h1>Testimonials</h1>
+      
+                <div id="second_testimonial">
+ 
+                    <Slider {...settings2}>
+                        <div className="second_quote">
+                            <p>Riding the Currus NF is like a dream come true. It's super awesome,
+                                fun to ride, looks amazing and powerful and has a top speed of of 40 MPH. I don't know
+                                what more you can expect from an e-scooter. Also, it easily folds, so I can carry it where it's not possible
+                                to ride. It's a complete power package. I am glad that my parents got me Currus NF for my birthday
+                                last month.
+                                <br/><br/>
+                                <span>L. JOSEPH (USA) </span>
+                            </p>
+                        </div>
+                        <div>
+                            <p>Another Review</p>
+                        </div>
+                        <div>
+                            <p>Third Review</p>
+                        </div>
+                    </Slider>
+                </div>
             </div>
         </div>
     )

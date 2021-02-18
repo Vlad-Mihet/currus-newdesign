@@ -18,18 +18,23 @@ const RedBand = () => {
     return (
         <div className="redband_wrapper">
             <div className="redband">
-                <div id="signuptonewsletter">
-                    Sign Up to Newsletter
+                <div className="redband_leftbox">
+                    <div id="signuptonewsletter">
+                        Sign Up to Newsletter
+                    </div>
+                    <div id="getallthelatest">
+                        Get all the latest information on Discounts, Sales, and Offers
+                    </div>
                 </div>
-                <div id="getallthelatest">
-                    Get all the latest information on Discounts, Sales, and Offers
-                </div>
-                <div id="subscribe">
+                <div className="redband_subscribe">
                 { !sub ? (
                 <>
                 
-                <input onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"></input>
-                <button onClick={subscribeHandler}>Subscribe</button>
+                <input onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email">
+
+                </input>
+
+                    <button onClick={subscribeHandler}>SUBSCRIBE NOW</button>
                 </> ) : (<h1>Thank you for subscribing. </h1>)
                 }
                 </div>

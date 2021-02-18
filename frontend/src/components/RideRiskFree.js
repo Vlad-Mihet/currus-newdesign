@@ -3,36 +3,48 @@ import React from 'react'
 const RideRiskFree = () => {
     return (
         <div className="rideriskfree">
-            <img src="images/61670.jpeg" />
-            <div id="riskfree">
-                <h3 id="rideriskfree">
-                    <br /><br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />  <br /><br /><br /><br />
-                    Ride Risk Free</h3>
+            <div className="rideriskfree_leftbox">
+                <div className="rideriskfree_leftbox_text">
+                    Ride Risk Free
+                </div>
+                <img style={{width: '370px', height: '300px'}}src='images/133.jpg' alt="sideview"></img>
             </div>
-            <div id="sections">
+            <div className="rideriskfree_rightbox">
                 <section id="one">
-                    <div className="red" id="redone">       
+                    <div className="redcircle" id="redone">   
+                        <i className="fas fa-medal"></i>    
                     </div>
-                    <h3>Premium quality</h3>
-                    <p>When it comes to product design &amp; build quality, all CURRUS e-scooter products are meticulously designed &amp; engineered with the use of high-quality built material.</p>
+                    <div>
+                        <h3>Premium quality</h3>
+                        <p>When it comes to product design &amp; build quality, all CURRUS e-scooter products are meticulously designed &amp; engineered with the use of high-quality built material.</p>
+                    </div>
                 </section>
                 <section id="two">
-                    <div className="red" id="redtwo">       
+                    <div className="redcircle" id="redtwo">     
+                        <i className="fas fa-undo-alt"></i>  
                     </div>
-                    <h3>Easy returns</h3>
-                    <p>We also offer 30-day easy &amp; free returns for all delivered products (conditions apply).</p>
+                    <div>
+                        <h3>Easy returns</h3>
+                        <p>We also offer 30-day easy &amp; free returns for all delivered products (conditions apply).</p>
+                    </div>
                 </section>
                 <section id="three">
-                    <div className="red" id="redthree">       
+                    <div className="redcircle" id="redthree">   
+                        <i className="fas fa-paper-plane"></i>    
                     </div>
-                    <h3>Easy mobility</h3>
-                    <p>Our e-scooters makes commuting super comfortable for you, door-to-door travel with zero environmental pollution is our product USP.</p>
+                    <div>
+                        <h3>Easy mobility</h3>
+                        <p>Our e-scooters makes commuting super comfortable for you, door-to-door travel with zero environmental pollution is our product USP.</p>
+                    </div>
                 </section>
                 <section id="four">
-                    <div className="red" id='redfour'>       
+                    <div className="redcircle" id='redfour'>  
+                        <i className="fas fa-piggy-bank"></i>     
                     </div>
-                    <h3>Cost-saving</h3>
-                    <p>You must be surprised to know running an e-vehicle cost less than a penny; no other transportation option comes anywhere to this.</p>
+                    <div>
+                        <h3>Cost-saving</h3>
+                        <p>You must be surprised to know running an e-vehicle cost less than a penny; no other transportation option comes anywhere to this.</p>
+                    </div>
                 </section>
             </div>
         </div>

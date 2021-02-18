@@ -162,33 +162,29 @@ footer {
             color: #888888;
         }
 
-        input {
-            padding: 7px;
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 24px;
-            color: rgba(102, 102, 102, 0.85);
+          
 
-            @media (max-width: 700px) {
-                margin-top: 30px;
-                margin-left: 30px;
+            input {
+                padding: 15px;
+                border-radius: 0px;
+                padding-right: 90px;
+                width: 150%;
+                border-color: white;
             }
-        }
-
-        button {
-            padding: 7px;
-            background: #E7161B;
-            font-family: Lato;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 24px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #FFFFFF;
-        }
+            button {
+                margin-left: -90px;
+                margin-top: 5px;
+                border: none;
+                background: white;
+                font-family: Hind;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+          
+                letter-spacing: 0.01em;
+                color: #E7161B;
+                
+            }
         }
     }
 

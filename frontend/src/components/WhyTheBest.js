@@ -18,7 +18,7 @@ const WhyTheBest = () => {
   
                 <div id="grid">
                     <div id="image">
-                        <img style={{ width: '200px', height: '200px' }} src="images/faq.png"></img>
+                        <img style={{ width: '400px', height: '600px' }} src="images/fronttext.png"></img>
                     </div>
                     <div className="sandbox">
                         <div>Why Currus is the best way to get around</div>
