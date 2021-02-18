@@ -71,6 +71,11 @@
 
 #aim_vision {
 
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
     @media (max-width: 500px) {
         display: block;
     }
@@ -85,25 +90,15 @@
     }
 
     h3 {
-        font-family: Lato;
+        font-family: Poppins;
         font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 24px;
-        text-transform: uppercase;
-        color: rgba(102, 102, 102, 0.85);
+        font-size: 36px;
+        color: #FFFFFF;
         margin-left: 50px;
-        margin-top: 60px;
 
     }
 
-    h3::after {
-        content: "";
-        display: block;
-        border-bottom: 1px solid red;
-        width: 10%;
-        padding-bottom: 20px;
-    }
+
 
     p {
         font-family: Open Sans;
@@ -111,7 +106,7 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 25px;
-        color: #666666;
+        color: white;
         margin-left: 50px;
         margin-top: 60px;
         margin-right: 50px;

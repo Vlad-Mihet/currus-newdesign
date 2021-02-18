@@ -38,14 +38,18 @@ import closeIcon from '@iconify/icons-carbon/close';
 function App() {
 
     const [hamburger, setHamburger] = useState(false)
+    const [sidecart, setSidecart] = useState(false)
 
   return (
   
     <BrowserRouter>
       <MessengerCustomerChat appId="2880331345560627" pageId="103025775108325"/>
       <div className="grid-container">
-        <Header hamburger={hamburger} setHamburger={setHamburger} />
-        <aside className={hamburger? 'hamburger open': 'hamburger' }>
+        <Header sidecart={sidecart} setSidecart={setSidecart} hamburger={hamburger} setHamburger={setHamburger} />
+        <aside className={sidecart? 'sidecartopen': 'sidecartclosed'}>
+          test
+        </aside>
+        <aside id="hamburgermenu" className={hamburger? 'hamburger hamburgeropen': 'hamburger hamburgerclosed' }>
           <div id="xparent">
             <div id="x">
                 <Icon onClick={() => setHamburger(false)} icon={closeIcon} style={{color: '#393636', fontSize: '24px'}} />

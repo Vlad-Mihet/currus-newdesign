@@ -11,13 +11,62 @@
     background: #E5E5E5;
     box-sizing: border-box;
 
-    #wrapper {
+    .contact_icons {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .contact_icons_box {
+        display: flex;
+    }
+
+    .contact_icons_box_circle {
+        width: 40px;
+        height: 40px;
+        background: rgba(231, 22, 27, 0.1);
+        border-radius: 100%;
+        margin: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #E7161B;
+    }
+
+    .contact_icons {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .contact_icons_top {
+        color: #393636;
+        font-family: Poppins;
+        font-size: 16px;
+    }
+
+    .contact_icons_bottom {
+        font-family: Hind;
+        color: rgba(57, 54, 54, 0.8);
+    }
+
+    #wrapper_weare {
     display: grid;
     grid-template-columns: 1fr 1fr;
    
     column-gap: 50px;
     margin-left: 13%;
     margin-right: 13%;
+   
+
+        #wearehere_right {
+            img {
+                height: 100%;
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                overflow: none;
+
+            }
+        }
 
         #wearehere {
             margin: auto;
@@ -62,132 +111,17 @@
             }
             
         }
-
-    #images {
-    
-        #img_one {
-width: 43%;
-    height: 37%;
-    margin-top: 60px;
-            
-        }
-
-        #img_two {
-    width: 35%;
-    height: 36.5%;
-    position: relative;
-    top: 40%;
-    right: 28%;
-        }
-
-        #group_three {
-    background: #FFFFFF;
-    box-shadow: 0px 0px 25px rgba(0,0,0,0.16);
-    width: 50%;
-    position: relative;
-    left: 35%;
-    top: -30%;
-    height: 60%;
     
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
 
-    div.three_box {
-        border-bottom: 1px solid rgba(102, 102, 102, 0.2);
-        height: 25%;
-        width: 85%;
-        margin: 0 auto;
-        
 
-        
 
-        h4 {
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 24px;
-            color: #393636;
-            margin-bottom: 3px;
-            margin-top: 2px;
-        
-        }
 
-            &:last-of-type {
-                border: none;
-            }
 
-        .three_box_flex {
-            display: flex;
-            flex-direction: row;
-            padding-bottom: 10px;
-            margin-bottom: 5px;
-
-            svg {
-                color: #E7161B;
-                padding: 5px;
-            }
-
-            div {
-                font-family: Open Sans;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 21px;
-                color: rgba(102, 102, 102, 0.85);
-                padding: 3px;
-                
-            }
+   
 
 
         }
     }
-        }
 
- 
-    }
 
-    @media (max-width: 800px) {
-        display: flex;
-        flex-direction: column;
-        
-        margin: 0 auto;
-        width: 80%;
-
-        #images {
-            width: 90%;
-            height: 548px;
-            margin: 0 auto;
-
-            #img_one {
-width: 43%;
-    height: 37%;
-    margin-top: 60px;
-            
-            }
-
-            #img_two {
-    width: 35%;
-    height: 36.5%;
-    position: relative;
-    top: 40%;
-    right: 28%;
-            }
-
-            
-        }
-
-        #wearehere {
-            margin: 0 auto;
-            width: 90%;
-
-            .dealer_form {
-                width: 100%;
-            }
-        }
-
-    }
-    }
-}

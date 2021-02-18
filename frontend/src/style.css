@@ -365,43 +365,65 @@ header .menu .login_cart #cartsizeparent #cartsize {
   }
 }
 
-aside {
+aside.hamburger {
+  width: 288px;
+  position: fixed;
+  height: 100%;
+  z-index: 100;
+  background-color: #FFFFFF;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+@media (max-width: 320px) {
+  aside.hamburger {
+    width: 286px;
+  }
+}
+
+aside.hamburgerclosed {
+  transform: translateX(-288px);
+}
+
+aside.hamburgeropen {
+  transform: translateX(0);
+}
+
+aside.sidecartclosed {
   width: 288px;
   position: fixed;
   height: 100%;
   margin-top: -120px;
   z-index: 100;
-  transform: translateX(-288px);
+  transform: translateX(1288px);
   background-color: #FFFFFF;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 @media (max-width: 320px) {
-  aside {
+  aside.sidecartclosed {
     width: 286px;
   }
 }
 
-.open {
+aside.sidecartopen {
   transform: translateX(0);
 }
 
-.hamburger #xparent #x {
+.hamburgeropen #xparent #x {
   position: absolute;
   right: 10px;
   top: 10px;
 }
-.hamburger #content {
+.hamburgeropen #content {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
 }
-.hamburger #content img {
+.hamburgeropen #content img {
   padding: 5px;
   border-bottom: 1px solid red;
   width: 80%;
 }
-.hamburger #content #login {
+.hamburgeropen #content #login {
   width: 95%;
   text-decoration: none;
   background: #E7161B;
@@ -416,10 +438,10 @@ aside {
   text-align: center;
   text-transform: uppercase;
 }
-.hamburger #content #hamburger_nav {
+.hamburgeropen #content #hamburger_nav {
   width: 95%;
 }
-.hamburger #content #hamburger_nav ul {
+.hamburgeropen #content #hamburger_nav ul {
   list-style: none;
   padding: 30px;
   margin: 0px;
@@ -430,11 +452,11 @@ aside {
   line-height: 16px;
   text-transform: uppercase;
 }
-.hamburger #content #hamburger_nav ul li {
+.hamburgeropen #content #hamburger_nav ul li {
   padding: 10px;
   border-bottom: 1px solid rgba(102, 102, 102, 0.2);
 }
-.hamburger #content #hamburger_nav ul li a {
+.hamburgeropen #content #hamburger_nav ul li a {
   text-decoration: none;
   color: rgba(102, 102, 102, 0.85);
 }
@@ -1942,6 +1964,10 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   color: #E7161B;
 }
 #aboutus #aim_vision {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -1956,22 +1982,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   height: 100%;
 }
 #aboutus #aim_vision h3 {
-  font-family: Lato;
+  font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: rgba(102, 102, 102, 0.85);
+  font-size: 36px;
+  color: #FFFFFF;
   margin-left: 50px;
-  margin-top: 60px;
-}
-#aboutus #aim_vision h3::after {
-  content: "";
-  display: block;
-  border-bottom: 1px solid red;
-  width: 10%;
-  padding-bottom: 20px;
 }
 #aboutus #aim_vision p {
   font-family: Open Sans;
@@ -1979,7 +1994,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-weight: normal;
   font-size: 14px;
   line-height: 25px;
-  color: #666666;
+  color: white;
   margin-left: 50px;
   margin-top: 60px;
   margin-right: 50px;
@@ -2039,6 +2054,25 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   color: #ffffff;
   margin-right: auto;
   margin-left: auto;
+}
+
+.dealer_form_wrapper {
+  background: white;
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.dealer_form_wrapper input {
+  background: #F5F5FA;
+  border: none;
+}
+.dealer_form_wrapper_right img {
+  object-fit: cover;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .dealer_form {
@@ -2105,19 +2139,57 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .contactus #wearehere_form input {
   padding-left: 10px;
 }
-.contactus #wrapper {
+.contactus .contact_icons {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.contactus .contact_icons_box {
+  display: flex;
+}
+.contactus .contact_icons_box_circle {
+  width: 40px;
+  height: 40px;
+  background: rgba(231, 22, 27, 0.1);
+  border-radius: 100%;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E7161B;
+}
+.contactus .contact_icons {
+  display: flex;
+  justify-content: space-around;
+}
+.contactus .contact_icons_top {
+  color: #393636;
+  font-family: Poppins;
+  font-size: 16px;
+}
+.contactus .contact_icons_bottom {
+  font-family: Hind;
+  color: rgba(57, 54, 54, 0.8);
+}
+.contactus #wrapper_weare {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 50px;
   margin-left: 13%;
   margin-right: 13%;
 }
-.contactus #wrapper #wearehere {
+.contactus #wrapper_weare #wearehere_right img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  overflow: none;
+}
+.contactus #wrapper_weare #wearehere {
   margin: auto;
   text-align: center;
   margin-top: 50px;
 }
-.contactus #wrapper #wearehere h1 {
+.contactus #wrapper_weare #wearehere h1 {
   font-family: Lato;
   font-style: normal;
   font-weight: 600;
@@ -2127,7 +2199,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   text-transform: uppercase;
   color: rgba(102, 102, 102, 0.85);
 }
-.contactus #wrapper #wearehere h4 {
+.contactus #wrapper_weare #wearehere h4 {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -2136,7 +2208,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   text-align: center;
   color: rgba(102, 102, 102, 0.85);
 }
-.contactus #wrapper #wearehere button {
+.contactus #wrapper_weare #wearehere button {
   background: #E7161B;
   border-radius: 3px;
   color: #FFFFFF;
@@ -2147,100 +2219,6 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   line-height: 19px;
   text-align: center;
   text-transform: uppercase;
-}
-.contactus #wrapper #images #img_one {
-  width: 43%;
-  height: 37%;
-  margin-top: 60px;
-}
-.contactus #wrapper #images #img_two {
-  width: 35%;
-  height: 36.5%;
-  position: relative;
-  top: 40%;
-  right: 28%;
-}
-.contactus #wrapper #images #group_three {
-  background: #FFFFFF;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
-  width: 50%;
-  position: relative;
-  left: 35%;
-  top: -30%;
-  height: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.contactus #wrapper #images #group_three div.three_box {
-  border-bottom: 1px solid rgba(102, 102, 102, 0.2);
-  height: 25%;
-  width: 85%;
-  margin: 0 auto;
-}
-.contactus #wrapper #images #group_three div.three_box h4 {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  color: #393636;
-  margin-bottom: 3px;
-  margin-top: 2px;
-}
-.contactus #wrapper #images #group_three div.three_box:last-of-type {
-  border: none;
-}
-.contactus #wrapper #images #group_three div.three_box .three_box_flex {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 10px;
-  margin-bottom: 5px;
-}
-.contactus #wrapper #images #group_three div.three_box .three_box_flex svg {
-  color: #E7161B;
-  padding: 5px;
-}
-.contactus #wrapper #images #group_three div.three_box .three_box_flex div {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  color: rgba(102, 102, 102, 0.85);
-  padding: 3px;
-}
-@media (max-width: 800px) {
-  .contactus #wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 80%;
-  }
-  .contactus #wrapper #images {
-    width: 90%;
-    height: 548px;
-    margin: 0 auto;
-  }
-  .contactus #wrapper #images #img_one {
-    width: 43%;
-    height: 37%;
-    margin-top: 60px;
-  }
-  .contactus #wrapper #images #img_two {
-    width: 35%;
-    height: 36.5%;
-    position: relative;
-    top: 40%;
-    right: 28%;
-  }
-  .contactus #wrapper #wearehere {
-    margin: 0 auto;
-    width: 90%;
-  }
-  .contactus #wrapper #wearehere .dealer_form {
-    width: 100%;
-  }
 }
 
 .privacy_wrap {

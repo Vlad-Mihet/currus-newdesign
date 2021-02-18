@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 import { signout } from '../redux/actions/userActions'
 import { changeCurrency } from '../redux/actions/currencyActions'
 
-const Header = ({ hamburger, setHamburger }) => {
+const Header = ({ hamburger, setHamburger, sidecart, setSidecart }) => {
 
     const dispatch = useDispatch()
     const userSignin = useSelector(state => state.userSignin)
@@ -87,9 +87,9 @@ const Header = ({ hamburger, setHamburger }) => {
                     </div>
                     <div id="cart" style={{color: "rgba(102, 102, 102, 0.85)"}}><Link to='/cart'>Cart</Link> / ${Math.round(100 * itemsPrice) / 100}</div>
                     <div id="cartsizeparent">
-                    <Icon icon={bagIcon} style={{color: 'black', fontSize: '25px' }}></Icon>
+                      <Icon icon={bagIcon} style={{color: 'black', fontSize: '25px' }}></Icon>
                   
-                    <div id="cartsize">{cartItems.length}</div>
+                      <div onClick={()=> setSidecart(true)} id="cartsize">{cartItems.length}</div>
                   
                     </div>
                   </div>

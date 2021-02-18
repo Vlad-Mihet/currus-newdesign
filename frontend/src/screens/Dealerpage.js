@@ -36,21 +36,26 @@ const Dealerpage = (props) => {
                     We are more than happy to sit down with you and discuss all the details to help you make your decision.
                     Give us a call?
                 </p>
-                <div>
-                    <h1>Tell us about yourself</h1>
-                    { !submitted ? (
-                    <form className="dealer_form" onSubmit={handleSubmit}>
-                        <input id="firstname" type="text" value={firstname} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
-                        <input id="lastname" type="text" value={lastname} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
-                        <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail"></input>
-                        <input id="phonenumber" type="text" value={phonenumber} onChange={(e) => setPhone(e.target.value)} placeholder="Phone Number"></input>
-                        <input id="address" type="text" value={storeaddress} onChange={(e) => setStore(e.target.value)} placeholder="Store Address"></input>
-                        <input id="message" type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Your Message"></input>
-                        <button type="submit">
-                            Buy Now
-                        </button>
-                    </form>
-                    ) : <h2>Thanks for your submission.</h2>}
+                <div className="dealer_form_wrapper">
+                    <div className="dealer_form_wrapper_left">
+                        <h1>Tell us about yourself</h1>
+                        { !submitted ? (
+                        <form className="dealer_form" onSubmit={handleSubmit}>
+                            <input id="firstname" type="text" value={firstname} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
+                            <input id="lastname" type="text" value={lastname} onChange={(e) => setLast(e.target.value)} placeholder="Last Name"></input>
+                            <input id="email" type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail"></input>
+                            <input id="phonenumber" type="text" value={phonenumber} onChange={(e) => setPhone(e.target.value)} placeholder="Phone Number"></input>
+                            <input id="address" type="text" value={storeaddress} onChange={(e) => setStore(e.target.value)} placeholder="Store Address"></input>
+                            <input id="message" type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Your Message"></input>
+                            <button type="submit">
+                                Buy Now
+                            </button>
+                        </form>
+                        ) : <h2>Thanks for your submission.</h2>}
+                    </div>
+                    <div className="dealer_form_wrapper_right">
+                        <img src='images/2.jpeg' />
+                    </div>
                 </div>
             </div>
             </>

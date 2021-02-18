@@ -102,13 +102,13 @@ We consider customer satisfaction as our foremost priority. Hence, we try to eng
                 <div>
                     <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/welcome4.jpeg"></img>
                 </div>
-                <div>
+                <div style={{ backgroundColor: "#E7161B" }}>
                     <h3>Our Aim</h3>
                     <p>
  Our aim is to become the leading online retailer of top-quality &amp; cost-effective electric vehicles globally. We are also putting our best efforts to become the automatic first-choice of our customers when it comes to choosing personal smart mobility vehicles for travel. 
                     </p>
                 </div>
-                <div>
+                <div style={{ backgroundColor: "#393636" }}>
                     <h3>Our Vision</h3>
                     <p>
 Our vision is to participate in the world clean technology revolution by delivering best-in-class electric mobility solutions to our customers worldwide.

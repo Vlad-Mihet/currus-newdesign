@@ -179,13 +179,38 @@ header {
     }
 }
 
-aside {
+aside.hamburger {
+    width: 288px;
+    position: fixed;
+    height: 100%;
+    
+    z-index: 100;
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @media (max-width: 320px) {
+        width: 286px;
+    }
+
+}
+
+aside.hamburgerclosed {
+
+    transform: translateX(-288px);
+
+}
+
+aside.hamburgeropen {
+    transform: translateX(0);
+}
+
+aside.sidecartclosed {
     width: 288px;
     position: fixed;
     height: 100%;
     margin-top: -120px;
     z-index: 100;
-    transform: translateX(-288px);
+    transform: translateX(1288px);
     background-color: #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
@@ -194,11 +219,11 @@ aside {
     }
 }
 
-.open {
+aside.sidecartopen {
     transform: translateX(0);
 }
 
-.hamburger {
+.hamburgeropen {
 
         #xparent {
         #x {
