@@ -1,66 +1,69 @@
 .shipping {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 100px;
-    margin-left: 15.28%;
-    margin-right: 15.28%;
-    margin-top: 60px;
 
-    #icon {
-        display: inline;
-       
-        width: 227px;
-        height: 208px;
+    margin-left: 11.8056%;
+    margin-right: 11.8056%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    h1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        color: #393636;
     }
 
-    #text {
-        
-        margin-left: 50px;
-      
+    p {
+        font-family: Hind;
+        font-style: normal;
+        font-weight: normal;
+        color: rgba(57, 54, 54, 0.8);
 
-        h1 {
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 24px;
-            color: #393636;
-        }
+    }
 
-        p {
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 24px;
-            color: rgba(102, 102, 102, 0.85);
+    &_text {
 
-            span {
-                color: red;
-                
+        &_questions {
+
+            &_circle {
+                background: rgba(231, 22, 27, 0.1);
+                border-radius: 100%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;      
+                align-self: center;       
+
+                i {
+                    color: #E7161B;                   
+                }
+            }
+
+            display: grid;
+            grid-template-columns: 1fr 13fr;
+            column-gap: 15px;
+            border: 1px solid #E7161B;
+            box-sizing: border-box;
+            border-radius: 7px;
+            padding: 20px;
+
+            h6 {
+                font-family: Poppins;
+                color: #393636;
+            }
+
+            #shipping_phone {
+               
+                font-family: Hind;
+                color: #E7161B;
+                font-size: 14px;
+
+                span {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
             }
         }
-    }
-
-    @media (max-width: 768px) {
-        margin-bottom: 60px;
-        
-        margin-right: 32px;
-
-        #text {
-            margin-right: 32px;
-        }
-
-        #icon img {
-            
-        }
-    }
-
-    @media (max-width: 320px) {
-        display: flex;
-        flex-direction: column;
-        margin-left: 16px;
-        margin-right: 16px;
     }
 
 }

@@ -3,18 +3,26 @@ import { useDispatch, useSelector } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
 import Filter from '../components/Filter';
 import ProductGridView from '../components/ProductGridView';
-import { listProducts } from '../redux/actions/productActions';
 import {Icon, InlineIcon } from '@iconify/react';
 import closeIcon from '@iconify/icons-carbon/close';
 import { Link } from 'react-router-dom'
 import Slider, { Range } from 'rc-slider';
 import LeftFilter from '../components/LeftFilter';
 
+import { filterProducts, listProducts, sortProducts } from '../redux/actions/productActions';
+
+
 const Shoppage = (props) => {
 
     const [def, setDef] = useState("")
     const [low, setLow] = useState(0)
     const [high, setHigh] = useState(100000)
+
+    const [speed, setSpeed] = useState("")
+    const [power, setPower] = useState("")
+    const [color, setColor] = useState("")
+
+
 
     const [grid, setGrid] = useState(true)
     const productList = useSelector((state) => state.productList);
@@ -33,6 +41,15 @@ const Shoppage = (props) => {
     }, [])
 
     useEffect(() => {
+
+        if(products) {
+        dispatch(filterProducts(products, def, low, high))
+        }
+
+
+    }, [def, low, high])
+
+    useEffect(() => {
         setDisplayedProducts(filteredProducts ? filteredProducts : products)
       
     }, [products, filteredProducts])
@@ -40,7 +57,7 @@ const Shoppage = (props) => {
 
     return (
         <div className="shoppage">
-        <aside className={hamburger? 'hamburger open': 'hamburger' }>
+        <aside className={hamburger? 'hamburger hamburgeropen': 'hamburger hamburgerclosed' }>
           <div id="xparent">
             <div id="x">
                 <Icon onClick={() => setHamburger(false)} icon={closeIcon} style={{color: '#393636', fontSize: '24px'}} />
@@ -106,7 +123,7 @@ const Shoppage = (props) => {
             <Breadcrumbs title={props.location.pathname} />
             <Filter low={low} setLow={setLow} high={high} setHigh={setHigh} def={def} setDef={setDef} hamburger={hamburger} setHamburger={setHamburger} grid={grid} setGrid={setGrid} sort={sort} setSort={setSort} />
             <div id="wrapper">
-                <LeftFilter />
+                <LeftFilter speed={speed} setSpeed={setSpeed} power={power} setPower={setPower} color={color} setColor={setColor} />
             <div className={grid ? "shoppage_gridview" : "shoppage_listview"}>
             {
             displayedProducts &&

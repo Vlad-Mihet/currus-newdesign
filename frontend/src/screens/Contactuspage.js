@@ -35,7 +35,7 @@ const Contactuspage = (props) => {
 
                 <div id="wearehere">
                     <h1>Get Free Estimate</h1>
-                    <h4>Contact us in any convenient way and we will answer any questions.</h4>
+                    <p>Contact us in any convenient way and we will answer any questions.</p>
                     { !submitted ? (
                     <form id="wearehere_form" className="dealer_form" onSubmit={handleSubmit}>
                         <input id="firstname" type="text" value={firstname} onChange={(e) => setFirst(e.target.value)} placeholder="First Name"></input>
@@ -45,7 +45,7 @@ const Contactuspage = (props) => {
                         <input id="address" type="text" value={address} onChange={(e) => setStore(e.target.value)} placeholder="Your Address"></input>
                         <input id="message" type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Your Message"></input>
                         <button type="submit">
-                            Buy Now
+                            GET IN TOUCH
                         </button>
                     </form>
                 ) : <h2>Thanks for your submission.</h2>}

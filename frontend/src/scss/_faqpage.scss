@@ -1,12 +1,68 @@
 .faqpage {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 11.8%;
+  margin-right: 11.8%;
   margin-top: 50px;
 
-  &_image {
+    &_image {
+
+      img {
+      object-fit: cover;
+      max-width: 100%;
+      width: 80%;
+      height: 80%;
+      }
   }
+
+        &_questions {
+          margin-left: 11.8%;
+          margin-right: 11.8%;
+          margin-bottom: 30px;
+
+            &_circle {
+                background: rgba(231, 22, 27, 0.1);
+                border-radius: 100%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;      
+                align-self: center;       
+
+                i {
+                    color: #E7161B;                   
+                }
+            }
+
+            display: grid;
+            grid-template-columns: 1fr 13fr;
+            column-gap: 15px;
+            border: 1px solid #E7161B;
+            box-sizing: border-box;
+            border-radius: 7px;
+            padding: 20px;
+
+            h6 {
+                font-family: Poppins;
+                color: #393636;
+            }
+
+            #shipping_phone {
+               
+                font-family: Hind;
+                color: #E7161B;
+                font-size: 14px;
+
+                span {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+        }
+    
+
+
 
   .sandbox {
     margin: 0;
@@ -37,22 +93,24 @@
       }
 
       .title {
-        background: #ffffff;
+        background: rgba(231, 22, 27, 0.1);
+        opacity: 0.73;
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
 
         width: 100%;
         margin: 0;
 
-        font-family: Open Sans;
+        font-family: Poppins;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 16px;
         line-height: 24px;
-        color: #e7161b;
+        color: #282828;
         position: relative;
 
         .icon {
           position: absolute;
+          color: #E7161B;
           top: 20px;
           right: 20px;
         }
@@ -77,3 +135,5 @@
     }
   }
 }
+
+

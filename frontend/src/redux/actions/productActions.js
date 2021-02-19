@@ -27,6 +27,7 @@ export const detailsProduct = (productId) => async (dispatch) => {
     }
 }
 
+// add power, color 
 export const filterProducts = (products, category, low, high) => (dispatch) => {
     if (low === null || low === undefined || low === "" ) { low = 0 }
     if (high === null || high === undefined || high === "" ) { high = 1000000 }

@@ -46,8 +46,10 @@ function App() {
       <MessengerCustomerChat appId="2880331345560627" pageId="103025775108325"/>
       <div className="grid-container">
         <Header sidecart={sidecart} setSidecart={setSidecart} hamburger={hamburger} setHamburger={setHamburger} />
-        <aside className={sidecart? 'sidecartopen': 'sidecartclosed'}>
-          test
+        <aside className={sidecart? 'sidecart sidecartopen': 'sidecart sidecartclosed'}>
+          <button>
+                <Icon onClick={() => setSidecart(false)} icon={closeIcon} style={{color: '#393636', fontSize: '24px'}} />      
+          </button>
         </aside>
         <aside id="hamburgermenu" className={hamburger? 'hamburger hamburgeropen': 'hamburger hamburgerclosed' }>
           <div id="xparent">

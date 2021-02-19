@@ -87,7 +87,7 @@ header {
                 list-style-type: none;
 
                 li {
-                    margin: 5px;
+                    margin: 10px;
                     a {
                         color: rgba(102, 102, 102, 0.85);
                     }
@@ -189,14 +189,14 @@ aside.hamburger {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
     @media (max-width: 320px) {
-        width: 286px;
+        width: 288px;
     }
 
 }
 
 aside.hamburgerclosed {
 
-    transform: translateX(-288px);
+    transform: translateX(-310px);
 
 }
 
@@ -204,11 +204,12 @@ aside.hamburgeropen {
     transform: translateX(0);
 }
 
-aside.sidecartclosed {
+aside.sidecart {
     width: 288px;
     position: fixed;
+    right: 0px;
     height: 100%;
-    margin-top: -120px;
+   
     z-index: 100;
     transform: translateX(1288px);
     background-color: #FFFFFF;
@@ -221,6 +222,10 @@ aside.sidecartclosed {
 
 aside.sidecartopen {
     transform: translateX(0);
+}
+
+aside.sidecartclosed {
+    transform: translateX(288px);
 }
 
 .hamburgeropen {

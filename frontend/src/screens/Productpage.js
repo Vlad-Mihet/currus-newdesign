@@ -4,6 +4,7 @@ import Breadcrumbs from '../components/Breadcrumbs'
 import Reviews from '../components/Reviews'
 import { detailsProduct } from '../redux/actions/productActions'
 import ImageGallery from 'react-image-gallery'
+import StarsUI from '../components/StarsUI'
 
 import Faq from 'react-faq-component'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -16,11 +17,8 @@ import flagForCanada from '@iconify/icons-emojione-monotone/flag-for-canada';
 import financeIcon from '@iconify/icons-mdi/finance';
 import shieldCheckSolid from '@iconify/icons-clarity/shield-check-solid';
 
-import globeIcon from '@iconify/icons-feather/globe'
-import mapIcon from '@iconify/icons-feather/map';
-import truckIcon from '@iconify/icons-feather/truck';
-import awardIcon from '@iconify/icons-feather/award';
-import headphonesIcon from '@iconify/icons-feather/headphones';
+
+
 import shoppingCart from '@iconify/icons-feather/shopping-cart';
 
 import minusIcon from '@iconify/icons-feather/minus';
@@ -87,29 +85,38 @@ const Productpage = (props) => {
                 <ImageGallery items={product.images.map(url => ({
                     original: url,
                     thumbnail: url
-                }))} thumbnailPosition="left" />) : <h1>Loading</h1>
+                }))} thumbnailPosition="bottom" />) : <h1>Loading</h1>
                 }
                 
             </div>
 
             <div className="product_detail">
+                <div id="product_category">
+                    {product.category}
+                </div>
                 <div id="product_name">{product.name}</div>
+                <div id="product_stars">
+                    {product.reviews &&
+                    <StarsUI rating={product.reviews.stars} />
+                    }
+                </div>
                 <div id="product_price">
                 $ {currency === ("CAD") ? product.priceCAD : product.priceUSD}
+                </div>
+                <div id="product_description">
+                    {product.description}
                 </div>
                 <div id="product_availability">
                 <span>Availability:</span> {product.quantity === 0 ? 'Out of Stock' : 'In Stock & Ready to Ship'}
                 </div>
-                <div id="product_category">
-                <span>Category:</span> {product.category}
-                </div>
+
                 <div id="icon_list">
                     <ul>
-                        <li><Icon icon={globeIcon} style={{fontSize: '18px'}}/>&nbsp;&nbsp;100% Made In Korea</li>
-                        <li><Icon icon={mapIcon} style={{fontSize: '18px'}} />&nbsp;&nbsp;Free shipping to USA and Canada</li>
-                        <li><Icon icon={truckIcon} style={{fontSize: '18px'}} />&nbsp;&nbsp;Ships in 1-2 days from California</li>
-                        <li><Icon icon={awardIcon} style={{fontSize: '18px' }} />&nbsp;&nbsp;12- months complete warranty</li>
-                        <li><Icon icon={headphonesIcon} style={{fontSize: '18px'}} />&nbsp;&nbsp;Free extra 12 months technical support</li>
+                        <li><i className="fas fa-globe-asia"></i>&nbsp;&nbsp;100% Made In Korea</li>
+                        <li><i className="fas fa-dolly"></i>&nbsp;&nbsp;Free shipping to USA and Canada</li>
+                        <li><i className="fas fa-shipping-fast"></i>&nbsp;&nbsp;Ships in 1-2 days from California</li>
+                        <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;12- months complete warranty</li>
+                        <li><i className="fas fa-headphones-alt"></i>&nbsp;&nbsp;Free extra 12 months technical support</li>
                     </ul>
                 </div>
             
@@ -132,14 +139,11 @@ const Productpage = (props) => {
                         Add To Cart</button>  
                 </div>
 
-                <div id="card_icons">      
-                    <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/visa-outline-large.png" ></img>
-                    <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/mastercard-outline-large.png"></img>
-                    <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/americanexpress-outline-large.png"></img>
-                    <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/paypal-outline-large.png"></img>
-                </div>   
+ 
             </div>
 
+
+        </div>
             <div id="product_icons">
                 <div className="icon_wrapper">
                     <div><Icon icon={shippingFast} style={{color: '#393636', fontSize: '42px'}} /></div>
@@ -158,7 +162,6 @@ const Productpage = (props) => {
                     <div className="icon_caption">12 month<br/>warranty</div>
                 </div>
             </div>
-        </div>
         <Tabs>
             <TabList>
                 <Tab>Description</Tab>
@@ -364,7 +367,7 @@ However, if your product is not under warranty or the damages are not covered, w
             <div className="shoppage_gridview">
             {
             products &&
-            products.filter(product => product._id !== productId).slice(0,3).map((product) => (
+            products.filter(product => product._id !== productId).slice(0,4).map((product) => (
                 <ProductGridView grid={true} history={props.history} key={product._id} product={product}></ProductGridView>
             ))
             }

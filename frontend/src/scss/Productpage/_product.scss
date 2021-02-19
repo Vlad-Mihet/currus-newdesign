@@ -214,18 +214,20 @@
 
     .product_detail {
 
-        #card_icons {
-            img {
-                margin: 2%;
-            }
+        #product_category {
+            font-family: Hind;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: #E7161B;
         }
 
+
+
         #product_name {
-            font-family: Open Sans;
+            font-family: Poppins;
             font-style: normal;
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 24px;
+            font-weight: 500;
             color: #393636;
         }
 
@@ -238,20 +240,14 @@
             color: #E7161B;
         }
 
-        #product_availability, #product_category {
-            font-family: Open Sans;
-            font-style: normal;
-            
-            font-size: 14px;
-            line-height: 24px;
-            color: #393636;
 
-            span {
-            font-weight: bold;
-            }
-        }
 
         #icon_list {
+            font-family: Hind;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            color: #666666;
             ul {
                 list-style: none;
             }
@@ -298,6 +294,7 @@
                 line-height: 24px;
                 text-transform: uppercase;
                 color: #FFFFFF;
+                border: none;
         
             }
         }
@@ -314,10 +311,19 @@
         line-height: 20px;
         text-align: center;
         color: rgba(102, 102, 102, 0.85);
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
 
         .icon_wrapper {
             width: auto;
             height: auto;
+            font-family: Hind;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px; 
+            color: rgba(57, 54, 54, 0.8);
 
             .icon_caption {
                 width: 140px;
@@ -336,11 +342,12 @@
         width: 100%;
         grid-template-columns: 1.15fr 1fr;
         column-gap: 50px;
-        grid-template-rows: 3fr 1fr;
-        row-gap: 50px;
+        margin-bottom: 20px;
 
         #product_icons {
             display: flex;
+            margin-bottom: 20px;
+           
         }
     }
 
@@ -365,9 +372,20 @@
 
 .react-tabs__tab-list {
   
-    border-bottom: none !important;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.2);
     border-top: 1px solid rgba(102, 102, 102, 0.2) !important;
-    width: 90%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    li {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba(57, 54, 54, 0.8);
+    }
 }
 
 
@@ -407,7 +425,7 @@
 div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
     
     border-radius: 0px 0px 0px 0px !important;
-    border-top: 2px solid red !important;
+    border-bottom: 2px solid red !important;
 }
 
 

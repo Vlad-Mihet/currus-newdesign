@@ -24,7 +24,7 @@ const Faqpage = (props) => {
         
         <div className="faqpage">
             <div className="faqpage_image">
-                <img style={{width: '200px', height: '500px' }} src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/faq_scooter_front.png"></img>
+                <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/faq_scooter_front.png"></img>
             </div>
             <div className="sandbox">
                 <div className="wrapper">
@@ -152,6 +152,17 @@ const Faqpage = (props) => {
             </div>
             
             </div>
+                <div className="faqpage_questions">
+                    <div className="faqpage_questions_circle">
+                        <i className="fas fa-question"></i>
+                    </div>
+                    <div>
+                        <h6>Have more questions? </h6>
+                        <p>Feel free to contact at any time and our customer support will answer any questions. We work 24 hours, every day of the week.</p>
+                        <div id="shipping_phone">+1 80 <span>123 123 123</span></div>
+                    </div>
+                </div>
+
         </div>
     )
 }

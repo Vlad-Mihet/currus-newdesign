@@ -7,7 +7,7 @@ import starHalf from '@iconify/icons-bi/star-half';
 import starIcon from '@iconify/icons-bi/star';
 import arrowRight from '@iconify/icons-bi/arrow-right';
 
-    const StarsUI = ({ rating }) => {
+const StarsUI = ({ rating }) => {
         return (
             <>
                 {rating > 4.5 ? <>
@@ -21,7 +21,7 @@ import arrowRight from '@iconify/icons-bi/arrow-right';
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
-                <Icon icon={starHalf} style={{color:"#fcc455", fontSize: '20px'}} /> </> :
+                <Icon icon={starHalf} style={{color:"#fcc455", fontSize: '24px'}} /> </> :
                  rating > 3.5 ? <>
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
@@ -33,43 +33,43 @@ import arrowRight from '@iconify/icons-bi/arrow-right';
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starHalf} style={{color: '#fcc455', fontSize: '24px'}} />
-                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '20px'}} /> </> :
+                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '24px'}} /> </> :
                  rating > 2.5 ? <>
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
-                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '20px'}} /> </> :
+                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '24px'}} /> </> :
                  rating > 2 ? <>
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starHalf} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
-                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '20px'}} /> </> :
+                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '24px'}} /> </> :
                  rating > 1.5 ? <>
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
-                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '20px'}} /> </> :
+                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '24px'}} /> </> :
                  rating > 1 ? <>
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starHalf} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
-                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '20px'}} /> </> :
+                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '24px'}} /> </> :
                  rating > 0.5 ? <>
                 <Icon icon={starFilled} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
-                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '20px'}} /> </> :
+                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '24px'}} /> </> :
                  <>
                 <Icon icon={starHalf} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
                 <Icon icon={starIcon} style={{color: '#fcc455', fontSize: '24px'}} />
-                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '20px'}} /> </>}
+                <Icon icon={starIcon} style={{color:"#fcc455", fontSize: '24px'}} /> </>}
             </>
         )
     }

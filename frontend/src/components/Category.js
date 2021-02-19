@@ -13,6 +13,17 @@ function Category(props) {
                     <div className="category_description">
                         Nulla id quarm varius
                     </div>
+                    <div className="category_flex">
+                        <div className="category_circle">
+                            <i className="fas fa-arrow-right"></i>
+                        </div>
+                        <div className="category_shopnow">
+                            SHOP NOW
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/helmet2.png"/>
                 </div>
             </section>
             <section id="section_two">
@@ -23,6 +34,17 @@ function Category(props) {
                     <div className="category_description">
                         Nulla id quarm varius
                     </div>
+                    <div className="category_flex">
+                        <div className="category_circle">
+                            <i className="fas fa-arrow-right"></i>
+                        </div>
+                        <div className="category_shopnow">
+                            SHOP NOW
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/helmet1.png" />
                 </div>
             </section>
         </div>       

@@ -7,16 +7,49 @@
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 50px;
-    height: 200px;
+
+
+    .category_flex {
+        display: flex;
+        
+    }
+
+    .category_title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        color: #393636;
+    }
+
+
+    .category_circle {
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        background-color: #E7161B;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category_description {
+        font-family: Hind;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: rgba(57, 54, 54, 0.8);
+    }
 
         #section_one {
         background: url(img/category.png);
-        background-size: cover;
+        background-size: 100% 100%;
         }
 
         #section_two {
         background: url(img/category.png);
-        background-size: cover;
+        background-size: 100% 100%;
         }
 
     section {
@@ -24,66 +57,20 @@
             width: 25%;
         }
 
-
-
-     
         width: 36.46%;
-        height: 160px;
-
+     
         margin-left: 25px;
         margin-right: 25px;
-
         padding: 10px;
 
-        .category_border {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.85);
-            box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
 
-
-        
-
-            .category_title {
-                font-family: Lato;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 24px;
-                line-height: 29px;
-                text-align: center;
-                text-transform: uppercase;
-                color: #FFFFFF;
-               
-           
-                margin-bottom: 10px;
-            }
-
-            .category_title:after {
-                margin: 0 auto;
-                width: 40%;
-                display: block;
-                content: "";
-                padding-top: 10px;
-                border-bottom: 3px solid $darkRed;
-
-            }
-
-            .category_description {
-                font-family: Lato;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 24px;
-                text-align: center;
-               
-                color: #FFFFFF;
-            }
+        img {
+            max-width: 80%;
+            object-fit: cover;
+            max-height: 80%;
         }
-        
-
     }
 
     @media (max-width: 800px) {

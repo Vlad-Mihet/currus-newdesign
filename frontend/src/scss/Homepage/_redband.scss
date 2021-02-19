@@ -50,12 +50,14 @@
             input {
                 padding: 15px;
                 border-radius: 0px;
-                padding-right: 90px;
-                width: 150%;
+                padding-right: 120px;
+                
                 border-color: white;
+                border: none;
             }
+
             button {
-                margin-left: -90px;
+                margin-left: -120px;
                 margin-top: 5px;
                 border: none;
                 background: white;

@@ -6,14 +6,24 @@ const Safety = (props) => {
         <>
         <Breadcrumbs title={`${props.location.pathname}`} />
         <div className="safety">
-            <p>
-            It can be great fun to ride an e-scooter but it doesn’t come without potential hazard. You always want to be awake, aware and alert to be safe; respect road signs, travel at modest speeds and stay in your lane! It goes without saying that you should never ride on a highway and so we strongly recommend a helmet or protective head gear.
-            </p>
-            <div id="icontext">
-                <div id="icon">
-                    <img src="/images/safety.png"></img>
+            <div className="safety_top">
+                <div className="safety_top_left">
+                    <h5>SAFETY INSTRUCTIONS</h5>
+                    <h1>Currus Safety</h1>
+                    <p>
+                    It can be great fun to ride an e-scooter but it doesn’t come without potential hazard. You always want to be awake, aware and alert to be safe; respect road signs, travel at modest speeds and stay in your lane! It goes without saying that you should never ride on a highway and so we strongly recommend a helmet or protective head gear.
+                    </p>
                 </div>
-                <div id="text">
+                <div className="safety_top_right">
+                    <img src='images/133.jpg' />
+                </div>
+            </div>
+            <div id="icontext">
+                <div id="icontext_circle">
+                    <i className="fas fa-battery-half" />
+                </div>
+         
+                <div id="icontext_text">
                 <h1>Charging Battery</h1>
                 <p>Use care when you are charging your device and be sure to monitor. Never leave it plugged into an outlet overnight or if you are away from home and never try to charge it when your scooter is wet. Here are some other tips:</p>
                 <ul>

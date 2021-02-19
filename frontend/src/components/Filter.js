@@ -21,14 +21,7 @@ const Filter = ({ low, setLow, high, setHigh, def, setDef, grid, setGrid, sort, 
 
     const dispatch = useDispatch()
 
-    useEffect(() => {
 
-        if(products) {
-        dispatch(filterProducts(products, def, low, high))
-        }
-
-
-    }, [def, low, high])
 
     useEffect(() => {
         if(filteredProducts) {
