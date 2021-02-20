@@ -16,6 +16,26 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px 300px;
 
+    h4 {
+        font-family: Hind;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.07em;
+        color: #E7161B;
+        margin: 0px;
+       
+    }
+
+    h1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        color: #222222;
+        margin: 0px;
+    }
+
     img {
         object-fit: content;
         max-width: 100%;
@@ -30,6 +50,8 @@
 
 #our {
  
+    margin-left: 11.8%;
+    margin-right: 11.8%;
 
     h1 {
         font-family: Poppins;

@@ -76,7 +76,7 @@ const Checkoutpage = (props) => {
 
     return (
         <div className="checkout">
-            <Stepper activeStep={1} steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
+            <Stepper completeColor="#E7161B" activeColor="#E7161B" activeStep={1} steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
             <div id="grid">
             <div id="box1">
             <h2 id="billing_details">Billing Details</h2>
@@ -118,27 +118,35 @@ const Checkoutpage = (props) => {
             </div>
 
             <div id="box2">
-                
+                <h1 className="subtotal">Product</h1>
                     <ul>
                         {cartItems.map(item => (
                         <li key={item.id}>
                             <img src={item.image}></img>
                             <div>{item.name}</div>
-                            <div>{item.qty}</div>
-                            <div>{item.priceUSD}</div>
+                            &nbsp;
+                            <div>Qty: {item.qty}</div>
+                            &nbsp;
+                            <div> ${item.priceUSD}</div>
                         </li>
                     ))}
                     </ul>
-                <h1 className="subtotal">Subtotal
-                { afterCouponPrice === subtotal ? subtotal : afterCouponPrice }
+                <h1 className="subtotal">
+                <div>Subtotal</div>
+                <div>
+                $ { afterCouponPrice === subtotal ? subtotal : afterCouponPrice }
+                </div>
                 </h1>
    
-                <h1 className="subtotal">Shipping
-                ${shippingPrice}
+                <h1 className="subtotal">
+                    <div>Shipping</div>
+                <div>
+                    $ {shippingPrice}</div>
                 </h1>
   
-                <h1 className="subtotal">Cart Totals
-                ${totalPrice}
+                <h1 className="subtotal">
+                    <div>Cart Totals</div>
+                    <div>$ {totalPrice}</div>
                 </h1>
 
                 <div>

@@ -18,8 +18,8 @@ const Thankyou = (props) => {
     return (
         <>
        <Breadcrumbs title={props.location.pathname} />
-        <div className="thankyou">
-               <Stepper activeStep={2} steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
+        <div style={{ fontFamily: 'Open Sans' }} className="thankyou">
+               <Stepper completeColor="#E7161B" activeColor="#E7161B" activeStep={2} steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
             <h1>This is your orderId: { order && order._id } </h1>
         </div>
         </>

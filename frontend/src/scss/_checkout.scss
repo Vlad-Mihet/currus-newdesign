@@ -2,6 +2,7 @@
 
     width: 90%;
     margin: 0 auto;
+    font-family: Open Sans;
 
     #billing_details, #createanaccount {
         font-family: Open Sans;
@@ -26,10 +27,26 @@
         }
 
         #box2 {
+
+            padding-left: 15px;
+            padding-right: 15px;
+            .subtotal {
+                display: flex;
+                justify-content: space-between;
+            }
             background: #F6F6F6;
             ul {
                 list-style: none;
+                margin-left: 0px;
+                padding-left: 0px;
                 li {
+                    display: flex;
+                    font-family: Open Sans;
+                    font-style: normal;
+
+                    font-weight: normal;
+                    font-size: 14px;
+                    color: #393636;
                     img {
                         width: 75px;
                         height: 75px;
@@ -59,6 +76,7 @@
             column-gap: 25px;
             grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
             row-gap: 25px;
+            font-family: Open Sans;
 
             input {
                 padding: 5px;

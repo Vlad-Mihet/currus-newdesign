@@ -81,7 +81,7 @@ const Cartpage = (props) => {
         <>
         <Breadcrumbs title={props.location.pathname} />
         <div className="cart">
-            <Stepper steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
+            <Stepper completeColor="#E7161B" activeColor="#E7161B" steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
             <div id="gridbox">
             <div id="box1">
                 <ul>

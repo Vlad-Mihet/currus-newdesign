@@ -6,13 +6,25 @@ header {
         position: inherit;
         height: 20px;
         background-color: #393636;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-around;
+        // align-items: center;
+
+        .currency {
+            left: 11.8%;
+            position: absolute;
+            width: 100%;
+            margin: 0 auto;
+        }
 
 
         .free-shipping-from {
+            left: 35%;
+            position: absolute;
+            width: 100%;
+            margin: 3px;
             
             font-family: $fontPrimary;
             font-weight: 600;
@@ -21,12 +33,16 @@ header {
             text-transform: uppercase;
             color: #FFFFFF;
 
-            @media (max-width: 500px) {
+            @media (max-width: 900px) {
                 display: none;
             }
         }
 
         .social-icons {
+            position: absolute;
+            left: 78.9%;
+            width: 100%;
+            margin: -2px;
            svg {
                margin: 1px;
            }

@@ -124,7 +124,7 @@ const Blogpage = (props) => {
                     <div className="blog_page_grid_latest">
                         <h1>Latest Post</h1>
                         {recentposts && recentposts.map(r => (
-                            <div className="blog_page_grid_latest_post">
+                            <div key={r.id} className="blog_page_grid_latest_post">
                                 {r.date.split("T")[0]}&nbsp;{r.title}
                             </div>
                         ))}

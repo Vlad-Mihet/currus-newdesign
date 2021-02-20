@@ -73,7 +73,7 @@ const Bloglistpage = (props) => {
             
            <div className="blogpage_gallery">
             {posts && posts.slice(0, 3).map((post, index) => 
-            <div onClick={() => clickHandler(post.id)} className="blogpage_box" key={post.id}>
+            <div style={{ cursor: "pointer" }} onClick={() => clickHandler(post.id)} className="blogpage_box" key={post.id}>
                 <img src={post.picture.url} />
                 <div className="blogpage_box_text">
                     <div className="blogpage_box_text_text">
@@ -114,7 +114,7 @@ const Bloglistpage = (props) => {
            <div className="featured_popular">
 
                 <div className="featured">
-                    {posts && posts.slice(0,2).map(post => <div className="featured_post">
+                    {posts && posts.slice(0,2).map(post => <div key={post.id} className="featured_post">
                         <div className="featured_img">
                             <img src={post.picture.url} />
                         </div>
@@ -151,7 +151,7 @@ const Bloglistpage = (props) => {
 
                 <div className="mostpopular">
                     {posts && posts.slice(0,6).map(post => 
-                        <div className="popular_post">
+                        <div className="popular_post" key={post.id}>
                             <div>
                                 <img src={post.picture.url} />       
                             </div>

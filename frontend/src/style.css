@@ -246,12 +246,18 @@ header .bar {
   position: inherit;
   height: 20px;
   background-color: #393636;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+}
+header .bar .currency {
+  left: 11.8%;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
 }
 header .bar .free-shipping-from {
+  left: 35%;
+  position: absolute;
+  width: 100%;
+  margin: 3px;
   font-family: "Lato";
   font-weight: 600;
   font-size: 12px;
@@ -259,10 +265,16 @@ header .bar .free-shipping-from {
   text-transform: uppercase;
   color: #FFFFFF;
 }
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   header .bar .free-shipping-from {
     display: none;
   }
+}
+header .bar .social-icons {
+  position: absolute;
+  left: 78.9%;
+  width: 100%;
+  margin: -2px;
 }
 header .bar .social-icons svg {
   margin: 1px;
@@ -2021,11 +2033,32 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 300px 300px;
 }
+#aboutus #aboutus_welcome h4 {
+  font-family: Hind;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.07em;
+  color: #E7161B;
+  margin: 0px;
+}
+#aboutus #aboutus_welcome h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  color: #222222;
+  margin: 0px;
+}
 #aboutus #aboutus_welcome img {
   object-fit: content;
   max-width: 100%;
   max-height: 100%;
   width: 100%;
+}
+#aboutus #our {
+  margin-left: 11.8%;
+  margin-right: 11.8%;
 }
 #aboutus #our h1 {
   font-family: Poppins;
@@ -2106,11 +2139,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   background: url(img/dealers.png);
   background-size: cover;
   box-sizing: content-box;
-  margin: 0 auto;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
-  padding-left: 60px;
+  padding-left: 11.8%;
+  padding-bottom: 40px;
 }
 .dealer h1 {
   font-family: Poppins;
@@ -2798,7 +2831,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-right: 11.81%;
 }
 .terms h1 {
-  font-family: Open Sans;
+  font-family: Poppins;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -2908,6 +2941,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-left: 170px;
   margin-right: 170px;
   margin-bottom: 100px;
+  font-family: Open Sans;
 }
 .cart #gridbox {
   display: grid;
@@ -3043,6 +3077,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .checkout {
   width: 90%;
   margin: 0 auto;
+  font-family: Open Sans;
 }
 .checkout #billing_details, .checkout #createanaccount {
   font-family: Open Sans;
@@ -3061,10 +3096,26 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-bottom: 50px;
 }
 .checkout #grid #box2 {
+  padding-left: 15px;
+  padding-right: 15px;
   background: #F6F6F6;
+}
+.checkout #grid #box2 .subtotal {
+  display: flex;
+  justify-content: space-between;
 }
 .checkout #grid #box2 ul {
   list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.checkout #grid #box2 ul li {
+  display: flex;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #393636;
 }
 .checkout #grid #box2 ul li img {
   width: 75px;
@@ -3086,6 +3137,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   column-gap: 25px;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   row-gap: 25px;
+  font-family: Open Sans;
 }
 .checkout #checkout_form input {
   padding: 5px;
@@ -3490,6 +3542,8 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
+  margin-left: 2%;
+  margin-right: 2%;
   color: rgba(102, 102, 102, 0.85);
 }
 .blog_page .blog_page_grid_latest_post {
