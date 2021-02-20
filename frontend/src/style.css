@@ -112,20 +112,25 @@ body {
   background-size: 100% 100%;
 }
 .banner .text-banner {
-  width: 26.04%;
+  width: 40.04%;
   height: 56%;
   position: absolute;
   top: 16.67%;
   left: 11.81%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
   border-radius: 3px;
   padding: 10px;
 }
 .banner .text-banner #text-banner__button {
-  display: inline;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+.banner .text-banner #text-banner__button #buy_now a {
+  font-family: Hind;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #393636;
 }
 .banner .text-banner #text-banner__button #shop_now_circle {
   width: 40px;
@@ -133,17 +138,26 @@ body {
   background: #e7161b;
   border-radius: 100%;
   color: white;
-  margin: 0 auto;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner .text-banner .features {
   display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .banner .text-banner .features .feature_box {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
+}
+.banner .text-banner .features .feature_box_text {
+  margin-left: 10px;
 }
 .banner .text-banner .features .feature_box .red_text_introducing {
   font-size: 10px;
@@ -195,8 +209,9 @@ body {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 40px;
   line-height: 38px;
+  margin-top: 20px;
   color: #222222;
 }
 @media (max-width: 1000px) {
@@ -473,7 +488,16 @@ aside.sidecartclosed {
   margin-bottom: 50px;
 }
 .category_page .category_flex {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+}
+.category_page .category_flex .category_shopnow {
+  font-family: Hind;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  color: #393636;
 }
 .category_page .category_title {
   font-family: Poppins;
@@ -511,7 +535,7 @@ aside.sidecartclosed {
   width: 36.46%;
   margin-left: 25px;
   margin-right: 25px;
-  padding: 10px;
+  padding: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -521,9 +545,11 @@ aside.sidecartclosed {
   }
 }
 .category_page section img {
-  max-width: 80%;
+  max-width: 95%;
   object-fit: cover;
-  max-height: 80%;
+  max-height: 95%;
+  height: 95%;
+  width: 95%;
 }
 @media (max-width: 800px) {
   .category_page {
@@ -596,12 +622,12 @@ aside.sidecartclosed {
   padding: 50px;
 }
 .whythebest #grid #image {
-  padding: 0px 0px 80px 0px;
+  align-self: end;
 }
 .whythebest #grid #image img {
-  width: 100%;
   object-fit: cover;
-  max-width: 100%;
+  max-width: 80%;
+  max-height: 70%;
 }
 @media (max-width: 1000px) {
   .whythebest #grid #image img {
@@ -645,7 +671,7 @@ aside.sidecartclosed {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 20px;
   color: #393636;
   margin-bottom: 30px;
 }
@@ -674,16 +700,16 @@ aside.sidecartclosed {
   position: absolute;
 }
 .whythebest .sandbox .wrapper .title {
-  background: #FFFFFF;
+  background: rgba(231, 22, 27, 0.1);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
   width: 100%;
   margin: 0;
-  font-family: Open Sans;
+  font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: #E7161B;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #282828;
   position: relative;
 }
 .whythebest .sandbox .wrapper .title .icon {
@@ -754,7 +780,7 @@ aside.sidecartclosed {
   border: none;
 }
 .redband_wrapper .redband_subscribe button {
-  margin-left: -120px;
+  margin-left: -150px;
   margin-top: 5px;
   border: none;
   background: white;
@@ -876,11 +902,18 @@ aside.sidecartclosed {
   color: rgba(57, 54, 54, 0.8);
 }
 .featured .featured_post .featured_text_author {
+  display: flex;
+  align-items: center;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   color: #393636;
+}
+.featured .featured_post .featured_text_author_picture img {
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
 }
 .featured .featured_post .featured_text_author_posted {
   color: #E7161B;
@@ -890,6 +923,11 @@ aside.sidecartclosed {
   font-size: 11px;
   letter-spacing: 0.09em;
   line-height: 187.6%;
+  margin-left: 15px;
+}
+.featured .featured_post .featured_text_author_posted_name {
+  color: #393636;
+  font-family: Open Sans;
 }
 .landing_featured_top {
   display: flex;
@@ -899,7 +937,7 @@ aside.sidecartclosed {
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 24px;
   line-height: 54px;
   color: #393636;
 }
@@ -917,21 +955,22 @@ aside.sidecartclosed {
 }
 
 .featured_page {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 11.8%;
+  margin-right: 11.8%;
   margin-bottom: 50px;
 }
 .featured_page .shoppage_gridview {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 .ourblog {
-  margin-top: 80px;
+  margin-top: 30px;
 }
 .ourblog_titlerow {
+  margin-left: 11.8%;
+  margin-right: 11.8%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .ourblog_titlerow h1 {
@@ -952,8 +991,8 @@ aside.sidecartclosed {
   text-decoration: none;
 }
 .ourblog #first {
-  width: 80%;
-  margin: 10px auto;
+  margin-left: 11.8%;
+  margin-right: 11.8%;
 }
 .ourblog #first .ourblog_post {
   position: relative;
@@ -1013,7 +1052,7 @@ aside.sidecartclosed {
 .ourblog #second h1 {
   font-family: Poppins;
   font-style: normal;
-  font-size: 48px;
+  font-size: 36px;
   line-height: 72px;
   color: #222222;
   margin-left: 11.8%;
@@ -3240,6 +3279,9 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-weight: normal;
   font-size: 14px;
   color: #393636;
+}
+.blogpage .featured_popular .featured .featured_post .featured_text_author_picture img {
+  border-radius: 100%;
 }
 .blogpage .featured_popular .featured .featured_post .featured_text_author_posted {
   color: #E7161B;

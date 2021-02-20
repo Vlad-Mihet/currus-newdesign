@@ -67,10 +67,16 @@ const OurBlog = () => {
                 title
                 theme
                 author
+                authorPicture {
+                    url
+                }
                 date
+                body
                 picture {
                     url
                 }
+                likes
+      
 
             }
         }
@@ -92,6 +98,7 @@ const OurBlog = () => {
               if (errors) {
                   console.error(errors);
               }
+              console.log(data.pageCollection)
               setPage(data.pageCollection.items[0]);
               setPosts(data.pageCollection.items);
           });
@@ -124,12 +131,24 @@ const OurBlog = () => {
                             <div className="featured_text_title">{post.title}</div>
                             <div className="featured_text_body">{post.body}</div>
                             <div className="featured_text_author">
+                                <div className="featured_text_author_picture">
+                                    <img src={post.authorPicture.url} />
+                                </div>
                                 <div className="featured_text_author_posted">
                                     Posted By
-                                </div>
-                                {post.author}
+                                    <div className="featured_text_author_posted_name">
+                                        {post.author}
+                                    </div>
+                                </div>   
                             </div>
-                            <div className="featured_text_likes">Likes: {post.likes}</div>
+                            <div className="featured_text_likes">
+                                <i className="fas fa-heart"></i>
+                            {post.likes}
+                            </div>
+                            <div className="featured_text_comments">
+                                <i className="fas fa-comment"></i>
+                               
+                            </div>
                         </div>
                     </div>)}
                 </div>

@@ -1,5 +1,7 @@
         .featured {
 
+
+
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             column-gap: 25px;
@@ -55,6 +57,17 @@
                     }
 
                     &_author {
+                        display: flex;
+                        align-items: center;
+
+                        &_picture {
+                            img {
+                                border-radius: 100%;
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+
                         font-family: Open Sans;
                         font-style: normal;
 
@@ -70,6 +83,13 @@
                             font-size: 11px;
                             letter-spacing: 0.09em;
                             line-height: 187.6%;
+                            margin-left: 15px;
+
+                            &_name {
+                                color: #393636;
+
+                                font-family: Open Sans;
+                            }
                         }
                     }
 
@@ -89,7 +109,7 @@
         font-family: Poppins;
         font-style: normal;
         font-weight: 600;
-        font-size: 36px;
+        font-size: 24px;
         line-height: 54px;
         color: #393636;
     }
@@ -109,12 +129,17 @@
 }
 
 .featured_page {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 11.8%;
+    margin-right: 11.8%;
     margin-bottom: 50px;
 
     .shoppage_gridview {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+            .product_gridview {
+
+       
+            }
 }

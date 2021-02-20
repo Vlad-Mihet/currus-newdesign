@@ -10,7 +10,19 @@
 
 
     .category_flex {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        align-items: center;
+
+        .category_shopnow {
+            font-family: Hind;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            color: #393636;
+        }
+
+
         
     }
 
@@ -61,15 +73,17 @@
      
         margin-left: 25px;
         margin-right: 25px;
-        padding: 10px;
+        padding: 25px;
 
         display: grid;
         grid-template-columns: 1fr 1fr;
 
         img {
-            max-width: 80%;
+            max-width: 95%;
             object-fit: cover;
-            max-height: 80%;
+            max-height: 95%;
+            height: 95%;
+            width: 95%;
         }
     }
 

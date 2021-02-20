@@ -1,10 +1,14 @@
 .ourblog {
-  margin-top:  80px;
+  margin-top: 30px;
+
 
   &_titlerow {
+    
+    margin-left: 11.8%;
+    margin-right: 11.8%;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     h1 {
@@ -30,9 +34,9 @@
 
 
   #first {
-    width: 80%;
-  
-    margin: 10px auto;
+
+    margin-left: 11.8%;
+    margin-right: 11.8%;
 
     .ourblog_post {
 
@@ -107,6 +111,7 @@
 
   
     #second_testimonial {
+    
       background: url('img/testimonials.png');
       margin-bottom: 50px;
     }
@@ -114,7 +119,7 @@
     h1 {
       font-family: Poppins;
       font-style: normal;
-      font-size: 48px;
+      font-size: 36px;
       line-height: 72px;
       color: #222222;
       margin-left: 11.8%;

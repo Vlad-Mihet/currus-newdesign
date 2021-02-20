@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Category(props) {
 
@@ -8,9 +9,12 @@ function Category(props) {
             <section id="section_one">
                 <div className="category_border">
                     <div className="category_title">
-                        E-SCOOTERS
+                        e-SCOOTERS
                     </div>
                     <div className="category_description">
+                        Nulla id quarm varius
+                        Nulla id quarm varius
+                        Nulla id quarm varius
                         Nulla id quarm varius
                     </div>
                     <div className="category_flex">
@@ -18,7 +22,9 @@ function Category(props) {
                             <i className="fas fa-arrow-right"></i>
                         </div>
                         <div className="category_shopnow">
+                            <Link style={{ color: 'black', textDecoration: 'none' }} to='/shop'>
                             SHOP NOW
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -33,13 +39,18 @@ function Category(props) {
                     </div>
                     <div className="category_description">
                         Nulla id quarm varius
+                        Nulla id quarm varius
+                        Nulla id quarm varius
+                        Nulla id quarm varius
                     </div>
                     <div className="category_flex">
                         <div className="category_circle">
                             <i className="fas fa-arrow-right"></i>
                         </div>
                         <div className="category_shopnow">
+                            <Link style={{ color: 'black', textDecoration: 'none' }} to='/shop'>
                             SHOP NOW
+                            </Link>
                         </div>
                     </div>
                 </div>

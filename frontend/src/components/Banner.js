@@ -63,8 +63,8 @@ const Banner = () => {
                     />
                 )
             }}>
-                <div>
-                    <img style={{ width: '400px',height: '400px' }} src="images/bbbc5fe88a5ca682c51189dc99db6385.png" />
+                <div style={{display: 'flex', marginRight: '150px', justifyContent: 'flex-end'}}>
+                    <img style={{ width: '400px',height: '500px' }} src="images/bbbc5fe88a5ca682c51189dc99db6385.png" />
 
                 </div>
                 <div>
@@ -76,29 +76,29 @@ const Banner = () => {
    
                  
                     <div id="your-vehicle">
-                        Your <br/>Vehicle-Grade Scooter is Here
+                        Your Vehicle-Grade Scooter is Here
                     </div>
                     <div id="introducing">
                         Introducing Currus NF
                     </div>
                     <div className="features">
                         <div className="feature_box">
-                            <i style={{width: '10px', height: '10px' }} className="fas fa-tachometer-alt"></i>
-                            <div>
+                            <i className="fas fa-tachometer-alt"></i>
+                            <div className="feature_box_text">
                                 <div className="red_text_introducing">TOP SPEED</div>
                                 <div className="black_text_introducing">25mph</div>
                             </div>
                         </div>
                         <div className="feature_box">
-                            <i style={{width: '10px', height: '10px' }} className="fas fa-bolt"></i>
-                            <div>
+                            <i className="fas fa-bolt"></i>
+                            <div className="feature_box_text">
                                 <div className="red_text_introducing">BATTERY RANGE</div>
                                 <div className="black_text_introducing">55-60 miles</div>
                             </div>
                         </div>
                         <div className="feature_box">
-                            <i style={{width: '10px', height: '10px' }} className="fas fa-shield-alt"></i>
-                            <div>
+                            <i className="fas fa-shield-alt"></i>
+                            <div className="feature_box_text">
                                 <div className="red_text_introducing">ANTI-THEFT</div>
                                 <div className="black_text_introducing">Smart Lock</div>
                             </div>

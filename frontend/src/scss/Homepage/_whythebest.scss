@@ -60,12 +60,14 @@
     }
 
     #image {
-      padding: 0px 0px 80px 0px;
-
+    
+      align-self: end;
       img {
-        width: 100%;
+        
         object-fit: cover;
-        max-width: 100%;
+        max-width: 80%;
+        max-height: 70%;
+
       }
 
       @media (max-width: 1000px) {
@@ -123,7 +125,7 @@
       font-family: Poppins;
       font-style: normal;
       font-weight: 600;
-      font-size: 36px;
+      font-size: 20px;
       color: #393636;
       margin-bottom: 30px;
     }
@@ -165,18 +167,18 @@
        
 
         .title {
-            background: #FFFFFF;
+            background: rgba(231, 22, 27, 0.1);
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
             
             width: 100%;
             margin: 0;
 
-            font-family: Open Sans;
+            font-family: Poppins;
             font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 24px;
-            color: #E7161B;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #282828;
             position: relative;
 
             .icon {

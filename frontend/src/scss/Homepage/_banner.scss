@@ -7,18 +7,28 @@
   }
 
   .text-banner {
-    width: 26.04%;
+    width: 40.04%;
     height: 56%;
     position: absolute;
     top: 16.67%;
     left: 11.81%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+
+
 
     #text-banner__button {
-      display: inline;
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      align-items: center;
+
+      #buy_now {
+        a {
+          font-family: Hind;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          color: #393636;
+        }
+      }
 
       #shop_now_circle {
         width: 40px;
@@ -26,19 +36,30 @@
         background: #e7161b;
         border-radius: 100%;
         color: white;
-        margin: 0 auto;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
     .features {
       display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      margin-bottom: 30px;
 
       .feature_box {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
         font-family: Poppins;
         font-style: normal;
         font-weight: 500;
+
+        &_text {
+          margin-left: 10px;
+        }
 
         .red_text_introducing {
           font-size: 10px;
@@ -94,8 +115,9 @@
       font-family: Poppins;
       font-style: normal;
       font-weight: 600;
-      font-size: 32px;
+      font-size: 40px;
       line-height: 38px;
+      margin-top: 20px;
 
       color: #222222;
 

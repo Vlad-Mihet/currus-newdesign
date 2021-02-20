@@ -136,6 +136,13 @@
                     }
 
                     &_author {
+
+                        &_picture {
+                            img {
+                                border-radius: 100%;
+                            }
+                        }
+                        
                         font-family: Open Sans;
                         font-style: normal;
 
@@ -152,6 +159,8 @@
                             letter-spacing: 0.09em;
                             line-height: 187.6%;
                         }
+
+
                     }
 
                     &_likes {
