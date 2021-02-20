@@ -86,10 +86,10 @@ const Footer = () => {
             Copyright 2021 <span>Currusmotors</span> All Rights Reservred
             </div>
             <div id="social_icons">
-              <Icon icon={scFacebook} style={{color: '#ffffff', fontSize: '24px'}} />
-              <Icon icon={scTwitter} style={{color: '#ffffff', fontSize: '24px'}} />
-              <Icon icon={scInstagram} style={{color: '#ffffff', fontSize: '24px'}} />
-              <Icon icon={scYoutube} style={{color: '#ffffff', fontSize: '24px'}} />
+              <a href="https://facebook.com/currusmotors" target="_blank" ><Icon icon={scFacebook} style={{color: '#ffffff', fontSize: '24px'}} /></a>
+              <a href="https://twitter.com/currusmotors" target="_blank" ><Icon icon={scTwitter} style={{color: '#ffffff', fontSize: '24px'}} /></a>
+              <a href="https://instagram.com/currusmotors" target="_blank" ><Icon icon={scInstagram} style={{color: '#ffffff', fontSize: '24px'}} /></a>
+              <a href="https://youtube.com/channel/UC4ko00dckfzvi8hrECa-cwQ" target="_blank" ><Icon icon={scYoutube} style={{color: '#ffffff', fontSize: '24px'}} /></a>
             </div>
             <div id="card">
               <Icon icon={visaIcon} style={{ backgroundColor: '#DFE3E8', fontSize: '15px' }}/>

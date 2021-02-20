@@ -33,6 +33,7 @@ const Bloglistpage = (props) => {
                     url
                     title
                 }
+                comments
 
             }
         }
@@ -71,16 +72,33 @@ const Bloglistpage = (props) => {
         <div className="blogpage">
             
            <div className="blogpage_gallery">
-            {posts && posts.slice(0, 3).map(post => 
+            {posts && posts.slice(0, 3).map((post, index) => 
             <div onClick={() => clickHandler(post.id)} className="blogpage_box" key={post.id}>
                 <img src={post.picture.url} />
                 <div className="blogpage_box_text">
-                    <div className="blogpage_box_theme">{post.theme}</div>
-                    <div className="blogpage_box_title">{post.title}</div>
-                    <div className="blogpage_box_author">{post.author}</div>
-                    <div className="blogpage_box_date">{post.date.split("T")[0]}</div>
-                    <div className="blogpage_box_likes">{post.likes}</div>
-                    
+                    <div className="blogpage_box_text_text">
+                        <div className="blogpage_box_theme">{post.theme}</div>
+                        <div className="blogpage_box_title">{post.title}</div>
+                        <div className="blogpage_box_flex">
+                            <div className="blogpage_box_authorpic">
+                                <img style={{width: '20px', height: '20px', borderRadius: '100%' }} src={post.authorPicture.url} />
+                            </div>
+                            <div className="blogpage_box_author">{post.author}</div>
+                            <div className="blogpage_box_date">{post.date.split("T")[0]}</div>
+                            {index === 0 && (
+                                <>
+                            <div className="blogpage_box_likes">
+                                <i className="fas fa-heart"></i>
+                                {post.likes}</div>
+                            <div className="blogpage_box_comments">
+                                <i className="fas fa-comment"></i>                      
+                                {post.comments.length}</div>
+                                </>
+                            )}
+                            </div>
+                            
+                    </div>
+
                 </div>
             
                
@@ -106,13 +124,27 @@ const Bloglistpage = (props) => {
                             <div className="featured_text_date">{post.date.split("T")[0]}</div>
                             <div className="featured_text_title">{post.title}</div>
                             <div className="featured_text_body">{post.body}</div>
-                            <div className="featured_text_author">
-                                <div className="featured_text_author_posted">
-                                    Posted By
+                            <div className="featured_text_bottom">
+                                <div className="featured_text_author">
+                                    <div className="featured_text_author_picture">
+                                        <img src={post.authorPicture.url} />
+                                    </div>
+                                    <div className="featured_text_author_posted">
+                                        Posted By
+                                        <div className="featured_text_author_posted_name">
+                                            {post.author}
+                                        </div>
+                                    </div>   
                                 </div>
-                                {post.author}
+                                <div className="featured_text_likes">
+                                    <i className="fas fa-heart"></i>
+                                {post.likes}
+                                </div>
+                                <div className="featured_text_comments">
+                                    <i className="fas fa-comment"></i>
+                                {post.comments.length}
+                                </div>
                             </div>
-                            <div className="featured_text_likes">Likes: {post.likes}</div>
                         </div>
                     </div>)}
                 </div>

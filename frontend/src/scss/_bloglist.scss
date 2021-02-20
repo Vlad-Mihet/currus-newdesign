@@ -1,6 +1,7 @@
 .blogpage {
-    width: 90%;
-    margin: 0 auto;
+    
+    margin-left: 11.8%;
+    margin-right: 11.8%;
     margin-top: 60px;
     margin-bottom: 60px;
 
@@ -9,7 +10,7 @@
         grid-template-columns: 2.0836fr 1fr;
         column-gap: 25px;
         font-size: 8px;
-        font-family: Open Sans;
+        font-family: Poppins;
         font-style: normal;
         font-weight: bold;
         line-height: 20px;
@@ -49,13 +50,19 @@
                 align-items: center;
 
                 img {
-                    width: 30px;
-                    height: 30px;
+                    width: 50px;
+                    height: 50px;
                     object-fit: cover;
                 }
 
                 &_text {
                     padding: 5px;
+
+                    &_bottom {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
 
                     &_title {
                         font-family: Open Sans;
@@ -64,6 +71,7 @@
                         font-size: 14px;
                         line-height: 15px;
                         color: #393636;
+
                         
                     }
 
@@ -74,6 +82,75 @@
                         line-height: 19px;
                         color: rgba(57, 54, 54, 0.8);
                         opacity: 0.7;
+                    }
+
+                    &_body {
+                        font-family: Open Sans;
+                        font-style: normal;
+
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 187.6%;
+                        color: rgba(57, 54, 54, 0.8);
+                    }
+
+                    &_author {
+                        display: flex;
+                        align-items: center;
+
+                        &_picture {
+                            img {
+                                border-radius: 100%;
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+
+                        font-family: Open Sans;
+                        font-style: normal;
+
+                        font-weight: normal;
+                        font-size: 14px;
+                        color: #393636;
+                        
+                        &_posted {
+                            color: #E7161B;
+                            font-family: Open Sans;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 11px;
+                            letter-spacing: 0.09em;
+                            line-height: 187.6%;
+                            margin-left: 15px;
+
+                            &_name {
+                                color: #393636;
+
+                                font-family: Open Sans;
+                            }
+                        }
+                    }
+
+                    &_likes {
+                        font-family: Open Sans;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        color: rgba(57, 54, 54, 0.8);
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &_comments {
+                        font-family: Open Sans;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        color: rgba(57, 54, 54, 0.8);
+                        i {
+                            margin-right: 10px;
+                        }
                     }
                 }
             }
@@ -122,6 +199,7 @@
                         font-size: 18px;
                         line-height: 142.6%;
                         color: #393636;
+                        
                     
                     }
 
@@ -140,6 +218,8 @@
                         &_picture {
                             img {
                                 border-radius: 100%;
+                                width: 30px;
+                                height: 30px;
                             }
                         }
                         
@@ -208,7 +288,14 @@
                 width: 100%;
                 height: 100%;
                 font-size: 100%;
-                background: linear-gradient(180deg, rgba(0,0,0,0) 37.5%, rgba(0, 0, 0, 0.55) 100%);
+                background: linear-gradient(180deg, rgba(0,0,0,0) 37.5%, rgba(0, 0, 0, 0.55) 100%);       
+
+                &_text {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                    width: 70%;
+                }
 
                 .blogpage_box_theme {
                     background: #E7161B;
@@ -217,6 +304,7 @@
                     display: inline;
                     padding: 4px;
                     font-size: 12px;
+                    box-sizing: border-box;
 
                     font-family: Open Sans;
                     font-style: normal;
@@ -227,34 +315,52 @@
             
                 }
 
+                .blogpage_box_flex {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
                 .blogpage_box_title {
-                    font-family: Open Sans;
+                    font-family: Poppins;
                     font-style: normal;
-                    font-weight: 500;
-                    font-size: 0.7em;
+                    font-weight: 600;
+                    font-size: 26px;
                     color: #FFFFFF;
+                     margin-top: 15px;
+                    
 
                 }
 
                 .blogpage_box_author {
                     color: #FFFFFF;
-                    font-family: Open Sans;
+                    font-family: Hind;
                     font-style: normal;
-                    font-size: 0.6em;
-                    line-height: 150%;
+                    font-size: 14px;
                 }
 
                 .blogpage_box_date {
                     color: #FFFFFF;
-                    font-family: Open Sans;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-size: 0.5em;
+                    font-family: Hind;
+                    font-size: 14px;
+                    opacity: 0.7;
                 }
 
                 .blogpage_box_likes {
                     color: #FFFFFF;
-                    font-size: 0.5em;
+                    font-family: Hind;
+                    font-size: 14px;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+
+                .blogpage_box_comments {
+                    color: #FFFFFF;
+                    font-family: Hind;
+                    font-size: 14px;
+                    i {
+                        margin-right: 10px;
+                    }
                 }
             }
         }

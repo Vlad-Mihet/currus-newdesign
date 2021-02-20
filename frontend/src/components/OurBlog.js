@@ -76,9 +76,12 @@ const OurBlog = () => {
                     url
                 }
                 likes
+                comments
+  
       
 
             }
+
         }
     }
     `
@@ -120,7 +123,7 @@ const OurBlog = () => {
 
             <div id="first">
                 <div className="featured">
-                    {posts && posts.slice(0,3).map(post => <div className="featured_post">
+                    {posts && posts.slice(0,3).map(post => <div key={post.id} className="featured_post">
                         <div className="featured_img">
                             <img src={post.picture.url} />
                         </div>
@@ -130,24 +133,26 @@ const OurBlog = () => {
                             <div className="featured_text_date">{post.date.split("T")[0]}</div>
                             <div className="featured_text_title">{post.title}</div>
                             <div className="featured_text_body">{post.body}</div>
-                            <div className="featured_text_author">
-                                <div className="featured_text_author_picture">
-                                    <img src={post.authorPicture.url} />
-                                </div>
-                                <div className="featured_text_author_posted">
-                                    Posted By
-                                    <div className="featured_text_author_posted_name">
-                                        {post.author}
+                            <div className="featured_text_bottom">
+                                <div className="featured_text_author">
+                                    <div className="featured_text_author_picture">
+                                        <img src={post.authorPicture.url} />
                                     </div>
-                                </div>   
-                            </div>
-                            <div className="featured_text_likes">
-                                <i className="fas fa-heart"></i>
-                            {post.likes}
-                            </div>
-                            <div className="featured_text_comments">
-                                <i className="fas fa-comment"></i>
-                               
+                                    <div className="featured_text_author_posted">
+                                        Posted By
+                                        <div className="featured_text_author_posted_name">
+                                            {post.author}
+                                        </div>
+                                    </div>   
+                                </div>
+                                <div className="featured_text_likes">
+                                    <i className="fas fa-heart"></i>
+                                {post.likes}
+                                </div>
+                                <div className="featured_text_comments">
+                                    <i className="fas fa-comment"></i>
+                                {post.comments.length}
+                                </div>
                             </div>
                         </div>
                     </div>)}
