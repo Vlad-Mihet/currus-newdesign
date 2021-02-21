@@ -16,7 +16,26 @@
     grid-template-columns: 1fr 4fr;
 
     .shop_leftfilter {
+      h5 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #393636;
+      }
+      ul {
+        list-style: none;
+        font-family: Hind;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(57, 54, 54, 0.8);
+        margin-left: 0px;
+        padding-left: 0px;
 
+
+      }
     }
 
 
@@ -150,10 +169,11 @@
     justify-content: space-between;
   .cartshare {
     display: flex;
+    justify-content: space-around;
     background: #E7161B;
     padding: 3px;
     padding-left: 15px;
-    width: 30%;
+    width: 50%;
 
     font-family: Open Sans;
     font-style: normal;

@@ -28,16 +28,38 @@ export const detailsProduct = (productId) => async (dispatch) => {
 }
 
 // add power, color 
-export const filterProducts = (products, category, low, high) => (dispatch) => {
+export const filterProducts = (products, category, low, high, speed, power, color) => (dispatch) => {
     if (low === null || low === undefined || low === "" ) { low = 0 }
     if (high === null || high === undefined || high === "" ) { high = 1000000 }
     if (category === null || category === undefined || category === '') { category = "" }
+    if (speed === null || speed === undefined || speed === '') { speed = "" }
+    if (power === null || power === undefined || power === '') { power = "" }
+    if (color === null || color === undefined || color === '') { color = "" }
     dispatch({
         type: FILTER_PRODUCTS_BY_SIZE,
         payload: {
             products: products,
-            filteredProducts: category === '' ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high)) :
-                                                products.filter(product => (product.category === category) && (product.priceUSD > low) && (product.priceUSD < high))
+            filteredProducts: (category !== '' && speed === '' && power === '' && color === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.category === category)) : 
+                            (speed !== '' && category === '' && power === '' && color === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.speed <= speed)) : 
+                            (power !== '' && speed === '' && category === '' && color === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.power <= power)) : 
+                            (color !== '' && speed === '' && power === '' && category === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.color === color)) : 
+
+                            (category !== '' && speed !== '' && power === '' && color === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.category === category) && (product.speed <= speed)) : 
+                            (category !== '' && power !== '' && speed === '' && color === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.category === category) && (product.power <= power)) : 
+                            (category !== '' && color !== '' && power === '' && speed === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.category === category) && (product.color === color)) : 
+                            (speed !== '' && power !== '' && color === '' && category === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.speed <= speed) && (product.power <= power)) : 
+                            (speed !== '' && color !== '' && power === '' && category === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.speed <= speed) && (product.color === color)) : 
+                            (power !== '' && color !== '' && speed === '' && category === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.power <= power) && (product.color === color)) : 
+
+                            (category !== '' && speed !== '' && power !== '' && color === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.category === category) && (product.speed <= speed) && (product.power <= power)) : 
+                            (category !== '' && speed !== '' && color !== '' && power === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.category === category) && (product.speed <= speed) && (product.color === color)) : 
+                            (category !== '' && power !== '' && color !== '' && speed === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.category === category) && (product.power <= power) && (product.color === color)) : 
+                            (speed !== '' && power !== '' && color !== '' && category === '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.color === color) && (product.speed <= speed) && (product.power <= power)) : 
+                            (category !== '' && speed !== '' && power !== '' && color !== '') ? products.filter(product => (product.priceUSD > low) && (product.priceUSD < high) && (product.category === category) && (product.speed <= speed) && (product.power <= power) && (product.color === color)) : 
+                                                                                                products.filter(product => (product.priceUSD > low) && (product.priceUSD < high))
+
+
+
         }
         
     })

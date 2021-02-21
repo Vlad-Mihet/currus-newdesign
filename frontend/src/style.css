@@ -256,7 +256,7 @@ header .bar .currency {
   margin: 0 auto;
 }
 header .bar .free-shipping-from {
-  left: 35%;
+  left: 40%;
   position: absolute;
   margin: 3px;
   font-family: "Lato";
@@ -1188,6 +1188,7 @@ aside.sidecartclosed {
 .slick-slider .slick-dots {
   bottom: 13px;
   left: 29%;
+  width: 10%;
 }
 .slick-slider .slick-dots .slick-active button:before {
   color: #E7161B;
@@ -1302,6 +1303,24 @@ aside.sidecartclosed {
   margin-top: 60px;
   display: grid;
   grid-template-columns: 1fr 4fr;
+}
+.shoppage #wrapper .shop_leftfilter h5 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #393636;
+}
+.shoppage #wrapper .shop_leftfilter ul {
+  list-style: none;
+  font-family: Hind;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(57, 54, 54, 0.8);
+  margin-left: 0px;
+  padding-left: 0px;
 }
 @media (max-width: 768px) {
   .shoppage #wrapper {
@@ -1426,10 +1445,11 @@ aside.sidecartclosed {
 }
 .product_listview .button_detail .cartshare {
   display: flex;
+  justify-content: space-around;
   background: #E7161B;
   padding: 3px;
   padding-left: 15px;
-  width: 30%;
+  width: 50%;
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -2232,7 +2252,6 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .dealer_form_wrapper {
   background: white;
   width: 80%;
-  margin: 0 auto;
   padding-left: 20px;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -3612,8 +3631,8 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 }
 
 .blog_page {
-  width: 90%;
-  margin: 0 auto;
+  margin-left: 11.8%;
+  margin-right: 11.8%;
   margin-top: 50px;
   margin-bottom: 50px;
 }
@@ -3819,6 +3838,13 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   box-sizing: border-box;
   border-radius: 7px;
   padding: 20px;
+}
+.faqpage_questions p {
+  font-family: Hind;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgba(57, 54, 54, 0.8);
 }
 .faqpage_questions_circle {
   background: rgba(231, 22, 27, 0.1);

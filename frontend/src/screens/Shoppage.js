@@ -43,11 +43,11 @@ const Shoppage = (props) => {
     useEffect(() => {
 
         if(products) {
-        dispatch(filterProducts(products, def, low, high))
+        dispatch(filterProducts(products, def, low, high, speed, power, color))
         }
 
 
-    }, [def, low, high])
+    }, [def, low, high, speed, power, color])
 
     useEffect(() => {
         setDisplayedProducts(filteredProducts ? filteredProducts : products)

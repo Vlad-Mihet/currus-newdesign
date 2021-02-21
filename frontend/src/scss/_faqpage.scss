@@ -13,13 +13,21 @@
       width: 80%;
       height: 80%;
       }
-  }
+    }
 
         &_questions {
           margin-left: 11.8%;
           margin-right: 11.8%;
           margin-bottom: 30px;
 
+          p {
+            font-family: Hind;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: rgba(57, 54, 54, 0.8);
+          }
+          
             &_circle {
                 background: rgba(231, 22, 27, 0.1);
                 border-radius: 100%;
