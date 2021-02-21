@@ -85,12 +85,20 @@
             text-align: center;
             background: #FFFFFF;
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.16);
+            box-sizing: border-box;
+
+            .return_form {
+                box-sizing: border-box;
+
+            }
 
             input {
                 background: #F5F5FA;
                 border: none;
                 border-radius: 2px;
                 margin-bottom: 3px;
+                padding: 10px;
+                margin: 5px;
             }
 
             h1 {
@@ -108,12 +116,19 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 column-gap: 5px;
+
+                @media (max-width: 900px) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             .two_row {
                 display: grid;
                 grid-template-columns: 1fr 1fr; 
                 column-gap: 5px;
+                @media (max-width: 900px) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             .four_row {
@@ -121,6 +136,9 @@
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 column-gap: 5px;
                 width: 100%;
+                @media (max-width: 900px) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             #message {

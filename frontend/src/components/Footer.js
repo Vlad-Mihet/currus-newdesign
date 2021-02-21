@@ -74,7 +74,7 @@ const Footer = () => {
               Subscribe to the weekly newsletter for all the latest updates
             </div>
             { !sub ? (
-            <div style={{display: 'flex'}}>
+            <div style={{display: 'flex', marginTop: '60px'}}>
             <input onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email"></input>
             <button onClick={subscribeHandler}>SUBSCRIBE NOW</button>
             </div> ) : <h1>Thank you for subscribing. </h1>

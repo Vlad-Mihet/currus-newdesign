@@ -45,11 +45,11 @@ const Bloglistpage = (props) => {
     }
 
     useEffect(() => {
-        window.fetch(`https://graphql.contentful.com/content/v1/spaces/xotd7hfzkl7y/`, {
+        window.fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE}/`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: "Bearer 8KtFtte2PR8gF1OFvIKxx5D7lDSBw59spjTurlbh1k0",
+                Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL}`,
             },
             body: JSON.stringify({ query }),
         }).then((response) => response.json())

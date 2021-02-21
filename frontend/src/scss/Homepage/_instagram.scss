@@ -1,6 +1,7 @@
 .instagram {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 100px 100px;
 
   img {
       object-fit: cover;

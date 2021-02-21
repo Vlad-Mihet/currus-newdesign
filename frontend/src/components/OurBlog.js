@@ -30,7 +30,7 @@ const OurBlog = () => {
         return (
             <div
             className={className}
-            style={{ ...style, display: "block", background: "#393636", fontFamily: "none" }}
+            style={{ ...style, display: "flex", background: "#393636", fontFamily: "none" }}
             onClick={onClick} />
         );
     }
@@ -40,7 +40,7 @@ const OurBlog = () => {
         return (
             <div
             className={className}
-            style={{ ...style, display: "block", background: "#393636" }}
+            style={{ ...style, display: "flex", background: "#393636" }}
             onClick={onClick} />
         );
     }
@@ -170,7 +170,7 @@ const OurBlog = () => {
                                 what more you can expect from an e-scooter. Also, it easily folds, so I can carry it where it's not possible
                                 to ride. It's a complete power package. I am glad that my parents got me Currus NF for my birthday
                                 last month.
-                                <br/><br/>
+                                <br/>
                                 <span>L. JOSEPH (USA) </span>
                             </p>
                         </div>

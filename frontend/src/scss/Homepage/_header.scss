@@ -15,7 +15,7 @@ header {
         .currency {
             left: 11.8%;
             position: absolute;
-            width: 100%;
+           
             margin: 0 auto;
         }
 
@@ -23,7 +23,7 @@ header {
         .free-shipping-from {
             left: 35%;
             position: absolute;
-            width: 100%;
+           
             margin: 3px;
             
             font-family: $fontPrimary;
@@ -40,8 +40,8 @@ header {
 
         .social-icons {
             position: absolute;
-            left: 78.9%;
-            width: 100%;
+            right: 11.8%;
+           
             margin: -2px;
            svg {
                margin: 1px;
@@ -124,7 +124,7 @@ header {
         .login_cart {
            display: flex;
            flex-direction: row;
-           margin: 15px;
+           
            align-items: center;
 
            position: absolute;

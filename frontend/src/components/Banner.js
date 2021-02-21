@@ -7,14 +7,15 @@ const Banner = () => {
 
     const indicatorStyles = {
         background: '#fff',
-        width: 18,
-        height: 18,
+        width: 13,
+        height: 13,
         display: 'block', 
         top: '50px',
       
         left: '90%',
         
-        margin: '10px 8px'
+        margin: '10px 8px',
+        borderRadius: '100%'
     }
 
     const arrowStyles = {
@@ -23,7 +24,10 @@ const Banner = () => {
         top: 'calc(50% - 15px)',
         width: 30,
         height: 30,  
-        cursor: 'pointer'
+        cursor: 'pointer',
+        border: 'none',
+        background: 'none'
+
     }
 
     return (
@@ -32,14 +36,14 @@ const Banner = () => {
             <Carousel axis="vertical" showThumbs={false}
             renderArrowPrev={(onClickHandler, hasPrev, label) => (
                 <button type="button" onClick={onClickHandler} title={label} 
-                style={{ ...arrowStyles, left: '90%', top: '30%' }}>
-                    -
+                style={{ ...arrowStyles, left: '90%', top: '40%' }}>
+                    &#8963;
                 </button>
             )}
             renderArrowNext={(onClickHandler, hasNext, label) => (
                 <button type="button" onClick={onClickHandler} title={label}
-                style={{ ...arrowStyles, left: '90%', top: '80%' }}>
-                    +
+                style={{ ...arrowStyles, left: '90%', top: '70%' }}>
+                    &#8964;
                 </button>
             )}
             renderIndicator={(onClickHandler, isSelected, index, label) => {
@@ -51,7 +55,7 @@ const Banner = () => {
                     )
                 }
                 return (
-                    <li style={indicatorStyles}
+                    <li style={{...indicatorStyles, background: '#393636' }}
                         onClick={onClickHandler}
                         onKeyDown={onClickHandler}
                         value={index}
@@ -105,11 +109,15 @@ const Banner = () => {
                         </div>
                     </div>
                     <div id="text-banner__button">   
-                        <div id="shop_now_circle">→</div>
+                    <Link style={{ color: 'black', textDecoration: 'none' }} to='/shop'>
+                        <div id="shop_now_circle">
+                            <i className="fas fa-arrow-right"></i>
+                        </div>
 
                         <div id="buy_now">
-                            <Link style={{ color: 'black', textDecoration: 'none' }} to='/shop'>Shop Now</Link>
+                            Shop Now
                         </div>
+                    </Link>
                     </div>
                 </div>
 

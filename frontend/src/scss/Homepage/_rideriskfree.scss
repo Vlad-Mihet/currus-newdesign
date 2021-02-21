@@ -5,7 +5,11 @@
     column-gap: 50px;
     margin-left: 6%;
     margin-right: 6%;
+    box-sizing: border-box;
 
+    @media (max-width: 900px) {
+        display: block;
+    }
    
  
     position: relative;

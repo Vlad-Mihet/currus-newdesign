@@ -16,23 +16,25 @@
 
 
     #text-banner__button {
+      a {
       display: grid;
       grid-template-columns: 1fr 5fr;
       align-items: center;
+      }
 
       #buy_now {
-        a {
+        
           font-family: Hind;
           font-style: normal;
           font-weight: 500;
           font-size: 18px;
           color: #393636;
-        }
+        
       }
 
       #shop_now_circle {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
         background: #e7161b;
         border-radius: 100%;
         color: white;
@@ -56,6 +58,10 @@
         font-family: Poppins;
         font-style: normal;
         font-weight: 500;
+
+        i {
+          color: #D0D0D0;
+        }
 
         &_text {
           margin-left: 10px;

@@ -11,12 +11,15 @@ function Category(props) {
                     <div className="category_title">
                         e-SCOOTERS
                     </div>
+                    <br />
                     <div className="category_description">
                         Nulla id quarm varius
                         Nulla id quarm varius
                         Nulla id quarm varius
                         Nulla id quarm varius
                     </div>
+                    <br />
+                    <br />
                     <div className="category_flex">
                         <div className="category_circle">
                             <i className="fas fa-arrow-right"></i>
@@ -37,12 +40,15 @@ function Category(props) {
                     <div className="category_title">
                         Accessories
                     </div>
+                    <br />
                     <div className="category_description">
                         Nulla id quarm varius
                         Nulla id quarm varius
                         Nulla id quarm varius
                         Nulla id quarm varius
                     </div>
+                    <br />
+                    <br />
                     <div className="category_flex">
                         <div className="category_circle">
                             <i className="fas fa-arrow-right"></i>

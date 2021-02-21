@@ -162,6 +162,10 @@
             grid-template-columns: 1fr 1fr;
             column-gap: 25px;
 
+            @media (max-width: 900px) {
+                display: block;
+            }
+
             .featured_post {
 
                 display: grid;
@@ -258,6 +262,13 @@
         column-gap: 25px;
         row-gap: 25px;
 
+        @media (max-width: 900px) {
+            display: block;
+            div {
+                margin-bottom: 20px;
+            }
+        }
+
 
         .blogpage_box {
             position: relative;
@@ -292,7 +303,7 @@
 
                 &_text {
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 0px;
                     left: 20px;
                     width: 70%;
                 }
