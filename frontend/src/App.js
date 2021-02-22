@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 
 
 import Homepage from './screens/Homepage'
@@ -40,6 +41,9 @@ function App() {
     const [hamburger, setHamburger] = useState(false)
     const [sidecart, setSidecart] = useState(false)
 
+    const cart = useSelector(state => state.cart)
+    const { cartItems, totalPrice, shippingPrice, subtotal, afterCouponPrice } = cart
+
   return (
   
     <BrowserRouter>
@@ -47,9 +51,31 @@ function App() {
       <div className="grid-container">
         <Header sidecart={sidecart} setSidecart={setSidecart} hamburger={hamburger} setHamburger={setHamburger} />
         <aside className={sidecart? 'sidecart sidecartopen': 'sidecart sidecartclosed'}>
-          <button>
-                <Icon onClick={() => setSidecart(false)} icon={closeIcon} style={{color: '#393636', fontSize: '24px'}} />      
+          <button className="sidecart_xbutton">
+                <Icon onClick={() => setSidecart(false)} icon={closeIcon} style={{color: '#393636', fontSize: '24px'}} /> 
           </button>
+          <div className="subtotal">
+                <h1>Product</h1>
+                    <ul>
+                        {cartItems.map(item => (
+                        <li key={item.id}>
+                            <img src={item.image}></img>
+                            <div>{item.name}</div>
+                            &nbsp;
+                            <div>Qty: {item.qty}</div>
+                            &nbsp;
+                            <div> ${item.priceUSD}</div>
+                        </li>
+                    ))}
+                    </ul>     
+          </div>
+          <div className="viewcart_checkout">
+              <Link to={'/cart'}>
+                 <button onClick={() => setSidecart(!sidecart)}>VIEW CART</button>
+              </Link>
+              
+          </div>
+          
         </aside>
         <aside id="hamburgermenu" className={hamburger? 'hamburger hamburgeropen': 'hamburger hamburgerclosed' }>
           <div id="xparent">
@@ -68,7 +94,7 @@ function App() {
                       <li><Link to="/faq">FAQ</Link></li>
                       <li><Link to="/dealer">Dealers</Link></li>
                       <li><Link to="/contactus">Contact Us</Link></li>
-                      <li><Link to="/order">Order Tracking</Link></li>
+                      {/* <li><Link to="/order">Order Tracking</Link></li> */}
                     </ul>
                   </nav>
                       <Link id="login" to="/login">

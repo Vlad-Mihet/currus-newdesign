@@ -66,7 +66,10 @@ header {
 
             @media (max-width: 1250px) {
                 left: 36%;
+            }
 
+            @media (max-width: 500px) {
+                left: 32%;
             }
 
             img {
@@ -137,6 +140,9 @@ header {
            line-height: 16px;
            text-transform: uppercase;
 
+        
+
+
            #login {
             @media (max-width: 350px) {
                 display: none;
@@ -173,6 +179,9 @@ header {
                 top: 1px;
                 left: 3px;
               }
+
+              padding: 0px;
+              margin: 0px;
            }
 
            @media (max-width: 1250px) {
@@ -199,6 +208,7 @@ aside.hamburger {
     width: 288px;
     position: fixed;
     height: 100%;
+    top: 0px;
     
     z-index: 100;
     background-color: #FFFFFF;
@@ -225,6 +235,37 @@ aside.sidecart {
     position: fixed;
     right: 0px;
     height: 100%;
+    top: 0px;
+
+    .subtotal {
+                ul {
+                list-style: none;
+                margin-left: 0px;
+                padding-left: 0px;
+                li {
+                    display: flex;
+                    font-family: Open Sans;
+                    font-style: normal;
+
+                    font-weight: normal;
+                    font-size: 14px;
+                    color: #393636;
+                    img {
+                        width: 75px;
+                        height: 75px;
+                        object-fit: cover;
+                    }
+                }
+            }
+    }
+
+    .sidecart_xbutton {
+        border: none;
+        background: none;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
    
     z-index: 100;
     transform: translateX(1288px);
@@ -265,12 +306,13 @@ aside.sidecartclosed {
 
         img {
             padding: 5px;
-            border-bottom: 1px solid red;
+            
             width: 80%;
+            padding-left: 50px;
         }
 
         #login {
-            width: 95%;
+           
             
             text-decoration: none;
             background: #E7161B;

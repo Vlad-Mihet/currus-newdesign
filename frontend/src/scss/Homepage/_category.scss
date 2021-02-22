@@ -1,116 +1,137 @@
 .category_page {
-    
-  
-   
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+
+
+  .category_flex {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+
+    @media (max-width: 900px) {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    .category_circle {
+      width: 40px;
+      height: 40px;
+
+      @media (max-width: 900px) {
+          width: 20px;
+          height: 20px;
+      }
+    }
+
+    .category_shopnow {
+      font-family: Hind;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      color: #393636;
+      margin-left: 15px;
+    }
+  }
+
+  .category_title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    color: #393636;
+
+
+  }
+
+
+
+  .category_circle {
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: #e7161b;
+    color: white;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    align-items: center;
+  }
+
+  .category_description {
+    font-family: Hind;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(57, 54, 54, 0.8);
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
 
 
-    .category_flex {
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        align-items: center;
+  }
 
-        .category_circle {
-            width: 40px;
-            height: 40px;
-        }
+  #section_one {
+    background: url(img/category.png);
+    background-size: 100% 100%;
+  }
 
-        .category_shopnow {
-            font-family: Hind;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            color: #393636;
-            margin-left: 15px;
-        }
+  #section_two {
+    background: url(img/category.png);
+    background-size: 100% 100%;
+  }
 
+  section {
+    @media (max-width: 1000px) {
+      width: 25%;
+    }
 
-        
+    width: 36.46%;
+
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    img {
+      max-width: 95%;
+      object-fit: cover;
+      max-height: 95%;
+      height: 95%;
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    section {
+     
+      width: 43.75%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    section {
+      width: 80%;
+      margin: 30px auto;
     }
 
     .category_title {
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 28px;
-        color: #393636;
+        font-weight: 300;
+        font-size: 14px;
+
     }
-
-
-    .category_circle {
-        border-radius: 100%;
-        width: 20px;
-        height: 20px;
-        background-color: #E7161B;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .category_description {
-        font-family: Hind;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        color: rgba(57, 54, 54, 0.8);
-    }
-
-        #section_one {
-        background: url(img/category.png);
-        background-size: 100% 100%;
-        }
-
-        #section_two {
-        background: url(img/category.png);
-        background-size: 100% 100%;
-        }
-
-    section {
-        @media (max-width: 1000px) {
-            width: 25%;
-        }
-
-        width: 36.46%;
-     
-        margin-left: 25px;
-        margin-right: 25px;
-        padding: 25px;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        img {
-            max-width: 95%;
-            object-fit: cover;
-            max-height: 95%;
-            height: 95%;
-            width: 95%;
-        }
-    }
-
-    @media (max-width: 800px) {
-        margin-top: 60px;
-        margin-bottom: 60px;
-
-        section {
-            height: 100px;
-            width: 43.75%;
-        }
-    }
-
-    @media (max-width: 700px) {
-        display: block;
-        margin-top: 30px;
-        margin-bottom: 30px;
-
-        section {
-            width: 80%;
-            margin: 30px auto;
-        }
-    }
+  }
 }

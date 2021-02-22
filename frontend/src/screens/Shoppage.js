@@ -117,6 +117,7 @@ const Shoppage = (props) => {
                     setHigh(arr[1]);
                 }}/>
                   </div>
+                <LeftFilter speed={speed} setSpeed={setSpeed} power={power} setPower={setPower} color={color} setColor={setColor} />
 
               </div>
         </aside>
