@@ -17,6 +17,10 @@
       font-weight: 600;
       font-size: 36px;
       color: #393636;
+
+      @media (max-width: 600px) {
+        font-size: 20px;
+      }
     }
 
     a {

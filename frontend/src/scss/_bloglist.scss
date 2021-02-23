@@ -306,6 +306,10 @@
                     bottom: 0px;
                     left: 20px;
                     width: 70%;
+
+                    @media (max-width: 500px) {
+                        margin-bottom: 0px;
+                    }
                 }
 
                 .blogpage_box_theme {
@@ -329,6 +333,11 @@
                 .blogpage_box_flex {
                     display: flex;
                     justify-content: space-between;
+
+                    @media (max-width: 500px) {
+                        margin-bottom: 0px;
+
+                    }
                 }
 
                 .blogpage_box_title {
@@ -338,6 +347,10 @@
                     font-size: 26px;
                     color: #FFFFFF;
                      margin-top: 15px;
+
+                     @media (max-width: 500px) {
+                         margin: 0px;
+                     }
                     
 
                 }

@@ -58,8 +58,8 @@ const Header = ({ hamburger, setHamburger, sidecart, setSidecart }) => {
 
             <div className="menu">
                     <div id="hamburger">
-                      <button style={{ background: 'None', border: 'None', padding: 'None' }} onClick={() => setHamburger(true)}>
-                        <Icon icon={bxMenuAltLeft} style={{color: '#393636', fontSize: '24px'}} />
+                      <button style={{ background: 'None', border: 'None', padding: '0px', margin: '0px' }} onClick={() => setHamburger(true)}>
+                        <Icon icon={bxMenuAltLeft} style={{color: '#393636', fontSize: '24px', padding: '0px', margin: '0px' }} />
                       </button>
                     </div>
                   
@@ -69,7 +69,14 @@ const Header = ({ hamburger, setHamburger, sidecart, setSidecart }) => {
               
                   <nav id="menu_nav">
                     <ul>
-                      <li><Link to="/shop">Shop</Link></li>
+                      <li>
+                      <Link to="/shop">
+                        Shop
+                      <ul style={{ display: 'None' }}>
+                        <li>E-scooters</li>
+                        <li>Accessories</li>
+                      </ul>
+                      </Link></li>
                       <li><Link to="/aboutus">About Us</Link></li>
                       <li><Link to="/blog">Blog</Link></li>
                       <li><Link to="/dealer">Dealers</Link></li>

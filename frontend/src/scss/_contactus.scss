@@ -7,8 +7,16 @@
         
     }
 
+    .dealer_form {
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+    }
+
     #wearehere_form {
         grid-template-columns: 1fr 1fr;
+
+        
 
         @media (max-width: 900px) {
             grid-template-columns: 1fr;
@@ -33,10 +41,26 @@
     .contact_icons {
         margin-top: 50px;
         padding-bottom: 50px;
+        display: flex;
+        justify-content: space-around;
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     .contact_icons_box {
         display: flex;
+
+
+        @media (max-width: 800px) {
+            width: 100%;
+            align-items: space-between;
+            margin-left: 30%;
+        }
     }
 
     .contact_icons_box_circle {
@@ -51,10 +75,6 @@
         color: #E7161B;
     }
 
-    .contact_icons {
-        display: flex;
-        justify-content: space-around;
-    }
 
     .contact_icons_top {
         color: #393636;
@@ -70,6 +90,10 @@
     #wrapper_weare {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 800px) {
+       grid-template-columns: 1fr;
+    }
    
    
     margin-left: 13%;
@@ -86,6 +110,10 @@
                 overflow: none;
 
             }
+
+    @media (max-width: 800px) {
+     display: none;  
+    }
         }
 
         #wearehere_right {

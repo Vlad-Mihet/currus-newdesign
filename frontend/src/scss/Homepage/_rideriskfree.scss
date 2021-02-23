@@ -9,7 +9,7 @@
 
     @media (max-width: 900px) {
         display: block;
-        margin-left: 0.1%;
+        margin-left: 6%;
     }
    
  
@@ -44,6 +44,11 @@
             color: #FFFFFF;
             text-align: center;
             padding-top: 20px;
+
+            @media (max-width: 500px) {
+                padding-top: 0px;
+                font-size: 30px;
+            }
             
         }
 
@@ -60,6 +65,14 @@
     &_rightbox {
 
         margin-right: 50px;
+
+        @media (max-width: 400px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 0px;
+        }
 
         section {
             display: grid;

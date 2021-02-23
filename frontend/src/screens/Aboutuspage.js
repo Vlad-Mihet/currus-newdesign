@@ -9,7 +9,7 @@ const Aboutuspage = (props) => {
         <Breadcrumbs title={`${props.location.pathname}`} />
         <div id="aboutus">
             <div id="aboutus_welcome">
-                <div style={{ marginLeft: '22%', padding: "10px" }}>
+                <div id="aboutus_welcome_text">
                     <h4>WELCOME TO CURRUS</h4>
                     <h1>About Us</h1>
                     <p>
@@ -29,10 +29,10 @@ thus leaving no carbon footprint!
                 <div>
                     <img src="images/26de61983a.jpeg" />
                 </div>
-                <div>
-                    <img style={{width: '90%' }} src="images/sidered.png" />
+                <div id="aboutus_welcome_third">
+                    <img src="images/sidered.png" />
                 </div>
-                <div style={{marginRight: '22%' }}>
+                <div id="aboutus_welcome_fourth">
                     <p>
                         <b>
                             They feature a sleek design – creativity is core to our brand – and can be 

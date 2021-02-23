@@ -42,8 +42,8 @@
     }
 
     #warranty_box {
-            margin-left: 220px;
-            margin-right: 220px;
+            margin-left: 15.28%;
+            margin-right: 15.28%;
             padding: 25px 20px;
 
             text-align: center;
@@ -69,6 +69,8 @@
         }
 
         #warranty_form {
+
+            width: 100%;
             
             button {         
                 margin: 0 auto;
@@ -83,25 +85,36 @@
                 color: #FFFFFF;
             }
 
-            grid-template-columns: 5px;
+          
 
             input {
                 padding: 5px;
                 background: #F5F5FA;
                 border: none;
                 margin-bottom: 10px;
+                width: 100%;
             }
 
             .three_row {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 column-gap: 5px;
+                width: 100%;
+
+                @media (max-width: 700px) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             .two_row {
                 display: grid;
                 grid-template-columns: 1fr 1fr; 
                 column-gap: 5px;
+                width: 100%;
+
+                @media (max-width: 700px) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             .four_row {
@@ -109,6 +122,10 @@
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 column-gap: 5px;
                 width: 100%;
+
+                @media (max-width: 700px) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             .one_row {

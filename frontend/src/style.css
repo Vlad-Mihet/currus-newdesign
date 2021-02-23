@@ -753,7 +753,7 @@ aside.sidecartclosed {
 @media (max-width: 500px) {
   .whythebest .sandbox {
     margin-left: 0;
-    margin-right: 10%;
+    margin-right: 0%;
   }
 }
 .whythebest .sandbox .wrapper {
@@ -896,7 +896,7 @@ aside.sidecartclosed {
 @media (max-width: 900px) {
   .rideriskfree {
     display: block;
-    margin-left: 0.1%;
+    margin-left: 6%;
   }
 }
 .rideriskfree_leftbox {
@@ -928,6 +928,12 @@ aside.sidecartclosed {
   text-align: center;
   padding-top: 20px;
 }
+@media (max-width: 500px) {
+  .rideriskfree_leftbox_text {
+    padding-top: 0px;
+    font-size: 30px;
+  }
+}
 .rideriskfree_leftbox img {
   margin-left: 40px;
   margin-top: 60px;
@@ -939,6 +945,15 @@ aside.sidecartclosed {
 }
 .rideriskfree_rightbox {
   margin-right: 50px;
+}
+@media (max-width: 400px) {
+  .rideriskfree_rightbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+  }
 }
 .rideriskfree_rightbox section {
   display: grid;
@@ -1142,6 +1157,11 @@ aside.sidecartclosed {
   font-weight: 600;
   font-size: 36px;
   color: #393636;
+}
+@media (max-width: 600px) {
+  .ourblog_titlerow h1 {
+    font-size: 20px;
+  }
 }
 .ourblog_titlerow a {
   border: none;
@@ -2266,6 +2286,39 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 300px 300px;
 }
+#aboutus #aboutus_welcome_text {
+  margin-left: 22%;
+  padding: 10px;
+}
+@media (max-width: 400px) {
+  #aboutus #aboutus_welcome_text {
+    margin-left: 0px;
+    padding: 0px;
+  }
+}
+#aboutus #aboutus_welcome_third img {
+  width: 90%;
+}
+@media (max-width: 400px) {
+  #aboutus #aboutus_welcome_third img {
+    width: 100%;
+  }
+}
+#aboutus #aboutus_welcome_fourth {
+  margin-right: 22%;
+}
+@media (max-width: 400px) {
+  #aboutus #aboutus_welcome_fourth {
+    margin-right: 0%;
+  }
+}
+@media (max-width: 400px) {
+  #aboutus #aboutus_welcome {
+    display: block;
+    margin-left: 11.8%;
+    margin-right: 11.8%;
+  }
+}
 #aboutus #aboutus_welcome h4 {
   font-family: Hind;
   font-style: normal;
@@ -2315,6 +2368,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+@media (max-width: 400px) {
+  #aboutus #our .principles {
+    display: block;
+  }
+}
 #aboutus #our .principles_principle {
   display: grid;
   grid-template-columns: 1fr 10fr;
@@ -2354,6 +2412,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   color: #FFFFFF;
   margin-left: 50px;
 }
+@media (max-width: 500px) {
+  #aboutus #aim_vision h3 {
+    margin: 0px;
+  }
+}
 #aboutus #aim_vision p {
   font-family: Open Sans;
   font-style: normal;
@@ -2370,6 +2433,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
     font-size: 13px;
     line-height: 20px;
     margin-top: 20px;
+  }
+}
+@media (max-width: 500px) {
+  #aboutus #aim_vision p {
+    margin-bottom: 5px;
   }
 }
 
@@ -2429,9 +2497,19 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
+@media (max-width: 800px) {
+  .dealer_form_wrapper {
+    display: block;
+  }
+}
 .dealer_form_wrapper input {
   background: #F5F5FA;
   border: none;
+}
+@media (max-width: 800px) {
+  .dealer_form_wrapper_right {
+    display: none;
+  }
 }
 .dealer_form_wrapper_right img {
   object-fit: cover;
@@ -2502,6 +2580,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   background: white;
   padding: 20px;
 }
+@media (max-width: 900px) {
+  .contactus .dealer_form {
+    width: 100%;
+  }
+}
 .contactus #wearehere_form {
   grid-template-columns: 1fr 1fr;
 }
@@ -2522,9 +2605,26 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .contactus .contact_icons {
   margin-top: 50px;
   padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 800px) {
+  .contactus .contact_icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .contactus .contact_icons_box {
   display: flex;
+}
+@media (max-width: 800px) {
+  .contactus .contact_icons_box {
+    width: 100%;
+    align-items: space-between;
+    margin-left: 30%;
+  }
 }
 .contactus .contact_icons_box_circle {
   width: 40px;
@@ -2536,10 +2636,6 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   justify-content: center;
   align-items: center;
   color: #E7161B;
-}
-.contactus .contact_icons {
-  display: flex;
-  justify-content: space-around;
 }
 .contactus .contact_icons_top {
   color: #393636;
@@ -2556,12 +2652,22 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-left: 13%;
   margin-right: 13%;
 }
+@media (max-width: 800px) {
+  .contactus #wrapper_weare {
+    grid-template-columns: 1fr;
+  }
+}
 .contactus #wrapper_weare #wearehere_right img {
   height: 100%;
   width: 100%;
   max-width: 100%;
   object-fit: cover;
   overflow: none;
+}
+@media (max-width: 800px) {
+  .contactus #wrapper_weare #wearehere_right {
+    display: none;
+  }
 }
 .contactus #wrapper_weare #wearehere_right {
   margin-top: 50px;
@@ -2832,8 +2938,8 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   color: rgba(57, 54, 54, 0.8);
 }
 .warranty #warranty_box {
-  margin-left: 220px;
-  margin-right: 220px;
+  margin-left: 15.28%;
+  margin-right: 15.28%;
   padding: 25px 20px;
   text-align: center;
   background: #FFFFFF;
@@ -2849,7 +2955,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   color: rgba(57, 54, 54, 0.8);
 }
 .warranty #warranty_form {
-  grid-template-columns: 5px;
+  width: 100%;
 }
 .warranty #warranty_form button {
   margin: 0 auto;
@@ -2868,22 +2974,40 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   background: #F5F5FA;
   border: none;
   margin-bottom: 10px;
+  width: 100%;
 }
 .warranty #warranty_form .three_row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .warranty #warranty_form .three_row {
+    grid-template-columns: 1fr;
+  }
 }
 .warranty #warranty_form .two_row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 5px;
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .warranty #warranty_form .two_row {
+    grid-template-columns: 1fr;
+  }
 }
 .warranty #warranty_form .four_row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 5px;
   width: 100%;
+}
+@media (max-width: 700px) {
+  .warranty #warranty_form .four_row {
+    grid-template-columns: 1fr;
+  }
 }
 .warranty #warranty_form .one_row {
   width: 100%;
@@ -2896,6 +3020,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   grid-template-columns: 1fr 0.7fr;
   margin-left: 11.81%;
   margin-right: 11.81%;
+}
+@media (max-width: 800px) {
+  .affiliate {
+    display: block;
+  }
 }
 .affiliate #icontext {
   padding-left: 40px;
@@ -3121,9 +3250,19 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-left: 11.81%;
   margin-right: 11.81%;
 }
+@media (max-width: 800px) {
+  .safety {
+    margin-top: 0px;
+  }
+}
 .safety_top {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
+}
+@media (max-width: 800px) {
+  .safety_top {
+    display: block;
+  }
 }
 .safety_top_left {
   padding: 15px;
@@ -3748,6 +3887,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   left: 20px;
   width: 70%;
 }
+@media (max-width: 500px) {
+  .blogpage .blogpage_gallery .blogpage_box .blogpage_box_text_text {
+    margin-bottom: 0px;
+  }
+}
 .blogpage .blogpage_gallery .blogpage_box .blogpage_box_text .blogpage_box_theme {
   background: #E7161B;
   color: #FFFFFF;
@@ -3766,6 +3910,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .blogpage .blogpage_gallery .blogpage_box .blogpage_box_text .blogpage_box_flex {
+    margin-bottom: 0px;
+  }
+}
 .blogpage .blogpage_gallery .blogpage_box .blogpage_box_text .blogpage_box_title {
   font-family: Poppins;
   font-style: normal;
@@ -3773,6 +3922,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-size: 26px;
   color: #FFFFFF;
   margin-top: 15px;
+}
+@media (max-width: 500px) {
+  .blogpage .blogpage_gallery .blogpage_box .blogpage_box_text .blogpage_box_title {
+    margin: 0px;
+  }
 }
 .blogpage .blogpage_gallery .blogpage_box .blogpage_box_text .blogpage_box_author {
   color: #FFFFFF;
@@ -3994,6 +4148,16 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-right: 11.8%;
   margin-top: 50px;
 }
+@media (max-width: 900px) {
+  .faqpage {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .faqpage_image {
+    display: none;
+  }
+}
 .faqpage_image img {
   object-fit: cover;
   max-width: 100%;
@@ -4048,6 +4212,12 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .faqpage .sandbox {
   margin: 0;
   margin-left: 17%;
+}
+@media (max-width: 900px) {
+  .faqpage .sandbox {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 }
 .faqpage .sandbox .wrapper {
   margin: 0;
@@ -4115,7 +4285,7 @@ footer #one {
   margin-right: 11.8%;
   position: relative;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   footer #one {
     flex-direction: column;
     border-bottom: none;
@@ -4153,12 +4323,12 @@ footer #one #contact_us #phone {
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   margin-top: 40px;
 }
 footer #one #contact_us #phone span {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 29px;
 }
@@ -4220,7 +4390,7 @@ footer #one a {
   text-decoration: none;
   color: #888888;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   footer #one {
     display: block;
   }
@@ -4228,6 +4398,7 @@ footer #one a {
 @media (max-width: 800px) {
   footer #one #newsletter {
     display: block;
+    margin-bottom: 20px;
   }
 }
 footer #one #newsletter #newsletter-description {
@@ -4244,7 +4415,11 @@ footer #one #newsletter .subscribenow_now {
 }
 @media (max-width: 500px) {
   footer #one #newsletter .subscribenow_now {
-    display: block;
+    display: flex;
+    margin-top: 1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 footer #one #newsletter input {
@@ -4276,6 +4451,7 @@ footer #one #newsletter button {
 @media (max-width: 800px) {
   footer #one #newsletter button {
     margin-left: 1px;
+    margin-top: 1px;
   }
 }
 footer #two {

@@ -34,6 +34,7 @@ import MessengerCustomerChat from 'react-messenger-customer-chat'
 
 import {Icon, InlineIcon } from '@iconify/react';
 import closeIcon from '@iconify/icons-carbon/close';
+import ShoppageA from './screens/ShoppageA'
 
 
 function App() {
@@ -87,17 +88,17 @@ function App() {
                   <img src="https://currus-ij.s3.ap-northeast-2.amazonaws.com/currus_logo.png" ></img>
                   <nav id="hamburger_nav">
                     <ul>
-                      <li><Link to="/">Home</Link></li>
-                      <li><Link to="/shop">Shop</Link></li>
-                      <li><Link to="/aboutus">About Us</Link></li>
-                      <li><Link to="/blog">Blog</Link></li>
-                      <li><Link to="/faq">FAQ</Link></li>
-                      <li><Link to="/dealer">Dealers</Link></li>
-                      <li><Link to="/contactus">Contact Us</Link></li>
+                      <li><Link onClick={() => setHamburger(false)} to="/">Home</Link></li>
+                      <li><Link onClick={() => setHamburger(false)} to="/shop">Shop</Link></li>
+                      <li><Link onClick={() => setHamburger(false)} to="/aboutus">About Us</Link></li>
+                      <li><Link onClick={() => setHamburger(false)} to="/blog">Blog</Link></li>
+                      <li><Link onClick={() => setHamburger(false)} to="/faq">FAQ</Link></li>
+                      <li><Link onClick={() => setHamburger(false)} to="/dealer">Dealers</Link></li>
+                      <li><Link onClick={() => setHamburger(false)} to="/contactus">Contact Us</Link></li>
                       {/* <li><Link to="/order">Order Tracking</Link></li> */}
                     </ul>
                   </nav>
-                      <Link id="login" to="/login">
+                      <Link onClick={() => setHamburger(false)} id="login" to="/login">
                       LOGIN
                     </Link>
 
@@ -107,6 +108,7 @@ function App() {
           <Switch>
             <Route path="/" component={Homepage} exact></Route>
             <Route path="/shop" component={Shoppage}></Route> 
+            <Route path="/shopa" component={ShoppageA}></Route> 
             <Route path="/product/:id" component={Productpage} exact></Route>
             <Route path="/aboutus" component={Aboutuspage}></Route>
             <Route path="/blog" component={Bloglistpage} exact></Route>

@@ -16,6 +16,42 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px 300px;
 
+    &_text {
+        margin-left: 22%;
+        padding: 10px;
+
+        @media (max-width: 400px) {
+            margin-left: 0px;
+
+            padding: 0px;
+        }
+    }
+
+    &_third {
+       
+
+        img {
+            width: 90%;
+        @media (max-width: 400px) {
+            width: 100%;
+        }
+        }
+    }
+
+    &_fourth {
+        margin-right: 22%;
+
+        @media (max-width: 400px) {
+            margin-right: 0%;
+        }
+    }
+
+    @media (max-width: 400px) {
+        display: block;
+        margin-left: 11.8%;
+        margin-right: 11.8%;
+    }
+
     h4 {
         font-family: Hind;
         font-style: normal;
@@ -60,7 +96,10 @@
         font-size: 36px;
         text-align: center;
         color: #222222;
+        
+   
     }
+
 
     h3 {
         padding: 0px;
@@ -70,6 +109,8 @@
         font-style: normal;
         font-size: 16px;
         letter-spacing: 0.01em;
+
+
     }
 
     .principles {
@@ -77,6 +118,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+
+        @media (max-width: 400px) {
+            display: block;
+        }
 
         &_principle {
             display: grid;
@@ -114,6 +159,7 @@
     img {
         width: 100%;
         height: 100%;
+        
     }
 
     h3 {
@@ -122,6 +168,10 @@
         font-size: 36px;
         color: #FFFFFF;
         margin-left: 50px;
+
+        @media (max-width: 500px) {
+            margin: 0px;
+        }
 
     }
 
@@ -142,6 +192,11 @@
             font-size: 13px;
             line-height: 20px;
             margin-top: 20px;
+        }
+
+
+        @media (max-width: 500px) {
+           margin-bottom: 5px;
         }
     }
 }
