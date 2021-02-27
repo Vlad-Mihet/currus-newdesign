@@ -1,155 +1,142 @@
 #aboutus {
-    
-    p {
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 20px;
-        color: #666666;
-        
-    }
+  p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666666;
+  }
 
-#aboutus_welcome {
-
+  #aboutus_welcome {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 300px 300px;
 
+    @media (max-width: 1000px) {
+      display: block;
+    }
+
     &_text {
-        margin-left: 22%;
-        padding: 10px;
+      margin-left: 22%;
+      padding: 10px;
 
-        @media (max-width: 400px) {
-            margin-left: 0px;
+      @media (max-width: 400px) {
+        margin-left: 0px;
 
-            padding: 0px;
-        }
+        padding: 0px;
+      }
     }
 
     &_third {
-       
-
-        img {
-            width: 90%;
+      img {
+        width: 90%;
         @media (max-width: 400px) {
-            width: 100%;
+          width: 100%;
         }
-        }
+      }
     }
 
     &_fourth {
-        margin-right: 22%;
+      margin-right: 22%;
+      margin-left: 5%;
 
-        @media (max-width: 400px) {
-            margin-right: 0%;
-        }
+      @media (max-width: 400px) {
+        margin-right: 0%;
+      }
     }
 
     @media (max-width: 400px) {
-        display: block;
-        margin-left: 11.8%;
-        margin-right: 11.8%;
+      display: block;
+      margin-left: 11.8%;
+      margin-right: 11.8%;
     }
 
     h4 {
-        font-family: Hind;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        letter-spacing: 0.07em;
-        color: #E7161B;
-        margin: 0px;
-       
+      font-family: Hind;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      letter-spacing: 0.07em;
+      color: #e7161b;
+      margin: 0px;
     }
 
     h1 {
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 40px;
-        color: #222222;
-        margin: 0px;
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      color: #222222;
+      margin: 0px;
     }
 
     img {
-        object-fit: content;
-        max-width: 100%;
-        max-height: 100%;
-        width: 100%;
+      object-fit: content;
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
     }
+  }
 
-
-
- 
-}
-
-#our {
- 
+  #our {
     margin-left: 11.8%;
     margin-right: 11.8%;
 
     h1 {
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 36px;
-        text-align: center;
-        color: #222222;
-        
-   
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      text-align: center;
+      color: #222222;
     }
 
-
     h3 {
-        padding: 0px;
-        margin: 0px;
-        font-family: Poppins;
-        color: #393636;
-        font-style: normal;
-        font-size: 16px;
-        letter-spacing: 0.01em;
-
-
+      padding: 0px;
+      margin: 0px;
+      font-family: Poppins;
+      color: #393636;
+      font-style: normal;
+      font-size: 16px;
+      letter-spacing: 0.01em;
     }
 
     .principles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
 
+      @media (max-width: 400px) {
+        display: block;
+      }
+
+      &_principle {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 10fr;
 
-        @media (max-width: 400px) {
-            display: block;
+        &_circle {
+          border-radius: 100%;
+          width: 40px;
+          height: 40px;
+          background-color: rgba(231, 22, 27, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #e7161b;
         }
-
-        &_principle {
-            display: grid;
-            grid-template-columns: 1fr 10fr;
-
-            &_circle {
-                border-radius: 100%;
-                width: 40px;
-                height: 40px;
-                background-color: rgba(231, 22, 27, 0.1);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #E7161B;
-            }
-        }
+      }
     }
-}
+  }
 
-#aim_vision {
-
+  #aim_vision {
     width: 80%;
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 40px;
 
     @media (max-width: 500px) {
-        display: block;
+      display: block;
     }
 
     display: grid;
@@ -157,47 +144,42 @@
     grid-template-rows: 1fr 1fr;
 
     img {
-        width: 100%;
-        height: 100%;
-        
+      width: 100%;
+      height: 100%;
     }
 
     h3 {
-        font-family: Poppins;
-        font-style: normal;
-        font-size: 36px;
-        color: #FFFFFF;
-        margin-left: 50px;
+      font-family: Poppins;
+      font-style: normal;
+      font-size: 36px;
+      color: #ffffff;
+      margin-left: 50px;
 
-        @media (max-width: 500px) {
-            margin: 0px;
-        }
-
+      @media (max-width: 500px) {
+        margin: 0px;
+      }
     }
-
-
 
     p {
-        font-family: Open Sans;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 25px;
-        color: white;
-        margin-left: 50px;
-        margin-top: 60px;
-        margin-right: 50px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 25px;
+      color: white;
+      margin-left: 50px;
+      margin-top: 60px;
+      margin-right: 50px;
 
-        @media (max-width: 1000px) {
-            font-size: 13px;
-            line-height: 20px;
-            margin-top: 20px;
-        }
+      @media (max-width: 1000px) {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 20px;
+      }
 
-
-        @media (max-width: 500px) {
-           margin-bottom: 5px;
-        }
+      @media (max-width: 500px) {
+        margin-bottom: 5px;
+      }
     }
-}
+  }
 }

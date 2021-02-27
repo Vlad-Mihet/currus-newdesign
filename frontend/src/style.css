@@ -596,18 +596,18 @@ aside.sidecartclosed {
   }
 }
 .category_page #section_one {
-  background: url(img/category.png);
+  background: url(img/categories.png);
   background-size: 100% 100%;
 }
 .category_page #section_two {
-  background: url(img/category.png);
+  background: url(img/categories.png);
   background-size: 100% 100%;
 }
 .category_page section {
   width: 36.46%;
   margin-left: 25px;
   margin-right: 25px;
-  padding: 25px;
+  padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -2286,6 +2286,11 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 300px 300px;
 }
+@media (max-width: 1000px) {
+  #aboutus #aboutus_welcome {
+    display: block;
+  }
+}
 #aboutus #aboutus_welcome_text {
   margin-left: 22%;
   padding: 10px;
@@ -2306,6 +2311,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 }
 #aboutus #aboutus_welcome_fourth {
   margin-right: 22%;
+  margin-left: 5%;
 }
 @media (max-width: 400px) {
   #aboutus #aboutus_welcome_fourth {
@@ -2325,7 +2331,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-weight: normal;
   font-size: 14px;
   letter-spacing: 0.07em;
-  color: #E7161B;
+  color: #e7161b;
   margin: 0px;
 }
 #aboutus #aboutus_welcome h1 {
@@ -2385,7 +2391,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #E7161B;
+  color: #e7161b;
 }
 #aboutus #aim_vision {
   width: 80%;
@@ -2409,7 +2415,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-family: Poppins;
   font-style: normal;
   font-size: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: 50px;
 }
 @media (max-width: 500px) {
