@@ -1,0 +1,35 @@
+.compare {
+    margin-left: 11%;
+    margin-right: 11%;
+
+    &_table {
+        width: 100%;
+
+        tr.compare_table_head {
+
+            height: 200px;
+
+            #addtocompare {
+                background-color: red;
+                border: none;
+                color: white;
+            }
+        }
+
+        tr {
+            height: 20px;
+
+
+        }
+
+
+    }
+}
+
+.compare_modal {
+
+    &_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

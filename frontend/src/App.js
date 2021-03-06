@@ -9,6 +9,9 @@ import Shoppage from './screens/Shoppage'
 import Productpage from './screens/Productpage'
 import Aboutuspage from './screens/Aboutuspage'
 import Bloglistpage from './screens/Bloglistpage'
+import Comparepage from './screens/Comparepage'
+import Accountpage from './screens/Accountpage'
+import Wishlistpage from './screens/Wishlistpage'
 import Blogpage from './screens/Blogpage'
 import Faqpage from './screens/Faqpage'
 import Dealerpage from './screens/Dealerpage'
@@ -129,6 +132,9 @@ function App() {
             <Route path="/checkout" component={Checkoutpage}></Route>
             <Route path="/register" component={Register}></Route>
             <Route path="/thankyou" component={Thankyou}></Route>
+            <Route path="/compare" component={Comparepage}></Route>
+            <Route path="/account" component={Accountpage}></Route>
+            <Route path="/wishlist" component={Wishlistpage}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/logout" component={Logout}></Route>
 

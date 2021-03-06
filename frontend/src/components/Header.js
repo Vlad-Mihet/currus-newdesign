@@ -83,6 +83,16 @@ const Header = ({ hamburger, setHamburger, sidecart, setSidecart }) => {
                       <li><Link to="/contactus">Contact Us</Link></li>
                     </ul>
                   </nav>
+                  {userInfo ? 
+                  (<nav id="login_nav_icons">
+                    <ul>
+                      <li><Link to='/compare'><i className="fas fa-ellipsis-h"></i></Link></li>
+                      <li><Link to='/account'><i className="fas fa-user"></i></Link></li>
+                      <li><Link to='/wishlist'><i className="fas fa-heart"></i></Link></li>
+                      {/* <li><i className="fas fa-shopping-cart"></i></li> */}
+                    </ul>
+                  </nav>) : ""
+                  }
                   
                   <div className="login_cart">
                     <div id="login">

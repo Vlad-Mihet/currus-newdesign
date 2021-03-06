@@ -270,7 +270,7 @@ header .bar .free-shipping-from {
   font-size: 12px;
   line-height: 14px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (max-width: 900px) {
   header .bar .free-shipping-from {
@@ -286,7 +286,7 @@ header .bar .social-icons svg {
   margin: 1px;
 }
 header .menu {
-  background: #FFFFFF;
+  background: #ffffff;
   position: relative;
   height: 60px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -317,13 +317,30 @@ header .menu #logo {
 header .menu #hamburger {
   display: none;
 }
+header .menu #login_nav_icons {
+  position: absolute;
+  left: 68%;
+}
+header .menu #login_nav_icons ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  list-style-type: none;
+  padding: 0px;
+}
+header .menu #login_nav_icons ul li {
+  margin: 7px;
+}
+header .menu #login_nav_icons ul li i {
+  color: rgba(102, 102, 102, 0.85);
+}
 header .menu #menu_nav {
   position: absolute;
   left: 30.8333%;
   font-family: Lato;
   font-style: normal;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 11px;
   line-height: 16px;
   text-transform: uppercase;
 }
@@ -332,6 +349,7 @@ header .menu #menu_nav ul {
   flex-direction: row;
   list-style: none;
   list-style-type: none;
+  padding: 0px;
 }
 header .menu #menu_nav ul li {
   margin: 10px;
@@ -410,7 +428,7 @@ aside.hamburger {
   height: 100%;
   top: 0px;
   z-index: 100;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 @media (max-width: 320px) {
@@ -435,7 +453,7 @@ aside.sidecart {
   top: 0px;
   z-index: 100;
   transform: translateX(1288px);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 aside.sidecart .subtotal ul {
@@ -495,11 +513,11 @@ aside.sidecartclosed {
 }
 .hamburgeropen #content #login {
   text-decoration: none;
-  background: #E7161B;
+  background: #e7161b;
   padding: 10px 30px;
   display: block;
   font-family: Lato;
-  color: #FFFFFF;
+  color: #ffffff;
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -4276,6 +4294,30 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-size: 14px;
   line-height: 21px;
   color: rgba(102, 102, 102, 0.85);
+}
+
+.compare {
+  margin-left: 11%;
+  margin-right: 11%;
+}
+.compare_table {
+  width: 100%;
+}
+.compare_table tr.compare_table_head {
+  height: 200px;
+}
+.compare_table tr.compare_table_head #addtocompare {
+  background-color: red;
+  border: none;
+  color: white;
+}
+.compare_table tr {
+  height: 20px;
+}
+
+.compare_modal_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 footer {
