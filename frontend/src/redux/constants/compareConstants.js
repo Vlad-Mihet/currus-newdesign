@@ -1,0 +1,1 @@
+export const COMPARE_ADD_ITEM = 'COMPARE_ADD_ITEM'

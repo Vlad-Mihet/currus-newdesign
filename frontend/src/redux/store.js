@@ -6,16 +6,19 @@ import { dealerCreateReducer } from './reducers/dealerReducers';
 import { contactCreateReducer } from './reducers/contactReducers'
 import { returnCreateReducer } from './reducers/returnReducers'
 import { warrantyCreateReducer } from './reducers/warrantyReducers';
-import { userSigninReducer, userRegisterReducer } from './reducers/userReducers';
+import { userSigninReducer, userRegisterReducer, userDetailReducer } from './reducers/userReducers';
 import { subscribeReducer } from './reducers/subscribeReducers'
 import { currencyReducer } from './reducers/currencyReducers'
 import { cartReducer, checkoutReducer } from './reducers/cartReducers'
 import { orderDetailsReducer } from './reducers/orderReducers';
+import { compareListReducer } from './reducers/compareReducers';
+
 
 const initialState = {};
 
 const rootReducer = combineReducers({
     productList: productListReducer,
+    compareList: compareListReducer,
     productDetails: productDetailsReducer,
     blogList: blogListReducer,
     blogDetails: blogDetailsReducer,
@@ -25,6 +28,7 @@ const rootReducer = combineReducers({
     warrantyCreate: warrantyCreateReducer,
     userSignin: userSigninReducer,
     userRegister: userRegisterReducer,
+    userDetail: userDetailReducer,
     subscribe: subscribeReducer,
     currency: currencyReducer,
     cart: cartReducer,

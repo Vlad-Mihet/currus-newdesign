@@ -1,0 +1,96 @@
+.accountpage {
+    margin-left: 11.81%;
+    margin-right: 11.81%;
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+    h1 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #393636;
+    }
+
+    .react-tabs {
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+
+        &__tab-list {
+            display: flex;
+            flex-direction: column;
+
+            .react-tabs__tab--selected {
+                border-bottom: none !important;
+                border-right: 2px solid red;
+            }
+        }
+
+        &__tab {
+           padding: 0px;
+           padding-bottom: 15px;
+           padding-top: 15px;
+           padding-right: 30px;
+        }
+
+        &__tab-panel {
+            margin-left: 5%;
+        }
+
+
+        .shoppage_gridview {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &_myaccount {
+        &_name {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 106%;
+            letter-spacing: 0.01em;
+            color: #E7161B;
+        }
+
+        &_createdat {
+            font-family: Hind;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            letter-spacing: 0.01em;
+            color: rgba(57, 54, 54, 0.8);
+
+        }
+    }
+
+    &_history {
+
+        font-family: Hind;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: rgba(57, 54, 54, 0.8);
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+
+            tr {
+                border-bottom: 1px solid rgba(57, 54, 54, 0.8);
+            }
+        }
+    }
+
+    &_shipping {
+
+        font-family: Hind;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 50px;
+        color: #393636;
+    }
+}

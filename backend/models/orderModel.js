@@ -33,6 +33,9 @@ const orderSchema = new mongoose.Schema({
     },
     isDelivered: {
         type: Boolean, required: true
+    },
+    tracking: {
+        type: String
     }
 
 }, {

@@ -8,6 +8,14 @@ const userSchema = new mongoose.Schema({
     orders: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Order'
+    }],
+    address: {
+        country: { type: String },
+        address: { type: String },
+    },
+    wishlist: [{ 
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product'
     }]
 }, {
     timestamps: true

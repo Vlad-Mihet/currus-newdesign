@@ -5,6 +5,8 @@ export const cartReducer = (state = { cartItems: []}, action) => {
         case CART_ADD_ITEM:
             const item = action.payload;
             const existItem = state.cartItems.find((x) => x.id === item.id)
+            console.log(existItem);
+            console.log('added an item')
             if (existItem) {
                 return {
                     ...state,
@@ -19,15 +21,17 @@ export const cartReducer = (state = { cartItems: []}, action) => {
             const foundItem = state.cartItems.find((x) => x.id === id)
             if (foundItem) {
                 return { ...state, cartItems: [...state.cartItems.filter(x => x.id !== id)]}
+            } else {
+                return state;
             }
         case CART_REMOVE_ONE:
             const productId = action.payload;
             const i = state.cartItems.find((x) => x.id === productId)
             if (i && i.qty > 1) {
                 return { ...state, cartItems: [...state.cartItems.map(x => (x.id === productId ? { ...x, qty: x.qty - 1 } : { ...x }))]}
+            } else {
+                return state;
             }
-            
-
         case SAVE_SUBTOTAL:
             return { ...state, subtotal: action.payload }
         case SAVE_SHIPPING:

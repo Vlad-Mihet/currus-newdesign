@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
 import Reviews from '../components/Reviews'
-import { detailsProduct } from '../redux/actions/productActions'
+import { detailsProduct, listProducts } from '../redux/actions/productActions'
+import { addToWishlist } from '../redux/actions/wishlistActions'
 import ImageGallery from 'react-image-gallery'
 import StarsUI from '../components/StarsUI'
 
@@ -10,7 +11,6 @@ import Faq from 'react-faq-component'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 import ProductGridView from '../components/ProductGridView';
-import { listProducts } from '../redux/actions/productActions';
 import { Icon, InlineIcon } from '@iconify/react';
 import shippingFast from '@iconify/icons-fa-solid/shipping-fast';
 import flagForCanada from '@iconify/icons-emojione-monotone/flag-for-canada';
@@ -36,6 +36,9 @@ const Productpage = (props) => {
     const [qty, setQty] = useState(1)
     const productDetails = useSelector(state => state.productDetails)
     const { loading, error, product } = productDetails;
+
+    const userSignIn = useSelector(state => state.userSignin);
+    const { userInfo } = userSignIn;
 
     const productList = useSelector((state) => state.productList);
     const { products } = productList;
@@ -63,6 +66,11 @@ const Productpage = (props) => {
 
     const handleCart = () => {
         props.history.push(`/cart/${productId}?qty=${qty}`)
+    }
+
+    const handleWishlist = () => {
+        dispatch(addToWishlist(userInfo._id, productId))
+        props.history.push(`/wishlist`)
     }
 
     useEffect(() => {
@@ -137,6 +145,12 @@ const Productpage = (props) => {
                     <button id="addtocart" onClick={handleCart}>
                         <Icon icon={shoppingCart} style={{fontSize: '12px'}} />&nbsp;
                         Add To Cart</button>  
+                    {userInfo && 
+                    <button id="addtowishlist" onClick={handleWishlist}>
+                        <i class="fas fa-heart"></i>
+                        Add To Wishlist
+                    </button>
+                    }
                 </div>
 
  

@@ -18,7 +18,7 @@ const Breadcrumbs = (props) => {
     return (
         <div className="breadcrumbs">
             <div className="homeshop">
-                {`HOME / ${arr[0]}`}{arr[1] ? ` / ${arr[1]}`:''}
+                {`HOME / ${props.title}`}
             </div>
         </div>
     )

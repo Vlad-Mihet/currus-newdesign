@@ -297,6 +297,11 @@
                 border: none;
         
             }
+
+            button#addtowishlist {
+                border: none;
+                background: none;
+            }
         }
 
     
@@ -425,7 +430,7 @@
 div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
     
     border-radius: 0px 0px 0px 0px !important;
-    border-bottom: 2px solid red !important;
+    border-bottom: 2px solid red;
 }
 
 

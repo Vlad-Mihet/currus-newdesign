@@ -319,7 +319,7 @@ header .menu #hamburger {
 }
 header .menu #login_nav_icons {
   position: absolute;
-  left: 68%;
+  left: 64%;
 }
 header .menu #login_nav_icons ul {
   display: flex;
@@ -1987,6 +1987,10 @@ aside.sidecartclosed {
   color: #FFFFFF;
   border: none;
 }
+.single_page .product_detail #plusminus button#addtowishlist {
+  border: none;
+  background: none;
+}
 .single_page #product_icons {
   font-family: Open Sans;
   font-style: normal;
@@ -2088,7 +2092,7 @@ aside.sidecartclosed {
 
 div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   border-radius: 0px 0px 0px 0px !important;
-  border-bottom: 2px solid red !important;
+  border-bottom: 2px solid red;
 }
 
 .reviews #writeareview {
@@ -3239,6 +3243,13 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   background: #fff;
   padding: 0 10px;
 }
+.login .login_form #googlefacebook {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
 .terms {
   margin-top: 60px;
@@ -4297,11 +4308,23 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 }
 
 .compare {
-  margin-left: 11%;
-  margin-right: 11%;
+  margin-left: 11.81%;
+  margin-right: 11.81%;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 .compare_table {
   width: 100%;
+  font-family: Hind;
+  font-style: normal;
+  text-align: center;
+}
+.compare_table_first_column {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #393636;
 }
 .compare_table tr.compare_table_head {
   height: 200px;
@@ -4311,13 +4334,160 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   border: none;
   color: white;
 }
+.compare_table tr.compare_table_head th.compare_table_head_firstblock > * {
+  display: block;
+}
+.compare_table tr.compare_table_head img {
+  object-fit: cover;
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+}
 .compare_table tr {
-  height: 20px;
+  height: 30px;
+}
+.compare_table tr:nth-of-type(2n) {
+  background: #F9FAFA;
 }
 
 .compare_modal_grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.accountpage {
+  margin-left: 11.81%;
+  margin-right: 11.81%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.accountpage h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #393636;
+}
+.accountpage .react-tabs {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+}
+.accountpage .react-tabs__tab-list {
+  display: flex;
+  flex-direction: column;
+}
+.accountpage .react-tabs__tab-list .react-tabs__tab--selected {
+  border-bottom: none !important;
+  border-right: 2px solid red;
+}
+.accountpage .react-tabs__tab {
+  padding: 0px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-right: 30px;
+}
+.accountpage .react-tabs__tab-panel {
+  margin-left: 5%;
+}
+.accountpage .react-tabs .shoppage_gridview {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.accountpage_myaccount_name {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 106%;
+  letter-spacing: 0.01em;
+  color: #E7161B;
+}
+.accountpage_myaccount_createdat {
+  font-family: Hind;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(57, 54, 54, 0.8);
+}
+.accountpage_history {
+  font-family: Hind;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(57, 54, 54, 0.8);
+}
+.accountpage_history table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.accountpage_history table tr {
+  border-bottom: 1px solid rgba(57, 54, 54, 0.8);
+}
+.accountpage_shipping {
+  font-family: Hind;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 50px;
+  color: #393636;
+}
+
+.wishlist {
+  margin-left: 11.8%;
+  margin-right: 11.8%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-family: Hind;
+  font-style: normal;
+  color: #393636;
+  letter-spacing: 0.01em;
+}
+.wishlist_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.wishlist_buttons #continue {
+  background: #393636;
+  border: none;
+  color: #FFFFFF;
+  padding: 10px;
+}
+.wishlist_buttons #add {
+  background: #E7161B;
+  border: none;
+  color: #FFFFFF;
+  padding: 10px;
+}
+.wishlist table {
+  width: 100%;
+  text-align: center;
+}
+.wishlist_row {
+  height: 50px;
+}
+.wishlist_row_name {
+  font-family: Poppins;
+}
+.wishlist_row_price {
+  font-family: Poppins;
+  color: #393636;
+  font-weight: 600;
+}
+.wishlist_row img {
+  object-fit: cover;
+  max-height: 100%;
+  max-width: 100%;
+  height: 40px;
+  width: 40px;
+}
+.wishlist_row button {
+  display: flex;
+  border: none;
+  background: none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
 }
 
 footer {
@@ -4331,6 +4501,7 @@ footer #one {
   align-items: center;
   margin-left: 11.8%;
   margin-right: 11.8%;
+  margin-bottom: 20px;
   position: relative;
 }
 @media (max-width: 1000px) {

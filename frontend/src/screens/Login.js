@@ -69,6 +69,7 @@ const Login = (props) => {
                     <div id="signupvia">
                        <span>or sign up via</span>
                     </div>
+                    <div id="googlefacebook">
                         <GoogleLogin
                         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
                         buttonText="Login"
@@ -82,7 +83,8 @@ const Login = (props) => {
                         fields="name,email,picture"
                         scope="public_profile"
                         callback={responseFacebook}
-                        icon="facebook" />
+                        icon="facebook" />  
+                    </div>
                     
                     <div id="donthave">
                         Don't have an account? <Link to='/register'>Create your account</Link>

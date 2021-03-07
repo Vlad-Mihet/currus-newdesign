@@ -1,0 +1,68 @@
+.wishlist {
+    margin-left: 11.80%;
+    margin-right: 11.80%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    font-family: Hind;
+    font-style: normal;
+    color: #393636;
+    letter-spacing: 0.01em;
+
+    &_buttons {
+        display: flex;
+        justify-content: space-between;
+
+        #continue {
+            background: #393636;
+            border: none;
+            color: #FFFFFF;
+            padding: 10px;
+        }
+
+        #add {
+            background: #E7161B;
+            border: none;
+            color: #FFFFFF;
+            padding: 10px;
+        }
+    }
+
+    table {
+        width: 100%;
+        text-align: center;
+    }
+    
+    &_row {
+       
+        height: 50px;
+    
+        &_name {
+            font-family: Poppins;
+        }
+        
+        &_price {
+            font-family: Poppins;
+            color: #393636;
+            font-weight: 600;
+        }
+
+        img {
+            object-fit: cover;
+            max-height: 100%;
+            max-width: 100%;
+            height: 40px;
+            width: 40px;
+            
+        }
+
+        button {
+            display: flex;
+            border: none;
+            background: none;
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+        }
+    }
+}
