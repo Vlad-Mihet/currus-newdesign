@@ -118,34 +118,33 @@ const Checkoutpage = (props) => {
             </div>
 
             <div id="box2">
-                <h1 className="subtotal">Product</h1>
                     <ul>
                         {cartItems.map(item => (
                         <li key={item.id}>
                             <img src={item.image}></img>
-                            <div>{item.name}</div>
-                            &nbsp;
-                            <div>Qty: {item.qty}</div>
-                            &nbsp;
-                            <div> ${item.priceUSD}</div>
+                            <div className="cartiteminfo">
+                                <div>{item.name}</div>
+                                <div>Qty: {item.qty}</div>
+                                <div> ${item.priceUSD}</div>
+                            </div>
                         </li>
                     ))}
                     </ul>
                 <h1 className="subtotal">
-                <div>Subtotal</div>
+                <div className="subtotal_title">Subtotal</div>
                 <div>
                 $ { afterCouponPrice === subtotal ? subtotal : afterCouponPrice }
                 </div>
                 </h1>
    
                 <h1 className="subtotal">
-                    <div>Shipping</div>
+                    <div className="subtotal_title">Shipping</div>
                 <div>
                     $ {shippingPrice}</div>
                 </h1>
   
                 <h1 className="subtotal">
-                    <div>Cart Totals</div>
+                    <div className="subtotal_title">Cart Totals</div>
                     <div>$ {totalPrice}</div>
                 </h1>
 

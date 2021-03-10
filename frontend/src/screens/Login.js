@@ -46,24 +46,30 @@ const Login = (props) => {
     return (
         <>
             <Breadcrumbs title={props.location.pathname} />
+            <div className="login_grid">
+            <div className="login_left_pic">
+
+            </div>
             <div className="login">
                 <img src="images/currus_logo.png" ></img>
                 <form className="login_form" onSubmit={handleSubmit}>
-                    <h1>Login</h1>
+                    <h1>Login to your account</h1>
                     {error && <h4 className="errorbox">Wrong Username/Password</h4>}
                     <div>
-                        <input type="email" id="email" placeholder="Username or Email" required
+                        <label>USERNAME</label>
+                        <input type="email" id="email" required
                         onChange={e => setEmail(e.target.value)}></input>
                     </div>
                     <div>
-                        <input type="password" id="password" placeholder="Password" required
+                        <label>PASSWORD</label>
+                        <input type="password" id="password" required
                         onChange={e => setPassword(e.target.value)}></input>
                     </div>
                     <div>
                         <button id="forgot">Forgot password?</button>
                     </div>
                     <div>
-                        <label />
+                        
                         <button className="primary" type="submit">LOGIN</button>
                     </div>
                     <div id="signupvia">
@@ -90,6 +96,7 @@ const Login = (props) => {
                         Don't have an account? <Link to='/register'>Create your account</Link>
                     </div>
                 </form>
+            </div>
             </div>
         </>
     )

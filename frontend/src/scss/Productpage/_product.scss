@@ -240,13 +240,26 @@
             color: #E7161B;
         }
 
+        #product_description {
+            margin-top: 15px;
+            font-family: Hind;
+            font-size: 14px;
+            line-height: 24px;
+            color: rgba(57, 54, 54, 0.8);
+        }
+
+        #product_availability {
+            font-family: Hind;
+            font-size: 14px;
+            color: #393636;
+        }
 
 
         #icon_list {
             font-family: Hind;
             font-style: normal;
             font-weight: normal;
-            font-size: 12px;
+            font-size: 16px;
             color: #666666;
             ul {
                 list-style: none;
@@ -301,6 +314,17 @@
             button#addtowishlist {
                 border: none;
                 background: none;
+                font-family: Hind;
+                color: rgba(57, 54, 54, 0.8);
+                display: inline;
+            }
+
+            button#addtocompare {
+                border: none;
+                background: none;
+                font-family: Hind;
+                display: inline;
+                color: rgba(57, 54, 54, 0.8);
             }
         }
 

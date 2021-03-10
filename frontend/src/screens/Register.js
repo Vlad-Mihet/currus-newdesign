@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { register } from '../redux/actions/userActions'
 import { Link } from 'react-router-dom';
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const Register = (props) => {
 
@@ -26,21 +27,31 @@ const Register = (props) => {
     }, [userInfo])
 
     return (
+        <>
+        <Breadcrumbs title="Register" />
+            <div className="login_grid">
+            <div className="login_left_pic">
+
+            </div>
+            
         <div className="register">
             <form className="register_form" onSubmit={handleSubmit}>
                 <img src="images/currus_logo.png" ></img>
                 <h1>Register</h1>
 
                 <div>
-                    <input type="name" id="name" placeholder="Name" required
+                    <label>USERNAME</label>
+                    <input type="name" id="name" required
                     onChange={e => setName(e.target.value)}></input>
                 </div>
                 <div>
-                    <input type="email" id="email" placeholder="Email" required
+                    <label>EMAIL</label>
+                    <input type="email" id="email" required
                     onChange={e => setEmail(e.target.value)}></input>
                 </div>
                 <div>
-                    <input type="password" id="password" placeholder="Password" required
+                    <label>PASSWORD</label>
+                    <input type="password" id="password" required
                     onChange={e => setPassword(e.target.value)}></input>
                 </div>
                 <div>
@@ -52,6 +63,8 @@ const Register = (props) => {
                     </div>
             </form>
         </div>
+        </div>
+        </>
     )
 }
 

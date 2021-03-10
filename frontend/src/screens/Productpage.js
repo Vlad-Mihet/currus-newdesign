@@ -16,9 +16,7 @@ import shippingFast from '@iconify/icons-fa-solid/shipping-fast';
 import flagForCanada from '@iconify/icons-emojione-monotone/flag-for-canada';
 import financeIcon from '@iconify/icons-mdi/finance';
 import shieldCheckSolid from '@iconify/icons-clarity/shield-check-solid';
-
-
-
+import { addToCompare } from '../redux/actions/compareActions';
 import shoppingCart from '@iconify/icons-feather/shopping-cart';
 
 import minusIcon from '@iconify/icons-feather/minus';
@@ -47,7 +45,10 @@ const Productpage = (props) => {
     const { currency } = useSelector(state => state.currency)
     const [first, setFirst] = useState(false);
 
-   
+    const handleAddToCompare = () => {
+        dispatch(addToCompare(productId))
+        props.history.push(`/compare`)
+    }
 
     const data = {
         title: "FAQQQQQ",
@@ -117,16 +118,6 @@ const Productpage = (props) => {
                 <div id="product_availability">
                 <span>Availability:</span> {product.quantity === 0 ? 'Out of Stock' : 'In Stock & Ready to Ship'}
                 </div>
-
-                <div id="icon_list">
-                    <ul>
-                        <li><i className="fas fa-globe-asia"></i>&nbsp;&nbsp;100% Made In Korea</li>
-                        <li><i className="fas fa-dolly"></i>&nbsp;&nbsp;Free shipping to USA and Canada</li>
-                        <li><i className="fas fa-shipping-fast"></i>&nbsp;&nbsp;Ships in 1-2 days from California</li>
-                        <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;12- months complete warranty</li>
-                        <li><i className="fas fa-headphones-alt"></i>&nbsp;&nbsp;Free extra 12 months technical support</li>
-                    </ul>
-                </div>
             
                 <div id="plusminus">
                     {/* qty
@@ -148,9 +139,24 @@ const Productpage = (props) => {
                     {userInfo && 
                     <button id="addtowishlist" onClick={handleWishlist}>
                         <i class="fas fa-heart"></i>
-                        Add To Wishlist
+                        <div>Add To Wishlist</div>
                     </button>
                     }
+                    
+                    <button onClick={handleAddToCompare} id="addtocompare">
+                        <i className="fas fa-ellipsis-h"></i>
+                        <div>Compare</div>
+                    </button>
+                    
+                </div>
+                <div id="icon_list">
+                    <ul>
+                        <li><i className="fas fa-globe-asia"></i>&nbsp;&nbsp;100% Made In Korea</li>
+                        <li><i className="fas fa-dolly"></i>&nbsp;&nbsp;Free shipping to USA and Canada</li>
+                        <li><i className="fas fa-shipping-fast"></i>&nbsp;&nbsp;Ships in 1-2 days from California</li>
+                        <li><i className="fas fa-check-circle"></i>&nbsp;&nbsp;12- months complete warranty</li>
+                        <li><i className="fas fa-headphones-alt"></i>&nbsp;&nbsp;Free extra 12 months technical support</li>
+                    </ul>
                 </div>
 
  

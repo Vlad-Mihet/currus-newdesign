@@ -120,6 +120,11 @@ body {
   border-radius: 3px;
   padding: 10px;
 }
+@media (max-width: 800px) {
+  .banner .text-banner {
+    display: none;
+  }
+}
 .banner .text-banner #text-banner__button a {
   display: grid;
   grid-template-columns: 1fr 5fr;
@@ -321,6 +326,11 @@ header .menu #login_nav_icons {
   position: absolute;
   left: 64%;
 }
+@media (max-width: 1000px) {
+  header .menu #login_nav_icons {
+    display: none;
+  }
+}
 header .menu #login_nav_icons ul {
   display: flex;
   flex-direction: row;
@@ -336,11 +346,11 @@ header .menu #login_nav_icons ul li i {
 }
 header .menu #menu_nav {
   position: absolute;
-  left: 30.8333%;
+  left: 33%;
   font-family: Lato;
   font-style: normal;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
 }
@@ -451,10 +461,71 @@ aside.sidecart {
   right: 0px;
   height: 100%;
   top: 0px;
+  background: #f6f6f6;
+  z-index: 9999;
   z-index: 100;
   transform: translateX(1288px);
   background-color: #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+aside.sidecart .viewcart_checkout button {
+  margin-left: 30px;
+  border: none;
+  background: #E7161B;
+  color: #FFFFFF;
+  padding: 15px;
+}
+aside.sidecart #box22 {
+  padding: 15px;
+  margin-top: 15px;
+}
+aside.sidecart #box22 h1 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #222222;
+  margin-left: 15px;
+}
+aside.sidecart #box22 .cartiteminfo {
+  display: block;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 10px;
+}
+aside.sidecart #box22 .cartiteminfo div:nth-child(2) {
+  font-weight: 600;
+}
+aside.sidecart #box22 .subtotal {
+  display: flex;
+  justify-content: space-between;
+}
+aside.sidecart #box22 .subtotal_title {
+  font-weight: normal;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 16px;
+  color: rgba(57, 54, 54, 0.8);
+}
+aside.sidecart #box22 ul {
+  list-style: none;
+  margin-left: 15px;
+  padding-left: 0px;
+}
+aside.sidecart #box22 ul li {
+  display: flex;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  color: #393636;
+  margin-bottom: 10px;
+}
+aside.sidecart #box22 ul li img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
 }
 aside.sidecart .subtotal ul {
   list-style: none;
@@ -1941,11 +2012,23 @@ aside.sidecartclosed {
   line-height: 24px;
   color: #E7161B;
 }
+.single_page .product_detail #product_description {
+  margin-top: 15px;
+  font-family: Hind;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(57, 54, 54, 0.8);
+}
+.single_page .product_detail #product_availability {
+  font-family: Hind;
+  font-size: 14px;
+  color: #393636;
+}
 .single_page .product_detail #icon_list {
   font-family: Hind;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 16px;
   color: #666666;
 }
 .single_page .product_detail #icon_list ul {
@@ -1990,6 +2073,16 @@ aside.sidecartclosed {
 .single_page .product_detail #plusminus button#addtowishlist {
   border: none;
   background: none;
+  font-family: Hind;
+  color: rgba(57, 54, 54, 0.8);
+  display: inline;
+}
+.single_page .product_detail #plusminus button#addtocompare {
+  border: none;
+  background: none;
+  font-family: Hind;
+  display: inline;
+  color: rgba(57, 54, 54, 0.8);
 }
 .single_page #product_icons {
   font-family: Open Sans;
@@ -3134,6 +3227,28 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   color: #FFFFFF;
 }
 
+.login_grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+}
+@media (max-width: 1000px) {
+  .login_grid {
+    display: block;
+  }
+}
+
+.login_left_pic {
+  background: url(img/banner_picture.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40% 0%;
+}
+@media (max-width: 1000px) {
+  .login_left_pic {
+    display: none;
+  }
+}
+
 .login {
   margin: 0 auto;
   width: 50%;
@@ -3151,22 +3266,14 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   display: block;
 }
 .login h1 {
-  font-family: Lato;
+  font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgba(57, 54, 54, 0.85);
+  color: #393636;
 }
-.login h1::after {
-  content: "";
-  display: block;
-  border-bottom: 1px solid #E7161B;
-  width: 15%;
-  margin: 0 auto;
-  padding-top: 10px;
+.login .login_form label {
+  font-family: Poppins;
+  color: #393636;
+  font-style: normal;
 }
 .login .login_form .errorbox {
   background: #E7161B;
@@ -3180,10 +3287,9 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 }
 .login .login_form input {
   width: 100%;
-  background: #FFFFFF;
-  border: 1px solid rgba(102, 102, 102, 0.3);
   box-sizing: border-box;
-  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid #D0D0D0;
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -3230,6 +3336,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .login .login_form #donthave a {
   color: #E7161B;
   font-weight: 600;
+  text-decoration: none;
 }
 .login .login_form #signupvia {
   width: 100%;
@@ -3238,6 +3345,8 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   text-align: center;
   line-height: 1px;
   margin: 20px 0 20px;
+  font-family: Hind;
+  font-style: normal;
 }
 .login .login_form #signupvia span {
   background: #fff;
@@ -3380,124 +3489,96 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-bottom: 100px;
   font-family: Open Sans;
 }
-.cart #gridbox {
+.cart #box1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+}
+.cart #box1 #gray_arrow {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.cart #box1 #gray_arrow i {
+  color: #E7161B;
+}
+.cart #box1 button {
+  border: none;
+  background: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart #box1 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart #box1 button#xbutton {
+  color: #E7161B;
+}
+.cart #box1 ul {
+  list-style: none;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.cart #box1 ul li {
   display: grid;
-  grid-template-columns: 2.5833fr 1fr;
-  column-gap: 25px;
-}
-.cart #gridbox #box1 {
-  border: 1px solid rgba(102, 102, 102, 0.3);
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+  border: 1px solid #E2E2E2;
   box-sizing: border-box;
 }
-.cart #gridbox #box1 ul {
-  box-sizing: border-box;
-  border: 1px solid rgba(102, 102, 102, 0.3);
-}
-.cart #gridbox #box1 ul li {
+.cart #box2 {
+  border-bottom: 1px solid #E2E2E2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: #393636;
   align-items: center;
-  box-sizing: border-box;
+  font-family: Poppins;
 }
-.cart #gridbox #box1 ul li #xbutton {
+.cart #box2 .applypromo input {
+  padding: 15px;
+  border-radius: 0px;
+  padding-right: 140px;
+  border-color: white;
   border: none;
-  background: none;
-}
-.cart #gridbox #box1 ul li #gray {
-  margin-right: 25px;
-  border: 1px solid rgba(102, 102, 102, 0.2);
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-  color: #666666;
+  margin-top: 20px;
+  border: 1px solid #EDEDED;
   box-sizing: border-box;
-}
-.cart #gridbox #box1 ul li #gray button {
-  border: none;
-  outline: none;
-  background: none;
-  margin: 10px;
-}
-.cart #gridbox #box1 #row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.cart #gridbox #box1 #row #couponcode {
   background: #FFFFFF;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  box-sizing: border-box;
-  padding: 4px;
-  border: 1px solid rgba(102, 102, 102, 0.3);
-  color: rgba(102, 102, 102, 0.85);
 }
-.cart #gridbox #box1 #row #applycoupon {
-  background: #E7161B;
-  border: 1px solid rgba(102, 102, 102, 0.3);
-  padding: 4px;
-  box-sizing: border-box;
-  border-radius: 0px 3px 3px 0px;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: Lato;
+.cart #box2 .applypromo button {
+  margin-left: -140px;
+  margin-top: 25px;
+  border: none;
+  background: white;
+  font-family: Hind;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  letter-spacing: 0.01em;
+  color: #E7161B;
 }
-.cart #gridbox #box1 #row a {
-  text-decoration: none;
-  font-family: Open Sans;
-  font-style: normal;
+.cart #box2 h4 em {
   font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: right;
-  text-transform: uppercase;
-  color: rgba(57, 54, 54, 0.85);
-}
-.cart #gridbox #box2 {
-  background: #F6F6F6;
-}
-.cart #gridbox #box2 #carttotals {
-  padding: 11px;
-  margin: 0;
-  background: #E9E9E9;
-  font-family: Open Sans;
   font-style: normal;
-  font-weight: bold;
+}
+.cart #box2 .subtotal {
+  font-style: normal;
+  font-weight: normal;
   font-size: 14px;
   line-height: 19px;
-  text-transform: uppercase;
   color: #393636;
 }
-.cart #gridbox #box2 .subtotal {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: #393636;
+.cart #box2 .subtotal label {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
-.cart #gridbox #box2 #checkoutbutton {
+.cart #box2 #checkoutbutton {
   background: #E7161B;
   border-radius: 3px;
   border: none;
@@ -3510,13 +3591,38 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+.cart .bottom_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Hind;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.cart .bottom_buttons a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.cart .bottom_buttons #continue_gray {
+  background: #393636;
+  padding: 10px;
+}
+.cart .bottom_buttons button {
+  background: #E7161B;
+  padding: 10px;
+  color: #FFFFFF;
+  border: none;
+}
 
 .checkout {
   width: 90%;
   margin: 0 auto;
   font-family: Open Sans;
 }
-.checkout #billing_details, .checkout #createanaccount {
+.checkout #billing_details,
+.checkout #createanaccount {
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
@@ -3532,18 +3638,50 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.checkout #grid #box1 {
+  padding: 15px;
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(91, 91, 91, 0.1);
+}
+.checkout #grid #box1 #billing_details {
+  color: #222222;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+}
+.checkout #grid #box1 input {
+  background: #f5f5fa;
+  padding: 10px;
+  border: none;
+}
 .checkout #grid #box2 {
-  padding-left: 15px;
-  padding-right: 15px;
-  background: #F6F6F6;
+  padding: 15px;
+  background: #f6f6f6;
+}
+.checkout #grid #box2 .cartiteminfo {
+  display: block;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  margin-left: 10px;
+}
+.checkout #grid #box2 .cartiteminfo div:nth-child(2) {
+  font-weight: 600;
 }
 .checkout #grid #box2 .subtotal {
   display: flex;
   justify-content: space-between;
 }
+.checkout #grid #box2 .subtotal_title {
+  font-weight: normal;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 16px;
+  color: rgba(57, 54, 54, 0.8);
+}
 .checkout #grid #box2 ul {
   list-style: none;
-  margin-left: 0px;
+  margin-left: 15px;
   padding-left: 0px;
 }
 .checkout #grid #box2 ul li {
@@ -3553,6 +3691,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-weight: normal;
   font-size: 14px;
   color: #393636;
+  margin-bottom: 10px;
 }
 .checkout #grid #box2 ul li img {
   width: 75px;
@@ -3565,7 +3704,6 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   font-weight: bold;
   font-size: 14px;
   line-height: 19px;
-  text-transform: uppercase;
   color: #393636;
 }
 .checkout #checkout_form {
@@ -4093,29 +4231,20 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   display: block;
 }
 .register h1 {
-  font-family: Lato;
+  font-family: Poppins;
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-  color: rgba(57, 54, 54, 0.85);
+  color: #393636;
 }
-.register h1::after {
-  content: "";
-  display: block;
-  border-bottom: 1px solid #E7161B;
-  width: 15%;
-  margin: 0 auto;
-  padding-top: 10px;
+.register .register_form label {
+  font-family: Poppins;
+  color: #393636;
+  font-style: normal;
 }
 .register .register_form input {
   width: 100%;
-  background: #FFFFFF;
-  border: 1px solid rgba(102, 102, 102, 0.3);
   box-sizing: border-box;
-  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid #D0D0D0;
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -4162,6 +4291,7 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
 .register .register_form #donthave a {
   color: #E7161B;
   font-weight: 600;
+  text-decoration: none;
 }
 .register .register_form #signupvia {
   width: 100%;
@@ -4490,6 +4620,58 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   text-align: center;
 }
 
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.thankyou div {
+  margin-bottom: 15px;
+}
+.thankyou_check {
+  border-radius: 100%;
+  border: 1px solid #E7161B;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thankyou_check i {
+  color: #E7161B;
+}
+.thankyou_complete {
+  font-family: Hind;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #393636;
+}
+.thankyou_purchase {
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #393636;
+}
+.thankyou_number {
+  font-family: Hind;
+  color: rgba(57, 54, 54, 0.8);
+}
+.thankyou button {
+  background: #E7161B;
+  border: none;
+  padding: 15px;
+}
+.thankyou button a {
+  text-decoration: none;
+  color: white;
+}
+
 footer {
   box-sizing: border-box;
   background: #393636;
@@ -4503,12 +4685,6 @@ footer #one {
   margin-right: 11.8%;
   margin-bottom: 20px;
   position: relative;
-}
-@media (max-width: 1000px) {
-  footer #one {
-    flex-direction: column;
-    border-bottom: none;
-  }
 }
 footer #one #contact_us img {
   margin-top: 30px;

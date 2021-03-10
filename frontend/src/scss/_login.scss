@@ -1,3 +1,23 @@
+.login_grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+
+    @media (max-width: 1000px) {
+        display: block;
+    }
+}
+
+.login_left_pic {
+    background: url(img/banner_picture.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40% 0%;
+    
+    @media (max-width: 1000px) {
+        display: none;
+    }
+}
+
 .login {
     margin: 0 auto;
     width: 50%;
@@ -16,27 +36,21 @@
     }
 
     h1 {
-        font-family: Lato;
+        font-family: Poppins;
         font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 36px;
-        text-align: center;
-        text-transform: uppercase;
-        color: rgba(57, 54, 54, 0.85);
+        color: #393636;
         
     }
-    h1::after {
-        content: '';
-        display: block;
-        border-bottom: 1px solid #E7161B;
-        width: 15%;
-        margin: 0 auto;
-        padding-top: 10px;
-   
-    }
+
 
     .login_form {
+
+        label {
+            font-family: Poppins;
+            color: #393636;
+            font-style: normal;
+
+        }
 
        .errorbox {
           background: #E7161B;
@@ -51,10 +65,10 @@
 
        input {
            width: 100%;
-           background: #FFFFFF;
-           border: 1px solid rgba(102, 102, 102, 0.3);
+           
            box-sizing: border-box;
-           border-radius: 3px;
+           border: none;
+           border-bottom: 1px solid #D0D0D0;
            margin-bottom: 10px;
            padding: 10px;
        }
@@ -104,6 +118,7 @@
            a {
                color: #E7161B;
                font-weight: 600;
+               text-decoration: none;
            }
        }
 
@@ -114,6 +129,9 @@
            text-align: center;
            line-height: 1px;
            margin: 20px 0 20px;
+           font-family: Hind;
+           font-style: normal;
+
 
 
             span {

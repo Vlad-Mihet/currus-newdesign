@@ -79,12 +79,20 @@ const Cartpage = (props) => {
 
     return (
         <>
-        <Breadcrumbs title={props.location.pathname} />
+        <Breadcrumbs title="CART"/>
         <div className="cart">
             <Stepper completeColor="#E7161B" activeColor="#E7161B" steps={ [{title: 'Shipping Cart'}, {title: 'Checkout'}, {title: 'Order Complete'}] } />
-            <div id="gridbox">
+           
             <div id="box1">
                 <ul>
+                    <li style={{ fontSize: '12px' }}>
+                        <div>Product</div>
+                        <div>Title</div>
+                        <div>Base Price</div>
+                        <div>Quantity</div>
+                        <div>Total Price</div>
+                        <div>Remove</div>
+                    </li>
                     { cartItems.length === 0 ? <h2>Cart is Empty</h2> : (
                         cartItems.map(item => (
                             <li key={item.id}>
@@ -92,66 +100,87 @@ const Cartpage = (props) => {
                                 <div>{item.name}{' '}</div>
                                 <div>${item.priceUSD}</div>
                                <div id="gray">
-                                   <button onClick={() => handleMinus(item.id)}>-</button>
                                    {item.qty}{' '}
-                                   <button onClick={() => handlePlus(item.id)}>+</button>
+                                   <div id="gray_arrow">
+                                        <button id="gray_up" onClick={() => handlePlus(item.id)}>
+                                            <i class="fas fa-angle-up"></i>                                      
+                                        </button>
+                                        <button id="gray_down" onClick={() => handleMinus(item.id)}>
+                                            <i class="fas fa-angle-down"></i>
+                                        </button>
+                                  </div>
                                </div>
                                 <div style={{ fontWeight: "bold"}}>${Math.round(100* item.priceUSD * item.qty)/100}</div>
                                 <button id="xbutton" onClick={() => handleRemove(item.id)}>
-                                    <Icon icon={closeO} style={{color: '#666666', fontSize: '20px' }} />
+                                    Remove
                                 </button>
                             </li>
                         )
                     ))}
                 </ul>
-                <div id="row">
-                    <div>
+            </div>
+
+            <div id="box2">
+                <h4 className="subtotal">
+                        Shipping
+                        <label style={{display: "block"}}>
+                            
+                            <input name="free" type="radio" value="free" checked={!shipping} onChange={() => {
+                                setShipping(!shipping)
+                                setShippingPrice(0)}} />
+                                Free shipping
+                        </label>
+                        <label>
+                        
+                            <input name="paid" type="radio" value="paid" checked={shipping} onChange={() => {
+                                setShipping(!shipping)
+                                setShippingPrice(100)}} />
+                                Shipping to CA
+                        </label>
+                    </h4>
+                    <div className="applypromo">
+                        <div>Apply Promo Code: </div>
                         { !applied ? (
                         <>
                         <input id="couponcode" onChange={(e) => setCode(e.target.value)} placeholder="Coupon Code">     
                         </input>
-                        <button id="applycoupon" onClick={handleCoupon}>Apply Coupon</button>
+                        <button id="applycoupon" onClick={handleCoupon}>Promo Code</button>
                         </>
                         ) : (<h5>Coupon Applied</h5>)}
                     </div>
-                    
-                    <div>
+
+                <div id="item_block">
+                    <h4 className="subtotal">
+                    Subtotal &nbsp; 
+                    <em>
+                    ${Math.round(100 * itemsPrice)/100}
+                    </em>
+                    </h4>
+                    <h4 className="subtotal">Coupon Applied &nbsp; 
+                        <em>${afterCouponPrice}</em>
+                    </h4>
+                    <h4 className="subtotal">Shipping &nbsp;
+                        <em>
+                        { shipping ? '$100' : 'FREE' }
+                        </em>
+                    </h4>
+                    <h4 className="subtotal">Total &nbsp; 
+                        <em>
+                        ${totalPrice}
+                        </em>
+                    </h4>
+                </div>
+            </div>
+                <div className="bottom_buttons">
+                    <button id="continue_gray">
                         <Link to='/shop'>Continue Shopping</Link>
+                    </button>
+                    <div>
+                            <button id="checkoutbutton" type="button" onClick={handleCheckout} disabled={cartItems.length === 0}>
+                                Proceed to Checkout
+                            </button>
                     </div>
                 </div>
-            </div>
-            <div id="box2">
-                <h1 id="carttotals">Cart Totals</h1>
-                <h4 className="subtotal">
-                Subtotal &nbsp; ${Math.round(100 * itemsPrice)/100}
-                </h4>
-                <h4 className="subtotal">Coupon Applied &nbsp; ${afterCouponPrice}</h4>
-                <h4 className="subtotal">
-                    Shipping
-                    <label style={{display: "block"}}>
-                        
-                        <input name="free" type="radio" value="free" checked={!shipping} onChange={() => {
-                            setShipping(!shipping)
-                            setShippingPrice(0)}} />
-                            Free shipping
-                    </label>
-                    <label>
-                      
-                        <input name="paid" type="radio" value="paid" checked={shipping} onChange={() => {
-                            setShipping(!shipping)
-                            setShippingPrice(100)}} />
-                            Shipping to CA
-                    </label>
-                    { shipping && <h1>$100</h1>}
-                </h4>
-                <h4 className="subtotal">Total &nbsp; ${totalPrice}</h4>
-                <div>
-                        <button id="checkoutbutton" type="button" onClick={handleCheckout} disabled={cartItems.length === 0}>
-                            Proceed to Checkout
-                        </button>
-                </div>
-            </div>
-            </div>
         </div>
         </>
     )

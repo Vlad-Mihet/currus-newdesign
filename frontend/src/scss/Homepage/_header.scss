@@ -85,6 +85,10 @@ header {
         position: absolute;
         left: 64%;
 
+        @media (max-width: 1000px) {
+          display: none;
+        }
+
         ul {
         display: flex;
         flex-direction: row;
@@ -106,12 +110,12 @@ header {
 
     #menu_nav {
       position: absolute;
-      left: 30.8333%;
+      left: 33%;
 
       font-family: Lato;
       font-style: normal;
       font-weight: 600;
-      font-size: 11px;
+      font-size: 12px;
       line-height: 16px;
       text-transform: uppercase;
 
@@ -241,6 +245,84 @@ aside.sidecart {
   right: 0px;
   height: 100%;
   top: 0px;
+  background: #f6f6f6;
+  z-index: 9999;
+
+
+  .viewcart_checkout {
+    button {
+      margin-left: 30px;
+      border: none;
+      background: #E7161B;
+      color: #FFFFFF;
+      padding: 15px;
+    }
+  }
+
+    #box22 {
+      padding: 15px;
+      margin-top: 15px;
+      
+        h1 {
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          color: #222222;
+          margin-left: 15px;
+        }
+
+            .cartiteminfo {
+              display: block;
+              font-family: Poppins;
+              font-style: normal;
+              font-weight: normal;
+              margin-left: 10px;
+
+              div:nth-child(2) {
+                  font-weight: 600;
+              }
+
+
+            }
+
+      .subtotal {
+        display: flex;
+        justify-content: space-between;
+        
+
+
+
+        &_title {
+            font-weight: normal;
+            font-family: Poppins;
+            font-style: normal;
+            font-size: 16px;
+            color: rgba(57, 54, 54, 0.8);
+        }
+      }
+  
+      ul {
+        list-style: none;
+        margin-left: 15px;
+        padding-left: 0px;
+        li {
+          display: flex;
+          font-family: Open Sans;
+          font-style: normal;
+
+          font-weight: normal;
+          font-size: 14px;
+          color: #393636;
+          margin-bottom: 10px;
+          img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
 
   .subtotal {
     ul {

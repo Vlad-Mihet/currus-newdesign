@@ -16,33 +16,28 @@
     }
 
     h1 {
-        font-family: Lato;
+        font-family: Poppins;
         font-style: normal;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 36px;
-        text-align: center;
-        text-transform: uppercase;
-        color: rgba(57, 54, 54, 0.85);
-        
-    }
-    h1::after {
-        content: '';
-        display: block;
-        border-bottom: 1px solid #E7161B;
-        width: 15%;
-        margin: 0 auto;
-        padding-top: 10px;
-   
+        color: #393636;
+       
     }
 
+
     .register_form {
+
+        label {
+            font-family: Poppins;
+            color: #393636;
+            font-style: normal;
+
+        }
+
        input {
            width: 100%;
-           background: #FFFFFF;
-           border: 1px solid rgba(102, 102, 102, 0.3);
+           
            box-sizing: border-box;
-           border-radius: 3px;
+           border: none;
+           border-bottom: 1px solid #D0D0D0;
            margin-bottom: 10px;
            padding: 10px;
        }
@@ -92,6 +87,7 @@
            a {
                color: #E7161B;
                font-weight: 600;
+               text-decoration: none;
            }
        }
 

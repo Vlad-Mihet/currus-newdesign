@@ -13,6 +13,10 @@
     top: 16.67%;
     left: 11.81%;
 
+    @media (max-width: 800px) {
+      display: none;
+    }
+
 
 
     #text-banner__button {

@@ -58,17 +58,17 @@ function App() {
           <button className="sidecart_xbutton">
                 <Icon onClick={() => setSidecart(false)} icon={closeIcon} style={{color: '#393636', fontSize: '24px'}} /> 
           </button>
-          <div className="subtotal">
+          <div className="subtotal" id="box22">
                 <h1>Product</h1>
                     <ul>
                         {cartItems.map(item => (
                         <li key={item.id}>
                             <img src={item.image}></img>
-                            <div>{item.name}</div>
-                            &nbsp;
-                            <div>Qty: {item.qty}</div>
-                            &nbsp;
-                            <div> ${item.priceUSD}</div>
+                            <div className="cartiteminfo">
+                              <div>{item.name}</div>
+                              <div>Qty: {item.qty}</div>
+                              <div> ${item.priceUSD}</div>
+                            </div>
                         </li>
                     ))}
                     </ul>     
