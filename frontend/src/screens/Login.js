@@ -8,6 +8,7 @@ import { fblogin, userreset } from '../redux/actions/userActions'
 import GoogleLogin from 'react-google-login';
 
 
+
 const Login = (props) => {
 
     const dispatch = useDispatch()
@@ -45,7 +46,7 @@ const Login = (props) => {
 
     return (
         <>
-            <Breadcrumbs title={props.location.pathname} />
+            <Breadcrumbs title="LOGIN" />
             <div className="login_grid">
             <div className="login_left_pic">
 

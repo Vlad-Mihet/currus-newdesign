@@ -354,17 +354,25 @@ header .menu #menu_nav {
   line-height: 16px;
   text-transform: uppercase;
 }
-header .menu #menu_nav ul {
+header .menu #menu_nav #menu_nav_shop {
+  position: absolute;
+  padding: 0px;
+  list-style: none;
+  left: 0px;
+  background: white;
+}
+header .menu #menu_nav ul#menu_nav_ui {
   display: flex;
   flex-direction: row;
   list-style: none;
   list-style-type: none;
   padding: 0px;
 }
-header .menu #menu_nav ul li {
+header .menu #menu_nav ul#menu_nav_ui li {
   margin: 10px;
+  color: rgba(102, 102, 102, 0.85);
 }
-header .menu #menu_nav ul li a {
+header .menu #menu_nav ul#menu_nav_ui li a {
   color: rgba(102, 102, 102, 0.85);
 }
 @media (max-width: 1250px) {
@@ -4582,6 +4590,10 @@ div.react-tabs > ul.react-tabs__tab-list > .react-tabs__tab--selected {
   border: none;
   color: #FFFFFF;
   padding: 10px;
+}
+.wishlist_buttons #continue a {
+  color: white;
+  text-decoration: none;
 }
 .wishlist_buttons #add {
   background: #E7161B;

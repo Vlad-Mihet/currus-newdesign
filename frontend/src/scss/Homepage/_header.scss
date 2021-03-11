@@ -119,7 +119,16 @@ header {
       line-height: 16px;
       text-transform: uppercase;
 
-      ul {
+      #menu_nav_shop {
+        position: absolute;
+      padding: 0px;
+      list-style: none;
+      left: 0px;
+      background: white;
+      }
+
+
+      ul#menu_nav_ui {
         display: flex;
         flex-direction: row;
 
@@ -127,8 +136,12 @@ header {
         list-style-type: none;
         padding: 0px;
 
+
         li {
           margin: 10px;
+          color: rgba(102, 102, 102, 0.85);
+        
+
           a {
             color: rgba(102, 102, 102, 0.85);
           }

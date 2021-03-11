@@ -128,7 +128,7 @@ const Shoppage = (props) => {
             <div className={grid ? "shoppage_gridview" : "shoppage_listview"}>
             {
             displayedProducts &&
-            displayedProducts.map((product) => (
+            displayedProducts.filter(product => product.category !== 'E-Scooter').map((product) => (
                 <ProductGridView history={props.history} grid={grid} key={product._id} product={product}></ProductGridView>
             ))
             }

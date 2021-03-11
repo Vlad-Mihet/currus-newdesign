@@ -18,6 +18,7 @@ const Header = ({ hamburger, setHamburger, sidecart, setSidecart }) => {
     const dispatch = useDispatch()
     const userSignin = useSelector(state => state.userSignin)
     const { userInfo } = userSignin
+    const [dropdown, setDropdown] = useState(false);
 
 
     const cart = useSelector(state => state.cart)
@@ -31,6 +32,10 @@ const Header = ({ hamburger, setHamburger, sidecart, setSidecart }) => {
 
     const handleCurrency = (currency) => {
       dispatch(changeCurrency(currency))
+    }
+
+    const shopdropdownHandler = () => {
+      setDropdown(!dropdown)
     }
 
 
@@ -68,15 +73,16 @@ const Header = ({ hamburger, setHamburger, sidecart, setSidecart }) => {
                     </Link>
               
                   <nav id="menu_nav">
-                    <ul>
-                      <li>
-                      <Link to="/shop">
-                        Shop
-                      <ul style={{ display: 'None' }}>
-                        <li>E-scooters</li>
-                        <li>Accessories</li>
-                      </ul>
-                      </Link></li>
+                    <ul id="menu_nav_ui">
+                      <li onClick={shopdropdownHandler}>
+                        Shop &nbsp;
+                        <i className="fas fa-angle-down"></i>
+                        {dropdown &&
+                      <ul id="menu_nav_shop">
+                        <li><Link to="/shopa">E-scooters</Link></li>
+                        <li><Link to="/shop">Accessories</Link></li>
+                      </ul>}
+                      </li>
                       <li><Link to="/aboutus">About Us</Link></li>
                       <li><Link to="/blog">Blog</Link></li>
                       <li><Link to="/dealer">Dealers</Link></li>

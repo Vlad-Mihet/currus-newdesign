@@ -42,10 +42,10 @@ const Filter = ({ low, setLow, high, setHigh, def, setDef, grid, setGrid, sort, 
             <div id="filter-icon">
                 <Icon onClick={() => setHamburger(true)} icon={filterIcon} style={{color: '#666666', fontSize: '24px' }} />
             </div>
-            { loading ? <h1>Loading </h1> : 
+            {/* { loading ? <h1>Loading </h1> : 
             <div id="filter-result">
             We found <span>{displayedProducts ? displayedProducts.length : products.length} product(s)</span> available for you.
-            </div> }
+            </div> } */}
   
             <div id="filter-price">
                 {/* <input id="low" type="number" onChange={e => {

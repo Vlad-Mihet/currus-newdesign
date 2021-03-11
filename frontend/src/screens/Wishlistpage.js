@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import Breadcrumbs from '../components/Breadcrumbs'
 import { detailsUser, deleteWishlistItem } from '../redux/actions/userActions'
+import { Link } from 'react-router-dom'
+import { addToCart } from '../redux/actions/cartActions'
 // import { useHistory, useLocation } from "react-router-dom";
 
 
@@ -19,6 +21,14 @@ const Wishlistpage = (props) => {
 
     const handleCart = (id) => {
         props.history.push(`/cart/${id}?qty=1`)
+    }
+
+    const handleCartAll = () => {
+
+        userInfoDetail.wishlist.forEach(ele => {
+            dispatch(addToCart(ele._id, 1))
+        })
+        props.history.push(`/cart/`)
     }
 
     const handleDeleteItem = (itemid) => {
@@ -60,8 +70,12 @@ const Wishlistpage = (props) => {
                         ))}
                     </table>
                     <div className="wishlist_buttons">
-                        <button id="continue">CONTINUE SHOPPING</button>
-                        <button id="add">ADD ALL TO CART</button>
+                        <button id="continue">
+                            <Link to='/shop'>
+                            CONTINUE SHOPPING
+                            </Link>
+                        </button>
+                        <button onClick={handleCartAll} id="add">ADD ALL TO CART</button>
                     </div>
                 </div>
             </div>
