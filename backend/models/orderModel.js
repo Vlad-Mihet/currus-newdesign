@@ -1,46 +1,54 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const orderSchema = new mongoose.Schema({
-    orderItems: [{
+const orderSchema = new mongoose.Schema(
+  {
+    orderItems: [
+      {
         name: { type: String, required: true },
         qty: { type: Number, required: true },
         priceUSD: { type: Number, required: true },
         priceCAD: { type: Number, required: true },
         product: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Product',
-            required: true,
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Product",
+          required: true,
         },
-    }],
+      },
+    ],
     shippingAddress: {
-        address: { type: String, required: true },
-        town: { type: String, required: true },
-        state: { type: String, required: true },
-        postcode: { type: String, required: true }
+      address: { type: String, required: true },
+      town: { type: String, required: true },
+      state: { type: String, required: true },
+      postcode: { type: String, required: true },
     },
     itemsPrice: {
-        type: Number, required: true
+      type: Number,
+      required: true,
     },
     shippingPrice: {
-        type: Number, required: true
+      type: Number,
+      required: true,
     },
     totalPrice: {
-        type: Number, required: true
+      type: Number,
+      required: true,
     },
     buyer: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
     },
     isDelivered: {
-        type: Boolean, required: true
+      type: Boolean,
+      required: true,
     },
     tracking: {
-        type: String
-    }
+      type: String,
+    },
+  },
+  {
+    timestamps: true,
+  },
+);
 
-}, {
-    timestamps: true
-})
-
-const Order = mongoose.model('Order', orderSchema)
-export default Order
+const Order = mongoose.model("Order", orderSchema);
+export default Order;

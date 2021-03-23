@@ -1,27 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 const Breadcrumbs = (props) => {
+  const [t, setT] = useState("");
 
-    const [t, setT] = useState('');
+  const [arr, setArr] = useState([]);
 
-    const [arr, setArr] = useState([]);
+  useEffect(() => {
+    setT(props.title.slice(1).toUpperCase());
+    setArr(t.split("/"));
+  }, [props]);
 
-    useEffect(() => {
-        setT(props.title.slice(1).toUpperCase())
-        setArr(t.split("/"))
-    }, [props]);
+  if (!props) {
+    return <h1>Loading...</h1>;
+  }
 
-    if(!props) {
-        return <h1>Loading...</h1>
-    }
-
-    return (
-        <div className="breadcrumbs">
-            <div className="homeshop">
-                {`HOME / ${props.title}`}
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="breadcrumbs">
+      <div className="homeshop">{`HOME / ${props.title}`}</div>
+    </div>
+  );
+};
 
 export default Breadcrumbs;

@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'react-tabs/style/react-tabs.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "react-tabs/style/react-tabs.css";
 import "react-image-gallery/styles/css/image-gallery.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"
-import './style.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import store from './redux/store.js'
-import { Provider } from 'react-redux'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "./style.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import store from "./redux/store.js";
+import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,7 +15,7 @@ ReactDOM.render(
       <App />
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
 
 // If you want to start measuring performance in your app, pass a function

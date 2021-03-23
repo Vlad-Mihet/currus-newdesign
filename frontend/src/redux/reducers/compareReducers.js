@@ -1,11 +1,11 @@
-import { COMPARE_ADD_ITEM } from '../constants/compareConstants';
+import { COMPARE_ADD_ITEM } from "../constants/compareConstants";
 
-export const compareListReducer = (state = { compareItems: []}, action) => {
-    switch (action.type) {
-        case COMPARE_ADD_ITEM:
-            const item = action.payload;
-            return { ...state, compareItems: [...state.compareItems, item] };
-        default:
-            return state;
-    }
-}
+export const compareListReducer = (state = { compareItems: [] }, action) => {
+  switch (action.type) {
+    case COMPARE_ADD_ITEM:
+      const item = action.payload;
+      return { ...state, compareItems: [...state.compareItems, item] };
+    default:
+      return state;
+  }
+};

@@ -1,9 +1,10 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const warrantySchema = new mongoose.Schema({
+const warrantySchema = new mongoose.Schema(
+  {
     first: { type: String, required: true },
     last: { type: String, required: true },
-    order: { type: String, required: true  },
+    order: { type: String, required: true },
     email: { type: String, required: true },
     phone: { type: String, required: true },
     date: { type: String, required: true },
@@ -14,13 +15,13 @@ const warrantySchema = new mongoose.Schema({
     zip: { type: String, required: true },
     country: { type: String, required: true },
     model: { type: String, required: true },
-    message: { type: String, required: true }
-}, {
-    timestamps: true 
-});
+    message: { type: String, required: true },
+  },
+  {
+    timestamps: true,
+  },
+);
 
-const Warranty = mongoose.model('Warranty', warrantySchema)
+const Warranty = mongoose.model("Warranty", warrantySchema);
 
 export default Warranty;
-
-

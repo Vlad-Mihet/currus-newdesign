@@ -1,6 +1,7 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const productSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema(
+  {
     name: { type: String, required: true, unique: true },
     priceUSD: { type: Number, required: true },
     priceCAD: { type: Number, required: true },
@@ -14,21 +15,25 @@ const productSchema = new mongoose.Schema({
     specification: [{ type: String }],
     shipping: { type: String },
     onSale: { type: Boolean, required: true },
-    reviews: [{ 
+    reviews: [
+      {
         author: { type: String, required: true },
         stars: { type: Number, required: true },
         pros: { type: String },
         cons: { type: String },
         detail: { type: String, required: true },
-        date: { type: Date }
-    }],
+        date: { type: Date },
+      },
+    ],
     numReviews: { type: Number },
     image: { type: String },
-    images: [{ type: String }]
-}, {
-    timestamps: true
-});
+    images: [{ type: String }],
+  },
+  {
+    timestamps: true,
+  },
+);
 
-const Product = mongoose.model('Product', productSchema);
+const Product = mongoose.model("Product", productSchema);
 
 export default Product;

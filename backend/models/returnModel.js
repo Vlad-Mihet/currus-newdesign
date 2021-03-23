@@ -1,9 +1,10 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const returnSchema = new mongoose.Schema({
+const returnSchema = new mongoose.Schema(
+  {
     vendor: { type: String, required: true },
     action: { type: String, required: true },
-    sku: { type: String, required: true  },
+    sku: { type: String, required: true },
     serial: { type: String, required: true },
     quantity: { type: String, required: true },
     date: { type: String, required: true },
@@ -20,12 +21,12 @@ const returnSchema = new mongoose.Schema({
     zip: { type: String, required: true },
     country: { type: String, required: true },
     message: { type: String, required: true },
-}, {
-    timestamps: true 
-});
+  },
+  {
+    timestamps: true,
+  },
+);
 
-const Return = mongoose.model('Return', returnSchema)
+const Return = mongoose.model("Return", returnSchema);
 
 export default Return;
-
-
