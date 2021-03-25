@@ -80,9 +80,6 @@ const OurBlog = () => {
                 }
                 likes
                 comments
-  
-      
-
             }
 
         }
