@@ -42,19 +42,19 @@ const Blogpage = (props) => {
     `;
 
   const queryrecent = `
-        {
-    pageCollection(
+    {
+      pageCollection (
         order: [ date_DESC ]
-    ) {
-        items {
-        id
-        title
-        author
-        date
+      ) {
+          items {
+            id
+            title
+            author
+            date
+          }
         }
     }
-    }
-    `;
+  `;
 
   useEffect(() => {
     window
@@ -71,10 +71,7 @@ const Blogpage = (props) => {
       )
       .then((response) => response.json())
       .then(({ data, errors }) => {
-        if (errors) {
-          console.error(errors);
-        }
-
+        if (errors) console.error(errors);
         setPage(data.pageCollection.items[0]);
         setPosts(data.pageCollection.items);
       });
@@ -111,7 +108,6 @@ const Blogpage = (props) => {
           <div className="blog_page_head">
             <h1 className="blog_page_head_theme">{page.theme}</h1>
             <h1 className="blog_page_head_title">{page.title}</h1>
-
             <h2 className="blog_page_head_postedon">
               POSTED ON <span>{page.date.split("T")[0]}</span> BY{" "}
               <span>{page.author}</span>
