@@ -1,5 +1,4 @@
 import express from "express";
-import dotenv from "dotenv";
 import mongoose from "mongoose";
 import productRouter from "./routers/productRouter.js";
 import dealerRouter from "./routers/dealerRouter.js";
@@ -16,20 +15,19 @@ const require = createRequire(import.meta.url);
 
 const __dirname = path.resolve();
 
-dotenv.config();
+require("dotenv").config();
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, "/frontend/build")));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+mongoose.connect(
+  process.env.MONGODB_URL,
+  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
+  () => console.log("Connected to DB!"),
+);
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
