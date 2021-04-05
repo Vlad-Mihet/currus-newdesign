@@ -22,6 +22,10 @@ const app = express();
 app.use(express.static(path.join(__dirname, "/frontend/build")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(function (req, res, next) {
+  res.removeHeader("X-Powered-By");
+  next();
+});
 
 mongoose.connect(
   process.env.MONGODB_URL,
@@ -42,9 +46,15 @@ app.get("/api/config/paypal", (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID);
 });
 
-app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, "/frontend/build/index.html")),
-);
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("frontend/build"));
+
+  app.use(express.static(path.join(__dirname, "build")));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+}
 
 // app.get('/', (req, res) => {
 //     res.send('Server is ready')
