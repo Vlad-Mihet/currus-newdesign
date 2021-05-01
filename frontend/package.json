@@ -1,6 +1,6 @@
 {
   "name": "cur",
-  "proxy": "http://127.0.0.1:5001",
+  "proxy": "http://127.0.0.1:5002",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -55,7 +55,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "set HTTPS=true && react-scripts start",
+    "start": "set HTTPS=true && set PORT=3001 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
